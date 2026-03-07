@@ -3,21 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tricube Tales Solo - Oficial</title>
+    <title>Tricube Tales Solo - Completo</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <style>
-        :root { --primary: #d81b60; --ins-color: #5d6d7e; }
+        :root { --primary: #d81b60; }
         body { padding-top: 1rem; }
-        .card-display { font-size: 3.5rem; text-align: center; margin: 0.5rem 0; font-weight: bold; }
+        .card-display { font-size: 3.5rem; text-align: center; margin: 0.5rem 0; font-weight: bold; min-height: 1.2em; transition: all 0.2s; }
+        .shuffling { animation: shake 0.1s infinite; opacity: 0.5; filter: blur(2px); }
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            50% { transform: translate(-1px, -2px) rotate(-1deg); }
+            100% { transform: translate(1px, 1px) rotate(0deg); }
+        }
         .btn-victory { background-color: #2e7d32 !important; border-color: #2e7d32 !important; color: white !important; }
         .btn-loss { background-color: #c62828 !important; border-color: #c62828 !important; color: white !important; }
         .suit-red { color: #e53935; }
         .suit-black { color: #212121; }
-        .grid-buttons { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.5rem; }
-        .history-list { font-size: 0.85rem; max-height: 150px; overflow-y: auto; background: #f4f4f4; padding: 0.5rem; border-radius: 5px; color: #333; border: 1px solid #ccc; }
+        .history-list { font-size: 1rem; max-height: 120px; overflow-y: auto; background: #f4f4f4; padding: 0.8rem; border-radius: 5px; border: 1px solid #ccc; display: flex; flex-wrap: wrap; gap: 8px; }
+        .hist-item { padding: 2px 5px; border-radius: 4px; font-weight: bold; }
+        .hist-fail { opacity: 0.5; text-decoration: line-through; }
         .hidden { display: none; }
-        footer { margin-top: 2rem; padding: 1rem 0; border-top: 1px solid #eee; text-align: center; }
-        .lang-btn { padding: 2px 10px; font-size: 0.7rem; }
+        .oracle-box { border: 1px dashed #ccc; padding: 1rem; border-radius: 8px; margin-top: 1rem; background: #fff; }
+        .oracle-grid { display: grid; grid-template-columns: 1fr; gap: 5px; margin-top: 10px; }
+        .oracle-grid button { margin-bottom: 0; font-size: 0.7rem; padding: 4px; }
+        .oracle-res { font-weight: bold; font-size: 1.1rem; color: var(--primary); margin-top: 10px; display: block; text-align: center; }
+        #current-card-area { border: 2px solid var(--primary); padding: 1rem; border-radius: 10px; min-height: 420px; }
+        .last-scene-alert { background: #fff3cd; color: #856404; padding: 5px; text-align: center; font-weight: bold; border-radius: 5px; margin-bottom: 10px; border: 1px solid #ffeeba; }
+        .game-over-banner { background: #1a1a1a; color: #fff; padding: 1rem; border-radius: 8px; text-align: center; margin-top: 1rem; border: 2px solid gold; }
+        
+        /* Estilos para generadores completos */
+        .gen-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; }
+        .gen-section { border: 1px solid #eee; padding: 10px; border-radius: 8px; }
+        .gen-section h6 { margin-bottom: 10px; font-size: 0.8rem; text-transform: uppercase; color: #666; }
+        .gen-section button { width: 100%; font-size: 0.75rem; padding: 8px; margin-bottom: 5px; }
     </style>
 </head>
 <body>
@@ -26,186 +44,267 @@
         <section id="game-section">
             <div class="grid">
                 <article>
-                    <h5 data-i18n="scene_mgr">Gestión de Escenas</h5>
-                    <button onclick="drawCard()" id="draw-btn" data-i18n="draw_card">Sacar Carta</button>
-                    <button class="secondary outline" onclick="confirmReset()" data-i18n="reset">Reiniciar Aventura</button>
-                    <div style="margin-top:10px;">
-                        <small>
-                            <span data-i18n="victories">Victorias</span>: <span id="v-count">0</span> | 
-                            <span data-i18n="losses">Derrotas</span>: <span id="l-count">0</span> |
-                            <span data-i18n="deck">Mazo</span>: <span id="deck-count">53</span>
-                        </small>
+                    <h5>Estado</h5>
+                    <div style="margin-bottom:15px;">
+                        <small>Éxitos: <span id="v-count">0</span> | Fallos: <span id="l-count">0</span> | Mazo: <span id="deck-count">53</span></small>
+                    </div>
+
+                    <div class="oracle-box">
+                        <strong>Oráculo (Probabilidad)</strong>
+                        <div class="oracle-grid">
+                            <button class="outline contrast" onclick="rollOracle(2)">Muy Probable (2+)</button>
+                            <button class="outline contrast" onclick="rollOracle(3)">Probable (3+)</button>
+                            <button class="outline contrast" onclick="rollOracle(4)">Tal vez (4+)</button>
+                            <button class="outline contrast" onclick="rollOracle(5)">Improbable (5+)</button>
+                            <button class="outline contrast" onclick="rollOracle(6)">Casi imposible (6)</button>
+                        </div>
+                        <span id="oracle-result" class="oracle-res"></span>
                     </div>
                 </article>
 
-                <article id="current-card-area" class="hidden">
-                    <div id="card-icon" class="card-display"></div>
-                    <p id="challenge-desc" style="text-align:center;"></p>
-                    <div class="grid" id="action-buttons">
-                        <button class="btn-victory" onclick="resolve(true)" data-i18n="win">Victoria</button>
-                        <button class="btn-loss" onclick="resolve(false)" data-i18n="fail">Fracaso</button>
+                <article id="current-card-area">
+                    <button id="init-scene-btn" onclick="startAdventure()" style="width:100%">Empezar Escena Inicial</button>
+                    
+                    <div id="card-content-wrapper" class="hidden">
+                        <div id="last-scene-msg" class="last-scene-alert hidden">⚠️ ESTA ES LA ÚLTIMA ESCENA</div>
+                        <div id="card-icon" class="card-display">?</div>
+                        <p id="challenge-desc" style="text-align:center; min-height: 3em;"></p>
+                        
+                        <div class="grid" id="action-buttons">
+                            <button class="btn-victory" onclick="resolve(true)">Victoria</button>
+                            <button class="btn-loss" onclick="resolve(false)">Fracaso</button>
+                        </div>
+
+                        <div class="grid hidden" id="special-buttons">
+                            <button class="primary" onclick="drawCard()" id="next-card-btn">Continuar</button>
+                            <button id="twist-btn" class="secondary outline hidden" onclick="openTwistMenu()">¡Giro!</button>
+                        </div>
+
+                        <div id="final-screen" class="game-over-banner hidden">
+                            <h3>SESIÓN FINALIZADA</h3>
+                            <p id="final-stats"></p>
+                            <button class="contrast" onclick="initDeck()" style="width:100%">Nueva Aventura</button>
+                        </div>
                     </div>
+                    
+                    <hr>
+                    <button class="secondary outline" onclick="confirmReset()" style="font-size: 0.7rem; width: 100%;">Reiniciar Mazo</button>
                 </article>
             </div>
             
             <details>
-                <summary data-i18n="history">Historial de Cartas</summary>
+                <summary>Historial de Desafíos</summary>
                 <div id="card-history" class="history-list"></div>
             </details>
         </section>
 
         <hr>
 
-        <section>
-            <h4 data-i18n="generators">Generadores</h4>
-            
-            <details>
-                <summary data-i18n="gen_urban">Urbano</summary>
-                <div class="grid-buttons">
-                    <button class="secondary" onclick="rollTable('urban_loc')" data-i18n="u_loc">Ubicación</button>
-                    <button class="secondary" onclick="rollTable('urban_ppl')" data-i18n="u_ppl">Gente</button>
-                    <button class="secondary" onclick="rollTable('urban_event')" data-i18n="u_event">Evento</button>
+        <section id="generators-section">
+            <h4>Generadores del Manual</h4>
+            <div class="gen-container">
+                
+                <div class="gen-section">
+                    <h6>📍 Localizaciones</h6>
+                    <button class="secondary outline" onclick="rollManualTable('urban')">Ciudad (Urbana)</button>
+                    <button class="secondary outline" onclick="rollManualTable('wilderness')">Salvaje (Wilderness)</button>
+                    <button class="secondary outline" onclick="rollManualTable('voyage')">Viaje (Voyage)</button>
                 </div>
-            </details>
 
-            <details>
-                <summary data-i18n="gen_wild">Salvaje & Viajes</summary>
-                <div class="grid-buttons">
-                    <button class="secondary" onclick="rollTable('wild_feat')" data-i18n="w_feat">Rasgo Salvaje</button>
-                    <button class="secondary" onclick="rollTable('wild_ppl')" data-i18n="w_ppl">Gente Salvaje</button>
-                    <button class="secondary" onclick="rollTable('wild_event')" data-i18n="w_event">Evento Salvaje</button>
-                    <button class="secondary" onclick="rollTable('voyage_loc')" data-i18n="v_loc">Hito de Viaje</button>
-                    <button class="secondary" onclick="rollTable('weather')" data-i18n="weather">Clima</button>
+                <div class="gen-section">
+                    <h6>✨ Rasgos/Detalles</h6>
+                    <button class="secondary outline" onclick="rollManualTable('urban_feat')">Rasgo Urbano</button>
+                    <button class="secondary outline" onclick="rollManualTable('wild_feat')">Rasgo Salvaje</button>
+                    <button class="secondary outline" onclick="rollManualTable('voyage_feat')">Hito de Viaje</button>
                 </div>
-            </details>
 
-            <details>
-                <summary data-i18n="gen_dungeon">Mazmorra & Misterio</summary>
-                <div class="grid-buttons">
-                    <button class="secondary" onclick="rollTable('dung_feat')" data-i18n="d_feat">Rasgo Mazmorra</button>
-                    <button class="secondary" onclick="rollTable('dung_ppl')" data-i18n="d_ppl">Habitantes</button>
-                    <button class="secondary" onclick="rollTable('dung_event')" data-i18n="d_event">Evento Mazmorra</button>
-                    <button class="secondary" onclick="rollTable('crimes')" data-i18n="crimes">Crímenes</button>
-                    <button class="secondary" onclick="rollTable('clues')" data-i18n="clues">Pistas</button>
+                <div class="gen-section">
+                    <h6>👥 Gente y PNJs</h6>
+                    <button class="secondary outline" onclick="rollManualTable('urban_ppl')">Gente de Ciudad</button>
+                    <button class="secondary outline" onclick="rollManualTable('wild_ppl')">Gente del Camino</button>
+                    <button class="contrast outline" onclick="rollFantasyName()">Nombre Fantasía</button>
                 </div>
-            </details>
 
-            <details>
-                <summary data-i18n="gen_names">Nombres & Social</summary>
-                <div class="grid-buttons">
-                    <button class="contrast" onclick="rollName('male')" data-i18n="n_male">Masculino</button>
-                    <button class="contrast" onclick="rollName('female')" data-i18n="n_female">Femenino</button>
-                    <button class="contrast" onclick="rollFantasyName()" data-i18n="n_fantasy">Fantasía (Mix)</button>
-                    <button class="contrast" onclick="rollTable('demeanor')" data-i18n="demeanor">Actitud (Demeanor)</button>
+                <div class="gen-section">
+                    <h6>🌀 Giros (Twists)</h6>
+                    <button class="primary outline" onclick="rollTwist('fantasy')">Giro Fantasía</button>
+                    <button class="primary outline" onclick="rollTwist('horror')">Giro Terror</button>
+                    <button class="primary outline" onclick="rollTwist('scifi')">Giro Ciencia Ficción</button>
                 </div>
-            </details>
+
+            </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <button class="outline lang-btn" onclick="setLanguage('es')">ESPAÑOL</button>
-            <button class="outline lang-btn" onclick="setLanguage('en')">ENGLISH</button>
-            <p style="font-size: 0.7rem; margin-top: 10px;">Tricube Tales Solo Companion</p>
-        </div>
-    </footer>
-
-    <dialog id="modal-app">
-        <article>
-            <header>
-                <a href="#close" aria-label="Close" class="close" onclick="closeModal()"></a>
-                <strong id="m-title">Inspiración</strong>
-            </header>
-            <p id="m-body"></p>
-            <footer><button onclick="closeModal()">OK</button></footer>
-        </article>
-    </dialog>
-
     <script>
-        const i18n = {
-            es: {
-                scene_mgr: "Gestión de Escenas", draw_card: "Sacar Carta", reset: "Reiniciar",
-                victories: "Victorias", losses: "Derrotas", deck: "Mazo", win: "Victoria", fail: "Fracaso",
-                history: "Historial de Cartas", generators: "Generadores", gen_urban: "Urbano", 
-                u_loc: "Ubicación", u_ppl: "PNJ", u_event: "Evento", gen_wild: "Salvaje & Viajes",
-                w_feat: "Rasgo Salvaje", w_ppl: "PNJ Salvaje", w_event: "Evento Salvaje", v_loc: "Hito Viaje",
-                weather: "Clima", gen_dungeon: "Mazmorra & Misterio", d_feat: "Rasgo Mazmorra", d_ppl: "Habitantes",
-                d_event: "Evento Mazmorra", crimes: "Crímenes", clues: "Pistas", gen_names: "Nombres",
-                n_male: "Masculino", n_female: "Femenino", n_fantasy: "Fantasía", demeanor: "Actitud",
-                msg_final: "¡ESCENA FINAL! Se han cumplido las condiciones de la sesión.",
-                t_agile: "Ágil", t_brawny: "Fuerte", t_crafty: "Astuto",
-                d_easy: "Fácil (4+)", d_std: "Estándar (5+)", d_hard: "Difícil (6+)",
-                plot_adv: "Trama {p} Avanza", red_pos: "Efecto Positivo (+)", black_neg: "Efecto Negativo (-)",
-                scene_change: "La escena cambia inesperadamente. Tira un giro.",
-                confirm_reset: "¿Seguro que quieres borrar todo el progreso?"
-            },
-            en: {
-                scene_mgr: "Scene Management", draw_card: "Draw Card", reset: "Reset",
-                victories: "Wins", losses: "Losses", deck: "Deck", win: "Win", fail: "Loss",
-                history: "Card History", generators: "Generators", gen_urban: "Urban",
-                u_loc: "Location", u_ppl: "NPC", u_event: "Event", gen_wild: "Wild & Travel",
-                w_feat: "Wild Feature", w_ppl: "Wild NPC", w_event: "Wild Event", v_loc: "Voyage Landmark",
-                weather: "Weather", gen_dungeon: "Dungeon & Mystery", d_feat: "Dungeon Feature", d_ppl: "Inhabitants",
-                d_event: "Dungeon Event", crimes: "Crimes", clues: "Clues", gen_names: "Names",
-                n_male: "Male", n_female: "Female", n_fantasy: "Fantasy", demeanor: "Demeanor",
-                msg_final: "FINAL SCENE! Session conditions met.",
-                t_agile: "Agile", t_brawny: "Brawny", t_crafty: "Crafty",
-                d_easy: "Easy (4+)", d_std: "Standard (5+)", d_hard: "Hard (6+)",
-                plot_adv: "{p} Plot Advances", red_pos: "Positive Effect (+)", black_neg: "Negative Effect (-)",
-                scene_change: "Unexpected scene change! Roll a twist.",
-                confirm_reset: "Are you sure you want to reset all progress?"
-            }
+        // DATOS COMPLETOS DE LAS TABLAS DEL PDF
+        const manualTables = {
+            urban: ["Callejón", "Banco", "Puente", "Burdel", "Castillo", "Catedral", "Cementerio", "Cisterna", "Ayuntamiento", "Muelle", "Puerta de la ciudad", "Embajada", "Fábrica", "Granja", "Fuerte", "Gremio", "Hospital", "Posada", "Cárcel", "Biblioteca", "Mansión", "Mercado", "Monasterio", "Monumento", "Museo", "Oficina", "Orfanato", "Palacio", "Parque", "Plaza", "Barrio pobre", "Establo", "Alcantarilla", "Taberna", "Teatro", "Universidad"],
+            urban_feat: ["Abandonado", "Hermoso", "Bloqueado", "Limpio", "Desordenado", "Colorido", "Concurrido", "Peligroso", "Oscuro", "Sucio", "Deteriorado", "Vacío", "Exótico", "Famoso", "Festivo", "Prohibido", "Olvidados", "Fortificado", "Atestado", "Lujoso", "Magnífico", "Modernizado", "Misterioso", "Nuevo", "Viejo/Decrépito", "Anticuado", "Aplastante", "Tóxico", "Prominente", "Quemado", "Vigilado", "Pequeño", "Siniestro", "Modesto", "Vandalizado", "Abastecido"],
+            urban_ppl: ["Mendigo", "Cazarrecompensas", "Cocinero", "Cortesana", "Criminal", "Diplomático", "Borracho", "Espía", "Guardia", "Heraldo", "Cazador", "Informante", "Investigador", "Trabajador", "Mercader", "Mensajero", "Noble", "Forastero", "Vendedor ambulante", "Peregrino", "Policía", "Sacerdote", "Prisionero", "Erudito", "Sirviente", "Comerciante", "Soldado", "Estudiante", "Superviviente", "Ladrón", "Turista", "Viajero", "Vagabundo", "Víctima", "Vigilante", "Visitante"],
+            wilderness: ["Paso de montaña", "Puente", "Cabaña", "Cueva", "Cementerio", "Acantilado", "Costa", "Presa", "Desierto", "Zanja", "Bosque", "Fortaleza", "Huerto", "Granja", "Garganta", "Arboleda", "Colina", "Isla", "Lago", "Mina", "Monolito", "Monumento", "Montaña", "Puesto avanzado", "Llanura", "Estanque", "Cantera", "Río", "Ruinas", "Asentamiento", "Estatua", "Pantano", "Templo", "Torre", "Valle", "Pueblo"],
+            wild_feat: ["Antiguo", "Artificial", "Cenizo", "Barroso", "Huesos", "Claro", "Peligroso", "Muerto", "Denso", "Desolado", "Seco", "Eerie", "Encantado", "Hielo", "Infestado", "Brumoso", "Fangoso", "Natural", "Venenoso", "Puntiagudo", "Prístino", "Rocoso", "Áspero", "Ruinoso", "Arenoso", "Cerrado", "Silencioso", "Nevado", "Extraño", "Sumergido", "Cubierto", "Vasto", "Volcánico", "Peculiar", "Salvaje", "Ventoso"],
+            wild_ppl: ["Bandidos", "Cazador", "Recolector", "Ermitaño", "Patrulla", "Carroñero", "Explorador", "Vagabundo"],
+            voyage: ["Archipiélago", "Atolón", "Cala", "Cañón", "Cuevas", "Canal", "Paso de montaña", "Isla de coral", "Cueva", "Cascada", "Delta", "Dunas", "Isla flotante", "Géiser", "Glaciar", "Garganta", "Bajos", "Bosque nuboso", "Iceberg", "Jungla", "Laguna", "Meseta", "Arrecife", "Río", "Rápidos", "Banco de arena", "Isla de arena", "Sabana", "Isla marina", "Pantano", "Fumarola", "Valle", "Cueva volcánica", "Isla volcánica", "Remolino", "Wadi"],
+            voyage_feat: ["Anomalía", "Puesto de avanzada", "Puente", "Campamento", "Caravana", "Castillo", "Cueva", "Lugar de desastre", "Lugar de batalla", "Estatua", "Granja", "Transbordador", "Cementerio", "Granero", "Tumba", "Hito", "Faro", "Mina", "Monasterio", "Monolito", "Monumento", "Oasis", "Observatorio", "Pinturas", "Pilares", "Puerto", "Ruinas", "Santuario", "Asentamiento", "Señal", "Naufragio", "Templo", "Torre", "Pueblo", "Aldea", "Pozo"]
         };
 
-        const tables = {
-            urban_loc: ["Lugar abandonado", "Aeropuerto/Muelle", "Banco", "Puente/Cruce", "Iglesia/Templo", "Almacén", "Fábrica", "Estudio de arte", "Parque/Jardín", "Mansión/Palacio", "Prisión", "Alcantarillado", "Taberna/Restaurante", "Zoológico"],
-            urban_ppl: ["Actor", "Vagabundo", "Cocinero", "Alquimista", "Niño", "Asesino", "Fanático", "Doctor", "Anciano", "Ingeniero", "Granjero", "Gánster", "Investigador", "Mercader", "Guardia", "Noble", "Espía", "Ladrón"],
-            urban_event: ["Accidente", "Emboscada", "Asesinato", "Vehículo roto", "Explosión/Fuego", "Animales salvajes", "Revelación impactante", "Clima terrible", "Robo", "Actividad monstruosa"],
-            wild_feat: ["Altar antiguo", "Torre misteriosa", "Huesos/Cadáveres", "Campo de batalla", "Laberinto rocoso", "Estatua ominosa", "Ruinas", "Río caudaloso", "Monolito enigmático", "Oasis tranquilo"],
-            wild_ppl: ["Aventureros", "Bandidos", "Cazador de recompensas", "Espíritu malévolo", "Planta carnívora", "Caballero honorable", "Ermitaño", "Bruja/Hechicero"],
-            wild_event: ["Avalancha", "Perdido", "Sonidos extraños", "Ataque de depredador", "Espejismo", "Tormenta/Ventisca", "Incendio forestal/Terremoto"],
-            voyage_loc: ["Archipiélago", "Pueblo costero", "Paso peligroso", "Campo de asteroides", "Cementerio de barcos", "Ruinas sumergidas", "Isla volcánica", "Base lunar"],
-            weather: ["Despejado", "Nublado", "Lluvia/Drizzle", "Tormenta/Huracán", "Calma", "Vientos fuertes"],
-            dung_feat: ["Altar/Mesa", "Aparato alienígena", "Cofre", "Escena macabra", "Prisionero", "Estatua", "Trampa", "Pozo de fuego"],
-            dung_ppl: ["Animales/Vermin", "Bandidos", "Constructos/Robots", "Demonios", "Dragón", "Goblins", "No-muertos", "Magos"],
-            dung_event: ["Trampa de cuchillas", "Gas venenoso", "Patrulla de guardia", "Derrumbe", "Visitante inesperado", "Alarma"],
-            crimes: ["Robo a mano armada", "Arson", "Chantaje", "Cybercrimen", "Espionaje", "Secuestro", "Asesinato", "Sabotaje", "Traición"],
-            clues: ["Mancha de sangre", "Nota manuscrita", "Botón perdido", "Huella dactilar", "Pelo/Piel", "Herramienta/Arma", "Fragmentos de vidrio"],
-            demeanor: ["Agresivo", "Distante", "Ansioso", "Calculador", "Cínico", "Emocional", "Alegre", "Escéptico", "Estoico"],
-            male: ["Adam/Alonso", "Brian/Benicio", "David/Eduardo", "James/Ismael", "Robert/Miguel", "Thomas/Rafael", "Jeffrey/Jose"],
-            female: ["Alice/Abigail", "Elena/Emily", "Isabella/Jennifer", "Luna/Kimberly", "Martina/Lisa", "Sofía/Ruth", "Valentina/Samantha"],
-            fantasy_pre: ["And", "Barth", "Cyn", "Dar", "Eld", "Fill", "Gal", "Gor", "Hord", "Izz", "Jaer", "Kyn", "Lok", "Lyth", "Mag", "Mord", "Ness", "Nol", "Ord", "Port", "Quint", "Rabb", "Roth", "Sard", "Sim", "Tann", "Thelm", "Ulin", "Venc", "Zar"],
-            fantasy_suf: ["aer", "ak", "alis", "ard", "as", "astin", "ed", "egar", "en", "ent", "er", "eray", "esia", "ey", "ia", "ian", "iek", "ig", "ild", "in", "ion", "ique", "ith", "obund", "ock", "on", "ond", "op", "orish", "yn"]
+        const twists = {
+            fantasy: ["Búsqueda/Misión", "Trampa/Peligro", "Hallazgo mágico", "Encuentro con criatura", "Pérdida de recursos", "Aliado inesperado"],
+            horror: ["Susto/Grito", "Amenaza oculta", "Corrupción", "Aislamiento", "Locura", "Muerte/Sangre"],
+            scifi: ["Fallo tecnológico", "Contacto alienígena", "Anomalía espacial", "Inteligencia Artificial", "Sabotaje", "Nuevos datos"]
         };
 
-        let state = { deck: [], drawn: [], stats: { v: 0, l: 0 }, lang: 'es' };
+        const names = {
+            pre: ["And", "Barth", "Cyn", "Dar", "Eld", "Fill", "Gal", "Gor", "Hord", "Izz", "Jaer", "Kyn", "Lok", "Lyth", "Mag", "Mord", "Ness", "Nol", "Ord", "Port", "Quint", "Rabb", "Roth", "Sard", "Sim", "Tann", "Thelm", "Ulin", "Venc", "Zar"],
+            suf: ["aer", "ak", "alis", "ard", "as", "astin", "ed", "egar", "en", "ent", "er", "eray", "esia", "ey", "ia", "ian", "iek", "ig", "ild", "in", "ion", "ique", "ith", "obund", "ock", "on", "ond", "op", "orish", "yn"]
+        };
 
-        function save() { localStorage.setItem('tricube_v3', JSON.stringify(state)); }
-        
+        let state = { deck: [], drawn: [], stats: { v: 0, l: 0 }, lang: 'es', adventureStarted: false, isGameOver: false };
+
+        function save() { localStorage.setItem('tricube_manual_full', JSON.stringify(state)); }
         function load() {
-            const saved = localStorage.getItem('tricube_v3');
-            if (saved) {
-                state = JSON.parse(saved);
-                updateUI();
-                renderHistory();
+            const saved = localStorage.getItem('tricube_manual_full');
+            if (saved) { 
+                state = JSON.parse(saved); 
+                if(state.adventureStarted) {
+                    document.getElementById('init-scene-btn').classList.add('hidden');
+                    document.getElementById('card-content-wrapper').classList.remove('hidden');
+                }
+                if(state.isGameOver) showEndScreen();
+                updateUI(); renderHistory(); 
+            } else { initDeck(); }
+        }
+
+        // LÓGICA DE JUEGO
+        function startAdventure() {
+            state.adventureStarted = true;
+            state.isGameOver = false;
+            document.getElementById('init-scene-btn').classList.add('hidden');
+            document.getElementById('card-content-wrapper').classList.remove('hidden');
+            drawCard();
+        }
+
+        function drawCard() {
+            if (state.deck.length === 0 || state.isGameOver) return;
+            const el = document.getElementById('card-icon');
+            el.classList.add('shuffling');
+            let counter = 0;
+            const animInterval = setInterval(() => {
+                const rs = ['♠', '♣', '♥', '♦'];
+                el.innerText = (Math.floor(Math.random() * 9) + 2) + rs[Math.floor(Math.random() * 4)];
+                if(++counter > 8) {
+                    clearInterval(animInterval);
+                    el.classList.remove('shuffling');
+                    executeDraw();
+                }
+            }, 50);
+        }
+
+        function executeDraw() {
+            const card = state.deck.pop();
+            state.drawn.push({ card, result: null });
+            const isRed = ['♥','♦'].includes(card.s);
+            const el = document.getElementById('card-icon');
+            el.innerText = `${card.v}${card.s}`;
+            el.className = 'card-display ' + (isRed ? 'suit-red' : 'suit-black');
+            processLogic(card, isRed);
+            if (checkFinalCondition()) document.getElementById('last-scene-msg').classList.remove('hidden');
+            else document.getElementById('last-scene-msg').classList.add('hidden');
+            updateUI(); save();
+        }
+
+        function processLogic(card, isRed) {
+            const desc = document.getElementById('challenge-desc');
+            const btnsChallenge = document.getElementById('action-buttons');
+            const btnsSpecial = document.getElementById('special-buttons');
+            const twistBtn = document.getElementById('twist-btn');
+            btnsChallenge.classList.add('hidden'); btnsSpecial.classList.add('hidden'); twistBtn.classList.add('hidden');
+
+            if (['J', 'Q', 'K'].includes(card.v)) {
+                let p = card.v === 'K' ? "Principal" : (card.v === 'Q' ? "Primaria" : "Secundaria");
+                desc.innerHTML = `Trama <strong>${p}</strong> avanza.<br>${isRed ? "Efecto Positivo (+)" : "Efecto Negativo (-)"}`;
+                btnsSpecial.classList.remove('hidden');
+            } else if (card.v === 'A' || card.v === 'Joker') {
+                desc.innerText = "Giro inesperado o cambio de escena.";
+                btnsSpecial.classList.remove('hidden');
+                twistBtn.classList.remove('hidden');
             } else {
-                initDeck();
+                btnsChallenge.classList.remove('hidden');
+                const n = parseInt(card.v);
+                let trait = n <= 4 ? "Ágil" : (n <= 7 ? "Fuerte" : "Astuto");
+                let diff = [2, 5, 8].includes(n) ? "4+" : ([3, 6, 9].includes(n) ? "5+" : "6+");
+                desc.innerHTML = `Desafío: <strong>${trait}</strong> (${diff})`;
             }
-            translateUI();
         }
 
-        function setLanguage(l) {
-            state.lang = l;
+        function resolve(win) {
+            const lastIdx = state.drawn.length - 1;
+            state.drawn[lastIdx].result = win;
+            if (win) state.stats.v++; else state.stats.l++;
+            renderHistory(); updateUI();
+            if (checkFinalCondition()) { state.isGameOver = true; showEndScreen(); }
+            else { drawCard(); }
             save();
-            translateUI();
         }
 
-        function translateUI() {
-            const langData = i18n[state.lang];
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (langData[key]) el.innerText = langData[key];
-            });
+        function checkFinalCondition() {
+            const challenges = state.drawn.filter(d => !isNaN(d.card.v));
+            if (challenges.length >= 9) return true;
+            const suits = {};
+            challenges.forEach(d => suits[d.card.s] = (suits[d.card.s] || 0) + 1);
+            const counts = Object.values(suits);
+            if (counts.some(c => c >= 5)) return true;
+            if (counts.filter(c => c >= 3).length >= 1 && counts.filter(c => c >= 2).length >= 3) return true;
+            return false;
+        }
+
+        function showEndScreen() {
+            document.getElementById('action-buttons').classList.add('hidden');
+            document.getElementById('special-buttons').classList.add('hidden');
+            document.getElementById('challenge-desc').classList.add('hidden');
+            document.getElementById('last-scene-msg').classList.add('hidden');
+            document.getElementById('final-screen').classList.remove('hidden');
+            document.getElementById('final-stats').innerHTML = `Éxitos: <strong>${state.stats.v}</strong> | Fallos: <strong>${state.stats.l}</strong>`;
+        }
+
+        // GENERADORES MANUALES
+        function rollManualTable(key) {
+            const list = manualTables[key];
+            const dice1 = Math.floor(Math.random() * 6);
+            const dice2 = Math.floor(Math.random() * 6);
+            const index = (dice1 * 6) + dice2;
+            const codes = ["A","B","C","D","E","F"];
+            const res = list[index];
+            alert(`[${codes[dice1]}${codes[dice2]}] Resultado: ${res}`);
+        }
+
+        function rollTwist(genre) {
+            const dice1 = Math.floor(Math.random() * 6);
+            const dice2 = Math.floor(Math.random() * 6);
+            const codes = ["A","B","C","D","E","F"];
+            alert(`Giro de ${genre.toUpperCase()} [${codes[dice1]}${codes[dice2]}]\nUsa la tabla del setting o interpreta este código como sugerencia.`);
+        }
+
+        function openTwistMenu() {
+            const g = prompt("Elige género para el Giro:\n1. Fantasía\n2. Terror\n3. Sci-Fi");
+            if(g=="1") rollTwist('fantasy');
+            else if(g=="2") rollTwist('horror');
+            else if(g=="3") rollTwist('scifi');
+        }
+
+        function rollFantasyName() {
+            const pre = names.pre[Math.floor(Math.random() * names.pre.length)];
+            const suf = names.suf[Math.floor(Math.random() * names.suf.length)];
+            alert(`Nombre Generado: ${pre}${suf.toLowerCase()}`);
+        }
+
+        function rollOracle(target) {
+            const r1 = Math.floor(Math.random() * 6) + 1;
+            const r2 = Math.floor(Math.random() * 6) + 1;
+            let res = r1 >= target ? "SÍ" : "NO";
+            if (r2 <= 2) res += ", pero..."; if (r2 >= 5) res += ", y además...";
+            document.getElementById('oracle-result').innerText = `Dado: ${r1} → ${res}`;
         }
 
         function initDeck() {
@@ -214,112 +313,25 @@
             state.deck = [];
             suits.forEach(s => values.forEach(v => state.deck.push({v, s})));
             state.deck.push({v: 'Joker', s: ''});
-            state.drawn = [];
-            state.stats = { v: 0, l: 0 };
-            shuffle(state.deck);
-            save();
-            updateUI();
+            state.drawn = []; state.stats = { v: 0, l: 0 }; state.adventureStarted = false; state.isGameOver = false;
+            shuffle(state.deck); save();
+            location.reload(); // Recarga para resetear UI limpia
         }
 
         function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } }
-
-        function drawCard() {
-            if (state.deck.length === 0) return;
-            const card = state.deck.pop();
-            state.drawn.push(card);
-            
-            const isRed = ['♥','♦'].includes(card.s);
-            const el = document.getElementById('card-icon');
-            el.innerText = `${card.v}${card.s}`;
-            el.className = 'card-display ' + (isRed ? 'suit-red' : 'suit-black');
-            
-            document.getElementById('current-card-area').classList.remove('hidden');
-            processLogic(card, isRed);
-            updateUI();
-            save();
-        }
-
-        function processLogic(card, isRed) {
-            const desc = document.getElementById('challenge-desc');
-            const btns = document.getElementById('action-buttons');
-            const lang = i18n[state.lang];
-            
-            if (['J', 'Q', 'K'].includes(card.v)) {
-                let p = card.v === 'K' ? "Main" : (card.v === 'Q' ? "Primary" : "Secondary");
-                desc.innerHTML = `<strong>${lang.plot_adv.replace('{p}', p)}</strong><br>${isRed ? lang.red_pos : lang.black_neg}`;
-                btns.classList.add('hidden');
-            } else if (card.v === 'A' || card.v === 'Joker') {
-                desc.innerText = lang.scene_change;
-                btns.classList.add('hidden');
-            } else {
-                btns.classList.remove('hidden');
-                const n = parseInt(card.v);
-                let trait = n <= 4 ? lang.t_agile : (n <= 7 ? lang.t_brawny : lang.t_crafty);
-                let diff = [2, 5, 8].includes(n) ? lang.d_easy : ([3, 6, 9].includes(n) ? lang.d_std : lang.d_hard);
-                desc.innerHTML = `Challenge: <strong>${trait}</strong><br><small>${diff}</small>`;
-            }
-            checkFinal();
-        }
-
-        function checkFinal() {
-            const spots = state.drawn.filter(c => !isNaN(c.v));
-            const suits = {};
-            spots.forEach(c => suits[c.s] = (suits[c.s] || 0) + 1);
-            const counts = Object.values(suits);
-            if (spots.length >= 9 || counts.some(v => v >= 5) || (counts.filter(v => v >= 3).length >= 1 && counts.filter(v => v >= 2).length >= 2)) {
-                showModal("SESSION END", i18n[state.lang].msg_final);
-            }
-        }
-
-        function resolve(win) {
-            if (win) state.stats.v++; else state.stats.l++;
-            document.getElementById('current-card-area').classList.add('hidden');
-            renderHistory();
-            updateUI();
-            save();
-        }
-
-        function updateUI() {
-            document.getElementById('v-count').innerText = state.stats.v;
-            document.getElementById('l-count').innerText = state.stats.l;
-            document.getElementById('deck-count').innerText = state.deck.length;
-        }
-
+        function updateUI() { document.getElementById('v-count').innerText = state.stats.v; document.getElementById('l-count').innerText = state.stats.l; document.getElementById('deck-count').innerText = state.deck.length; }
         function renderHistory() {
-            const h = document.getElementById('card-history');
-            h.innerHTML = state.drawn.map(c => `<span>${c.v}${c.s}</span>`).reverse().join(' | ');
+            const h = document.getElementById('card-history'); h.innerHTML = "";
+            [...state.drawn].reverse().forEach(item => {
+                if (['J', 'Q', 'K'].includes(item.card.v)) return;
+                const span = document.createElement('span');
+                const isRed = ['♥','♦'].includes(item.card.s);
+                span.className = `hist-item ${isRed ? 'suit-red' : 'suit-black'} ${item.result === false ? 'hist-fail' : ''}`;
+                span.innerText = `${item.card.v}${item.card.s}`;
+                h.appendChild(span);
+            });
         }
-
-        function rollTable(key) {
-            const res = tables[key][Math.floor(Math.random() * tables[key].length)];
-            showModal("Result", res);
-        }
-
-        function rollName(t) {
-            const res = tables[t][Math.floor(Math.random() * tables[t].length)];
-            showModal("NPC Name", res);
-        }
-
-        function rollFantasyName() {
-            const p = tables.fantasy_pre[Math.floor(Math.random() * tables.fantasy_pre.length)];
-            const s = tables.fantasy_suf[Math.floor(Math.random() * tables.fantasy_suf.length)];
-            showModal("Fantasy Name", p + s.toLowerCase());
-        }
-
-        function showModal(t, b) {
-            document.getElementById('m-title').innerText = t;
-            document.getElementById('m-body').innerText = b;
-            document.getElementById('modal-app').showModal();
-        }
-        function closeModal() { document.getElementById('modal-app').close(); }
-        
-        function confirmReset() { 
-            if(confirm(i18n[state.lang].confirm_reset)) {
-                localStorage.removeItem('tricube_v3');
-                location.reload();
-            } 
-        }
-
+        function confirmReset() { if(confirm("¿Reiniciar mazo y aventura?")) initDeck(); }
         window.onload = load;
     </script>
 </body>
