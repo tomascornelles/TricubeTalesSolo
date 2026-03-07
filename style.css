@@ -1,0 +1,35 @@
+:root { --primary: #d81b60; }
+body { padding-top: 1rem; }
+.card-display { font-size: 3.5rem; text-align: center; margin: 0.5rem 0; font-weight: bold; min-height: 1.2em; transition: all 0.2s; }
+.shuffling { animation: shake 0.1s infinite; opacity: 0.5; filter: blur(2px); }
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    50% { transform: translate(-1px, -2px) rotate(-1deg); }
+    100% { transform: translate(1px, 1px) rotate(0deg); }
+}
+.btn-victory { background-color: #2e7d32 !important; border-color: #2e7d32 !important; color: white !important; }
+.btn-loss { background-color: #c62828 !important; border-color: #c62828 !important; color: white !important; }
+.suit-red { color: #e53935; }
+.suit-black { color: #212121; }
+.history-list { font-size: 1rem; max-height: 120px; overflow-y: auto; background: #f4f4f4; padding: 0.8rem; border-radius: 5px; border: 1px solid #ccc; display: flex; flex-wrap: wrap; gap: 8px; }
+.hist-item { padding: 2px 5px; border-radius: 4px; font-weight: bold; }
+.hist-fail { opacity: 0.5; text-decoration: line-through; }
+.hidden { display: none; }
+.oracle-box { border: 1px dashed #ccc; padding: 1rem; border-radius: 8px; margin-top: 1rem; background: #fff; }
+.oracle-grid { display: grid; grid-template-columns: 1fr; gap: 5px; margin-top: 10px; }
+.oracle-grid button { margin-bottom: 0; font-size: 0.7rem; padding: 4px; }
+.oracle-res { font-weight: bold; font-size: 1.1rem; color: var(--primary); margin-top: 10px; display: block; text-align: center; }
+#current-card-area { border: 2px solid var(--primary); padding: 1rem; border-radius: 10px; min-height: 420px; }
+.last-scene-alert { background: #fff3cd; color: #856404; padding: 5px; text-align: center; font-weight: bold; border-radius: 5px; margin-bottom: 10px; border: 1px solid #ffeeba; }
+.game-over-banner { background: #1a1a1a; color: #fff; padding: 1rem; border-radius: 8px; text-align: center; margin-top: 1rem; border: 2px solid gold; }
+.gen-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; }
+.gen-section { border: 1px solid #eee; padding: 10px; border-radius: 8px; }
+.gen-section h6 { margin-bottom: 10px; font-size: 0.8rem; text-transform: uppercase; color: #666; }
+.gen-section button { width: 100%; font-size: 0.75rem; padding: 8px; margin-bottom: 5px; }
+dialog article { max-width: 500px; }
+.modal-dice { display: inline-block; background: #333; color: #fff; padding: 2px 8px; border-radius: 4px; font-family: monospace; margin-right: 10px; }
+.twist-idea { font-style: italic; color: var(--primary); margin-top: 10px; display: block; border-left: 3px solid var(--primary); padding-left: 10px; }
+
+footer { margin-top: 2rem; border-top: 1px solid #eee; padding: 1rem 0; display: flex; justify-content: flex-end; align-items: center; gap: 10px; }
+.lang-select-container { width: 200px; margin-bottom: 0; }
+.lang-select-container select { margin-bottom: 0; font-size: 0.8rem; }
