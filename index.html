@@ -3,48 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tricube Tales Solo - Director Edition</title>
+    <title>Tricube Tales Solo - Multi-Language</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <style>
         :root { --primary: #d81b60; }
         body { padding-top: 1rem; }
         .card-display { font-size: 3.5rem; text-align: center; margin: 0.5rem 0; font-weight: bold; min-height: 1.2em; transition: all 0.2s; }
-        
         .shuffling { animation: shake 0.1s infinite; opacity: 0.5; filter: blur(2px); }
         @keyframes shake {
             0% { transform: translate(1px, 1px) rotate(0deg); }
             50% { transform: translate(-1px, -2px) rotate(-1deg); }
             100% { transform: translate(1px, 1px) rotate(0deg); }
         }
-
         .btn-victory { background-color: #2e7d32 !important; border-color: #2e7d32 !important; color: white !important; }
         .btn-loss { background-color: #c62828 !important; border-color: #c62828 !important; color: white !important; }
         .suit-red { color: #e53935; }
         .suit-black { color: #212121; }
-        
         .history-list { font-size: 1rem; max-height: 120px; overflow-y: auto; background: #f4f4f4; padding: 0.8rem; border-radius: 5px; border: 1px solid #ccc; display: flex; flex-wrap: wrap; gap: 8px; }
         .hist-item { padding: 2px 5px; border-radius: 4px; font-weight: bold; }
         .hist-fail { opacity: 0.5; text-decoration: line-through; }
-        
         .hidden { display: none; }
-        
         .oracle-box { border: 1px dashed #ccc; padding: 1rem; border-radius: 8px; margin-top: 1rem; background: #fff; }
         .oracle-grid { display: grid; grid-template-columns: 1fr; gap: 5px; margin-top: 10px; }
         .oracle-grid button { margin-bottom: 0; font-size: 0.7rem; padding: 4px; }
         .oracle-res { font-weight: bold; font-size: 1.1rem; color: var(--primary); margin-top: 10px; display: block; text-align: center; }
-        
         #current-card-area { border: 2px solid var(--primary); padding: 1rem; border-radius: 10px; min-height: 420px; }
         .last-scene-alert { background: #fff3cd; color: #856404; padding: 5px; text-align: center; font-weight: bold; border-radius: 5px; margin-bottom: 10px; border: 1px solid #ffeeba; }
         .game-over-banner { background: #1a1a1a; color: #fff; padding: 1rem; border-radius: 8px; text-align: center; margin-top: 1rem; border: 2px solid gold; }
-        
         .gen-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; }
         .gen-section { border: 1px solid #eee; padding: 10px; border-radius: 8px; }
         .gen-section h6 { margin-bottom: 10px; font-size: 0.8rem; text-transform: uppercase; color: #666; }
         .gen-section button { width: 100%; font-size: 0.75rem; padding: 8px; margin-bottom: 5px; }
-
         dialog article { max-width: 500px; }
         .modal-dice { display: inline-block; background: #333; color: #fff; padding: 2px 8px; border-radius: 4px; font-family: monospace; margin-right: 10px; }
         .twist-idea { font-style: italic; color: var(--primary); margin-top: 10px; display: block; border-left: 3px solid var(--primary); padding-left: 10px; }
+        footer { margin-top: 2rem; border-top: 1px solid #eee; padding: 1rem 0; }
+        .lang-bar { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+        .lang-bar button { font-size: 0.7rem; padding: 5px 10px; }
     </style>
 </head>
 <body>
@@ -53,56 +48,60 @@
         <section id="game-section">
             <div class="grid">
                 <article>
-                    <h5>Estado</h5>
+                    <h5 data-i18n="status">Estado</h5>
                     <div style="margin-bottom:15px;">
-                        <small>Éxitos: <span id="v-count">0</span> | Fallos: <span id="l-count">0</span> | Mazo: <span id="deck-count">53</span></small>
+                        <small>
+                            <span data-i18n="wins">Éxitos</span>: <span id="v-count">0</span> | 
+                            <span data-i18n="losses">Fallos</span>: <span id="l-count">0</span> | 
+                            <span data-i18n="deck">Mazo</span>: <span id="deck-count">53</span>
+                        </small>
                     </div>
 
                     <div class="oracle-box">
-                        <strong>Oráculo (Probabilidad)</strong>
+                        <strong data-i18n="oracle_title">Oráculo (Probabilidad)</strong>
                         <div class="oracle-grid">
-                            <button class="outline contrast" onclick="rollOracle(2)">Muy Probable (2+)</button>
-                            <button class="outline contrast" onclick="rollOracle(3)">Probable (3+)</button>
-                            <button class="outline contrast" onclick="rollOracle(4)">Tal vez (4+)</button>
-                            <button class="outline contrast" onclick="rollOracle(5)">Improbable (5+)</button>
-                            <button class="outline contrast" onclick="rollOracle(6)">Casi imposible (6)</button>
+                            <button class="outline contrast" onclick="rollOracle(2)" data-i18n="v_likely">Muy Probable (2+)</button>
+                            <button class="outline contrast" onclick="rollOracle(3)" data-i18n="likely">Probable (3+)</button>
+                            <button class="outline contrast" onclick="rollOracle(4)" data-i18n="maybe">Tal vez (4+)</button>
+                            <button class="outline contrast" onclick="rollOracle(5)" data-i18n="unlikely">Improbable (5+)</button>
+                            <button class="outline contrast" onclick="rollOracle(6)" data-i18n="v_unlikely">Casi imposible (6)</button>
                         </div>
                         <span id="oracle-result" class="oracle-res"></span>
                     </div>
                 </article>
 
                 <article id="current-card-area">
-                    <button id="init-scene-btn" onclick="startAdventure()" style="width:100%">Empezar Escena Inicial</button>
+                    <button id="init-scene-btn" onclick="startAdventure()" style="width:100%" data-i18n="start_adventure">Empezar Escena Inicial</button>
                     
                     <div id="card-content-wrapper" class="hidden">
-                        <div id="last-scene-msg" class="last-scene-alert hidden">⚠️ ESTA ES LA ÚLTIMA ESCENA</div>
+                        <div id="last-scene-msg" class="last-scene-alert hidden" data-i18n="last_scene_warn">⚠️ ESTA ES LA ÚLTIMA ESCENA</div>
                         <div id="card-icon" class="card-display">?</div>
                         <p id="challenge-desc" style="text-align:center; min-height: 3em;"></p>
                         
                         <div class="grid" id="action-buttons">
-                            <button class="btn-victory" onclick="resolve(true)">Victoria</button>
-                            <button class="btn-loss" onclick="resolve(false)">Fracaso</button>
+                            <button class="btn-victory" onclick="resolve(true)" data-i18n="btn_win">Victoria</button>
+                            <button class="btn-loss" onclick="resolve(false)" data-i18n="btn_fail">Fracaso</button>
                         </div>
 
                         <div class="grid hidden" id="special-buttons">
-                            <button class="primary" onclick="drawCard()">Continuar</button>
-                            <button id="twist-btn" class="secondary outline hidden" onclick="openTwistModal()">¡Giro!</button>
+                            <button class="primary" onclick="drawCard()" data-i18n="btn_continue">Continuar</button>
+                            <button id="twist-btn" class="secondary outline hidden" onclick="openTwistModal()" data-i18n="btn_twist">¡Giro!</button>
                         </div>
 
                         <div id="final-screen" class="game-over-banner hidden">
-                            <h3>SESIÓN FINALIZADA</h3>
+                            <h3 data-i18n="game_over">SESIÓN FINALIZADA</h3>
                             <p id="final-stats"></p>
-                            <button class="contrast" onclick="initDeck()" style="width:100%">Nueva Aventura</button>
+                            <button class="contrast" onclick="initDeck()" style="width:100%" data-i18n="new_adventure">Nueva Aventura</button>
                         </div>
                     </div>
                     
                     <hr>
-                    <button class="secondary outline" onclick="showResetConfirm()" style="font-size: 0.7rem; width: 100%;">Reiniciar Mazo</button>
+                    <button class="secondary outline" onclick="showResetConfirm()" style="font-size: 0.7rem; width: 100%;" data-i18n="reset_deck">Reiniciar Mazo</button>
                 </article>
             </div>
             
             <details>
-                <summary>Historial de Desafíos</summary>
+                <summary data-i18n="history">Historial de Desafíos</summary>
                 <div id="card-history" class="history-list"></div>
             </details>
         </section>
@@ -110,75 +109,154 @@
         <hr>
 
         <section id="generators-section">
-            <h4>Generadores del Manual</h4>
+            <h4 data-i18n="gen_title">Generadores del Manual</h4>
             <div class="gen-container">
                 <div class="gen-section">
-                    <h6>📍 Localizaciones</h6>
-                    <button class="secondary outline" onclick="rollManualTable('urban', 'Ciudad')">Ciudad</button>
-                    <button class="secondary outline" onclick="rollManualTable('wilderness', 'Salvaje')">Salvaje</button>
-                    <button class="secondary outline" onclick="rollManualTable('voyage', 'Viaje')">Viaje</button>
+                    <h6 data-i18n="cat_loc">📍 Localizaciones</h6>
+                    <button class="secondary outline" onclick="rollManualTable('urban', 'loc_urban')" data-i18n="loc_urban">Ciudad</button>
+                    <button class="secondary outline" onclick="rollManualTable('wilderness', 'loc_wild')" data-i18n="loc_wild">Salvaje</button>
+                    <button class="secondary outline" onclick="rollManualTable('voyage', 'loc_voyage')" data-i18n="loc_voyage">Viaje</button>
                 </div>
                 <div class="gen-section">
-                    <h6>✨ Rasgos</h6>
-                    <button class="secondary outline" onclick="rollManualTable('urban_feat', 'Rasgo Urbano')">Urbano</button>
-                    <button class="secondary outline" onclick="rollManualTable('wild_feat', 'Rasgo Salvaje')">Salvaje</button>
-                    <button class="secondary outline" onclick="rollManualTable('voyage_feat', 'Hito Viaje')">Viaje</button>
+                    <h6 data-i18n="cat_feat">✨ Rasgos</h6>
+                    <button class="secondary outline" onclick="rollManualTable('urban_feat', 'feat_urban')" data-i18n="feat_urban">Urbano</button>
+                    <button class="secondary outline" onclick="rollManualTable('wild_feat', 'feat_wild')" data-i18n="feat_wild">Salvaje</button>
+                    <button class="secondary outline" onclick="rollManualTable('voyage_feat', 'feat_voyage')" data-i18n="feat_voyage">Viaje</button>
                 </div>
                 <div class="gen-section">
-                    <h6>👥 Gente</h6>
-                    <button class="secondary outline" onclick="rollManualTable('urban_ppl', 'Gente Ciudad')">Ciudad</button>
-                    <button class="secondary outline" onclick="rollManualTable('wild_ppl', 'Gente Campo')">Campo</button>
-                    <button class="contrast outline" onclick="rollFantasyName()">Nombre</button>
+                    <h6 data-i18n="cat_ppl">👥 Gente</h6>
+                    <button class="secondary outline" onclick="rollManualTable('urban_ppl', 'ppl_urban')" data-i18n="ppl_urban">Ciudad</button>
+                    <button class="secondary outline" onclick="rollManualTable('wild_ppl', 'ppl_wild')" data-i18n="ppl_wild">Campo</button>
+                    <button class="contrast outline" onclick="rollFantasyName()" data-i18n="gen_name">Nombre</button>
                 </div>
                 <div class="gen-section">
-                    <h6>🌀 Giros con Ideas</h6>
-                    <button class="primary outline" onclick="rollTwist('fantasy', 'Fantasía')">Fantasía</button>
-                    <button class="primary outline" onclick="rollTwist('horror', 'Terror')">Terror</button>
-                    <button class="primary outline" onclick="rollTwist('scifi', 'C. Ficción')">Sci-Fi</button>
+                    <h6 data-i18n="cat_twist">🌀 Giros con Ideas</h6>
+                    <button class="primary outline" onclick="rollTwist('fantasy', 'twist_fantasy')" data-i18n="twist_fantasy">Fantasía</button>
+                    <button class="primary outline" onclick="rollTwist('horror', 'twist_horror')" data-i18n="twist_horror">Terror</button>
+                    <button class="primary outline" onclick="rollTwist('scifi', 'twist_scifi')" data-i18n="twist_scifi">Sci-Fi</button>
                 </div>
             </div>
         </section>
+
+        <footer>
+            <div class="lang-bar">
+                <button class="outline" onclick="setLang('es')">ESP 🇪🇸</button>
+                <button class="outline" onclick="setLang('en')">ENG 🇺🇸</button>
+                <button class="outline" onclick="setLang('fr')">FRA 🇫🇷</button>
+                <button class="outline" onclick="setLang('it')">ITA 🇮🇹</button>
+                <button class="outline" onclick="setLang('de')">DEU 🇩🇪</button>
+            </div>
+        </footer>
     </main>
 
     <dialog id="modal-info">
         <article>
             <header>
                 <a href="#close" aria-label="Close" class="close" onclick="closeModal('modal-info')"></a>
-                <strong id="modal-title">Resultado</strong>
+                <strong id="modal-title"></strong>
             </header>
             <div id="modal-body"></div>
-            <footer>
-                <button onclick="closeModal('modal-info')">Entendido</button>
-            </footer>
+            <footer><button onclick="closeModal('modal-info')" data-i18n="modal_ok">Entendido</button></footer>
         </article>
     </dialog>
 
     <dialog id="modal-confirm">
         <article>
-            <header><strong>¿Reiniciar mazo?</strong></header>
-            <p>Se perderá el progreso actual.</p>
+            <header><strong data-i18n="reset_q">¿Reiniciar?</strong></header>
+            <p data-i18n="reset_text">Se perderá el progreso actual.</p>
             <footer>
-                <button class="secondary outline" onclick="closeModal('modal-confirm')">Cancelar</button>
-                <button onclick="initDeck()">Sí, reiniciar</button>
+                <button class="secondary outline" onclick="closeModal('modal-confirm')" data-i18n="modal_cancel">Cancelar</button>
+                <button onclick="initDeck()" data-i18n="modal_yes">Sí, reiniciar</button>
             </footer>
         </article>
     </dialog>
 
     <dialog id="modal-twist-choice">
         <article>
-            <header><strong>Selecciona un Género</strong></header>
+            <header><strong data-i18n="select_genre">Selecciona un Género</strong></header>
             <div class="oracle-grid">
-                <button onclick="rollTwist('fantasy', 'Fantasía')">Fantasía</button>
-                <button onclick="rollTwist('horror', 'Terror')">Terror</button>
-                <button onclick="rollTwist('scifi', 'C. Ficción')">Ciencia Ficción</button>
+                <button onclick="rollTwist('fantasy', 'twist_fantasy')" data-i18n="twist_fantasy">Fantasía</button>
+                <button onclick="rollTwist('horror', 'twist_horror')" data-i18n="twist_horror">Terror</button>
+                <button onclick="rollTwist('scifi', 'twist_scifi')" data-i18n="twist_scifi">Ciencia Ficción</button>
             </div>
-            <footer>
-                <button class="secondary outline" onclick="closeModal('modal-twist-choice')">Cancelar</button>
-            </footer>
+            <footer><button class="secondary outline" onclick="closeModal('modal-twist-choice')" data-i18n="modal_cancel">Cancelar</button></footer>
         </article>
     </dialog>
 
     <script>
+        const i18n = {
+            es: {
+                status: "Estado", wins: "Éxitos", losses: "Fallos", deck: "Mazo", oracle_title: "Oráculo (Probabilidad)",
+                v_likely: "Muy Probable (2+)", likely: "Probable (3+)", maybe: "Tal vez (4+)", unlikely: "Improbable (5+)", v_unlikely: "Casi imposible (6)",
+                start_adventure: "Empezar Escena Inicial", last_scene_warn: "⚠️ ÚLTIMA ESCENA", btn_win: "Victoria", btn_fail: "Fracaso",
+                btn_continue: "Continuar", btn_twist: "¡Giro!", game_over: "SESIÓN FINALIZADA", new_adventure: "Nueva Aventura",
+                reset_deck: "Reiniciar Mazo", history: "Historial de Desafíos", gen_title: "Generadores del Manual",
+                cat_loc: "📍 Localizaciones", cat_feat: "✨ Rasgos", cat_ppl: "👥 Gente", cat_twist: "🌀 Giros",
+                loc_urban: "Ciudad", loc_wild: "Salvaje", loc_voyage: "Viaje", feat_urban: "Rasgo Urbano", feat_wild: "Rasgo Salvaje", feat_voyage: "Hito Viaje",
+                ppl_urban: "Gente Ciudad", ppl_wild: "Gente Campo", gen_name: "Nombre", twist_fantasy: "Fantasía", twist_horror: "Terror", twist_scifi: "Sci-Fi",
+                modal_ok: "Entendido", reset_q: "¿Reiniciar?", reset_text: "Se perderá el progreso actual.", modal_cancel: "Cancelar", modal_yes: "Sí, reiniciar",
+                select_genre: "Selecciona un Género", plot_main: "Trama Principal", plot_pri: "Trama Primaria", plot_sec: "Trama Secundaria",
+                eff_pos: "Efecto Positivo", eff_neg: "Efecto Negativo", twist_event: "Giro inesperado / Cambio escena",
+                trait_agile: "Ágil", trait_strong: "Fuerte", trait_crafty: "Astuto", challenge: "Desafío de", oracle_res: "Dado", idea_label: "Idea sugerida"
+            },
+            en: {
+                status: "Status", wins: "Wins", losses: "Losses", deck: "Deck", oracle_title: "Oracle (Probability)",
+                v_likely: "Very Likely (2+)", likely: "Likely (3+)", maybe: "Maybe (4+)", unlikely: "Unlikely (5+)", v_unlikely: "Very Unlikely (6)",
+                start_adventure: "Start Initial Scene", last_scene_warn: "⚠️ FINAL SCENE", btn_win: "Win", btn_fail: "Failure",
+                btn_continue: "Continue", btn_twist: "Twist!", game_over: "SESSION ENDED", new_adventure: "New Adventure",
+                reset_deck: "Reset Deck", history: "Challenge History", gen_title: "Manual Generators",
+                cat_loc: "📍 Locations", cat_feat: "✨ Features", cat_ppl: "👥 People", cat_twist: "🌀 Twists",
+                loc_urban: "Urban", loc_wild: "Wilderness", loc_voyage: "Voyage", feat_urban: "Urban Feature", feat_wild: "Wild Feature", feat_voyage: "Voyage Landmark",
+                ppl_urban: "Urban People", ppl_wild: "Wild People", gen_name: "Name", twist_fantasy: "Fantasy", twist_horror: "Horror", twist_scifi: "Sci-Fi",
+                modal_ok: "Got it", reset_q: "Reset?", reset_text: "Current progress will be lost.", modal_cancel: "Cancel", modal_yes: "Yes, reset",
+                select_genre: "Select Genre", plot_main: "Main Plot", plot_pri: "Primary Plot", plot_sec: "Secondary Plot",
+                eff_pos: "Positive Effect", eff_neg: "Negative Effect", twist_event: "Unexpected Twist / Scene Change",
+                trait_agile: "Agile", trait_strong: "Strong", trait_crafty: "Crafty", challenge: "Challenge", oracle_res: "Die", idea_label: "Suggested Idea"
+            },
+            fr: {
+                status: "Statut", wins: "Succès", losses: "Échecs", deck: "Paquet", oracle_title: "Oracle (Probabilité)",
+                v_likely: "Très probable (2+)", likely: "Probable (3+)", maybe: "Peut-être (4+)", unlikely: "Improbable (5+)", v_unlikely: "Presque impossible (6)",
+                start_adventure: "Commencer l'aventure", last_scene_warn: "⚠️ DERNIÈRE SCÈNE", btn_win: "Victoire", btn_fail: "Échec",
+                btn_continue: "Continuer", btn_twist: "Reondissement !", game_over: "SESSION TERMINÉE", new_adventure: "Nouvelle Aventure",
+                reset_deck: "Réinitialiser", history: "Historique", gen_title: "Générateurs",
+                cat_loc: "📍 Lieux", cat_feat: "✨ Traits", cat_ppl: "👥 Personnes", cat_twist: "🌀 Rebonds",
+                loc_urban: "Urbain", loc_wild: "Sauvage", loc_voyage: "Voyage", feat_urban: "Trait Urbain", feat_wild: "Trait Sauvage", feat_voyage: "Étape Voyage",
+                ppl_urban: "Gens Urbains", ppl_wild: "Gens Sauvages", gen_name: "Nom", twist_fantasy: "Fantaisie", twist_horror: "Horreur", twist_scifi: "Sci-Fi",
+                modal_ok: "Compris", reset_q: "Réinitialiser ?", reset_text: "La progression sera perdue.", modal_cancel: "Annuler", modal_yes: "Oui",
+                select_genre: "Choisir le genre", plot_main: "Intrigue Principale", plot_pri: "Intrigue Primaire", plot_sec: "Intrigue Secondaire",
+                eff_pos: "Effet Positif", eff_neg: "Effet Négatif", twist_event: "Reondissement inattendu",
+                trait_agile: "Agile", trait_strong: "Fort", trait_crafty: "Ruzé", challenge: "Défi de", oracle_res: "Dé", idea_label: "Idée suggérée"
+            },
+            it: {
+                status: "Stato", wins: "Successi", losses: "Fallimenti", deck: "Mazzo", oracle_title: "Oracolo (Probabilità)",
+                v_likely: "Molto probabile (2+)", likely: "Probabile (3+)", maybe: "Forse (4+)", unlikely: "Improbabile (5+)", v_unlikely: "Quasi impossibile (6)",
+                start_adventure: "Inizia Avventura", last_scene_warn: "⚠️ ULTIMA SCENA", btn_win: "Vittoria", btn_fail: "Fallimento",
+                btn_continue: "Continua", btn_twist: "Colpo di scena!", game_over: "SESSIONE FINITA", new_adventure: "Nuova Avventura",
+                reset_deck: "Reset Mazzo", history: "Cronologia", gen_title: "Generatori",
+                cat_loc: "📍 Luoghi", cat_feat: "✨ Caratteristiche", cat_ppl: "👥 Gente", cat_twist: "🌀 Svolte",
+                loc_urban: "Urbano", loc_wild: "Selvaggio", loc_voyage: "Viaggio", feat_urban: "Tratto Urbano", feat_wild: "Tratto Selvaggio", feat_voyage: "Tappa Viaggio",
+                ppl_urban: "Gente Città", ppl_wild: "Gente Campo", gen_name: "Nome", twist_fantasy: "Fantasy", twist_horror: "Horror", twist_scifi: "Sci-Fi",
+                modal_ok: "Capito", reset_q: "Reset?", reset_text: "I progressi andranno persi.", modal_cancel: "Annulla", modal_yes: "Sì, reset",
+                select_genre: "Scegli Genere", plot_main: "Trama Principale", plot_pri: "Trama Primaria", plot_sec: "Trama Secondaria",
+                eff_pos: "Effetto Positivo", eff_neg: "Effetto Negativo", twist_event: "Svolta inaspettata",
+                trait_agile: "Agile", trait_strong: "Forte", trait_crafty: "Astuto", challenge: "Sfida di", oracle_res: "Dado", idea_label: "Idea suggerita"
+            },
+            de: {
+                status: "Status", wins: "Erfolge", losses: "Fehlschläge", deck: "Deck", oracle_title: "Orakel (Wahrscheinlichkeit)",
+                v_likely: "Sehr wahrscheinlich (2+)", likely: "Wahrscheinlich (3+)", maybe: "Vielleicht (4+)", unlikely: "Unwahrscheinlich (5+)", v_unlikely: "Fast unmöglich (6)",
+                start_adventure: "Abenteuer starten", last_scene_warn: "⚠️ LETZTE SZENE", btn_win: "Sieg", btn_fail: "Fehlschlag",
+                btn_continue: "Weiter", btn_twist: "Wendung!", game_over: "SITZUNG BEENDET", new_adventure: "Neues Abenteuer",
+                reset_deck: "Deck zurücksetzen", history: "Verlauf", gen_title: "Generatoren",
+                cat_loc: "📍 Orte", cat_feat: "✨ Merkmale", cat_ppl: "👥 Leute", cat_twist: "🌀 Wendungen",
+                loc_urban: "Städtisch", loc_wild: "Wildnis", loc_voyage: "Reise", feat_urban: "Stadtmerkmal", feat_wild: "Wildnismerkmal", feat_voyage: "Reise-Meilenstein",
+                ppl_urban: "Städter", ppl_wild: "Wildnis-Leute", gen_name: "Name", twist_fantasy: "Fantasy", twist_horror: "Horror", twist_scifi: "Sci-Fi",
+                modal_ok: "Verstanden", reset_q: "Zurücksetzen?", reset_text: "Fortschritt wird gelöscht.", modal_cancel: "Abbrechen", modal_yes: "Ja",
+                select_genre: "Genre wählen", plot_main: "Hauptplot", plot_pri: "Primärplot", plot_sec: "Sekundärplot",
+                eff_pos: "Positiver Effekt", eff_neg: "Negativer Effekt", twist_event: "Unerwartete Wendung",
+                trait_agile: "Wendig", trait_strong: "Stark", trait_crafty: "Schlau", challenge: "Herausforderung", oracle_res: "Würfel", idea_label: "Idee"
+            }
+        };
+
         const manualTables = {
             urban: ["Callejón", "Banco", "Puente", "Burdel", "Castillo", "Catedral", "Cementerio", "Cisterna", "Ayuntamiento", "Muelle", "Puerta ciudad", "Embajada", "Fábrica", "Granja", "Fuerte", "Gremio", "Hospital", "Posada", "Cárcel", "Biblioteca", "Mansión", "Mercado", "Monasterio", "Monumento", "Museo", "Oficina", "Orfanato", "Palacio", "Parque", "Plaza", "Pueblo", "Establo", "Alcantarilla", "Taberna", "Teatro", "Universidad"],
             urban_feat: ["Abandonado", "Hermoso", "Bloqueado", "Limpio", "Desordenado", "Colorido", "Concurrido", "Peligroso", "Oscuro", "Sucio", "Deteriorado", "Vacío", "Exótico", "Famoso", "Festivo", "Prohibido", "Olvidados", "Fortificado", "Atestado", "Lujoso", "Magnífico", "Modernizado", "Misterioso", "Nuevo", "Decrépito", "Anticuado", "Aplastante", "Tóxico", "Prominente", "Quemado", "Vigilado", "Pequeño", "Siniestro", "Modesto", "Vandalizado", "Abastecido"],
@@ -191,36 +269,31 @@
         };
 
         const twistIdeas = {
-            fantasy: [
-                "Un objeto mágico se activa por error o se agota.", "Un aliado revela una antigua profecía sobre ti.", "Aparece una criatura mística pidiendo un acertijo.", 
-                "El entorno cambia: la vegetación crece o el suelo flota.", "Alguien te confunde con un héroe de leyenda.", "Se revela que un enemigo es un pariente lejano.",
-                "Un portal se abre brevemente mostrando otro lugar.", "Tu equipo brilla con un aura extraña de repente.", "Un espíritu local exige un tributo o favor.",
-                "La magia en esta zona funciona de forma salvaje."
-            ],
-            horror: [
-                "Escuchas una risa familiar donde no hay nadie.", "Tus suministros se pudren o llenan de insectos.", "Una sombra se mueve de forma independiente a su dueño.",
-                "Encuentras una nota escrita con tu propia letra.", "El tiempo parece haberse detenido o buclado.", "Un PNJ querido empieza a actuar de forma siniestra.",
-                "Una herida antigua empieza a doler o a brillar.", "Las puertas se cierran solas tras de ti.", "Descubres que alguien te ha estado observando todo el rato.",
-                "Un espejo no refleja tu imagen, sino tus miedos."
-            ],
-            scifi: [
-                "Un fallo informático bloquea un acceso vital.", "Detectas una señal de radio de hace 100 años.", "La gravedad fluctúa violentamente en la zona.",
-                "Un dron desconocido empieza a seguirte en silencio.", "Tu IA personal detecta una anomalía en tu ADN.", "Un mercader ofrece tecnología prohibida o experimental.",
-                "El soporte vital indica una fuga crítica inexistente.", "Aparece un holograma con un mensaje de auxilio.", "Tu vehículo o nave hace un ruido inquietante.",
-                "Se revela que un aliado es un androide infiltrado."
-            ]
+            fantasy: ["Magic surge", "Prophecy revealed", "Mystical riddle", "Terrain floating", "Hero confusion", "Relative enemy", "Brief portal", "Gear glowing", "Spirit tribute", "Wild magic"],
+            horror: ["Familiar laughter", "Rotten supplies", "Free shadow", "Self-written note", "Looping time", "Sinister ally", "Aura of pain", "Self-closing doors", "Being watched", "Fear mirror"],
+            scifi: ["Glitch lockout", "Ancient radio", "Gravity flux", "Silent drone", "DNA anomaly", "Forbidden tech", "Fake leak", "Hologram SOS", "Vehicle rattle", "Android spy"]
         };
 
-        const names = {
-            pre: ["And", "Barth", "Cyn", "Dar", "Eld", "Fill", "Gal", "Gor", "Hord", "Izz", "Jaer", "Kyn", "Lok", "Lyth", "Mag", "Mord", "Ness", "Nol", "Ord", "Port", "Quint", "Rabb", "Roth", "Sard", "Sim", "Tann", "Thelm", "Ulin", "Venc", "Zar"],
-            suf: ["aer", "ak", "alis", "ard", "as", "astin", "ed", "egar", "en", "ent", "er", "eray", "esia", "ey", "ia", "ian", "iek", "ig", "ild", "in", "ion", "ique", "ith", "obund", "ock", "on", "ond", "op", "orish", "yn"]
-        };
+        const names = { pre: ["And", "Barth", "Cyn", "Dar", "Eld", "Gal"], suf: ["aer", "ak", "alis", "ard", "as", "en"] };
 
         let state = { deck: [], drawn: [], stats: { v: 0, l: 0 }, lang: 'es', adventureStarted: false, isGameOver: false };
 
-        function save() { localStorage.setItem('tricube_manual_twists', JSON.stringify(state)); }
+        function setLang(l) { state.lang = l; translateUI(); save(); }
+        
+        function translateUI() {
+            const d = i18n[state.lang];
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const k = el.getAttribute('data-i18n');
+                if (d[k]) el.innerText = d[k];
+            });
+            if(state.drawn.length > 0) processLogic(state.drawn[state.drawn.length-1].card, ['♥','♦'].includes(state.drawn[state.drawn.length-1].card.s));
+            renderHistory();
+        }
+
+        function save() { localStorage.setItem('tricube_multilang', JSON.stringify(state)); }
+        
         function load() {
-            const saved = localStorage.getItem('tricube_manual_twists');
+            const saved = localStorage.getItem('tricube_multilang');
             if (saved) { 
                 state = JSON.parse(saved); 
                 if(state.adventureStarted) {
@@ -228,17 +301,20 @@
                     document.getElementById('card-content-wrapper').classList.remove('hidden');
                 }
                 if(state.isGameOver) showEndScreen();
-                updateUI(); renderHistory(); 
+                updateUI(); translateUI();
             } else { initDeck(); }
         }
 
-        function openModal(id, title = "", body = "") {
-            if(title) document.getElementById('modal-title').innerText = title;
+        // MODALES
+        function openModal(id, titleKey = "", body = "") {
+            const d = i18n[state.lang];
+            if(titleKey) document.getElementById('modal-title').innerText = d[titleKey] || titleKey;
             if(body) document.getElementById('modal-body').innerHTML = body;
             document.getElementById(id).showModal();
         }
         function closeModal(id) { document.getElementById(id).close(); }
 
+        // JUEGO
         function startAdventure() {
             state.adventureStarted = true; state.isGameOver = false;
             document.getElementById('init-scene-btn').classList.add('hidden');
@@ -251,14 +327,10 @@
             const el = document.getElementById('card-icon');
             el.classList.add('shuffling');
             let counter = 0;
-            const animInterval = setInterval(() => {
+            const anim = setInterval(() => {
                 const rs = ['♠', '♣', '♥', '♦'];
                 el.innerText = (Math.floor(Math.random() * 9) + 2) + rs[Math.floor(Math.random() * 4)];
-                if(++counter > 8) {
-                    clearInterval(animInterval);
-                    el.classList.remove('shuffling');
-                    executeDraw();
-                }
+                if(++counter > 8) { clearInterval(anim); el.classList.remove('shuffling'); executeDraw(); }
             }, 50);
         }
 
@@ -271,11 +343,11 @@
             el.className = 'card-display ' + (isRed ? 'suit-red' : 'suit-black');
             processLogic(card, isRed);
             if (checkFinalCondition()) document.getElementById('last-scene-msg').classList.remove('hidden');
-            else document.getElementById('last-scene-msg').classList.add('hidden');
             updateUI(); save();
         }
 
         function processLogic(card, isRed) {
+            const d = i18n[state.lang];
             const desc = document.getElementById('challenge-desc');
             const bc = document.getElementById('action-buttons');
             const bs = document.getElementById('special-buttons');
@@ -283,18 +355,18 @@
             bc.classList.add('hidden'); bs.classList.add('hidden'); tb.classList.add('hidden');
 
             if (['J', 'Q', 'K'].includes(card.v)) {
-                let p = card.v === 'K' ? "Principal" : (card.v === 'Q' ? "Primaria" : "Secundaria");
-                desc.innerHTML = `Trama <strong>${p}</strong> avanza.<br>${isRed ? "Efecto Positivo" : "Efecto Negativo"}`;
+                let p = card.v === 'K' ? d.plot_main : (card.v === 'Q' ? d.plot_pri : d.plot_sec);
+                desc.innerHTML = `<strong>${p}</strong>.<br>${isRed ? d.eff_pos : d.eff_neg}`;
                 bs.classList.remove('hidden');
             } else if (card.v === 'A' || card.v === 'Joker') {
-                desc.innerText = "Giro inesperado / Cambio de escena.";
+                desc.innerText = d.twist_event;
                 bs.classList.remove('hidden'); tb.classList.remove('hidden');
             } else {
                 bc.classList.remove('hidden');
                 const n = parseInt(card.v);
-                let trait = n <= 4 ? "Ágil" : (n <= 7 ? "Fuerte" : "Astuto");
+                let trait = n <= 4 ? d.trait_agile : (n <= 7 ? d.trait_strong : d.trait_crafty);
                 let diff = [2, 5, 8].includes(n) ? "4+" : ([3, 6, 9].includes(n) ? "5+" : "6+");
-                desc.innerHTML = `Desafío de <strong>${trait}</strong> (${diff})`;
+                desc.innerHTML = `${d.challenge} <strong>${trait}</strong> (${diff})`;
             }
         }
 
@@ -303,8 +375,7 @@
             state.drawn[lastIdx].result = win;
             if (win) state.stats.v++; else state.stats.l++;
             renderHistory(); updateUI();
-            if (checkFinalCondition()) { state.isGameOver = true; showEndScreen(); }
-            else { drawCard(); }
+            if (checkFinalCondition()) { state.isGameOver = true; showEndScreen(); } else { drawCard(); }
             save();
         }
 
@@ -320,67 +391,54 @@
         }
 
         function showEndScreen() {
+            const d = i18n[state.lang];
             document.getElementById('action-buttons').classList.add('hidden');
             document.getElementById('special-buttons').classList.add('hidden');
             document.getElementById('challenge-desc').classList.add('hidden');
             document.getElementById('last-scene-msg').classList.add('hidden');
             document.getElementById('final-screen').classList.remove('hidden');
-            document.getElementById('final-stats').innerHTML = `Éxitos: <strong>${state.stats.v}</strong> | Fallos: <strong>${state.stats.l}</strong>`;
+            document.getElementById('final-stats').innerHTML = `${d.wins}: <strong>${state.stats.v}</strong> | ${d.losses}: <strong>${state.stats.l}</strong>`;
         }
 
-        function rollManualTable(key, label) {
+        function rollManualTable(key, titleKey) {
             const list = manualTables[key];
             const d1 = Math.floor(Math.random() * 6) + 1;
             const d2 = Math.floor(Math.random() * 6) + 1;
             const res = list[((d1-1)*6) + (d2-1)];
-            openModal('modal-info', label, `<span class="modal-dice">${d1}, ${d2}</span> Resultado: <strong>${res}</strong>`);
+            openModal('modal-info', titleKey, `<span class="modal-dice">${d1}, ${d2}</span> Result: <strong>${res}</strong>`);
         }
 
-        function rollTwist(genre, label) {
+        function rollTwist(genre, labelKey) {
+            const d = i18n[state.lang];
             const d1 = Math.floor(Math.random() * 6) + 1;
             const d2 = Math.floor(Math.random() * 6) + 1;
             const ideas = twistIdeas[genre];
             const idea = ideas[Math.floor(Math.random() * ideas.length)];
-            
             closeModal('modal-twist-choice');
-            openModal('modal-info', `Giro de ${label}`, `
-                <span class="modal-dice">${d1}, ${d2}</span> Código de Giro.<br>
-                <span class="twist-idea"><strong>Idea sugerida:</strong> ${idea}</span>
-            `);
+            openModal('modal-info', labelKey, `<span class="modal-dice">${d1}, ${d2}</span><br><span class="twist-idea"><strong>${d.idea_label}:</strong> ${idea}</span>`);
         }
 
         function openTwistModal() { openModal('modal-twist-choice'); }
-
-        function rollFantasyName() {
-            const p = names.pre[Math.floor(Math.random() * names.pre.length)];
-            const s = names.suf[Math.floor(Math.random() * names.suf.length)];
-            openModal('modal-info', "Nombre de Fantasía", `Sugerencia: <strong>${p}${s.toLowerCase()}</strong>`);
-        }
+        function rollFantasyName() { const p = names.pre[Math.floor(Math.random()*6)], s = names.suf[Math.floor(Math.random()*6)]; openModal('modal-info', "gen_name", `<strong>${p}${s}</strong>`); }
 
         function rollOracle(target) {
-            const r1 = Math.floor(Math.random() * 6) + 1;
-            const r2 = Math.floor(Math.random() * 6) + 1;
-            let res = r1 >= target ? "SÍ" : "NO";
-            if (r2 <= 2) res += ", pero..."; if (r2 >= 5) res += ", y además...";
-            document.getElementById('oracle-result').innerText = `Dado: ${r1} → ${res}`;
+            const d = i18n[state.lang];
+            const r1 = Math.floor(Math.random() * 6) + 1, r2 = Math.floor(Math.random() * 6) + 1;
+            let res = r1 >= target ? "YES" : "NO";
+            if (r2 <= 2) res += " (But)"; if (r2 >= 5) res += " (And)";
+            document.getElementById('oracle-result').innerText = `${d.oracle_res}: ${r1} → ${res}`;
         }
 
         function showResetConfirm() { openModal('modal-confirm'); }
-
         function initDeck() {
-            const s = ['♠', '♣', '♥', '♦'];
-            const v = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
-            state.deck = [];
-            s.forEach(suit => v.forEach(val => state.deck.push({v: val, s: suit})));
+            const s = ['♠', '♣', '♥', '♦'], v = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+            state.deck = []; s.forEach(suit => v.forEach(val => state.deck.push({v: val, s: suit})));
             state.deck.push({v: 'Joker', s: ''});
             state.drawn = []; state.stats = { v: 0, l: 0 }; state.adventureStarted = false; state.isGameOver = false;
-            shuffle(state.deck); save();
-            location.reload();
+            shuffle(state.deck); save(); location.reload();
         }
-
         function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } }
         function updateUI() { document.getElementById('v-count').innerText = state.stats.v; document.getElementById('l-count').innerText = state.stats.l; document.getElementById('deck-count').innerText = state.deck.length; }
-        
         function renderHistory() {
             const h = document.getElementById('card-history'); h.innerHTML = "";
             [...state.drawn].reverse().forEach(item => {
