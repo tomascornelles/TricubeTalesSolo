@@ -138,8 +138,8 @@ body { padding-top: 1rem; }
     50% { transform: translate(-1px, -2px) rotate(-1deg); }
     100% { transform: translate(1px, 1px) rotate(0deg); }
 }
-.btn-victory { background: #2e7d32; background: linear-gradient(180deg, rgba(147, 181, 147, .5) 2%, rgba(46, 125, 50, .85) 3%, rgba(46, 125, 50, 1) 100%); border-color: #2e7d32 !important; color: white !important; }
-.btn-loss { background: #c62828; background: linear-gradient(180deg, rgba(189, 152, 152, .5) 2%, rgba(198, 40, 40, .85) 3%, rgba(198, 40, 40, 1) 100%); border-color: #c62828 !important; color: white !important; }
+.btn-victory { background: #2e7d32; background: linear-gradient(180deg, rgba(147, 181, 147, .5) 2%, rgba(46, 125, 50, .85) 3%, rgba(46, 125, 50, 1) 100%) !important; border-color: #2e7d32 !important; color: white !important; }
+.btn-loss { background: #c62828; background: linear-gradient(180deg, rgba(189, 152, 152, .5) 2%, rgba(198, 40, 40, .85) 3%, rgba(198, 40, 40, 1) 100%) !important; border-color: #c62828 !important; color: white !important; }
 .suit-red { color: #e53935; }
 .suit-black { color: #212121; }
 .history-list { font-size: 1rem; max-height: 120px; overflow-y: auto; background: #f4f4f4; padding: 0.8rem; border-radius: 5px; border: 1px solid #ccc; display: flex; flex-wrap: wrap; gap: 8px; width: 100%; }
@@ -151,7 +151,7 @@ body { padding-top: 1rem; }
 .oracle-grid button { margin-bottom: 0; font-size: .8rem; padding: 4px; }
 .oracle-res { font-weight: bold; font-size: 1.1rem; color: var(--primary); margin-top: 10px; display: block; text-align: center; }
 .last-scene-alert { background: #fff3cd; color: #856404; padding: 5px; text-align: center; font-weight: bold; border-radius: 5px; margin-bottom: 10px; border: 1px solid #ffeeba; }
-.game-over-banner { background: #1a1a1a; color: #fff; padding: 1rem; border-radius: 8px; text-align: center; margin-top: 1rem; border: 2px solid gold; }
+.game-over-banner {padding: 1rem; border-radius: 8px; text-align: center; margin-top: 1rem; border: 2px solid gold; }
 .gen-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; }
 .gen-section { border: 1px solid #eee; padding: 10px; border-radius: 8px; }
 .gen-section h6 { margin-bottom: 10px; font-size: 0.8rem; text-transform: uppercase; color: #666; }

@@ -161,7 +161,7 @@ function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.fl
 function renderHistory() {
     const h = document.getElementById('card-history'); h.innerHTML = "";
     [...state.drawn].reverse().forEach(item => {
-        if (['J', 'Q', 'K'].includes(item.card.v)) return;
+        if (['J', 'Q', 'K', 'A', 'Joker'].includes(item.card.v)) return;
         const span = document.createElement('span');
         const isRed = ['♥','♦'].includes(item.card.s);
         span.className = `hist-item ${isRed ? 'suit-red' : 'suit-black'} ${item.result === false ? 'hist-fail' : ''}`;
