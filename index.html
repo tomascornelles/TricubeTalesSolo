@@ -17,30 +17,19 @@
         <section id="game-section">
             <div class="grid">
                 <article>
-                    <h5 data-i18n="status">Status</h5>
-                    <div style="margin-bottom:15px;">
-                        <small>
-                            <span data-i18n="wins">Wins</span>: <span id="v-count">0</span> | 
-                            <span data-i18n="losses">Losses</span>: <span id="l-count">0</span> | 
-                            <span data-i18n="deck">Deck</span>: <span id="deck-count">53</span>
-                        </small>
-                    </div>
-
-                    <div class="oracle-box">
                         <strong data-i18n="oracle_title">Oracle (Probability)</strong>
                         <div class="oracle-grid">
-                            <button class="outline contrast" onclick="rollOracle(2)" data-i18n="v_likely">Very Likely (2+)</button>
-                            <button class="outline contrast" onclick="rollOracle(3)" data-i18n="likely">Likely (3+)</button>
-                            <button class="outline contrast" onclick="rollOracle(4)" data-i18n="maybe">Maybe (4+)</button>
-                            <button class="outline contrast" onclick="rollOracle(5)" data-i18n="unlikely">Unlikely (5+)</button>
-                            <button class="outline contrast" onclick="rollOracle(6)" data-i18n="v_unlikely">Very Unlikely (6)</button>
+                            <button onclick="rollOracle(2)" data-i18n="v_likely">Very Likely (2+)</button>
+                            <button onclick="rollOracle(3)" data-i18n="likely">Likely (3+)</button>
+                            <button class="contrast" onclick="rollOracle(4)" data-i18n="maybe">Maybe (4+)</button>
+                            <button onclick="rollOracle(5)" data-i18n="unlikely">Unlikely (5+)</button>
+                            <button onclick="rollOracle(6)" data-i18n="v_unlikely">Very Unlikely (6)</button>
                         </div>
                         <span id="oracle-result" class="oracle-res"></span>
-                    </div>
                 </article>
 
                 <article id="current-card-area">
-                    <button id="init-scene-btn" onclick="startAdventure()" style="width:100%" data-i18n="start_adventure">Start Initial Scene</button>
+                    <button id="init-scene-btn" onclick="startAdventure()" class="contrast" style="width:100%" data-i18n="start_adventure">Start Initial Scene</button>
                     
                     <div id="card-content-wrapper" class="hidden">
                         <div id="last-scene-msg" class="last-scene-alert hidden" data-i18n="last_scene_warn">⚠️ FINAL SCENE</div>
@@ -60,19 +49,19 @@
                         <div id="final-screen" class="game-over-banner hidden">
                             <h3 data-i18n="game_over">SESSION ENDED</h3>
                             <p id="final-stats"></p>
-                            <button class="contrast" onclick="initDeck()" style="width:100%" data-i18n="new_adventure">New Adventure</button>
+                            <button onclick="initDeck()" style="width:100%" data-i18n="new_adventure">New Adventure</button>
                         </div>
                     </div>
                     
                     <hr>
-                    <button class="secondary outline" onclick="showResetConfirm()" style="font-size: 0.7rem; width: 100%;" data-i18n="reset_deck">Reset Deck</button>
+                    <button onclick="showResetConfirm()" style="font-size: 0.9rem; width: 100%;" data-i18n="reset_deck">Reset Deck</button>
+                    <hr>
+                      <div>
+                      <strong data-i18n="history">Challenge History</strong>
+                      <div id="card-history" class="history-list"></div>
+                      </div>
                 </article>
             </div>
-            
-            <details>
-                <summary data-i18n="history">Challenge History</summary>
-                <div id="card-history" class="history-list"></div>
-            </details>
         </section>
 
         <hr>

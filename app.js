@@ -23,7 +23,7 @@ function load() {
             document.getElementById('card-content-wrapper').classList.remove('hidden');
         }
         if(state.isGameOver) showEndScreen();
-        updateUI(); translateUI();
+        translateUI();
     } else { initDeck(); }
 }
 
@@ -63,7 +63,7 @@ function executeDraw() {
     el.className = 'card-display ' + (isRed ? 'suit-red' : 'suit-black');
     processLogic(card, isRed);
     if (checkFinalCondition()) document.getElementById('last-scene-msg').classList.remove('hidden');
-    updateUI(); save();
+    save();
 }
 
 function processLogic(card, isRed) {
@@ -94,7 +94,7 @@ function resolve(win) {
     const lastIdx = state.drawn.length - 1;
     state.drawn[lastIdx].result = win;
     if (win) state.stats.v++; else state.stats.l++;
-    renderHistory(); updateUI();
+    renderHistory();
     if (checkFinalCondition()) { state.isGameOver = true; showEndScreen(); } else { drawCard(); }
     save();
 }
@@ -158,7 +158,6 @@ function initDeck() {
     shuffle(state.deck); save(); location.reload();
 }
 function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } }
-function updateUI() { document.getElementById('v-count').innerText = state.stats.v; document.getElementById('l-count').innerText = state.stats.l; document.getElementById('deck-count').innerText = state.deck.length; }
 function renderHistory() {
     const h = document.getElementById('card-history'); h.innerHTML = "";
     [...state.drawn].reverse().forEach(item => {

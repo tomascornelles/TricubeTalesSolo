@@ -1,4 +1,112 @@
-:root { --primary: #d81b60; }
+/* Custom Theme for Pico.css: Modern OS Style */
+
+:root {
+  /* Paleta de Colores Inspirada en la Imagen */
+  --primary: #3b82f6; /* Azul brillante para acciones principales */
+  --primary-background: #dbeafe; /* Azul claro para fondos activos */
+  --primary-hover: #eaf2fa;
+  
+  /* Ajustes de Bordes y Espaciado (Más compacto) */
+  --border-radius: 12px;
+  --spacing: 0.65rem;
+  --typography-spacing-vertical: 1.25rem;
+  
+  /* Sombras sutiles para emular elevación */
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --border-color: #e2e8f0;
+}
+
+/* Modo Oscuro (Opcional, adaptado) */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --primary-background: #1e293b;
+    --border-color: #334155;
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* 1. Estilo de los Contenedores (Articles/Cards) */
+article {
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  padding: calc(var(--spacing) * 2);
+}
+
+/* 2. Botones Estilo "OS" */
+button, [role="button"] {
+  font-weight: 500;
+  border: 1px solid rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: var(--primary-color);
+  cursor: pointer;
+  background: #ffffff;
+  background: linear-gradient(180deg,rgba(255, 255, 255, 1) 2%, rgba(245, 245, 245, .5) 3%, rgba(237, 237, 237, .5) 100%);
+}
+button:hover, [role="button"]:hover {
+  background: #eaf2fa;
+  background: linear-gradient(180deg,rgba(255, 255, 255, 1) 2%, rgba(234, 242, 250, 1) 3%, rgba(234, 242, 250, 1) 100%);
+}
+
+:is(button,input[type=submit],input[type=button],[role=button]).contrast {
+  background: rgb(218 235 251);
+  background: linear-gradient(180deg,rgba(218, 235, 251, .5) 2%, rgba(218, 235, 251, 1) 3%, rgba(218, 235, 251, 1) 100%);
+  color: rgb(56, 96, 131);
+}
+button.contrast:hover, [role="button"].contrast:hover {
+  background: rgb(90 168 237);
+  background: linear-gradient(180deg,rgba(90, 168, 237, .25) 2%, rgba(90, 168, 237, .5) 3%, rgba(90, 168, 237, .5) 100%);
+}
+
+/* Botón secundario (como el "Close" de la imagen) */
+button.secondary, [role="button"].secondary {
+  background-color: transparent;
+  color: var(--color);
+  border: 1px solid var(--border-color);
+}
+
+/* 3. Selección de modo (Cards pequeñas como "Screen", "Window") */
+.selection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+
+.selection-item {
+  border: 2px solid transparent;
+  border-radius: var(--border-radius);
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.selection-item.active {
+  background-color: var(--primary-background);
+  border-color: var(--primary);
+}
+
+/* 4. Toggles / Switch (Emulando los de la imagen) */
+[type="checkbox"][role="switch"] {
+  height: 1.5rem;
+  width: 2.75rem;
+  background-color: #e2e8f0;
+}
+
+[type="checkbox"][role="switch"]:checked {
+  background-color: var(--primary);
+}
+
+/* 5. Inputs numéricos y otros controles */
+input, select {
+  background-color: #f8fafc;
+  border: 1px solid var(--border-color);
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+  input, select { background-color: #0f172a; }
+}
 body { padding-top: 1rem; }
 .card-display { font-size: 3.5rem; text-align: center; margin: 0.5rem 0; font-weight: bold; min-height: 1.2em; transition: all 0.2s; }
 .shuffling { animation: shake 0.1s infinite; opacity: 0.5; filter: blur(2px); }
@@ -11,13 +119,13 @@ body { padding-top: 1rem; }
 .btn-loss { background-color: #c62828 !important; border-color: #c62828 !important; color: white !important; }
 .suit-red { color: #e53935; }
 .suit-black { color: #212121; }
-.history-list { font-size: 1rem; max-height: 120px; overflow-y: auto; background: #f4f4f4; padding: 0.8rem; border-radius: 5px; border: 1px solid #ccc; display: flex; flex-wrap: wrap; gap: 8px; }
+.history-list { font-size: 1rem; max-height: 120px; overflow-y: auto; background: #f4f4f4; padding: 0.8rem; border-radius: 5px; border: 1px solid #ccc; display: flex; flex-wrap: wrap; gap: 8px; width: 100%; }
 .hist-item { padding: 2px 5px; border-radius: 4px; font-weight: bold; }
 .hist-fail { opacity: 0.5; text-decoration: line-through; }
 .hidden { display: none; }
 .oracle-box { border: 1px dashed #ccc; padding: 1rem; border-radius: 8px; margin-top: 1rem; background: #fff; }
 .oracle-grid { display: grid; grid-template-columns: 1fr; gap: 5px; margin-top: 10px; }
-.oracle-grid button { margin-bottom: 0; font-size: 0.7rem; padding: 4px; }
+.oracle-grid button { margin-bottom: 0; font-size: .8rem; padding: 4px; }
 .oracle-res { font-weight: bold; font-size: 1.1rem; color: var(--primary); margin-top: 10px; display: block; text-align: center; }
 #current-card-area { border: 2px solid var(--primary); padding: 1rem; border-radius: 10px; min-height: 420px; }
 .last-scene-alert { background: #fff3cd; color: #856404; padding: 5px; text-align: center; font-weight: bold; border-radius: 5px; margin-bottom: 10px; border: 1px solid #ffeeba; }
