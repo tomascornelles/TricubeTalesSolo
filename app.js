@@ -129,7 +129,7 @@ function rollManualTable(key, titleKey) {
     const d1 = Math.floor(Math.random() * 6) + 1;
     const d2 = Math.floor(Math.random() * 6) + 1;
     const res = list[((d1-1)*6) + (d2-1)];
-    openModal('modal-info', titleKey, `<span class="modal-dice">${d1}, ${d2}</span> Result: <strong>${res}</strong>`);
+    openModal('modal-info', titleKey, `<span class="modal-dice">${d1}, ${d2}</span><br><strong>${res}</strong>`);
 }
 
 function rollTwist(genre, labelKey) {
@@ -148,9 +148,9 @@ function rollFantasyName() { const p = names.pre[Math.floor(Math.random()*6)], s
 function rollOracle(target) {
     const d = i18n[state.lang];
     const r1 = Math.floor(Math.random() * 6) + 1, r2 = Math.floor(Math.random() * 6) + 1;
-    let res = r1 >= target ? "YES" : "NO";
-    if (r2 <= 2) res += " (But...)"; if (r2 >= 5) res += " (And...)";
-    document.getElementById('oracle-result').innerText = `${d.oracle_res}: ${r1} → ${res}`;
+    let res = r1 >= target ? "<strong>YES</strong>" : "<strong>NO</strong>";
+    if (r2 <= 2) res += " But..."; if (r2 >= 5) res += " And...";
+    openModal('modal-info', "oracle_title", res);
 }
 
 function showResetConfirm() { openModal('modal-confirm'); }
