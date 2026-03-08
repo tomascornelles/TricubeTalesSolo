@@ -21,6 +21,8 @@ function load() {
         if(state.adventureStarted) {
             document.getElementById('init-scene-btn').classList.add('hidden');
             document.getElementById('card-content-wrapper').classList.remove('hidden');
+            document.getElementById('reset-button').classList.remove('hidden');
+            document.getElementById('challenge-content').classList.remove('hidden');
         }
         if(state.isGameOver) showEndScreen();
         translateUI();
@@ -39,6 +41,8 @@ function startAdventure() {
     state.adventureStarted = true; state.isGameOver = false;
     document.getElementById('init-scene-btn').classList.add('hidden');
     document.getElementById('card-content-wrapper').classList.remove('hidden');
+    document.getElementById('reset-button').classList.remove('hidden');
+    document.getElementById('challenge-content').classList.remove('hidden');
     drawCard();
 }
 
