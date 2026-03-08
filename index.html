@@ -16,18 +16,6 @@
     <main class="container">
         <section id="game-section">
             <div class="grid">
-                <article>
-                        <strong data-i18n="oracle_title">Oracle (Probability)</strong>
-                        <div class="oracle-grid">
-                            <button onclick="rollOracle(2)" data-i18n="v_likely">Very Likely (2+)</button>
-                            <button onclick="rollOracle(3)" data-i18n="likely">Likely (3+)</button>
-                            <button class="contrast" onclick="rollOracle(4)" data-i18n="maybe">Maybe (4+)</button>
-                            <button onclick="rollOracle(5)" data-i18n="unlikely">Unlikely (5+)</button>
-                            <button onclick="rollOracle(6)" data-i18n="v_unlikely">Very Unlikely (6)</button>
-                        </div>
-                        <span id="oracle-result" class="oracle-res"></span>
-                </article>
-
                 <article id="current-card-area">
                     <button id="init-scene-btn" onclick="startAdventure()" class="contrast" style="width:100%" data-i18n="start_adventure">Start Initial Scene</button>
                     
@@ -60,6 +48,18 @@
                       <strong data-i18n="history">Challenge History</strong>
                       <div id="card-history" class="history-list"></div>
                       </div>
+                </article>
+
+                <article>
+                        <strong data-i18n="oracle_title">Oracle (Probability)</strong>
+                        <div class="oracle-grid">
+                            <button onclick="rollOracle(2)" data-i18n="v_likely">Very Likely (2+)</button>
+                            <button onclick="rollOracle(3)" data-i18n="likely">Likely (3+)</button>
+                            <button class="contrast" onclick="rollOracle(4)" data-i18n="maybe">Maybe (4+)</button>
+                            <button onclick="rollOracle(5)" data-i18n="unlikely">Unlikely (5+)</button>
+                            <button onclick="rollOracle(6)" data-i18n="v_unlikely">Very Unlikely (6)</button>
+                        </div>
+                        <span id="oracle-result" class="oracle-res"></span>
                 </article>
             </div>
         </section>
