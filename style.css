@@ -7,7 +7,7 @@
   --primary-hover: #eaf2fa;
 
   /* Ajustes de Bordes y Espaciado (Más compacto) */
-  --border-radius: 12px;
+  --border-radius: 5px;
   --spacing: 0.65rem;
   --typography-spacing-vertical: 1.25rem;
 
@@ -173,7 +173,7 @@ dialog article { max-width: 500px; text-align: center; }
 footer { margin-top: 2rem; border-top: 1px solid #eee; padding: 1rem 0; display: flex; justify-content: flex-end; align-items: center; gap: 10px; }
 .lang-select-container { width: 200px; margin-bottom: 0; }
 .lang-select-container select { margin-bottom: 0; font-size: 0.8rem; }
-#modal-body { text-align: center; margin-block: 1rem; border: 1px solid rgba(128, 128, 128, 0.5); padding: 1rem; border-radius: 5px; }
+#modal-body { text-align: center; margin-block: 1rem; border: 1px solid rgba(128, 128, 128, 0.25); padding: 1rem; border-radius: 5px;  font-size: 1.75rem; }
 .result-dice { font-size: 1.5rem; font-weight: bold; height: 3rem; line-height: 2.5rem;  display: inline-block; text-align: center; width: 3rem; border-radius: 4px; margin: 0 5px; }
 .result-card { font-size: 1rem; font-weight: bold; height: 6rem; line-height: 5rem;  display: inline-block; text-align: center; width: 4rem; border-radius: 4px; margin: 0 5px; }
 .result-card.♦, .result-card.♥ { color: #e53935;  font-size: 1.5rem; }
