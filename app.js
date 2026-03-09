@@ -109,8 +109,8 @@ function checkFinalCondition() {
   const suits = {};
   ch.forEach(d => suits[d.card.s] = (suits[d.card.s] || 0) + 1);
   const counts = Object.values(suits);
-  if (counts.some(c => c >= 5)) return true;
-  if (counts.filter(c => c >= 3).length >= 1 && counts.filter(c => c >= 2).length >= 3) return true;
+  console.log(suits, counts);
+  if (counts.some(c => c >= 3) && counts.some(c => c === 2)) return true;
   return false;
 }
 
