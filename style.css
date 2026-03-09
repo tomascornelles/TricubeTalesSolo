@@ -146,6 +146,9 @@ body { padding-top: 1rem; }
     .suit-black { color: #fff; }
 }
 .history-list { font-size: 1rem; max-height: 120px; overflow-y: auto; background: #f4f4f4; padding: 0.8rem; border-radius: 5px; border: 1px solid #ccc; display: flex; flex-wrap: wrap; gap: 8px; width: 100%; }
+@media only screen and (prefers-color-scheme: dark) {
+    .history-list { background: #0f172a; border-color: #1e293b; }
+}
 .hist-item { padding: 2px 5px; border-radius: 4px; font-weight: bold; }
 .hist-fail { opacity: 0.5; text-decoration: line-through; }
 .hidden { display: none; }
@@ -171,3 +174,4 @@ footer { margin-top: 2rem; border-top: 1px solid #eee; padding: 1rem 0; display:
 .result-card.♦, .result-card.♥ { color: #e53935;  font-size: 1.5rem; }
 .result-card.♠, .result-card.♣ { font-size: 1.5rem; }
 .dices { display: flex; gap: 10px; }
+#reset-button { margin-top: 1rem; }
