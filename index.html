@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tricube Tales Solo</title>
@@ -10,149 +10,149 @@
     <link rel="stylesheet" href="style.css">
     <script src="i18n.js"></script>
     <script src="app.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <main class="container">
-        <section id="game-section">
-                <article id="current-card-area">
-                    <button id="init-scene-btn" onclick="startAdventure()" class="contrast" style="width:100%" data-i18n="start_adventure">Start Initial Scene</button>
-                    
-                    <div id="card-content-wrapper" class="hidden">
-                        <div id="last-scene-msg" class="last-scene-alert hidden" data-i18n="last_scene_warn">⚠️ FINAL SCENE</div>
-                        <div id="card-icon" class="card-display">?</div>
-                        <p id="challenge-desc" style="text-align:center; min-height: 3em;"></p>
-                        
-                        <div class="grid" id="action-buttons">
-                            <button class="btn-victory" onclick="resolve(true)" data-i18n="btn_win">Win</button>
-                            <button class="btn-loss" onclick="resolve(false)" data-i18n="btn_fail">Failure</button>
-                        </div>
+      <section id="game-section">
+        <article id="current-card-area">
+          <button id="init-scene-btn" onclick="startAdventure()" class="contrast" style="width:100%" data-i18n="start_adventure">Start Initial Scene</button>
 
-                        <div class="grid hidden" id="special-buttons">
-                            <button class="primary" onclick="drawCard()" data-i18n="btn_continue">Continue</button>
-                            <button id="twist-btn" class="secondary outline hidden" onclick="openTwistModal()" data-i18n="btn_twist">Twist!</button>
-                        </div>
+          <div id="card-content-wrapper" class="hidden">
+            <div id="last-scene-msg" class="last-scene-alert hidden" data-i18n="last_scene_warn">⚠️ FINAL SCENE</div>
+            <div id="card-icon" class="card-display">?</div>
+            <p id="challenge-desc" style="text-align:center; min-height: 3em;"></p>
 
-                        <div id="final-screen" class="game-over-banner hidden">
-                            <h3 data-i18n="game_over">SESSION ENDED</h3>
-                            <p id="final-stats"></p>
-                            <button onclick="initDeck()" style="width:100%" data-i18n="new_adventure" class="contrast">New Adventure</button>
-                        </div>
-                    </div>
-
-                    <div class="hidden" id="challenge-content">
-                    <hr>
-                    <div>
-                      <strong data-i18n="history">Challenge History</strong>
-                      <div id="card-history" class="history-list"></div>
-                    </div>
-                    </div>
-                    
-                    <div class="hidden" id="reset-button">
-                    <button onclick="showResetConfirm()" style="font-size: 0.9rem; width: 100%;" data-i18n="reset_deck">Reset Deck</button>
-                    </div>
-                </article>
-                
-            <div class="grid">
-                <article>
-                        <div class="dices">
-                            <button onclick="rollDice(1)">1d6</button>
-                            <button onclick="rollDice(2)">2d6</button>
-                            <button onclick="rollDice(3)">3d6</button>
-                            <button class="contrast" onclick="drawSingleCard()" data-i18n="card">Card</button>
-                        </div>
-                </article>
-                
-                <article>
-                        <strong data-i18n="oracle_title">Oracle (Probability)</strong>
-                        <div class="oracle-grid">
-                            <button onclick="rollOracle(2)" data-i18n="v_likely">Very Likely (2+)</button>
-                            <button onclick="rollOracle(3)" data-i18n="likely">Likely (3+)</button>
-                            <button class="contrast" onclick="rollOracle(4)" data-i18n="maybe">Maybe (4+)</button>
-                            <button onclick="rollOracle(5)" data-i18n="unlikely">Unlikely (5+)</button>
-                            <button onclick="rollOracle(6)" data-i18n="v_unlikely">Very Unlikely (6)</button>
-                        </div>
-                </article>
+            <div class="grid" id="action-buttons">
+              <button class="btn-victory" onclick="resolve(true)" data-i18n="btn_win">Win</button>
+              <button class="btn-loss" onclick="resolve(false)" data-i18n="btn_fail">Failure</button>
             </div>
-        </section>
 
-        <section id="generators-section">
+            <div class="grid hidden" id="special-buttons">
+              <button class="primary" onclick="drawCard()" data-i18n="btn_continue">Continue</button>
+              <button id="twist-btn" class="secondary outline hidden" onclick="openTwistModal()" data-i18n="btn_twist">Twist!</button>
+            </div>
+
+            <div id="final-screen" class="game-over-banner hidden">
+              <h3 data-i18n="game_over">SESSION ENDED</h3>
+              <p id="final-stats"></p>
+              <button onclick="initDeck()" style="width:100%" data-i18n="new_adventure" class="contrast">New Adventure</button>
+            </div>
+          </div>
+
+          <div class="hidden" id="challenge-content">
+            <hr>
+            <div>
+              <strong data-i18n="history">Challenge History</strong>
+              <div id="card-history" class="history-list"></div>
+            </div>
+          </div>
+
+          <div class="hidden" id="reset-button">
+            <button onclick="showResetConfirm()" style="font-size: 0.9rem; width: 100%;" data-i18n="reset_deck">Reset Deck</button>
+          </div>
+        </article>
+
+        <div class="grid">
           <article>
-            <h4 data-i18n="gen_title">Manual Generators</h4>
-            <div class="gen-container">
-                <div class="gen-section">
-                    <h6 data-i18n="cat_loc">📍 Locations</h6>
-                    <button onclick="rollManualTable('urban', 'loc_urban')" data-i18n="loc_urban">Urban</button>
-                    <button onclick="rollManualTable('wilderness', 'loc_wild')" data-i18n="loc_wild">Wilderness</button>
-                    <button onclick="rollManualTable('voyage', 'loc_voyage')" data-i18n="loc_voyage">Voyage</button>
-                </div>
-                <div class="gen-section">
-                    <h6 data-i18n="cat_feat">✨ Features</h6>
-                    <button onclick="rollManualTable('urban_feat', 'feat_urban')" data-i18n="feat_urban">Urban Feature</button>
-                    <button onclick="rollManualTable('wild_feat', 'feat_wild')" data-i18n="feat_wild">Wild Feature</button>
-                    <button onclick="rollManualTable('voyage_feat', 'feat_voyage')" data-i18n="feat_voyage">Voyage Landmark</button>
-                </div>
-                <div class="gen-section">
-                    <h6 data-i18n="cat_ppl">👥 People</h6>
-                    <button onclick="rollManualTable('urban_ppl', 'ppl_urban')" data-i18n="ppl_urban">Urban People</button>
-                    <button onclick="rollManualTable('wild_ppl', 'ppl_wild')" data-i18n="ppl_wild">Wild People</button>
-                    <button onclick="rollFantasyName()" data-i18n="gen_name">Name</button>
-                </div>
-                <div class="gen-section">
-                    <h6 data-i18n="cat_twist">🌀 Twists</h6>
-                    <button onclick="rollTwist('fantasy', 'twist_fantasy')" data-i18n="twist_fantasy">Fantasy</button>
-                    <button onclick="rollTwist('horror', 'twist_horror')" data-i18n="twist_horror">Horror</button>
-                    <button onclick="rollTwist('scifi', 'twist_scifi')" data-i18n="twist_scifi">Sci-Fi</button>
-                </div>
+            <div class="dices">
+              <button onclick="rollDice(1)">1d6</button>
+              <button onclick="rollDice(2)">2d6</button>
+              <button onclick="rollDice(3)">3d6</button>
+              <button class="contrast" onclick="drawSingleCard()" data-i18n="card">Card</button>
             </div>
           </article>
-        </section>
 
-        <footer>
-            <div class="lang-select-container">
-                <select id="lang-dropdown" onchange="setLang(this.value)">
-                    <option value="en">English 🇺🇸</option>
-                    <option value="es">Español 🇪🇸</option>
-                    <option value="fr">Français 🇫🇷</option>
-                    <option value="it">Italiano 🇮🇹</option>
-                    <option value="de">Deutsch 🇩🇪</option>
-                </select>
+          <article>
+            <strong data-i18n="oracle_title">Oracle (Probability)</strong>
+            <div class="oracle-grid">
+              <button onclick="rollOracle(2)" data-i18n="v_likely">Very Likely (2+)</button>
+              <button onclick="rollOracle(3)" data-i18n="likely">Likely (3+)</button>
+              <button class="contrast" onclick="rollOracle(4)" data-i18n="maybe">Maybe (4+)</button>
+              <button onclick="rollOracle(5)" data-i18n="unlikely">Unlikely (5+)</button>
+              <button onclick="rollOracle(6)" data-i18n="v_unlikely">Very Unlikely (6)</button>
             </div>
-        </footer>
+          </article>
+        </div>
+      </section>
+
+      <section id="generators-section">
+        <article>
+          <h4 data-i18n="gen_title">Manual Generators</h4>
+          <div class="gen-container">
+            <div class="gen-section">
+              <h6 data-i18n="cat_loc">📍 Locations</h6>
+              <button onclick="rollManualTable('urban', 'loc_urban')" data-i18n="loc_urban">Urban</button>
+              <button onclick="rollManualTable('wilderness', 'loc_wild')" data-i18n="loc_wild">Wilderness</button>
+              <button onclick="rollManualTable('voyage', 'loc_voyage')" data-i18n="loc_voyage">Voyage</button>
+            </div>
+            <div class="gen-section">
+              <h6 data-i18n="cat_feat">✨ Features</h6>
+              <button onclick="rollManualTable('urban_feat', 'feat_urban')" data-i18n="feat_urban">Urban Feature</button>
+              <button onclick="rollManualTable('wild_feat', 'feat_wild')" data-i18n="feat_wild">Wild Feature</button>
+              <button onclick="rollManualTable('voyage_feat', 'feat_voyage')" data-i18n="feat_voyage">Voyage Landmark</button>
+            </div>
+            <div class="gen-section">
+              <h6 data-i18n="cat_ppl">👥 People</h6>
+              <button onclick="rollManualTable('urban_ppl', 'ppl_urban')" data-i18n="ppl_urban">Urban People</button>
+              <button onclick="rollManualTable('wild_ppl', 'ppl_wild')" data-i18n="ppl_wild">Wild People</button>
+              <button onclick="rollFantasyName()" data-i18n="gen_name">Name</button>
+            </div>
+            <div class="gen-section">
+              <h6 data-i18n="cat_twist">🌀 Twists</h6>
+              <button onclick="rollTwist('fantasy', 'twist_fantasy')" data-i18n="twist_fantasy">Fantasy</button>
+              <button onclick="rollTwist('horror', 'twist_horror')" data-i18n="twist_horror">Horror</button>
+              <button onclick="rollTwist('scifi', 'twist_scifi')" data-i18n="twist_scifi">Sci-Fi</button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <footer>
+        <div class="lang-select-container">
+          <select id="lang-dropdown" onchange="setLang(this.value)">
+            <option value="en">English 🇺🇸</option>
+            <option value="es">Español 🇪🇸</option>
+            <option value="fr">Français 🇫🇷</option>
+            <option value="it">Italiano 🇮🇹</option>
+            <option value="de">Deutsch 🇩🇪</option>
+          </select>
+        </div>
+      </footer>
     </main>
 
     <dialog id="modal-info">
-        <article>
-            <strong id="modal-title"></strong>
-            <div id="modal-body"></div>
-            <button onclick="closeModal('modal-info')" data-i18n="modal_ok">Got it</button>
-        </article>
+      <article>
+        <strong id="modal-title"></strong>
+        <div id="modal-body"></div>
+        <button onclick="closeModal('modal-info')" data-i18n="modal_ok">Got it</button>
+      </article>
     </dialog>
 
     <dialog id="modal-confirm">
-        <article>
-            <header><strong data-i18n="reset_q">Reset?</strong></header>
-            <p data-i18n="reset_text">Current progress will be lost.</p>
-            <footer>
-                <button class="secondary outline" onclick="closeModal('modal-confirm')" data-i18n="modal_cancel">Cancel</button>
-                <button onclick="initDeck()" data-i18n="modal_yes">Yes, reset</button>
-            </footer>
-        </article>
+      <article>
+        <header><strong data-i18n="reset_q">Reset?</strong></header>
+        <p data-i18n="reset_text">Current progress will be lost.</p>
+        <footer>
+          <button class="secondary outline" onclick="closeModal('modal-confirm')" data-i18n="modal_cancel">Cancel</button>
+          <button onclick="initDeck()" data-i18n="modal_yes">Yes, reset</button>
+        </footer>
+      </article>
     </dialog>
 
     <dialog id="modal-twist-choice">
-        <article>
-            <header><strong data-i18n="select_genre">Select Genre</strong></header>
-            <div class="oracle-grid">
-                <button onclick="rollTwist('fantasy', 'twist_fantasy')" data-i18n="twist_fantasy">Fantasy</button>
-                <button onclick="rollTwist('horror', 'twist_horror')" data-i18n="twist_horror">Horror</button>
-                <button onclick="rollTwist('scifi', 'twist_scifi')" data-i18n="twist_scifi">Sci-Fi</button>
-            </div>
-            <footer><button class="secondary outline" onclick="closeModal('modal-twist-choice')" data-i18n="modal_cancel">Cancel</button></footer>
-        </article>
+      <article>
+        <header><strong data-i18n="select_genre">Select Genre</strong></header>
+        <div class="oracle-grid">
+          <button onclick="rollTwist('fantasy', 'twist_fantasy')" data-i18n="twist_fantasy">Fantasy</button>
+          <button onclick="rollTwist('horror', 'twist_horror')" data-i18n="twist_horror">Horror</button>
+          <button onclick="rollTwist('scifi', 'twist_scifi')" data-i18n="twist_scifi">Sci-Fi</button>
+        </div>
+        <footer><button class="secondary outline" onclick="closeModal('modal-twist-choice')" data-i18n="modal_cancel">Cancel</button></footer>
+      </article>
     </dialog>
 
     <script>
     </script>
-</body>
+  </body>
 </html>
