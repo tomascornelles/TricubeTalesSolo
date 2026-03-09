@@ -7,6 +7,7 @@ const i18n = {
     btn_win: "Win", 
     but: "but...",
     card: "Card",
+    cat_urban: "🏘 Urban",
     cat_feat: "✨ Features", 
     cat_loc: "📍 Locations", 
     cat_ppl: "👥 People", 
@@ -48,6 +49,8 @@ const i18n = {
     reset_text: "Current progress will be lost.", 
     roll: "Roll",
     select_genre: "Select Genre", 
+    settlements_large: "Large settlements",
+    settlements_small: "Small settlements",
     start_adventure: "Start Initial Scene", 
     status: "Status", 
     trait_agile: "Agile", 
@@ -58,6 +61,9 @@ const i18n = {
     twist_horror: "Horror", 
     twist_scifi: "Sci-Fi",
     unlikely: "Unlikely (5+)", 
+    urban_ppl: "People",
+    urban_locations: "Locations",
+    urban_events: "Events",
     v_likely: "Very Likely (2+)", 
     v_unlikely: "Very Unlikely (6)",
     wins: "Wins", 
@@ -72,6 +78,12 @@ const i18n = {
     no: "No",
     but: "pero...",
     and: "y...",
+    cat_urban: "🏘 Urbano",
+    urban_ppl: "Población",
+    urban_locations: "Lugares",
+    urban_events: "Eventos",
+    settlements_large: "Asentamientos grandes",
+    settlements_small: "Asentamientos pequeños",
     status: "Estado", wins: "Éxitos", losses: "Fallos", deck: "Mazo", oracle_title: "Oráculo",
     v_likely: "Muy Probable (2+)", likely: "Probable (3+)", maybe: "Tal vez (4+)", unlikely: "Improbable (5+)", v_unlikely: "Casi imposible (6)",
     start_adventure: "Empezar Escena Inicial", last_scene_warn: "⚠️ ÚLTIMA ESCENA", btn_win: "Victoria", btn_fail: "Fracaso",
@@ -110,9 +122,149 @@ scene_changes: {
     es: ["Abandonado", "Hermoso", "Bloqueado", "Limpio", "Desordenado", "Colorido", "Atestado", "Peligroso", "Oscuro", "Sucio", "Deteriorado", "Vacío", "Exótico", "Famoso", "Festivo", "Prohibido", "Olvidado", "Fortificado", "Agitado", "Lujoso", "Magnífico", "Modernizado", "Misterioso", "Nuevo", "Decrépito", "Anticuado", "Abrumador", "Tóxico", "Prominente", "Quemado", "Vigilado", "Pequeño", "Escalofriante", "Modesto", "Vandalizado", "Bien abastecido"]
   },
   urban_ppl: {
-    en: ["Beggar", "Bounty Hunter", "Cook", "Courtesan", "Criminal", "Diplomat", "Drunkard", "Spy", "Guard", "Herald", "Hunter", "Informant", "Investigator", "Worker", "Merchant", "Messenger", "Noble", "Outsider", "Peddler", "Pilgrim", "Police", "Priest", "Prisoner", "Scholar", "Servant", "Shopkeeper", "Soldier", "Student", "Survivor", "Thief", "Tourist", "Traveler", "Vagrant", "Victim", "Vigilante", "Visitor"],
-    es: ["Mendigo", "Cazarrecompensas", "Cocinero", "Cortesana", "Criminal", "Diplomático", "Borracho", "Espía", "Guardia", "Heraldo", "Cazador", "Informante", "Investigador", "Trabajador", "Mercader", "Mensajero", "Noble", "Forastero", "Buhonero", "Peregrino", "Policía", "Sacerdote", "Prisionero", "Erudito", "Sirviente", "Tendero", "Soldado", "Estudiante", "Superviviente", "Ladrón", "Turista", "Viajero", "Vagabundo", "Víctima", "Vigilante", "Visitante"]
-  },
+  en: [
+    "Actor/entertainer", "Investigator/tracker", "Bartender/server", "Janitor/cleaner", 
+    "Beggar/vagrant", "Laborer/worker", "Biker/outlander", "Lawyer/judge", 
+    "Bumpkin/peasant", "Manager/foreman", "Chef/cook/baker", "Mechanic/artisan", 
+    "Chemist/alchemist", "Merchant/vendor", "Child/youngster", "Musician/bard", 
+    "Consultant/guide", "Police officer/guard", "Contractor/assassin", "Priest/preacher", 
+    "Cultist/fanatic", "Reporter/town crier", "Doctor/herbalist", "Scientist/scholar", 
+    "Driver/wagoner", "Socialite/noble", "Elder/senior figure", "Soldier/mercenary", 
+    "Engineer/architect", "Spy/renegade", "Farmer/smallholder", "Teacher/tutor", 
+    "Gangster/outlaw", "Thief/criminal", "Hunter/survivalist", "Watchman/bouncer"
+  ],
+  es: [
+    "Actor/artista", "Investigador/rastreador", "Barman/camarero", "Conserje/limpiador", 
+    "Mendigo/vagabundo", "Obrero/trabajador", "Motorista/forastero", "Abogado/juez", 
+    "Paleto/campesino", "Gerente/capataz", "Chef/cocinero", "Mecánico/artesano", 
+    "Químico/alquimista", "Comerciante/vendedor", "Niño/joven", "Músico/bardo", 
+    "Consultor/guía", "Oficial de policía/guardia", "Contratista/asesino", "Sacerdote/predicador", 
+    "Cultista/fanático", "Reportero/pregonero", "Doctor/herborista", "Científico/erudito", 
+    "Conductor/carretero", "Socialité/noble", "Anciano/figura veterana", "Soldado/mercenario", 
+    "Ingeniero/arquitecto", "Espía/renegado", "Granjero/pequeño propietario", "Maestro/tutor", 
+    "Gánster/fajón", "Ladrón/criminal", "Cazador/superviviente", "Vigilante/portero"
+  ]
+},
+  urban_locations: {
+  en: [
+    "Abandoned place", "Mansion/palace", "Airport/wharf/port", "Military building",
+    "Bank/moneylender", "Museum/library", "Bridge/crossroads", "Nightclub/brothel",
+    "Church/temple", "Office/workhouse", "Depot/warehouse", "Park/garden",
+    "Factory/mill", "Pharmacy/herbalist", "Film/art studio", "Police station",
+    "Fire station/tower", "Prison/guardhouse", "Garage/workshop", "Recreation area",
+    "Graveyard", "Restaurant/tavern", "Guild/corporation", "School/academy",
+    "Gun store/armory", "Sewer/subway", "Hospital/physician", "Slum/ruin",
+    "Hotel/inn", "Smithy/craft shop", "House/villa", "Theater/cinema",
+    "Local landmark", "Town hall/center", "Mall/marketplace", "Zoo/stable"
+  ],
+  es: [
+    "Lugar abandonado", "Mansión/palacio", "Aeropuerto/muelle/puerto", "Edificio militar",
+    "Banco/prestamista", "Museo/biblioteca", "Puente/encrucijada", "Club nocturno/burdel",
+    "Iglesia/templo", "Oficina/taller", "Depósito/almacén", "Parque/jardín",
+    "Fábrica/molino", "Farmacia/herbolario", "Estudio de arte/cine", "Estación de policía",
+    "Estación de bomberos/torre", "Prisión/casa de guardia", "Garaje/taller", "Área recreativa",
+    "Cementerio", "Restaurante/taberna", "Gremio/corporación", "Escuela/academia",
+    "Armería/depósito de armas", "Alcantarilla/metro", "Hospital/médico", "Suburbio/ruina",
+    "Hotel/posada", "Herrería/taller artesanal", "Casa/villa", "Teatro/cine",
+    "Lugar de interés local", "Ayuntamiento/centro", "Centro comercial/mercado", "Zoo/establo"
+  ]
+},
+urban_events: {
+  en: [
+    "Accident/breakage", "Lost child/pet", "Airplane/dragon", "Military presence", 
+    "Alarm/siren", "Monstrous activity", "Ambush/assault", "Prowling vigilante", 
+    "Assassination", "Roadblock/barrier", "Barking dog", "Sabotage/vandalism", 
+    "Broken vehicle", "Screaming/shouting", "Crying/arguing", "Serious injury", 
+    "Drone/surveillance", "Shocking revelation", "Dying victim", "Speeding vehicle", 
+    "Explosion/fire", "Tech/magic terror", "Feral/wild animals", "Terrible weather", 
+    "Fighting/brawling", "Theft/mugging", "Fleeing people", "Traffic collision", 
+    "Flood/burst pipe", "Trapped people", "Horrific violence", "Troublemakers", 
+    "Large gathering", "Urban decay", "Looting/robbery", "Weird/supernatural"
+  ],
+  es: [
+    "Accidente/rotura", "Niño o mascota perdido", "Avión/dragón", "Presencia militar", 
+    "Alarma/sirena", "Actividad monstruosa", "Emboscada/asalto", "Vigilante acechando", 
+    "Asesinato", "Bloqueo/barrera", "Perro ladrando", "Sabotaje/vandalismo", 
+    "Vehículo averiado", "Gritos/vociferaciones", "Llanto/discusión", "Lesión grave", 
+    "Dron/vigilancia", "Revelación impactante", "Víctima agonizante", "Vehículo a exceso de velocidad", 
+    "Explosión/incendio", "Terror tecnológico/mágico", "Animales salvajes/ferales", "Clima terrible", 
+    "Pelea/reyerta", "Robo/asalto", "Gente huyendo", "Colisión de tráfico", 
+    "Inundación/tubería rota", "Personas atrapadas", "Violencia horrible", "Alborotadores", 
+    "Gran multitud", "Deterioro urbano", "Saqueo/robo", "Extraño/sobrenatural"
+  ]
+},
+  settlements_large_desc: {
+  en: [
+    "Semirural village",
+    "Port town",
+    "Market town",
+    "Military town",
+    "Mining town",
+    "City/suburb"
+  ],
+  es: [
+    "Aldea semirural",
+    "Pueblo portuario",
+    "Ciudad comercial",
+    "Ciudad militar",
+    "Pueblo minero",
+    "Ciudad/suburbio"
+  ]
+},
+  settlements_large_ppl: {
+  en: [
+    "Cheerful/open",
+    "Distrustful/wary",
+    "Industrious/busy",
+    "Rude/inconsiderate",
+    "Indifferent/aloof",
+    "Nosy/prying"
+  ],
+  es: [
+    "Alegres/abiertos",
+    "Desconfiados/cautelosos",
+    "Laboriosos/ocupados",
+    "Groseros/considerados",
+    "Indiferentes/distantes",
+    "Entrometidos/curiosos"
+  ]
+},
+  settlements_small_desc: {
+  en: [
+    "Homestead/outpost",
+    "Small hamlet",
+    "Nomadic settlement",
+    "Mining/lumber camp",
+    "Farming village",
+    "Fishing village"
+  ],
+  es: [
+    "Hacienda/puesto de avanzada",
+    "Pequeña aldea",
+    "Asentamiento nómada",
+    "Campamento minero/maderero",
+    "Pueblo agrícola",
+    "Pueblo pesquero"
+  ]
+},
+settlements_small_ppl: {
+  en: [
+    "Welcoming/friendly",
+    "Frightened/nervous",
+    "Oppressed/abused",
+    "Weird/creepy",
+    "Indifferent/apathetic",
+    "Xenophobic/hostile"
+  ],
+  es: [
+    "Acogedores/amigables",
+    "Asustados/nerviosos",
+    "Oprimidos/maltratados",
+    "Extraños/inquietantes",
+    "Indiferentes/apáticos",
+    "Xenófobos/hostiles"
+  ]
+},
   wilderness: {
     en: ["Pass", "Bridge", "Cabin", "Cave", "Cemetery", "Cliff", "Coast", "Dam", "Desert", "Ditch", "Forest", "Fortress", "Garden", "Farm", "Gorge", "Grove", "Hill", "Island", "Lake", "Mine", "Monolith", "Monument", "Mountain", "Outpost", "Plain", "Pond", "Quarry", "River", "Ruins", "Settlement", "Statue", "Swamp", "Temple", "Tower", "Valley", "Village"],
     es: ["Paso", "Puente", "Cabaña", "Cueva", "Cementerio", "Acantilado", "Costa", "Presa", "Desierto", "Zanja", "Bosque", "Fortaleza", "Jardín", "Granja", "Desfiladero", "Arboleda", "Colina", "Isla", "Lago", "Mina", "Monolito", "Monumento", "Montaña", "Puesto de avanzada", "Llanura", "Estanque", "Cantera", "Río", "Ruinas", "Asentamiento", "Estatua", "Pantano", "Templo", "Torre", "Valle", "Aldea"]
