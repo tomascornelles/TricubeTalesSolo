@@ -145,9 +145,11 @@ function rollTwist(genre, labelKey) {
 function openTwistModal() { openModal('modal-twist-choice'); }
 function rollFantasyName() { const p = names.pre[Math.floor(Math.random()*6)], s = names.suf[Math.floor(Math.random()*6)]; openModal('modal-info', "gen_name", `<strong>${p}${s}</strong>`); }
 
-function rollOracle(target) {
+function rollOracle() {
+  const target = document.getElementById('oracle-select').value;
   const d = i18n[state.lang];
-  const r1 = Math.floor(Math.random() * 6) + 1, r2 = Math.floor(Math.random() * 6) + 1;
+  const r1 = Math.floor(Math.random() * 6) + 1;
+  const r2 = Math.floor(Math.random() * 6) + 1;
   let res = r1 >= target ? "<strong>YES</strong>" : "<strong>NO</strong>";
   if (r2 <= 2) res += " But..."; if (r2 >= 5) res += " And...";
   openModal('modal-info', "oracle_title", res);
