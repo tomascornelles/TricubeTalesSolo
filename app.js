@@ -124,11 +124,12 @@ function showEndScreen() {
 }
 
 function rollManualTable(keys, titleKey) {
-  forEachKey(keys, key => {
+  const res = [];
+  keys.forEach(key => {
     const list = manualTables[key];
-    const res = list[Math.floor(Math.random() * list.length)];
+    res.push(list[Math.floor(Math.random() * list.length)]);
   });
-  openModal('modal-info', titleKey, `<strong>${res}</strong>`);
+  openModal('modal-info', titleKey, `<strong>${res.join('<br>')}</strong>`);
 }
 
 function rollTwist(genre, labelKey) {
