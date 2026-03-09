@@ -142,6 +142,9 @@ body { padding-top: 1rem; }
 .btn-loss { background: #c62828; background: linear-gradient(180deg, rgba(189, 152, 152, .5) 2%, rgba(198, 40, 40, .85) 3%, rgba(198, 40, 40, 1) 100%) !important; border-color: #c62828 !important; color: white !important; }
 .suit-red { color: #e53935; }
 .suit-black { color: #212121; }
+@media only screen and (prefers-color-scheme: dark) {
+    .suit-black { color: #fff; }
+}
 .history-list { font-size: 1rem; max-height: 120px; overflow-y: auto; background: #f4f4f4; padding: 0.8rem; border-radius: 5px; border: 1px solid #ccc; display: flex; flex-wrap: wrap; gap: 8px; width: 100%; }
 .hist-item { padding: 2px 5px; border-radius: 4px; font-weight: bold; }
 .hist-fail { opacity: 0.5; text-decoration: line-through; }
