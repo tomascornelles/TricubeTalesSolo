@@ -123,11 +123,11 @@ function showEndScreen() {
   document.getElementById('final-stats').innerHTML = `${d.wins}: <strong>${state.stats.v}</strong> | ${d.losses}: <strong>${state.stats.l}</strong>`;
 }
 
-function rollManualTable(key, titleKey) {
-  const list = manualTables[key];
-  const d1 = Math.floor(Math.random() * 6) + 1;
-  const d2 = Math.floor(Math.random() * 6) + 1;
-  const res = list[((d1-1)*6) + (d2-1)];
+function rollManualTable(keys, titleKey) {
+  forEachKey(keys, key => {
+    const list = manualTables[key];
+    const res = list[Math.floor(Math.random() * list.length)];
+  });
   openModal('modal-info', titleKey, `<strong>${res}</strong>`);
 }
 

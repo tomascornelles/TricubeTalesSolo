@@ -127,6 +127,10 @@ input, select {
   background-color: #f8fafc;
   border: 1px solid var(--border-color);
 }
+ hr {
+ margin-block-start: calc(1.5 * var(--spacing));
+ margin-block-end: calc(2.5 * var(--spacing));
+ }
 
 @media only screen and (prefers-color-scheme: dark) {
   input, select { background-color: #0f172a; }
