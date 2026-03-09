@@ -162,4 +162,4 @@ dialog article { max-width: 500px; }
 footer { margin-top: 2rem; border-top: 1px solid #eee; padding: 1rem 0; display: flex; justify-content: flex-end; align-items: center; gap: 10px; }
 .lang-select-container { width: 200px; margin-bottom: 0; }
 .lang-select-container select { margin-bottom: 0; font-size: 0.8rem; }
-#modal-body { text-align: center; }
+#modal-body { text-align: center; margin-block: 1rem; background: #f0f0f0; padding: 1rem; border-radius: 5px; }
