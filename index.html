@@ -65,12 +65,19 @@
 
           <article>
             <strong data-i18n="oracle_title">Oracle (Probability)</strong>
-            <div class="oracle-grid">
-              <button onclick="rollOracle(2)" data-i18n="v_likely">Very Likely (2+)</button>
-              <button onclick="rollOracle(3)" data-i18n="likely">Likely (3+)</button>
-              <button class="contrast" onclick="rollOracle(4)" data-i18n="maybe">Maybe (4+)</button>
-              <button onclick="rollOracle(5)" data-i18n="unlikely">Unlikely (5+)</button>
-              <button onclick="rollOracle(6)" data-i18n="v_unlikely">Very Unlikely (6)</button>
+            <div class="dices">
+              <select id="oracle-select">
+                <option value="2" data-i18n="v_likely">Very Likely (2+)</option>
+                <option value="3" data-i18n="likely">Likely (3+)</option>
+                <option value="4" data-i18n="maybe" selected>Maybe (4+)</option>
+                <option value="5" data-i18n="unlikely">Unlikely (5+)</option>
+                <option value="6" data-i18n="v_unlikely">Very Unlikely (6)</option>
+              </select>
+              <button onclick="rollOracle()" data-i18n="yes_no" class="contrast">Yes/No</button>
+            </div>
+            <hr>
+            <div>
+              <button onclick="rollManualTable('complex', 'complex_answer')" data-i18n="complex_answer"></button>
             </div>
           </article>
         </div>

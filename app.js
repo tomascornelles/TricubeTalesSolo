@@ -109,7 +109,6 @@ function checkFinalCondition() {
   const suits = {};
   ch.forEach(d => suits[d.card.s] = (suits[d.card.s] || 0) + 1);
   const counts = Object.values(suits);
-  console.log(suits, counts);
   if (counts.some(c => c >= 3) && counts.some(c => c === 2)) return true;
   return false;
 }
@@ -129,7 +128,7 @@ function rollManualTable(key, titleKey) {
   const d1 = Math.floor(Math.random() * 6) + 1;
   const d2 = Math.floor(Math.random() * 6) + 1;
   const res = list[((d1-1)*6) + (d2-1)];
-  openModal('modal-info', titleKey, `<span class="modal-dice">${d1}, ${d2}</span><br><strong>${res}</strong>`);
+  openModal('modal-info', titleKey, `<strong>${res}</strong>`);
 }
 
 function rollTwist(genre, labelKey) {
