@@ -57,9 +57,8 @@
           <article>
             <div class="dices">
               <button onclick="rollDice(1)">1d6</button>
-              <button onclick="rollDice(2)">2d6</button>
+              <button class="contrast" onclick="rollDice(2)">2d6</button>
               <button onclick="rollDice(3)">3d6</button>
-              <button class="contrast" onclick="drawSingleCard()" data-i18n="card">Card</button>
             </div>
           </article>
 
@@ -120,9 +119,6 @@
           <select id="lang-dropdown" onchange="setLang(this.value)">
             <option value="en">English 🇺🇸</option>
             <option value="es">Español 🇪🇸</option>
-            <option value="fr">Français 🇫🇷</option>
-            <option value="it">Italiano 🇮🇹</option>
-            <option value="de">Deutsch 🇩🇪</option>
           </select>
         </div>
       </footer>

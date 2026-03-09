@@ -126,10 +126,16 @@ function showEndScreen() {
 function rollManualTable(keys, titleKey) {
   const res = [];
   keys.forEach(key => {
-    const list = manualTables[key];
+    const list = manualTables[key][state.lang];
     res.push(list[Math.floor(Math.random() * list.length)]);
   });
-  openModal('modal-info', titleKey, `<strong>${res.join('<br>')}</strong>`);
+  if (keys[0] === 'complex') {
+    res[0] = `<strong>${res[0]}</strong>`;
+  }
+  if (keys[1] === 'related') {
+    res[1] = `<em>${res[1]}</em>`;
+  }
+  openModal('modal-info', titleKey, res.join('<br>'));
 }
 
 function rollTwist(genre, labelKey) {
@@ -150,8 +156,9 @@ function rollOracle() {
   const d = i18n[state.lang];
   const r1 = Math.floor(Math.random() * 6) + 1;
   const r2 = Math.floor(Math.random() * 6) + 1;
-  let res = r1 >= target ? "<strong>YES</strong>" : "<strong>NO</strong>";
-  if (r2 <= 2) res += " But..."; if (r2 >= 5) res += " And...";
+  let res = r1 >= target ? `<strong>${d.yes}</strong>` : `<strong>${d.no}</strong>`;
+  if (r2 <= 2) res += ` ${d.but}`; 
+  if (r2 >= 5) res += ` ${d.and}`;
   openModal('modal-info', "oracle_title", res);
 }
 
