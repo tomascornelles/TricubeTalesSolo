@@ -15,7 +15,6 @@
 <body>
     <main class="container">
         <section id="game-section">
-            <div class="grid">
                 <article id="current-card-area">
                     <button id="init-scene-btn" onclick="startAdventure()" class="contrast" style="width:100%" data-i18n="start_adventure">Start Initial Scene</button>
                     
@@ -54,7 +53,17 @@
                     </div>
                     </div>
                 </article>
-
+                
+            <div class="grid">
+                <article>
+                        <div class="dices">
+                            <button onclick="rollDice(1)">1d6</button>
+                            <button onclick="rollDice(2)">2d6</button>
+                            <button onclick="rollDice(3)">3d6</button>
+                            <button class="contrast" onclick="drawCard()" data-i18n="card">Card</button>
+                        </div>
+                </article>
+                
                 <article>
                         <strong data-i18n="oracle_title">Oracle (Probability)</strong>
                         <div class="oracle-grid">
@@ -68,9 +77,8 @@
             </div>
         </section>
 
-        <hr>
-
         <section id="generators-section">
+          <article>
             <h4 data-i18n="gen_title">Manual Generators</h4>
             <div class="gen-container">
                 <div class="gen-section">
@@ -98,6 +106,7 @@
                     <button onclick="rollTwist('scifi', 'twist_scifi')" data-i18n="twist_scifi">Sci-Fi</button>
                 </div>
             </div>
+          </article>
         </section>
 
         <footer>

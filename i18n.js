@@ -11,7 +11,8 @@ const i18n = {
         modal_ok: "Got it", reset_q: "Reset?", reset_text: "Current progress will be lost.", modal_cancel: "Cancel", modal_yes: "Yes",
         select_genre: "Select Genre", plot_main: "Main Plot", plot_pri: "Primary Plot", plot_sec: "Secondary Plot",
         eff_pos: "Positive Effect", eff_neg: "Negative Effect", twist_event: "Unexpected Twist / Scene Change",
-        trait_agile: "Agile", trait_strong: "Strong", trait_crafty: "Crafty", challenge: "Challenge", oracle_res: "Die", idea_label: "Idea"
+        trait_agile: "Agile", trait_strong: "Strong", trait_crafty: "Crafty", challenge: "Challenge", oracle_res: "Die", idea_label: "Idea",
+      card: "Card",
     },
     es: {
         status: "Estado", wins: "Éxitos", losses: "Fallos", deck: "Mazo", oracle_title: "Oráculo",
@@ -25,7 +26,8 @@ const i18n = {
         modal_ok: "Entendido", reset_q: "¿Reiniciar?", reset_text: "Se perderá el progreso actual.", modal_cancel: "Cancelar", modal_yes: "Sí",
         select_genre: "Selecciona un Género", plot_main: "Trama Principal", plot_pri: "Trama Primaria", plot_sec: "Trama Secundaria",
         eff_pos: "Efecto Positivo", eff_neg: "Efecto Negativo", twist_event: "Giro inesperado / Cambio escena",
-        trait_agile: "Ágil", trait_strong: "Fuerte", trait_crafty: "Astuto", challenge: "Desafío de", oracle_res: "Dado", idea_label: "Idea"
+        trait_agile: "Ágil", trait_strong: "Fuerte", trait_crafty: "Astuto", challenge: "Desafío de", oracle_res: "Dado", idea_label: "Idea",
+      card: "Carta"
     },
     fr: {
         status: "Statut", wins: "Succès", losses: "Échecs", deck: "Paquet", oracle_title: "Oracle",
@@ -53,7 +55,8 @@ const i18n = {
         modal_ok: "OK", reset_q: "Reset?", reset_text: "Perderai i progressi.", modal_cancel: "Annulla", modal_yes: "Sì",
         select_genre: "Genere", plot_main: "Trama Principale", plot_pri: "Trama Primaria", plot_sec: "Trama Secondaria",
         eff_pos: "Effetto Positivo", eff_neg: "Effetto Negativo", twist_event: "Svolta inaspettata",
-        trait_agile: "Agile", trait_strong: "Forte", trait_crafty: "Astuto", challenge: "Sfida", oracle_res: "Dado", idea_label: "Idea"
+        trait_agile: "Agile", trait_strong: "Forte", trait_crafty: "Astuto", challenge: "Sfida", oracle_res: "Dado", idea_label: "Idea",
+      card: "Carta",
     },
     de: {
         status: "Status", wins: "Erfolge", losses: "Fehlschläge", deck: "Deck", oracle_title: "Orakel",
@@ -67,7 +70,8 @@ const i18n = {
         modal_ok: "OK", reset_q: "Reset?", reset_text: "Fortschritt geht verloren.", modal_cancel: "Abbrechen", modal_yes: "Ja",
         select_genre: "Genre", plot_main: "Hauptplot", plot_pri: "Primärplot", plot_sec: "Sekundärplot",
         eff_pos: "Positiver Effekt", eff_neg: "Negativer Effekt", twist_event: "Unerwartete Wendung",
-        trait_agile: "Wendig", trait_strong: "Stark", trait_crafty: "Schlau", challenge: "Herausforderung", oracle_res: "Würfel", idea_label: "Idee"
+        trait_agile: "Wendig", trait_strong: "Stark", trait_crafty: "Schlau", challenge: "Herausforderung", oracle_res: "Würfel", idea_label: "Idee",
+      card: "Karte",
     }
 };
 

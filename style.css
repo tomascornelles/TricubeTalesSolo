@@ -148,13 +148,13 @@ body { padding-top: 1rem; }
 .hidden { display: none; }
 .oracle-box { border: 1px dashed #ccc; padding: 1rem; border-radius: 8px; margin-top: 1rem; background: #fff; }
 .oracle-grid { display: grid; grid-template-columns: 1fr; gap: 5px; margin-top: 10px; }
-.oracle-grid button { margin-bottom: 0; font-size: .8rem; padding: 4px; }
+.oracle-grid button { margin-bottom: 0; padding: 4px; }
 .oracle-res { font-weight: bold; font-size: 1.1rem; color: var(--primary); margin-top: 10px; display: block; text-align: center; }
 .last-scene-alert { background: #fff3cd; color: #856404; padding: 5px; text-align: center; font-weight: bold; border-radius: 5px; margin-bottom: 10px; border: 1px solid #ffeeba; }
 .game-over-banner {padding: 1rem; border-radius: 8px; text-align: center; margin-top: 1rem; border: 2px solid gold; }
 .gen-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; }
 .gen-section h6 { margin-bottom: 10px; font-size: 0.8rem; text-transform: uppercase; color: #666; }
-.gen-section button { width: 100%; font-size: 0.75rem; padding: 8px; margin-bottom: 5px; }
+.gen-section button { width: 100%; font-size: 0.9rem; padding: 8px; margin-bottom: 5px; }
 dialog article { max-width: 500px; }
 .modal-dice { display: inline-block; background: #333; color: #fff; padding: 2px 8px; border-radius: 4px; font-family: monospace; margin-right: 10px; }
 .twist-idea { font-style: italic; color: var(--primary); margin-top: 10px; display: block; border-left: 3px solid var(--primary); padding-left: 10px; }
@@ -162,4 +162,9 @@ dialog article { max-width: 500px; }
 footer { margin-top: 2rem; border-top: 1px solid #eee; padding: 1rem 0; display: flex; justify-content: flex-end; align-items: center; gap: 10px; }
 .lang-select-container { width: 200px; margin-bottom: 0; }
 .lang-select-container select { margin-bottom: 0; font-size: 0.8rem; }
-#modal-body { text-align: center; margin-block: 1rem; background: #f0f0f0; padding: 1rem; border-radius: 5px; }
+#modal-body { text-align: center; margin-block: 1rem; }
+.result-dice { font-size: 1.5rem; font-weight: bold; height: 3rem; line-height: 2.5rem;  display: inline-block; text-align: center; width: 3rem; border-radius: 4px; margin: 0 5px; }
+.result-card { font-size: 1rem; font-weight: bold; height: 6rem; line-height: 5rem;  display: inline-block; text-align: center; width: 4rem; border-radius: 4px; margin: 0 5px; }
+.result-card.♦, .result-card.♥ { color: #e53935;  font-size: 1.5rem; }
+.result-card.♠, .result-card.♣ { font-size: 1.5rem; }
+.dices { display: flex; gap: 10px; }

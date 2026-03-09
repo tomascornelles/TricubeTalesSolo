@@ -153,6 +153,22 @@ function rollOracle(target) {
     openModal('modal-info', "oracle_title", res);
 }
 
+function rollDice(n) {
+  const results = [];
+  for (let i = 0; i < n; i++) results.push(Math.floor(Math.random() * 6) + 1);
+  openModal('modal-info', "dice_title", `<kbd class="result-dice">${results.join('</kbd> <kbd class="result-dice">')}</kbd>`);
+}
+
+function drawCard() {
+  // draw a random card fom a new deck and show it in a modal, the number/letter and simbol, with the color of the simbol
+  // this card is not related with the main deck
+    const s = ['♠', '♣', '♥', '♦'], v = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+    deck = []; s.forEach(suit => v.forEach(val => deck.push({v: val, s: suit})));
+    deck.push({v: 'Joker', s: ''});
+  const res = deck[Math.floor(Math.random() * deck.length)];
+  openModal('modal-info', "card", `<kbd class="result-card ${res.s}">${res.v}${res.s}</kbd>`);
+}
+
 function showResetConfirm() { openModal('modal-confirm'); }
 function initDeck() {
     const s = ['♠', '♣', '♥', '♦'], v = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
