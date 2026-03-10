@@ -88,7 +88,7 @@
       <section id="generators-section">
         <article>
           <h4 data-i18n="gen_title">Manual Generators</h4>
-            <details class="gen-section">
+            <details class="gen-section" name="generators">
               <summary data-i18n="cat_urban"> Urban</summary>
               <button onclick="rollManualTable(['settlements_large_desc', 'settlements_large_ppl'], 'settlements_large')" data-i18n="settlements_large"></button>
               <button onclick="rollManualTable(['settlements_small_desc', 'settlements_small_ppl'], 'settlements_small')" data-i18n="settlements_small"></button>
@@ -97,7 +97,7 @@
               <button onclick="rollManualTable(['urban_events'], 'urban_events')" data-i18n="urban_events"></button>
             </details>
 
-            <details class="gen-section">
+            <details class="gen-section" name="generators">
               <summary data-i18n="cat_wilderness">Wilderness</summary>
               <button onclick="rollManualTable(['wilderness_regions_terrain', 'wilderness_regions_climate'], 'wilderness_regions')" data-i18n="wilderness_regions"></button>
               <button onclick="rollManualTable(['wilderness_features'], 'wilderness_features')" data-i18n="wilderness_features"></button>
@@ -105,14 +105,14 @@
               <button onclick="rollManualTable(['wilderness_events'], 'wilderness_events')" data-i18n="wilderness_events"></button>
             </details>
 
-            <details class="gen-section">
+            <details class="gen-section" name="generators">
               <summary data-i18n="cat_dungeon">Dungeon Crawls</summary>
               <button onclick="rollManualTable(['dungeon_features'], 'dungeon_features')" data-i18n="dungeon_features"></button>
               <button onclick="rollManualTable(['dungeon_denizens'], 'dungeon_denizens')" data-i18n="dungeon_denizens"></button>
               <button onclick="rollManualTable(['dungeon_events'], 'dungeon_events')" data-i18n="dungeon_events"></button>
             </details>
 
-            <details class="gen-section">
+            <details class="gen-section" name="generators">
               <summary data-i18n="cat_voyages">Voyages</summary>
               <button onclick="rollManualTable(['voyages_sky', 'voyages_wind'], 'voyages_conditions')" data-i18n="voyages_conditions"></button>
               <button onclick="rollManualTable(['voyages_landmarks'], 'voyages_landmarks')" data-i18n="voyages_landmarks"></button>
@@ -120,7 +120,7 @@
               <button onclick="rollManualTable(['voyages_events'], 'voyages_events')" data-i18n="voyages_events"></button>
             </details>
 
-            <details class="gen-section">
+            <details class="gen-section" name="generators">
               <summary data-i18n="cat_planes">Planes</summary>
               <button onclick="rollManualTable(['planes_planar_travel_dimension', 'planes_planar_travel_form', 'planes_planar_travel_dangers'], 'planes_planar_travel')" data-i18n="planes_planar_travel"></button>
               <button onclick="rollManualTable(['planes_planets_travel_form', 'planes_planets_travel_orbit', 'planes_planets_travel_tech'], 'planes_planets_travel')" data-i18n="planes_planets_travel"></button>
@@ -129,7 +129,7 @@
               <button onclick="rollManualTable(['planes_major_events'], 'planes_major_events')" data-i18n="planes_major_events"></button>
             </details>
 
-            <details class="gen-section">
+            <details class="gen-section" name="generators">
               <summary data-i18n="cat_crimes">Mysteries</summary>
               <button onclick="rollManualTable(['crimes_suspected'], 'crimes_suspected')" data-i18n="crimes_suspected"></button>
               <button onclick="rollManualTable(['crimes_motives'], 'crimes_motives')" data-i18n="crimes_motives"></button>
@@ -137,7 +137,7 @@
               <button onclick="rollManualTable(['crimes_clues'], 'crimes_clues')" data-i18n="crimes_clues"></button>
             </details>
 
-            <details class="gen-section">
+            <details class="gen-section" name="generators">
               <summary data-i18n="cat_social">Social</summary>
               <button onclick="openSocialDisposition(1,6)" data-i18n="social_disposition"></button>
               <button onclick="rollManualTable(['social_interest'], 'social_interest')" data-i18n="social_interest"></button>
@@ -145,19 +145,19 @@
               <button onclick="rollManualTable(['social_mannerisms'], 'social_mannerisms')" data-i18n="social_mannerisms"></button>
             </details>
 
-            <details class="gen-section">
+            <details class="gen-section" name="generators">
               <summary data-i18n="cat_arcane">Arcane</summary>
               <button onclick="rollManualTable(['arcane_spells', 'arcane_spells_limitations', 'arcane_trappings'], 'arcane_spells')" data-i18n="arcane_spells"></button>
               <button onclick="rollManualTable(['arcane_items', 'arcane_item_features', 'arcane_trappings'], 'arcane_items')" data-i18n="arcane_items"></button>
             </details>
 
-            <details class="gen-section">
+            <details class="gen-section" name="generators">
               <summary data-i18n="cat_tags">Tags</summary>
               <button onclick="rollManualTable(['tags_person'], 'tags_person')" data-i18n="tags_person"></button>
               <button onclick="rollManualTable(['tags_location'], 'tags_location')" data-i18n="tags_location"></button>
             </details>
 
-            <details class="gen-section">
+            <details class="gen-section" name="generators">
               <summary data-i18n="cat_names">Names</summary>
               <button onclick="rollManualTable(['names_male', 'names_surname'], 'names_male')" data-i18n="names_male"></button>
               <button onclick="rollManualTable(['names_female', 'names_surname'], 'names_female')" data-i18n="names_female"></button>
@@ -168,7 +168,7 @@
 
 
 
-            <details class="gen-section">
+            <details class="gen-section" name="generators">
               <summary data-i18n="cat_twist">🌀 Twists</summary>
               <button onclick="rollTwist('fantasy', 'twist_fantasy')" data-i18n="twist_fantasy">Fantasy</button>
               <button onclick="rollTwist('horror', 'twist_horror')" data-i18n="twist_horror">Horror</button>
