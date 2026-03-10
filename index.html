@@ -88,66 +88,59 @@
       <section id="generators-section">
         <article>
           <h4 data-i18n="gen_title">Manual Generators</h4>
-          <div class="gen-container">
-            <div class="gen-section">
-              <h6 data-i18n="cat_urban"> Urban</h6>
+            <details class="gen-section">
+              <summary data-i18n="cat_urban"> Urban</summary>
               <button onclick="rollManualTable(['settlements_large_desc', 'settlements_large_ppl'], 'settlements_large')" data-i18n="settlements_large"></button>
               <button onclick="rollManualTable(['settlements_small_desc', 'settlements_small_ppl'], 'settlements_small')" data-i18n="settlements_small"></button>
               <button onclick="rollManualTable(['urban_ppl'], 'urban_ppl')" data-i18n="urban_ppl"></button>
               <button onclick="rollManualTable(['urban_locations'], 'urban_locations')" data-i18n="urban_locations"></button>
               <button onclick="rollManualTable(['urban_events'], 'urban_events')" data-i18n="urban_events"></button>
-            </div>
-            <div class="gen-section">
-              <h6 data-i18n="cat_wilderness">Wilderness</h6>
+            </details>
+
+            <details class="gen-section">
+              <summary data-i18n="cat_wilderness">Wilderness</summary>
               <button onclick="rollManualTable(['wilderness_regions_terrain', 'wilderness_regions_climate'], 'wilderness_regions')" data-i18n="wilderness_regions"></button>
               <button onclick="rollManualTable(['wilderness_features'], 'wilderness_features')" data-i18n="wilderness_features"></button>
               <button onclick="rollManualTable(['wilderness_folks'], 'wilderness_folks')" data-i18n="wilderness_folks"></button>
               <button onclick="rollManualTable(['wilderness_events'], 'wilderness_events')" data-i18n="wilderness_events"></button>
-            </div>
-            <div class="gen-section">
-              <h6 data-i18n="cat_dungeon">Dungeon Crawls</h6>
+            </details>
+
+            <details class="gen-section">
+              <summary data-i18n="cat_dungeon">Dungeon Crawls</summary>
               <button onclick="rollManualTable(['dungeon_features'], 'dungeon_features')" data-i18n="dungeon_features"></button>
               <button onclick="rollManualTable(['dungeon_denizens'], 'dungeon_denizens')" data-i18n="dungeon_denizens"></button>
               <button onclick="rollManualTable(['dungeon_events'], 'dungeon_events')" data-i18n="dungeon_events"></button>
-            </div>
-            <div class="gen-section">
-              <h6 data-i18n="cat_voyages">Voyages</h6>
+            </details>
+
+            <details class="gen-section">
+              <summary data-i18n="cat_voyages">Voyages</summary>
               <button onclick="rollManualTable(['voyages_sky', 'voyages_wind'], 'voyages_conditions')" data-i18n="voyages_conditions"></button>
               <button onclick="rollManualTable(['voyages_landmarks'], 'voyages_landmarks')" data-i18n="voyages_landmarks"></button>
               <button onclick="rollManualTable(['voyages_encounters'], 'voyages_encounters')" data-i18n="voyages_encounters"></button>
               <button onclick="rollManualTable(['voyages_events'], 'voyages_events')" data-i18n="voyages_events"></button>
-            </div>
+            </details>
+
+            <details class="gen-section">
+              <summary data-i18n="cat_planes">Planes</summary>
+              <button onclick="rollManualTable(['planes_planar_travel_dimension', 'planes_planar_travel_form', 'planes_planar_travel_dangers'], 'planes_planar_travel')" data-i18n="planes_planar_travel"></button>
+              <button onclick="rollManualTable(['planes_planets_travel_form', 'planes_planets_travel_orbit', 'planes_planets_travel_tech'], 'planes_planets_travel')" data-i18n="planes_planets_travel"></button>
+              <button onclick="rollManualTable(['planes_realm_features'], 'planes_realm_features')" data-i18n="planes_realm_features"></button>
+              <button onclick="rollManualTable(['planes_native_societies'], 'planes_native_societies')" data-i18n="planes_native_societies"></button>
+              <button onclick="rollManualTable(['planes_major_events'], 'planes_major_events')" data-i18n="planes_major_events"></button>
+            </details>
 
 
 
 
 
 
-            <div class="gen-section">
-              <h6 data-i18n="cat_loc">📍 Locations</h6>
-              <button onclick="rollManualTable(['urban'], 'loc_urban')" data-i18n="loc_urban">Urban</button>
-              <button onclick="rollManualTable(['wilderness'], 'loc_wild')" data-i18n="loc_wild">Wilderness</button>
-              <button onclick="rollManualTable(['voyage'], 'loc_voyage')" data-i18n="loc_voyage">Voyage</button>
-            </div>
-            <div class="gen-section">
-              <h6 data-i18n="cat_feat">✨ Features</h6>
-              <button onclick="rollManualTable(['urban_feat'], 'feat_urban')" data-i18n="feat_urban">Urban Feature</button>
-              <button onclick="rollManualTable(['wild_feat'], 'feat_wild')" data-i18n="feat_wild">Wild Feature</button>
-              <button onclick="rollManualTable(['voyage_feat'], 'feat_voyage')" data-i18n="feat_voyage">Voyage Landmark</button>
-            </div>
-            <div class="gen-section">
-              <h6 data-i18n="cat_ppl">👥 People</h6>
-              <button onclick="rollManualTable(['urban_ppl'], 'ppl_urban')" data-i18n="ppl_urban">Urban People</button>
-              <button onclick="rollManualTable(['wild_ppl'], 'ppl_wild')" data-i18n="ppl_wild">Wild People</button>
-              <button onclick="rollFantasyName()" data-i18n="gen_name">Name</button>
-            </div>
-            <div class="gen-section">
-              <h6 data-i18n="cat_twist">🌀 Twists</h6>
+
+            <details class="gen-section">
+              <summary data-i18n="cat_twist">🌀 Twists</summary>
               <button onclick="rollTwist('fantasy', 'twist_fantasy')" data-i18n="twist_fantasy">Fantasy</button>
               <button onclick="rollTwist('horror', 'twist_horror')" data-i18n="twist_horror">Horror</button>
               <button onclick="rollTwist('scifi', 'twist_scifi')" data-i18n="twist_scifi">Sci-Fi</button>
-            </div>
-          </div>
+            </details>
         </article>
       </section>
 
