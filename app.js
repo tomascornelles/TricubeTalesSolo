@@ -138,6 +138,21 @@ function rollManualTable(keys, titleKey) {
   openModal('modal-info', titleKey, res.join('<br>'));
 }
 
+function rollSocialDisposition(h,f) {
+  const r1 = Math.floor(Math.random() * 6);
+  const table = (r1 <= h) 
+  ? manualTables.social_attitude_negative[state.lang]
+  : (r1 >= f)
+    ? manualTables.social_attitude_positive[state.lang]
+    : manualTables.social_attitude_neutral[state.lang];
+  const title = (r1 <= h)
+    ? 'social_attitude_negative'
+    : (r1 >= f)
+      ? 'social_attitude_positive'
+      : 'social_attitude_neutral';
+  openModal('modal-info', title, table[Math.floor(Math.random() * table.length)]);
+}
+
 function rollScaledQuestion() {
   const r1 = Math.floor(Math.random() * 6);
   const d = manualTables.scaled_question[state.lang][r1];

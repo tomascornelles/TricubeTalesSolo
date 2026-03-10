@@ -16,8 +16,14 @@ const i18n = {
     cat_twist: "🌀 Twists",
     cat_planes: "🪐 Planes & Planets",
     cat_wilderness: "🏞 Wilderness",
+    cat_crimes: "🔪 Crimes & Mysteries",
+    cat_social: "👥 Social Interaction",
     challenge: "Challenge", 
     complex_answer: "Complex answer",
+    crimes_suspected: "Suspected Crimes",
+    crimes_motives: "Apparent Motives",
+    crimes_unsolved: "Unsolved Mysteries",
+    crimes_clues: "Crime Scene Clues",
     deck: "Deck", 
     dungeon_denizens: "Dungeon Denizens",
     dungeon_events: "Dungeon Events",
@@ -64,6 +70,15 @@ const i18n = {
     select_genre: "Select Genre", 
     settlements_large: "Large settlements",
     settlements_small: "Small settlements",
+    social_disposition: "Disposition",
+    social_friendly: "Friendly",
+    social_hostile: "Hostile",
+    social_attitude_negative: "Negative Attitude",
+    social_attitude_positive: "Positive Attitude",
+    social_attitude_neutral: "Neutral Attitude",
+    social_interest: "Subject of Interest",
+    social_demeanor: "General Demeanor",
+    social_mannerisms: "Speech/Mannerisms",
     start_adventure: "Start Initial Scene", 
     status: "Status", 
     trait_agile: "Agile", 
@@ -126,6 +141,19 @@ const i18n = {
     planes_realm_features: "Características",
     planes_native_societies: "Sociedades",
     planes_major_events: "Eventos",
+    cat_crimes: "🔪 Crimenes y Misterios",
+    crimes_suspected: "Supuestos Crimenes",
+    crimes_motives: "Motivos Aparentes",
+    crimes_unsolved: "Misterios no resueltos",
+    crimes_clues: "Pistas",
+    cat_social: "👥 Interacción Social",
+    social_disposition: "Disposición",
+    social_attitude_negative: "Disposicion Negativa",
+    social_attitude_positive: "Disposicion Positiva",
+    social_attitude_neutral: "Disposicion Neutral",
+    social_interest: "Tema de Interés",
+    social_demeanor: "Generalidad",
+    social_mannerisms: "Mannerismos",
     status: "Estado", wins: "Éxitos", losses: "Fallos", deck: "Mazo", oracle_title: "Oráculo",
     v_likely: "Muy Probable (2+)", likely: "Probable (3+)", maybe: "Tal vez (4+)", unlikely: "Improbable (5+)", v_unlikely: "Casi imposible (6)",
     start_adventure: "Empezar Escena Inicial", last_scene_warn: "⚠️ ÚLTIMA ESCENA", btn_win: "Victoria", btn_fail: "Fracaso",
@@ -779,6 +807,228 @@ const manualTables = {
       "Impacto de meteorito", "Guerra/revolución", "Muertes misteriosas", "Caza de brujas"
     ]
   },
+  crimes_suspected: {
+  en: [
+    "Armed robbery", "Hijacking", "Arson", "Hostage-taking", 
+    "Assassination", "Illegal possession", "Assault", "Impersonation", 
+    "Blackmail", "Insider trading", "Bribery", "Kidnapping", 
+    "Burglary", "Money laundering", "Coercion", "Murder", 
+    "Conspiracy", "Piracy", "Counterfeiting", "Racketeering", 
+    "Cybercrimes", "Rebellion", "Embezzlement", "Sabotage", 
+    "Espionage", "Smuggling", "Exploitation", "Solicitation", 
+    "Extortion", "Terrorism", "Fraud", "Trafficking", 
+    "Grand theft auto", "Treason", "Harassment", "Vandalism"
+  ],
+  es: [
+    "Robo a mano armada", "Secuestro de vehículos", "Incendio provocado", "Toma de rehenes", 
+    "Asesinato/Magnicidio", "Posesión ilegal", "Asalto/Agresión", "Suplantación de identidad", 
+    "Chantaje", "Uso de información privilegiada", "Soborno", "Secuestro de personas", 
+    "Allanamiento de morada", "Blanqueo de dinero", "Coacción", "Homicidio/Asesinato", 
+    "Conspiración", "Piratería", "Falsificación", "Crimen organizado/Chantaje", 
+    "Ciberdelitos", "Rebelión", "Malversación de fondos", "Sabotaje", 
+    "Espionaje", "Contrabando", "Explotación", "Instigación/Solicitación", 
+    "Extorsión", "Terrorismo", "Fraude", "Tráfico ilegal", 
+    "Robo de vehículos", "Traición", "Acoso", "Vandalismo"
+  ]
+},
+crimes_motives: {
+  en: [
+    "Accidental", "Intolerance", "Anger/rage", "Jealousy/grudge", 
+    "Artistic expression", "Long-term agenda", "Convenience", "Love/passion", 
+    "Curiosity/boredom", "Lust/desire", "Desperation", "Mistaken identity", 
+    "Destroy a rival", "Paid to do it", "Disagreement", "Power/influence", 
+    "Distraction", "Practice/training", "Following orders", "Protect someone", 
+    "Forced to do it", "Revenge/vendetta", "Greater good", "Self-preservation", 
+    "Greed/selfishness", "Status/prestige", "Hatred/resentment", "Stress/fear", 
+    "Honor/pride", "Teaching a lesson", "Idealism/morality", "Tying up loose ends", 
+    "Incidental/random", "Undermine/ruin", "Independence", "Wealth/security"
+  ],
+  es: [
+    "Accidental", "Intolerancia", "Ira/rabia", "Celos/rencor", 
+    "Expresión artística", "Agenda a largo plazo", "Conveniencia", "Amor/pasión", 
+    "Curiosidad/aburrimiento", "Lujuria/deseo", "Desesperación", "Confusión de identidad", 
+    "Destruir a un rival", "Pagado por ello", "Desacuerdo", "Poder/influencia", 
+    "Distracción", "Práctica/entrenamiento", "Siguiendo órdenes", "Proteger a alguien", 
+    "Obligado a ello", "Venganza/vendetta", "Bien común", "Autopreservación", 
+    "Codicia/egoísmo", "Estatus/prestigio", "Odio/resentimiento", "Estrés/miedo", 
+    "Honor/orgullo", "Dar una lección", "Idealismo/moralidad", "Cabo suelto", 
+    "Incidental/aleatorio", "Socavar/arruinar", "Independencia", "Riqueza/seguridad"
+  ]
+},
+  crimes_unsolved: {
+  en: [
+    "Alien sighting", "Lost treasure", "Ancient technology", "Magical relic/device",
+    "Astral projection", "Missing person", "Bedeviled object", "Murder-suicide",
+    "Blood drinkers", "Occult rituals", "Cannibalism", "Phantom hitchhiker",
+    "Crop circles", "Psychic visions", "Cursed land", "Ritualistic killings",
+    "Demonic possession", "Savaged corpse", "Disappearance", "Secret door/room",
+    "Faith healing", "Spooky woods", "Forbidden grimoire", "Sunken ship",
+    "Ghost vehicle", "Strange lights", "Ghostly sighting", "Unnatural sickness",
+    "Haunted house", "Urban legend", "Horrific mutilations", "Vanished flight",
+    "Human sacrifice", "Violent beast", "Impossible crime", "Weird drownings"
+  ],
+  es: [
+    "Avistamiento alienígena", "Tesoro perdido", "Tecnología antigua", "Reliquia/artefacto mágico",
+    "Proyección astral", "Persona desaparecida", "Objeto endemoniado", "Homicidio-suicidio",
+    "Bebedores de sangre", "Rituales ocultistas", "Canibalismo", "Autoestopista fantasma",
+    "Círculos en las cosechas", "Visiones psíquicas", "Tierra maldita", "Asesinatos rituales",
+    "Posesión demoníaca", "Cadáver destrozado", "Desaparición", "Puerta/habitación secreta",
+    "Sanación por fe", "Bosque inquietante", "Grimorio prohibido", "Barco hundido",
+    "Vehículo fantasma", "Luces extrañas", "Avistamiento espectral", "Enfermedad antinatural",
+    "Casa encantada", "Leyenda urbana", "Mutilaciones horribles", "Vuelo desaparecido",
+    "Sacrificio humano", "Bestia violenta", "Crimen imposible", "Ahogamientos extraños"
+  ]
+},
+  crimes_clues: {
+  en: [
+    "Article of clothing", "Hair, skin, or fur", "Blood spatter", "Hand-written note",
+    "Bullet or casing", "Internal organ", "Carpet fibers", "Lost button",
+    "Chemicals", "Paint or varnish", "Cigarette butt", "Photo or picture",
+    "Claw marks", "Piece of paper", "Coins or jewelry", "Pool of vomit",
+    "Dark stains", "Powder or dust", "Discarded wrapper", "Receipt or letter",
+    "Dog-eared book", "Small card", "Dry residue", "Specks of dirt",
+    "Ear, nose, or eyeball", "Tire tracks", "Finger, nail, or claw", "Tooth or fang",
+    "Fingerprint", "Traces of drugs", "Footprint", "Verbal statements",
+    "Glass fragments", "Video evidence", "Glove or boot", "Weapon or tool"
+  ],
+  es: [
+    "Prenda de vestir", "Pelo, piel o pelaje", "Salpicadura de sangre", "Nota manuscrita",
+    "Bala o casquillo", "Órgano interno", "Fibras de alfombra", "Botón perdido",
+    "Sustancias químicas", "Pintura o barniz", "Colilla de cigarrillo", "Foto o imagen",
+    "Marcas de garras", "Trozo de papel", "Monedas o joyas", "Charco de vómito",
+    "Manchas oscuras", "Polvo o ceniza", "Envoltorio desechado", "Recibo o carta",
+    "Libro con dobleces", "Tarjeta pequeña", "Residuo seco", "Motas de suciedad",
+    "Oreja, nariz o globo ocular", "Huellas de neumáticos", "Dedo, uña o garra", "Diente o colmillo",
+    "Huella dactilar", "Trazas de drogas", "Huella de pie/calzado", "Declaraciones verbales",
+    "Fragmentos de vidrio", "Evidencia de video", "Guante o bota", "Arma o herramienta"
+  ]
+},
+  social_attitude_negative: {
+  en: [
+    "<small>The character’s general attitude involves</small> Accusations/insults",
+    "<small>The character’s general attitude involves</small> Boasts/bluster",
+    "<small>The character’s general attitude involves</small> Demands/bullying",
+    "<small>The character’s general attitude involves</small> Mocking/taunts",
+    "<small>The character’s general attitude involves</small> Threats/intimidation",
+    "<small>The character’s general attitude involves</small> Yelling/ranting"
+  ],
+  es: [
+    "<small>La actitud general del personaje implica</small> Acusaciones/insultos",
+    "<small>La actitud general del personaje implica</small> Jactancia/fanfarronería",
+    "<small>La actitud general del personaje implica</small> Exigencias/intimidación",
+    "<small>La actitud general del personaje implica</small> Burlas/mofas",
+    "<small>La actitud general del personaje implica</small> Amenazas/intimidación",
+    "<small>La actitud general del personaje implica</small> Gritos/desvaríos"
+  ]
+},
+  social_attitude_neutral: {
+  en: [
+    "<small>The character’s general attitude involves</small> Boredom/distraction",
+    "<small>The character’s general attitude involves</small> Inquisitive/nosy",
+    "<small>The character’s general attitude involves</small> Joking/teasing",
+    "<small>The character’s general attitude involves</small> Politeness/civility",
+    "<small>The character’s general attitude involves</small> Preaching/insistence",
+    "<small>The character’s general attitude involves</small> Teaching/explaining"
+  ],
+  es: [
+    "<small>La actitud general del personaje implica</small> Aburrimiento/distracción",
+    "<small>La actitud general del personaje implica</small> Curiosidad/entrometimiento",
+    "<small>La actitud general del personaje implica</small> Bromas/vacile",
+    "<small>La actitud general del personaje implica</small> Cortesía/civilidad",
+    "<small>La actitud general del personaje implica</small> Sermoneo/insistencia",
+    "<small>La actitud general del personaje implica</small> Enseñanza/explicación"
+  ]
+},
+social_attitude_positive: {
+  en: [
+    "<small>The character’s general attitude involves</small> Assistance/guidance",
+    "<small>The character’s general attitude involves</small> Beseeching/groveling",
+    "<small>The character’s general attitude involves</small> Entertaining/regaling",
+    "<small>The character’s general attitude involves</small> Flirting/flattering",
+    "<small>The character’s general attitude involves</small> Praising/admiring",
+    "<small>The character’s general attitude involves</small> Sympathizing"
+  ],
+  es: [
+    "<small>La actitud general del personaje implica</small> Asistencia/guía",
+    "<small>La actitud general del personaje implica</small> Súplica/servilismo",
+    "<small>La actitud general del personaje implica</small> Entretenimiento/agasajo",
+    "<small>La actitud general del personaje implica</small> Coqueteo/halago",
+    "<small>La actitud general del personaje implica</small> Elogio/admiración",
+    "<small>La actitud general del personaje implica</small> Empatía/compasión"
+  ]
+},
+  social_interest: {
+  en: [
+    "Animal/pet", "Local news/gossip", "Assault/invasion", "Murder/death",
+    "Behavior/sin", "Mystery/secret", "Brawl/battle/duel", "Person/faction",
+    "Celebrity/luminary", "Personal agenda", "Children/relatives", "Physique/beauty",
+    "Clue/rumor/story", "Private matters", "Courage/heroism", "Profession/vocation",
+    "Disaster/accident", "Quest/adventure", "Discovery/creation", "Recent event",
+    "Disease/sickness", "Relationship/love", "Family/heritage", "Religion/faith",
+    "Festival/party", "Resources/property", "Geography/place", "Skill/talent/aptitude",
+    "History/past", "Status/reputation", "Intellect/wits", "Theft/robbery",
+    "Item/equipment", "Wealth/treasure", "Knowledge/study", "Weather/climate"
+  ],
+  es: [
+    "Animal/mascota", "Noticias locales/chismes", "Asalto/invasión", "Asesinato/muerte",
+    "Comportamiento/pecado", "Misterio/secreto", "Pelea/batalla/duelo", "Persona/facción",
+    "Celebridad/luminaria", "Agenda personal", "Niños/parientes", "Físico/belleza",
+    "Pista/rumor/historia", "Asuntos privados", "Coraje/heroísmo", "Profesión/vocación",
+    "Desastre/accidente", "Misión/aventura", "Descubrimiento/creación", "Suceso reciente",
+    "Enfermedad/dolencia", "Relación/amor", "Familia/herencia", "Religión/fe",
+    "Festival/fiesta", "Recursos/propiedades", "Geografía/lugar", "Habilidad/talento/aptitud",
+    "Historia/pasado", "Estatus/reputación", "Intelecto/astucia", "Robo/hurto",
+    "Objeto/equipo", "Riqueza/tesoro", "Conocimiento/estudio", "Clima/meteorología"
+  ]
+},
+  social_demeanor: {
+  en: [
+    "Accepting/casual", "Distrustful/fearful", "Aggressive/pushy", "Emotional/excitable",
+    "Aloof/haughty", "Empathetic/astute", "Ambitious/eager", "Energetic/spirited",
+    "Anxious/restless", "Forthright/sincere", "Assertive/confident", "Gloomy/grumpy",
+    "Bossy/commanding", "Hesitant/reluctant", "Brooding/reflective", "Impatient/irritable",
+    "Callous/insensitive", "Lighthearted/lively", "Candid/blunt", "Merry/cheerful",
+    "Careful/cautious", "Opinionated/cocky", "Caring/worrier", "Passionate/ardent",
+    "Cold/calculating", "Relaxed/calm", "Condescending", "Self-absorbed",
+    "Conservative", "Skeptical/doubtful", "Cynical/sarcastic", "Stoic/apathetic",
+    "Daring/impulsive", "Thoughtful/discrete", "Disagreeable/rude", "Wary/vigilant"
+  ],
+  es: [
+    "Aceptante/informal", "Desconfiado/temeroso", "Agresivo/insistente", "Emocional/excitable",
+    "Distante/altivo", "Empático/astuto", "Ambicioso/entusiasta", "Enérgico/brioso",
+    "Ansioso/inquieto", "Directo/sincero", "Asertivo/seguro", "Sombrío/gruñón",
+    "Mandón/autoritario", "Vacilante/reacio", "Melancólico/reflexivo", "Impaciente/irritable",
+    "Cruel/insensible", "Alegre/animado", "Franco/brusco", "Jovial/risueño",
+    "Cuidadoso/cauto", "Obstinado/engreído", "Afectuoso/preocupado", "Apasionado/ardiente",
+    "Frío/calculador", "Relajado/calmado", "Condescendiente", "Ensimismado",
+    "Conservador", "Escéptico/dudoso", "Cínico/sarcástico", "Estoico/apático",
+    "Atrevido/impulsivo", "Considerado/discreto", "Desagradable/grosero", "Cauteloso/vigilante"
+  ]
+},
+  social_mannerisms: {
+  en: [
+    "1000 yard stare", "Mumbles/slurs", "Always interrupts", "Often clears throat",
+    "Avoids eye contact", "Picks nose/teeth", "Bites lip/nails", "Plays with hair",
+    "Breathes loudly", "Rubs eyes/mouth", "Chain smoker", "Scratches a lot",
+    "Chews gum/leaves", "Slouching posture", "Constant snacking", "Speaks quietly",
+    "Cracks knuckles", "Strokes chin/beard", "Darting eyes", "Stutters/pauses",
+    "Drinks excessively", "Talks/laughs loudly", "Drums fingers", "Taps foot",
+    "Fiddles/fidgets", "Touches/traces scar", "Folded arms", "Tilts head & frowns",
+    "Gestures wildly", "Tugs ear/clothing", "Giggles/chuckles", "Twists jewelry",
+    "Hands in pockets", "Unusual accent", "Hums/whistles", "Whispers/rasps"
+  ],
+  es: [
+    "Mirada perdida", "Murmura/arrastra las palabras", "Interrumpe siempre", "Se aclara la garganta a menudo",
+    "Evita el contacto visual", "Se hurga la nariz/los dientes", "Se muerde los labios/las uñas", "Se juega con el pelo",
+    "Respira ruidosamente", "Se frotar los ojos/la boca", "Fumador empedernido", "Se rasca mucho",
+    "Masca chicle/hojas", "Postura encorvada", "Picotea comida constantemente", "Habla en voz baja",
+    "Se cruje los nudillos", "Se acaricia la barbilla/barba", "Mirada esquiva", "Tartamudea/hace pausas",
+    "Bebe en exceso", "Habla/ríe fuerte", "Tamborilea con los dedos", "Zapatea con el pie",
+    "Manosea objetos/está inquieto", "Toca/recorre una cicatriz", "Brazos cruzados", "Inclina la cabeza y frunce el ceño",
+    "Gesticula salvajemente", "Se tira de la oreja/la ropa", "Risitas/risas entre dientes", "Juguetea con sus joyas",
+    "Manos en los bolsillos", "Acento inusual", "Tararea/silba", "Susurra/habla con voz rasposa"
+  ]
+},
 };
 
 const twistIdeas = {
