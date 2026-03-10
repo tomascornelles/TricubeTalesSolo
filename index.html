@@ -15,50 +15,49 @@
   <body>
     <main class="container">
       <section id="game-section">
-        <article id="current-card-area">
-          <button id="init-scene-btn" onclick="startAdventure()" class="contrast" style="width:100%" data-i18n="start_adventure">Start Initial Scene</button>
-
-          <div id="card-content-wrapper" class="hidden">
-            <div id="last-scene-msg" class="last-scene-alert hidden" data-i18n="last_scene_warn">⚠️ FINAL SCENE</div>
-            <div id="card-icon" class="card-display">?</div>
-            <p id="challenge-desc" style="text-align:center; min-height: 3em;"></p>
-
-            <div class="grid" id="action-buttons">
-              <button class="btn-victory" onclick="resolve(true)" data-i18n="btn_win">Win</button>
-              <button class="btn-loss" onclick="resolve(false)" data-i18n="btn_fail">Failure</button>
-            </div>
-
-            <div class="grid hidden" id="special-buttons">
-              <button class="primary" onclick="drawCard()" data-i18n="btn_continue">Continue</button>
-              <button id="twist-btn" class="secondary outline hidden" onclick="openTwistModal()" data-i18n="btn_twist">Twist!</button>
-            </div>
-
-            <div id="final-screen" class="game-over-banner hidden">
-              <h3 data-i18n="game_over">SESSION ENDED</h3>
-              <p id="final-stats"></p>
-              <button onclick="initDeck()" style="width:100%" data-i18n="new_adventure" class="contrast">New Adventure</button>
-            </div>
-          </div>
-
-          <div class="hidden" id="challenge-content">
-            <hr>
-            <div>
-              <strong data-i18n="history">Challenge History</strong>
-              <div id="card-history" class="history-list"></div>
-            </div>
-          </div>
-
-          <div class="hidden" id="reset-button">
-            <button onclick="showResetConfirm()" style="font-size: 0.9rem; width: 100%;" data-i18n="reset_deck">Reset Deck</button>
+        <article>
+          <div class="dices">
+            <button onclick="rollDice(1)">1d6</button>
+            <button class="contrast" onclick="rollDice(2)">2d6</button>
+            <button onclick="rollDice(3)">3d6</button>
           </div>
         </article>
-
         <div class="grid">
-          <article>
-            <div class="dices">
-              <button onclick="rollDice(1)">1d6</button>
-              <button class="contrast" onclick="rollDice(2)">2d6</button>
-              <button onclick="rollDice(3)">3d6</button>
+          <article id="current-card-area">
+            <button id="init-scene-btn" onclick="startAdventure()" class="contrast" style="width:100%" data-i18n="start_adventure">Start Initial Scene</button>
+
+            <div id="card-content-wrapper" class="hidden">
+              <div id="last-scene-msg" class="last-scene-alert hidden" data-i18n="last_scene_warn">⚠️ FINAL SCENE</div>
+              <div id="card-icon" class="card-display">?</div>
+              <p id="challenge-desc" style="text-align:center; min-height: 3em;"></p>
+
+              <div class="grid" id="action-buttons">
+                <button class="btn-victory" onclick="resolve(true)" data-i18n="btn_win">Win</button>
+                <button class="btn-loss" onclick="resolve(false)" data-i18n="btn_fail">Failure</button>
+              </div>
+
+              <div class="grid hidden" id="special-buttons">
+                <button class="primary" onclick="drawCard()" data-i18n="btn_continue">Continue</button>
+                <button id="twist-btn" class="secondary outline hidden" onclick="openTwistModal()" data-i18n="btn_twist">Twist!</button>
+              </div>
+
+              <div id="final-screen" class="game-over-banner hidden">
+                <h3 data-i18n="game_over">SESSION ENDED</h3>
+                <p id="final-stats"></p>
+                <button onclick="initDeck()" style="width:100%" data-i18n="new_adventure" class="contrast">New Adventure</button>
+              </div>
+            </div>
+
+            <div class="hidden" id="challenge-content">
+              <hr>
+              <div>
+                <strong data-i18n="history">Challenge History</strong>
+                <div id="card-history" class="history-list"></div>
+              </div>
+            </div>
+
+            <div class="hidden" id="reset-button">
+              <button onclick="showResetConfirm()" style="font-size: 0.9rem; width: 100%;" data-i18n="reset_deck">Reset Deck</button>
             </div>
           </article>
 

@@ -144,8 +144,8 @@ scene_changes: {
     es: ["Positivo (para ti)", "Nueva ubicación (tirar)", "Negativo (para ti)", "Nueva persona (tirar)", "Tabla de giros (tirar)", "Nuevo evento (tirar)"]
   },
   scaled_question: {
-    en: ["Terrible", "Very bad", "Bad", "Okay", "Good", "Very good"],
-    es: ["Terrible", "Muy mal", "Mal", "Regular", "Bueno", "Muy bueno"],
+    en: ["Very negative for character", "Negative for character", "Somewhat negative for character", "Somewhat positive for character", "Positive for character", "Very positive for character"],
+    es: ["Muy negativo para el personaje", "Negativo para el personaje", "Un poco negativo para el personaje", "Poco positivo para el personaje", "Positivo para el personaje", "Muy positivo para el personaje"],
   },
   urban: {
     en: ["Alleyway", "Bank", "Bridge", "Brothel", "Castle", "Cathedral", "Cemetery", "Cistern", "City Hall", "Dock", "Gatehouse", "Embassy", "Factory", "Farmhouse", "Fort", "Guildhall", "Hospital", "Inn", "Jail", "Library", "Mansion", "Market", "Monastery", "Monument", "Museum", "Office", "Orphanage", "Palace", "Park", "Plaza", "Shantytown", "Stables", "Sewers", "Tavern", "Theater", "University"],
