@@ -138,6 +138,12 @@ function rollManualTable(keys, titleKey) {
   openModal('modal-info', titleKey, res.join('<br>'));
 }
 
+function rollScaledQuestion() {
+  const d = i18n[state.lang];
+  const r1 = Math.floor(Math.random() * 6) + 1;
+  openModal('modal-info', "scaled_question", `<kbd class="result-dice">${r1}</kbd>`);
+}
+
 function rollTwist(genre, labelKey) {
   const d = i18n[state.lang];
   const d1 = Math.floor(Math.random() * 6) + 1;

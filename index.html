@@ -76,6 +76,10 @@
             </div>
             <hr>
             <div>
+              <button onclick="rollScaledQuestion()" data-i18n="scaled_question"></button>
+            </div>
+            <hr>
+            <div>
               <button onclick="rollManualTable(['complex', 'related'], 'complex_answer')" data-i18n="complex_answer"></button>
             </div>
           </article>
@@ -88,12 +92,38 @@
           <div class="gen-container">
             <div class="gen-section">
               <h6 data-i18n="cat_urban"> Urban</h6>
+              <button onclick="rollManualTable(['settlements_large_desc', 'settlements_large_ppl'], 'settlements_large')" data-i18n="settlements_large"></button>
+              <button onclick="rollManualTable(['settlements_small_desc', 'settlements_small_ppl'], 'settlements_small')" data-i18n="settlements_small"></button>
               <button onclick="rollManualTable(['urban_ppl'], 'urban_ppl')" data-i18n="urban_ppl"></button>
               <button onclick="rollManualTable(['urban_locations'], 'urban_locations')" data-i18n="urban_locations"></button>
               <button onclick="rollManualTable(['urban_events'], 'urban_events')" data-i18n="urban_events"></button>
-              <button onclick="rollManualTable(['settlements_large_desc', 'settlements_large_ppl'], 'settlements_large')" data-i18n="settlements_large"></button>
-              <button onclick="rollManualTable(['settlements_small_desc', 'settlements_small_ppl'], 'settlements_small')" data-i18n="settlements_small"></button>
             </div>
+            <div class="gen-section">
+              <h6 data-i18n="cat_wilderness">Wilderness</h6>
+              <button onclick="rollManualTable(['wilderness_regions_terrain', 'wilderness_regions_climate'], 'wilderness_regions')" data-i18n="wilderness_regions"></button>
+              <button onclick="rollManualTable(['wilderness_features'], 'wilderness_features')" data-i18n="wilderness_features"></button>
+              <button onclick="rollManualTable(['wilderness_folks'], 'wilderness_folks')" data-i18n="wilderness_folks"></button>
+              <button onclick="rollManualTable(['wilderness_events'], 'wilderness_events')" data-i18n="wilderness_events"></button>
+            </div>
+            <div class="gen-section">
+              <h6 data-i18n="cat_dungeon">Dungeon Crawls</h6>
+              <button onclick="rollManualTable(['dungeon_features'], 'dungeon_features')" data-i18n="dungeon_features"></button>
+              <button onclick="rollManualTable(['dungeon_denizens'], 'dungeon_denizens')" data-i18n="dungeon_denizens"></button>
+              <button onclick="rollManualTable(['dungeon_events'], 'dungeon_events')" data-i18n="dungeon_events"></button>
+            </div>
+            <div class="gen-section">
+              <h6 data-i18n="cat_voyages">Voyages</h6>
+              <button onclick="rollManualTable(['voyages_sky', 'voyages_wind'], 'voyages_conditions')" data-i18n="voyages_conditions"></button>
+              <button onclick="rollManualTable(['voyages_landmarks'], 'voyages_landmarks')" data-i18n="voyages_landmarks"></button>
+              <button onclick="rollManualTable(['voyages_encounters'], 'voyages_encounters')" data-i18n="voyages_encounters"></button>
+              <button onclick="rollManualTable(['voyages_events'], 'voyages_events')" data-i18n="voyages_events"></button>
+            </div>
+
+
+
+
+
+
             <div class="gen-section">
               <h6 data-i18n="cat_loc">📍 Locations</h6>
               <button onclick="rollManualTable(['urban'], 'loc_urban')" data-i18n="loc_urban">Urban</button>
