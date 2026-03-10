@@ -25,6 +25,7 @@ const i18n = {
     cat_social: "👥 Social Interaction",
     cat_arcane: "🧙 Arcane Items & Spells",
     cat_tags: "🏷️ Descriptive Tags",
+    cat_names: "👤 Character Names",
     challenge: "Challenge", 
     complex_answer: "Complex answer",
     crimes_suspected: "Suspected Crimes",
@@ -55,6 +56,10 @@ const i18n = {
     modal_cancel: "Cancel", 
     modal_ok: "Got it", 
     modal_yes: "Yes",
+    names_fictional: "Fictional Names",
+    names_males: "Male Forenames",
+    names_females: "Female Forenames",
+    names_surnames: "Surnames",
     new_adventure: "New Adventure",
     no: "No",
     oracle_res: "Die", 
@@ -182,6 +187,11 @@ const i18n = {
     cat_tags: "🏷️ Etiquetas Descriptivas",
     tags_person: "Persona",
     tags_location: "Lugar",
+    cat_names: "👤 Nombres de Personaje",
+    names_fictional: "Nombres Ficticios",
+    names_male: "Nombres Masculinos",
+    names_female: "Nombres Femeninos",
+    names_surname: "Apellidos",
 
     status: "Estado", wins: "Éxitos", losses: "Fallos", deck: "Mazo", oracle_title: "Oráculo",
     v_likely: "Muy Probable (2+)", likely: "Probable (3+)", maybe: "Tal vez (4+)", unlikely: "Improbable (5+)", v_unlikely: "Casi imposible (6)",
@@ -1290,6 +1300,78 @@ arcane_item_features: {
     "Prohibido/cerrado", "Inquietante/siniestro", "Fortificado/reforzado", "Modesto",
     "Funcional/espartano", "Decepcionante", "Lúgubre/sin luz", "Vandalizado",
     "Imponente/lujoso", "Cálido/caluroso", "Infestado/invadido", "Bien abastecido"
+  ]
+},
+  names_male: {
+  en: [
+    "Adam/Alonso", "Jeffrey/Jose", "Anthony/Andrés", "Jonathan/Leonardo",
+    "Benjamin/Antonio", "Joseph/Lorenzo", "Brian/Benicio", "Kevin/Luca",
+    "Charles/Bruno", "Matthew/Luciano", "Craig/Carlos", "Michael/Manuel",
+    "Daniel/Diego", "Paul/Marco", "David/Eduardo", "Phillip/Mateo",
+    "Edward/Elías", "Raymond/Mauricio", "Eric/Emiliano", "Robert/Miguel",
+    "Frank/Emmanuel", "Shane/Pablo", "Gary/Enzo", "Stephen/Pedro",
+    "George/Felipe", "Thomas/Rafael", "Gregory/Fernando", "Timothy/Rodrigo",
+    "Harold/Francisco", "Todd/Santino", "Howard/Franco", "Walter/Sergio",
+    "James/Ismael", "Wayne/Simón", "Jason/Jorge", "William/Tadeo"
+  ],
+  es: [
+    "Adam/Alonso", "Jeffrey/José", "Anthony/Andrés", "Jonathan/Leonardo",
+    "Benjamin/Antonio", "Joseph/Lorenzo", "Brian/Benicio", "Kevin/Luca",
+    "Charles/Bruno", "Matthew/Luciano", "Craig/Carlos", "Michael/Manuel",
+    "Daniel/Diego", "Paul/Marco", "David/Eduardo", "Phillip/Mateo",
+    "Edward/Elías", "Raymond/Mauricio", "Eric/Emiliano", "Robert/Miguel",
+    "Frank/Emmanuel", "Shane/Pablo", "Gary/Enzo", "Stephen/Pedro",
+    "George/Felipe", "Thomas/Rafael", "Gregory/Fernando", "Timothy/Rodrigo",
+    "Harold/Francisco", "Todd/Santino", "Howard/Franco", "Walter/Sergio",
+    "James/Ismael", "Wayne/Simón", "Jason/Jorge", "William/Tadeo"
+  ]
+},
+  names_female: {
+  en: [
+    "Alice/Abigail", "Julia/Julieta", "Amy/Adriana", "Karen/Lola",
+    "Anna/Alicia", "Katie/Luciana", "Barbara/Amelia", "Kimberly/Luna",
+    "Bethany/Aurora", "Laura/María", "Carol/Catalina", "Lisa/Martina",
+    "Catherine/Chloe", "Louise/Miranda", "Christine/Clara", "Margaret/Natalia",
+    "Deborah/Claudia", "Michelle/Nicole", "Diana/Daniela", "Pamela/Olivia",
+    "Dorothy/Danna", "Patricia/Penélope", "Elizabeth/Delfina", "Rachel/Rafaela",
+    "Emily/Elena", "Rebecca/Regina", "Gail/Elisa", "Ruth/Sofía",
+    "Grace/Francesca", "Samantha/Valentina", "Helen/Gabriela", "Sarah/Violeta",
+    "Jennifer/Isabella", "Susan/Ximena", "Jessica/Josefa", "Tiffany/Zoe"
+  ],
+  es: [
+    "Alice/Abigail", "Julia/Julieta", "Amy/Adriana", "Karen/Lola",
+    "Anna/Alicia", "Katie/Luciana", "Barbara/Amelia", "Kimberly/Luna",
+    "Bethany/Aurora", "Laura/María", "Carol/Catalina", "Lisa/Martina",
+    "Catherine/Chloe", "Louise/Miranda", "Christine/Clara", "Margaret/Natalia",
+    "Deborah/Claudia", "Michelle/Nicole", "Diana/Daniela", "Pamela/Olivia",
+    "Dorothy/Danna", "Patricia/Penélope", "Elizabeth/Delfina", "Rachel/Rafaela",
+    "Emily/Elena", "Rebecca/Regina", "Gail/Elisa", "Ruth/Sofía",
+    "Grace/Francesca", "Samantha/Valentina", "Helen/Gabriela", "Sarah/Violeta",
+    "Jennifer/Isabella", "Susan/Ximena", "Jessica/Josefa", "Tiffany/Zoe"
+  ]
+},
+  names_surname: {
+  en: [
+    "Allen/Aguilar", "Lee/López", "Anderson/Alvarado", "Little/Madrigal",
+    "Baker/Barrios", "Mason/Magaña", "Campbell/Burgos", "Miller/Martínez",
+    "Clark/Calderón", "Moore/Morales", "Cook/Castillo", "Nelson/Paredes",
+    "Davis/Cruz", "Parker/Pérez", "Evans/Díaz", "Price/Portillo",
+    "Ford/Estrada", "Robinson/Reyes", "Foster/Fernández", "Rogers/Rivera",
+    "Gibson/Flores", "Ross/Rodriguez", "Green/Garcia", "Scott/Rojas",
+    "Harris/Gómez", "Smith/Romero", "Hill/González", "Taylor/Salas",
+    "Jackson/Guerra", "Thompson/Sanchez", "Johnson/Gutiérrez", "Watson/Santiago",
+    "Jones/Hernández", "Wilson/Torres", "Kelly/Jiménez", "Young/Vargas"
+  ],
+  es: [
+    "Allen/Aguilar", "Lee/López", "Anderson/Alvarado", "Little/Madrigal",
+    "Baker/Barrios", "Mason/Magaña", "Campbell/Burgos", "Miller/Martínez",
+    "Clark/Calderón", "Moore/Morales", "Cook/Castillo", "Nelson/Paredes",
+    "Davis/Cruz", "Parker/Pérez", "Evans/Díaz", "Price/Portillo",
+    "Ford/Estrada", "Robinson/Reyes", "Foster/Fernández", "Rogers/Rivera",
+    "Gibson/Flores", "Ross/Rodríguez", "Green/García", "Scott/Rojas",
+    "Harris/Gómez", "Smith/Romero", "Hill/González", "Taylor/Salas",
+    "Jackson/Guerra", "Thompson/Sánchez", "Johnson/Gutiérrez", "Watson/Santiago",
+    "Jones/Hernández", "Wilson/Torres", "Kelly/Jiménez", "Young/Vargas"
   ]
 },
 };
