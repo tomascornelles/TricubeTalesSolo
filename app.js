@@ -138,8 +138,11 @@ function rollManualTable(keys, titleKey) {
   openModal('modal-info', titleKey, res.join('<br>'));
 }
 
+function openSocialDisposition() { openModal('modal-disposition'); }
+  
 function rollSocialDisposition(h,f) {
-  const r1 = Math.floor(Math.random() * 6);
+  const r1 = Math.floor(Math.random() * 6 + 1);
+  console.log(r1);
   const table = (r1 <= h) 
   ? manualTables.social_attitude_negative[state.lang]
   : (r1 >= f)
