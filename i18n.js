@@ -24,6 +24,7 @@ const i18n = {
     cat_crimes: "🔪 Crimes & Mysteries",
     cat_social: "👥 Social Interaction",
     cat_arcane: "🧙 Arcane Items & Spells",
+    cat_tags: "🏷️ Descriptive Tags",
     challenge: "Challenge", 
     complex_answer: "Complex answer",
     crimes_suspected: "Suspected Crimes",
@@ -92,6 +93,8 @@ const i18n = {
     social_disposition_very_friendly: "Very Probably Friendly",
     start_adventure: "Start Initial Scene", 
     status: "Status", 
+    tags_person: "Person",
+    tags_location: "Location",
     trait_agile: "Agile", 
     trait_crafty: "Crafty", 
     trait_strong: "Strong", 
@@ -176,6 +179,9 @@ const i18n = {
     arcane_items: "Objetos Arcanos",
     arcane_trappings: "Apariencias Arcanas",
     arcane_item_features: "Características",
+    cat_tags: "🏷️ Etiquetas Descriptivas",
+    tags_person: "Persona",
+    tags_location: "Lugar",
 
     status: "Estado", wins: "Éxitos", losses: "Fallos", deck: "Mazo", oracle_title: "Oráculo",
     v_likely: "Muy Probable (2+)", likely: "Probable (3+)", maybe: "Tal vez (4+)", unlikely: "Improbable (5+)", v_unlikely: "Casi imposible (6)",
@@ -1236,6 +1242,54 @@ arcane_item_features: {
     "<small>El hechizo/objeto usa o tiene poder sobre</small> Gravedad/presión", "<small>El hechizo/objeto usa o tiene poder sobre</small> Tiempo/entropía",
     "<small>El hechizo/objeto usa o tiene poder sobre</small> Humanos/criaturas", "<small>El hechizo/objeto usa o tiene poder sobre</small> Agua/líquido",
     "<small>El hechizo/objeto usa o tiene poder sobre</small> Hielo/frío", "<small>El hechizo/objeto usa o tiene poder sobre</small> Clima/tormenta"
+  ]
+},
+  tags_person: {
+  en: [
+    "Arrogant/proud", "Injured/sick", "Attractive/seductive", "Intoxicated/crazy",
+    "Brutal/violent", "Lazy/apathetic", "Caring/protective", "Loud/unsubtle",
+    "Charming/suave", "Muscular/strong", "Clever/cunning", "Nosy/prying",
+    "Clumsy/inept", "Overconfident", "Cowardly/timid", "Paranoid/cautious",
+    "Creepy/weird", "Pious/righteous", "Cruel/ruthless", "Quick/nimble",
+    "Envious/suspicious", "Selfish/vain", "Friendly/affable", "Smelly/filthy",
+    "Greedy/impatient", "Sneaky/devious", "Gullible/foolish", "Squeamish/fussy",
+    "Helpful/supportive", "Stubborn/resolute", "Hostile/aggressive", "Treacherous/tricky",
+    "Humble/shy", "Ugly/monstrous", "Ignorant/oblivious", "Unfriendly/rude"
+  ],
+  es: [
+    "Arrogante/orgulloso", "Herido/enfermo", "Atractivo/seductor", "Ebrio/loco",
+    "Brutal/violento", "Perezoso/apático", "Cariñoso/protector", "Ruidoso/poco sutil",
+    "Encantador/elegante", "Musculoso/fuerte", "Listo/astuto", "Entrometido/fisgón",
+    "Torpe/inepto", "Presuntuoso", "Cobarde/tímido", "Paranoico/cauto",
+    "Siniestro/raro", "Piadoso/justo", "Cruel/despiadado", "Rápido/ágil",
+    "Envidioso/suspicaz", "Egoísta/vanidoso", "Amigable/afable", "Maloliente/sucio",
+    "Codicioso/impaciente", "Furtivo/taimado", "Crédulo/necio", "Aprensivo/quisquilloso",
+    "Servicial/atento", "Obstinado/resuelto", "Hostil/agresivo", "Traicionero/astuto",
+    "Humilde/tímido", "Feo/monstruoso", "Ignorante/distraído", "Antipático/grosero"
+  ]
+},
+  tags_location: {
+  en: [
+    "Abandoned", "Large/sprawling", "Barricaded/locked", "Modernized",
+    "Cheap/slipshod", "Mysterious/strange", "Clean/tidy", "New/renovated",
+    "Cool/cold/drafty", "Old/decrepit", "Crowded/cluttered", "Old-fashioned",
+    "Damaged", "Overwhelming", "Damp/flooded", "Polluted/toxic",
+    "Demolished", "Prominent", "Dirty/messy", "Scorched/burning",
+    "Empty/looted", "Secure/guarded", "Exposed/open", "Small/cramped",
+    "Forbidden/closed", "Spooky/creepy", "Fortified/reinforced", "Unassuming",
+    "Functional/spartan", "Underwhelming", "Gloomy/unlit", "Vandalized",
+    "Imposing/lavish", "Warm/hot", "Infested/overrun", "Well-stocked"
+  ],
+  es: [
+    "Abandonado", "Grande/extenso", "Barricadeado/cerrado", "Modernizado",
+    "Barato/chapucero", "Misterioso/extraño", "Limpio/ordenado", "Nuevo/renovado",
+    "Fresco/frío/con corrientes", "Viejo/decrépito", "Abarrotado/desordenado", "Anticuado",
+    "Dañado", "Abrumador", "Húmedo/inundado", "Contaminado/tóxico",
+    "Demolido", "Prominente", "Sucio/desordenado", "Churruscado/ardiendo",
+    "Vacío/saqueado", "Seguro/custodiado", "Expuesto/abierto", "Pequeño/estrecho",
+    "Prohibido/cerrado", "Inquietante/siniestro", "Fortificado/reforzado", "Modesto",
+    "Funcional/espartano", "Decepcionante", "Lúgubre/sin luz", "Vandalizado",
+    "Imponente/lujoso", "Cálido/caluroso", "Infestado/invadido", "Bien abastecido"
   ]
 },
 };
