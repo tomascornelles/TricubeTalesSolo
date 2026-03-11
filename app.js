@@ -173,7 +173,11 @@ function rollTwist(genre, labelKey) {
 }
 
 function openTwistModal() { openModal('modal-twist-choice'); }
-function rollFantasyName() { const p = names.pre[Math.floor(Math.random()*6)], s = names.suf[Math.floor(Math.random()*6)]; openModal('modal-info', "gen_name", `<strong>${p}${s}</strong>`); }
+function rollFantasyName() { 
+  const p = manualTables.names_fictional.prefixes[Math.floor(Math.random()*manualTables.names_fictional.prefixes.length)]; 
+  const s = manualTables.names_fictional.suffixes[Math.floor(Math.random()*manualTables.names_fictional.suffixes.length)]; 
+  openModal('modal-info', "gen_name", `${p}${s}`); 
+}
 
 function rollOracle() {
   const target = document.getElementById('oracle-select').value;

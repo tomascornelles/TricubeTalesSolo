@@ -847,533 +847,551 @@ const manualTables = {
     ]
   },
   crimes_suspected: {
-  en: [
-    "Armed robbery", "Hijacking", "Arson", "Hostage-taking", 
-    "Assassination", "Illegal possession", "Assault", "Impersonation", 
-    "Blackmail", "Insider trading", "Bribery", "Kidnapping", 
-    "Burglary", "Money laundering", "Coercion", "Murder", 
-    "Conspiracy", "Piracy", "Counterfeiting", "Racketeering", 
-    "Cybercrimes", "Rebellion", "Embezzlement", "Sabotage", 
-    "Espionage", "Smuggling", "Exploitation", "Solicitation", 
-    "Extortion", "Terrorism", "Fraud", "Trafficking", 
-    "Grand theft auto", "Treason", "Harassment", "Vandalism"
-  ],
-  es: [
-    "Robo a mano armada", "Secuestro de vehículos", "Incendio provocado", "Toma de rehenes", 
-    "Asesinato/Magnicidio", "Posesión ilegal", "Asalto/Agresión", "Suplantación de identidad", 
-    "Chantaje", "Uso de información privilegiada", "Soborno", "Secuestro de personas", 
-    "Allanamiento de morada", "Blanqueo de dinero", "Coacción", "Homicidio/Asesinato", 
-    "Conspiración", "Piratería", "Falsificación", "Crimen organizado/Chantaje", 
-    "Ciberdelitos", "Rebelión", "Malversación de fondos", "Sabotaje", 
-    "Espionaje", "Contrabando", "Explotación", "Instigación/Solicitación", 
-    "Extorsión", "Terrorismo", "Fraude", "Tráfico ilegal", 
-    "Robo de vehículos", "Traición", "Acoso", "Vandalismo"
-  ]
-},
-crimes_motives: {
-  en: [
-    "Accidental", "Intolerance", "Anger/rage", "Jealousy/grudge", 
-    "Artistic expression", "Long-term agenda", "Convenience", "Love/passion", 
-    "Curiosity/boredom", "Lust/desire", "Desperation", "Mistaken identity", 
-    "Destroy a rival", "Paid to do it", "Disagreement", "Power/influence", 
-    "Distraction", "Practice/training", "Following orders", "Protect someone", 
-    "Forced to do it", "Revenge/vendetta", "Greater good", "Self-preservation", 
-    "Greed/selfishness", "Status/prestige", "Hatred/resentment", "Stress/fear", 
-    "Honor/pride", "Teaching a lesson", "Idealism/morality", "Tying up loose ends", 
-    "Incidental/random", "Undermine/ruin", "Independence", "Wealth/security"
-  ],
-  es: [
-    "Accidental", "Intolerancia", "Ira/rabia", "Celos/rencor", 
-    "Expresión artística", "Agenda a largo plazo", "Conveniencia", "Amor/pasión", 
-    "Curiosidad/aburrimiento", "Lujuria/deseo", "Desesperación", "Confusión de identidad", 
-    "Destruir a un rival", "Pagado por ello", "Desacuerdo", "Poder/influencia", 
-    "Distracción", "Práctica/entrenamiento", "Siguiendo órdenes", "Proteger a alguien", 
-    "Obligado a ello", "Venganza/vendetta", "Bien común", "Autopreservación", 
-    "Codicia/egoísmo", "Estatus/prestigio", "Odio/resentimiento", "Estrés/miedo", 
-    "Honor/orgullo", "Dar una lección", "Idealismo/moralidad", "Cabo suelto", 
-    "Incidental/aleatorio", "Socavar/arruinar", "Independencia", "Riqueza/seguridad"
-  ]
-},
+    en: [
+      "Armed robbery", "Hijacking", "Arson", "Hostage-taking", 
+      "Assassination", "Illegal possession", "Assault", "Impersonation", 
+      "Blackmail", "Insider trading", "Bribery", "Kidnapping", 
+      "Burglary", "Money laundering", "Coercion", "Murder", 
+      "Conspiracy", "Piracy", "Counterfeiting", "Racketeering", 
+      "Cybercrimes", "Rebellion", "Embezzlement", "Sabotage", 
+      "Espionage", "Smuggling", "Exploitation", "Solicitation", 
+      "Extortion", "Terrorism", "Fraud", "Trafficking", 
+      "Grand theft auto", "Treason", "Harassment", "Vandalism"
+    ],
+    es: [
+      "Robo a mano armada", "Secuestro de vehículos", "Incendio provocado", "Toma de rehenes", 
+      "Asesinato/Magnicidio", "Posesión ilegal", "Asalto/Agresión", "Suplantación de identidad", 
+      "Chantaje", "Uso de información privilegiada", "Soborno", "Secuestro de personas", 
+      "Allanamiento de morada", "Blanqueo de dinero", "Coacción", "Homicidio/Asesinato", 
+      "Conspiración", "Piratería", "Falsificación", "Crimen organizado/Chantaje", 
+      "Ciberdelitos", "Rebelión", "Malversación de fondos", "Sabotaje", 
+      "Espionaje", "Contrabando", "Explotación", "Instigación/Solicitación", 
+      "Extorsión", "Terrorismo", "Fraude", "Tráfico ilegal", 
+      "Robo de vehículos", "Traición", "Acoso", "Vandalismo"
+    ]
+  },
+  crimes_motives: {
+    en: [
+      "Accidental", "Intolerance", "Anger/rage", "Jealousy/grudge", 
+      "Artistic expression", "Long-term agenda", "Convenience", "Love/passion", 
+      "Curiosity/boredom", "Lust/desire", "Desperation", "Mistaken identity", 
+      "Destroy a rival", "Paid to do it", "Disagreement", "Power/influence", 
+      "Distraction", "Practice/training", "Following orders", "Protect someone", 
+      "Forced to do it", "Revenge/vendetta", "Greater good", "Self-preservation", 
+      "Greed/selfishness", "Status/prestige", "Hatred/resentment", "Stress/fear", 
+      "Honor/pride", "Teaching a lesson", "Idealism/morality", "Tying up loose ends", 
+      "Incidental/random", "Undermine/ruin", "Independence", "Wealth/security"
+    ],
+    es: [
+      "Accidental", "Intolerancia", "Ira/rabia", "Celos/rencor", 
+      "Expresión artística", "Agenda a largo plazo", "Conveniencia", "Amor/pasión", 
+      "Curiosidad/aburrimiento", "Lujuria/deseo", "Desesperación", "Confusión de identidad", 
+      "Destruir a un rival", "Pagado por ello", "Desacuerdo", "Poder/influencia", 
+      "Distracción", "Práctica/entrenamiento", "Siguiendo órdenes", "Proteger a alguien", 
+      "Obligado a ello", "Venganza/vendetta", "Bien común", "Autopreservación", 
+      "Codicia/egoísmo", "Estatus/prestigio", "Odio/resentimiento", "Estrés/miedo", 
+      "Honor/orgullo", "Dar una lección", "Idealismo/moralidad", "Cabo suelto", 
+      "Incidental/aleatorio", "Socavar/arruinar", "Independencia", "Riqueza/seguridad"
+    ]
+  },
   crimes_unsolved: {
-  en: [
-    "Alien sighting", "Lost treasure", "Ancient technology", "Magical relic/device",
-    "Astral projection", "Missing person", "Bedeviled object", "Murder-suicide",
-    "Blood drinkers", "Occult rituals", "Cannibalism", "Phantom hitchhiker",
-    "Crop circles", "Psychic visions", "Cursed land", "Ritualistic killings",
-    "Demonic possession", "Savaged corpse", "Disappearance", "Secret door/room",
-    "Faith healing", "Spooky woods", "Forbidden grimoire", "Sunken ship",
-    "Ghost vehicle", "Strange lights", "Ghostly sighting", "Unnatural sickness",
-    "Haunted house", "Urban legend", "Horrific mutilations", "Vanished flight",
-    "Human sacrifice", "Violent beast", "Impossible crime", "Weird drownings"
-  ],
-  es: [
-    "Avistamiento alienígena", "Tesoro perdido", "Tecnología antigua", "Reliquia/artefacto mágico",
-    "Proyección astral", "Persona desaparecida", "Objeto endemoniado", "Homicidio-suicidio",
-    "Bebedores de sangre", "Rituales ocultistas", "Canibalismo", "Autoestopista fantasma",
-    "Círculos en las cosechas", "Visiones psíquicas", "Tierra maldita", "Asesinatos rituales",
-    "Posesión demoníaca", "Cadáver destrozado", "Desaparición", "Puerta/habitación secreta",
-    "Sanación por fe", "Bosque inquietante", "Grimorio prohibido", "Barco hundido",
-    "Vehículo fantasma", "Luces extrañas", "Avistamiento espectral", "Enfermedad antinatural",
-    "Casa encantada", "Leyenda urbana", "Mutilaciones horribles", "Vuelo desaparecido",
-    "Sacrificio humano", "Bestia violenta", "Crimen imposible", "Ahogamientos extraños"
-  ]
-},
+    en: [
+      "Alien sighting", "Lost treasure", "Ancient technology", "Magical relic/device",
+      "Astral projection", "Missing person", "Bedeviled object", "Murder-suicide",
+      "Blood drinkers", "Occult rituals", "Cannibalism", "Phantom hitchhiker",
+      "Crop circles", "Psychic visions", "Cursed land", "Ritualistic killings",
+      "Demonic possession", "Savaged corpse", "Disappearance", "Secret door/room",
+      "Faith healing", "Spooky woods", "Forbidden grimoire", "Sunken ship",
+      "Ghost vehicle", "Strange lights", "Ghostly sighting", "Unnatural sickness",
+      "Haunted house", "Urban legend", "Horrific mutilations", "Vanished flight",
+      "Human sacrifice", "Violent beast", "Impossible crime", "Weird drownings"
+    ],
+    es: [
+      "Avistamiento alienígena", "Tesoro perdido", "Tecnología antigua", "Reliquia/artefacto mágico",
+      "Proyección astral", "Persona desaparecida", "Objeto endemoniado", "Homicidio-suicidio",
+      "Bebedores de sangre", "Rituales ocultistas", "Canibalismo", "Autoestopista fantasma",
+      "Círculos en las cosechas", "Visiones psíquicas", "Tierra maldita", "Asesinatos rituales",
+      "Posesión demoníaca", "Cadáver destrozado", "Desaparición", "Puerta/habitación secreta",
+      "Sanación por fe", "Bosque inquietante", "Grimorio prohibido", "Barco hundido",
+      "Vehículo fantasma", "Luces extrañas", "Avistamiento espectral", "Enfermedad antinatural",
+      "Casa encantada", "Leyenda urbana", "Mutilaciones horribles", "Vuelo desaparecido",
+      "Sacrificio humano", "Bestia violenta", "Crimen imposible", "Ahogamientos extraños"
+    ]
+  },
   crimes_clues: {
-  en: [
-    "Article of clothing", "Hair, skin, or fur", "Blood spatter", "Hand-written note",
-    "Bullet or casing", "Internal organ", "Carpet fibers", "Lost button",
-    "Chemicals", "Paint or varnish", "Cigarette butt", "Photo or picture",
-    "Claw marks", "Piece of paper", "Coins or jewelry", "Pool of vomit",
-    "Dark stains", "Powder or dust", "Discarded wrapper", "Receipt or letter",
-    "Dog-eared book", "Small card", "Dry residue", "Specks of dirt",
-    "Ear, nose, or eyeball", "Tire tracks", "Finger, nail, or claw", "Tooth or fang",
-    "Fingerprint", "Traces of drugs", "Footprint", "Verbal statements",
-    "Glass fragments", "Video evidence", "Glove or boot", "Weapon or tool"
-  ],
-  es: [
-    "Prenda de vestir", "Pelo, piel o pelaje", "Salpicadura de sangre", "Nota manuscrita",
-    "Bala o casquillo", "Órgano interno", "Fibras de alfombra", "Botón perdido",
-    "Sustancias químicas", "Pintura o barniz", "Colilla de cigarrillo", "Foto o imagen",
-    "Marcas de garras", "Trozo de papel", "Monedas o joyas", "Charco de vómito",
-    "Manchas oscuras", "Polvo o ceniza", "Envoltorio desechado", "Recibo o carta",
-    "Libro con dobleces", "Tarjeta pequeña", "Residuo seco", "Motas de suciedad",
-    "Oreja, nariz o globo ocular", "Huellas de neumáticos", "Dedo, uña o garra", "Diente o colmillo",
-    "Huella dactilar", "Trazas de drogas", "Huella de pie/calzado", "Declaraciones verbales",
-    "Fragmentos de vidrio", "Evidencia de video", "Guante o bota", "Arma o herramienta"
-  ]
-},
+    en: [
+      "Article of clothing", "Hair, skin, or fur", "Blood spatter", "Hand-written note",
+      "Bullet or casing", "Internal organ", "Carpet fibers", "Lost button",
+      "Chemicals", "Paint or varnish", "Cigarette butt", "Photo or picture",
+      "Claw marks", "Piece of paper", "Coins or jewelry", "Pool of vomit",
+      "Dark stains", "Powder or dust", "Discarded wrapper", "Receipt or letter",
+      "Dog-eared book", "Small card", "Dry residue", "Specks of dirt",
+      "Ear, nose, or eyeball", "Tire tracks", "Finger, nail, or claw", "Tooth or fang",
+      "Fingerprint", "Traces of drugs", "Footprint", "Verbal statements",
+      "Glass fragments", "Video evidence", "Glove or boot", "Weapon or tool"
+    ],
+    es: [
+      "Prenda de vestir", "Pelo, piel o pelaje", "Salpicadura de sangre", "Nota manuscrita",
+      "Bala o casquillo", "Órgano interno", "Fibras de alfombra", "Botón perdido",
+      "Sustancias químicas", "Pintura o barniz", "Colilla de cigarrillo", "Foto o imagen",
+      "Marcas de garras", "Trozo de papel", "Monedas o joyas", "Charco de vómito",
+      "Manchas oscuras", "Polvo o ceniza", "Envoltorio desechado", "Recibo o carta",
+      "Libro con dobleces", "Tarjeta pequeña", "Residuo seco", "Motas de suciedad",
+      "Oreja, nariz o globo ocular", "Huellas de neumáticos", "Dedo, uña o garra", "Diente o colmillo",
+      "Huella dactilar", "Trazas de drogas", "Huella de pie/calzado", "Declaraciones verbales",
+      "Fragmentos de vidrio", "Evidencia de video", "Guante o bota", "Arma o herramienta"
+    ]
+  },
   social_attitude_negative: {
-  en: [
-    "<small>The character’s general attitude involves</small> Accusations/insults",
-    "<small>The character’s general attitude involves</small> Boasts/bluster",
-    "<small>The character’s general attitude involves</small> Demands/bullying",
-    "<small>The character’s general attitude involves</small> Mocking/taunts",
-    "<small>The character’s general attitude involves</small> Threats/intimidation",
-    "<small>The character’s general attitude involves</small> Yelling/ranting"
-  ],
-  es: [
-    "<small>La actitud general del personaje implica</small> Acusaciones/insultos",
-    "<small>La actitud general del personaje implica</small> Jactancia/fanfarronería",
-    "<small>La actitud general del personaje implica</small> Exigencias/intimidación",
-    "<small>La actitud general del personaje implica</small> Burlas/mofas",
-    "<small>La actitud general del personaje implica</small> Amenazas/intimidación",
-    "<small>La actitud general del personaje implica</small> Gritos/desvaríos"
-  ]
-},
+    en: [
+      "<small>The character’s general attitude involves</small> Accusations/insults",
+      "<small>The character’s general attitude involves</small> Boasts/bluster",
+      "<small>The character’s general attitude involves</small> Demands/bullying",
+      "<small>The character’s general attitude involves</small> Mocking/taunts",
+      "<small>The character’s general attitude involves</small> Threats/intimidation",
+      "<small>The character’s general attitude involves</small> Yelling/ranting"
+    ],
+    es: [
+      "<small>La actitud general del personaje implica</small> Acusaciones/insultos",
+      "<small>La actitud general del personaje implica</small> Jactancia/fanfarronería",
+      "<small>La actitud general del personaje implica</small> Exigencias/intimidación",
+      "<small>La actitud general del personaje implica</small> Burlas/mofas",
+      "<small>La actitud general del personaje implica</small> Amenazas/intimidación",
+      "<small>La actitud general del personaje implica</small> Gritos/desvaríos"
+    ]
+  },
   social_attitude_neutral: {
-  en: [
-    "<small>The character’s general attitude involves</small> Boredom/distraction",
-    "<small>The character’s general attitude involves</small> Inquisitive/nosy",
-    "<small>The character’s general attitude involves</small> Joking/teasing",
-    "<small>The character’s general attitude involves</small> Politeness/civility",
-    "<small>The character’s general attitude involves</small> Preaching/insistence",
-    "<small>The character’s general attitude involves</small> Teaching/explaining"
-  ],
-  es: [
-    "<small>La actitud general del personaje implica</small> Aburrimiento/distracción",
-    "<small>La actitud general del personaje implica</small> Curiosidad/entrometimiento",
-    "<small>La actitud general del personaje implica</small> Bromas/vacile",
-    "<small>La actitud general del personaje implica</small> Cortesía/civilidad",
-    "<small>La actitud general del personaje implica</small> Sermoneo/insistencia",
-    "<small>La actitud general del personaje implica</small> Enseñanza/explicación"
-  ]
-},
-social_attitude_positive: {
-  en: [
-    "<small>The character’s general attitude involves</small> Assistance/guidance",
-    "<small>The character’s general attitude involves</small> Beseeching/groveling",
-    "<small>The character’s general attitude involves</small> Entertaining/regaling",
-    "<small>The character’s general attitude involves</small> Flirting/flattering",
-    "<small>The character’s general attitude involves</small> Praising/admiring",
-    "<small>The character’s general attitude involves</small> Sympathizing"
-  ],
-  es: [
-    "<small>La actitud general del personaje implica</small> Asistencia/guía",
-    "<small>La actitud general del personaje implica</small> Súplica/servilismo",
-    "<small>La actitud general del personaje implica</small> Entretenimiento/agasajo",
-    "<small>La actitud general del personaje implica</small> Coqueteo/halago",
-    "<small>La actitud general del personaje implica</small> Elogio/admiración",
-    "<small>La actitud general del personaje implica</small> Empatía/compasión"
-  ]
-},
+    en: [
+      "<small>The character’s general attitude involves</small> Boredom/distraction",
+      "<small>The character’s general attitude involves</small> Inquisitive/nosy",
+      "<small>The character’s general attitude involves</small> Joking/teasing",
+      "<small>The character’s general attitude involves</small> Politeness/civility",
+      "<small>The character’s general attitude involves</small> Preaching/insistence",
+      "<small>The character’s general attitude involves</small> Teaching/explaining"
+    ],
+    es: [
+      "<small>La actitud general del personaje implica</small> Aburrimiento/distracción",
+      "<small>La actitud general del personaje implica</small> Curiosidad/entrometimiento",
+      "<small>La actitud general del personaje implica</small> Bromas/vacile",
+      "<small>La actitud general del personaje implica</small> Cortesía/civilidad",
+      "<small>La actitud general del personaje implica</small> Sermoneo/insistencia",
+      "<small>La actitud general del personaje implica</small> Enseñanza/explicación"
+    ]
+  },
+  social_attitude_positive: {
+    en: [
+      "<small>The character’s general attitude involves</small> Assistance/guidance",
+      "<small>The character’s general attitude involves</small> Beseeching/groveling",
+      "<small>The character’s general attitude involves</small> Entertaining/regaling",
+      "<small>The character’s general attitude involves</small> Flirting/flattering",
+      "<small>The character’s general attitude involves</small> Praising/admiring",
+      "<small>The character’s general attitude involves</small> Sympathizing"
+    ],
+    es: [
+      "<small>La actitud general del personaje implica</small> Asistencia/guía",
+      "<small>La actitud general del personaje implica</small> Súplica/servilismo",
+      "<small>La actitud general del personaje implica</small> Entretenimiento/agasajo",
+      "<small>La actitud general del personaje implica</small> Coqueteo/halago",
+      "<small>La actitud general del personaje implica</small> Elogio/admiración",
+      "<small>La actitud general del personaje implica</small> Empatía/compasión"
+    ]
+  },
   social_interest: {
-  en: [
-    "Animal/pet", "Local news/gossip", "Assault/invasion", "Murder/death",
-    "Behavior/sin", "Mystery/secret", "Brawl/battle/duel", "Person/faction",
-    "Celebrity/luminary", "Personal agenda", "Children/relatives", "Physique/beauty",
-    "Clue/rumor/story", "Private matters", "Courage/heroism", "Profession/vocation",
-    "Disaster/accident", "Quest/adventure", "Discovery/creation", "Recent event",
-    "Disease/sickness", "Relationship/love", "Family/heritage", "Religion/faith",
-    "Festival/party", "Resources/property", "Geography/place", "Skill/talent/aptitude",
-    "History/past", "Status/reputation", "Intellect/wits", "Theft/robbery",
-    "Item/equipment", "Wealth/treasure", "Knowledge/study", "Weather/climate"
-  ],
-  es: [
-    "Animal/mascota", "Noticias locales/chismes", "Asalto/invasión", "Asesinato/muerte",
-    "Comportamiento/pecado", "Misterio/secreto", "Pelea/batalla/duelo", "Persona/facción",
-    "Celebridad/luminaria", "Agenda personal", "Niños/parientes", "Físico/belleza",
-    "Pista/rumor/historia", "Asuntos privados", "Coraje/heroísmo", "Profesión/vocación",
-    "Desastre/accidente", "Misión/aventura", "Descubrimiento/creación", "Suceso reciente",
-    "Enfermedad/dolencia", "Relación/amor", "Familia/herencia", "Religión/fe",
-    "Festival/fiesta", "Recursos/propiedades", "Geografía/lugar", "Habilidad/talento/aptitud",
-    "Historia/pasado", "Estatus/reputación", "Intelecto/astucia", "Robo/hurto",
-    "Objeto/equipo", "Riqueza/tesoro", "Conocimiento/estudio", "Clima/meteorología"
-  ]
-},
+    en: [
+      "Animal/pet", "Local news/gossip", "Assault/invasion", "Murder/death",
+      "Behavior/sin", "Mystery/secret", "Brawl/battle/duel", "Person/faction",
+      "Celebrity/luminary", "Personal agenda", "Children/relatives", "Physique/beauty",
+      "Clue/rumor/story", "Private matters", "Courage/heroism", "Profession/vocation",
+      "Disaster/accident", "Quest/adventure", "Discovery/creation", "Recent event",
+      "Disease/sickness", "Relationship/love", "Family/heritage", "Religion/faith",
+      "Festival/party", "Resources/property", "Geography/place", "Skill/talent/aptitude",
+      "History/past", "Status/reputation", "Intellect/wits", "Theft/robbery",
+      "Item/equipment", "Wealth/treasure", "Knowledge/study", "Weather/climate"
+    ],
+    es: [
+      "Animal/mascota", "Noticias locales/chismes", "Asalto/invasión", "Asesinato/muerte",
+      "Comportamiento/pecado", "Misterio/secreto", "Pelea/batalla/duelo", "Persona/facción",
+      "Celebridad/luminaria", "Agenda personal", "Niños/parientes", "Físico/belleza",
+      "Pista/rumor/historia", "Asuntos privados", "Coraje/heroísmo", "Profesión/vocación",
+      "Desastre/accidente", "Misión/aventura", "Descubrimiento/creación", "Suceso reciente",
+      "Enfermedad/dolencia", "Relación/amor", "Familia/herencia", "Religión/fe",
+      "Festival/fiesta", "Recursos/propiedades", "Geografía/lugar", "Habilidad/talento/aptitud",
+      "Historia/pasado", "Estatus/reputación", "Intelecto/astucia", "Robo/hurto",
+      "Objeto/equipo", "Riqueza/tesoro", "Conocimiento/estudio", "Clima/meteorología"
+    ]
+  },
   social_demeanor: {
-  en: [
-    "Accepting/casual", "Distrustful/fearful", "Aggressive/pushy", "Emotional/excitable",
-    "Aloof/haughty", "Empathetic/astute", "Ambitious/eager", "Energetic/spirited",
-    "Anxious/restless", "Forthright/sincere", "Assertive/confident", "Gloomy/grumpy",
-    "Bossy/commanding", "Hesitant/reluctant", "Brooding/reflective", "Impatient/irritable",
-    "Callous/insensitive", "Lighthearted/lively", "Candid/blunt", "Merry/cheerful",
-    "Careful/cautious", "Opinionated/cocky", "Caring/worrier", "Passionate/ardent",
-    "Cold/calculating", "Relaxed/calm", "Condescending", "Self-absorbed",
-    "Conservative", "Skeptical/doubtful", "Cynical/sarcastic", "Stoic/apathetic",
-    "Daring/impulsive", "Thoughtful/discrete", "Disagreeable/rude", "Wary/vigilant"
-  ],
-  es: [
-    "Aceptante/informal", "Desconfiado/temeroso", "Agresivo/insistente", "Emocional/excitable",
-    "Distante/altivo", "Empático/astuto", "Ambicioso/entusiasta", "Enérgico/brioso",
-    "Ansioso/inquieto", "Directo/sincero", "Asertivo/seguro", "Sombrío/gruñón",
-    "Mandón/autoritario", "Vacilante/reacio", "Melancólico/reflexivo", "Impaciente/irritable",
-    "Cruel/insensible", "Alegre/animado", "Franco/brusco", "Jovial/risueño",
-    "Cuidadoso/cauto", "Obstinado/engreído", "Afectuoso/preocupado", "Apasionado/ardiente",
-    "Frío/calculador", "Relajado/calmado", "Condescendiente", "Ensimismado",
-    "Conservador", "Escéptico/dudoso", "Cínico/sarcástico", "Estoico/apático",
-    "Atrevido/impulsivo", "Considerado/discreto", "Desagradable/grosero", "Cauteloso/vigilante"
-  ]
-},
+    en: [
+      "Accepting/casual", "Distrustful/fearful", "Aggressive/pushy", "Emotional/excitable",
+      "Aloof/haughty", "Empathetic/astute", "Ambitious/eager", "Energetic/spirited",
+      "Anxious/restless", "Forthright/sincere", "Assertive/confident", "Gloomy/grumpy",
+      "Bossy/commanding", "Hesitant/reluctant", "Brooding/reflective", "Impatient/irritable",
+      "Callous/insensitive", "Lighthearted/lively", "Candid/blunt", "Merry/cheerful",
+      "Careful/cautious", "Opinionated/cocky", "Caring/worrier", "Passionate/ardent",
+      "Cold/calculating", "Relaxed/calm", "Condescending", "Self-absorbed",
+      "Conservative", "Skeptical/doubtful", "Cynical/sarcastic", "Stoic/apathetic",
+      "Daring/impulsive", "Thoughtful/discrete", "Disagreeable/rude", "Wary/vigilant"
+    ],
+    es: [
+      "Aceptante/informal", "Desconfiado/temeroso", "Agresivo/insistente", "Emocional/excitable",
+      "Distante/altivo", "Empático/astuto", "Ambicioso/entusiasta", "Enérgico/brioso",
+      "Ansioso/inquieto", "Directo/sincero", "Asertivo/seguro", "Sombrío/gruñón",
+      "Mandón/autoritario", "Vacilante/reacio", "Melancólico/reflexivo", "Impaciente/irritable",
+      "Cruel/insensible", "Alegre/animado", "Franco/brusco", "Jovial/risueño",
+      "Cuidadoso/cauto", "Obstinado/engreído", "Afectuoso/preocupado", "Apasionado/ardiente",
+      "Frío/calculador", "Relajado/calmado", "Condescendiente", "Ensimismado",
+      "Conservador", "Escéptico/dudoso", "Cínico/sarcástico", "Estoico/apático",
+      "Atrevido/impulsivo", "Considerado/discreto", "Desagradable/grosero", "Cauteloso/vigilante"
+    ]
+  },
   social_mannerisms: {
-  en: [
-    "1000 yard stare", "Mumbles/slurs", "Always interrupts", "Often clears throat",
-    "Avoids eye contact", "Picks nose/teeth", "Bites lip/nails", "Plays with hair",
-    "Breathes loudly", "Rubs eyes/mouth", "Chain smoker", "Scratches a lot",
-    "Chews gum/leaves", "Slouching posture", "Constant snacking", "Speaks quietly",
-    "Cracks knuckles", "Strokes chin/beard", "Darting eyes", "Stutters/pauses",
-    "Drinks excessively", "Talks/laughs loudly", "Drums fingers", "Taps foot",
-    "Fiddles/fidgets", "Touches/traces scar", "Folded arms", "Tilts head & frowns",
-    "Gestures wildly", "Tugs ear/clothing", "Giggles/chuckles", "Twists jewelry",
-    "Hands in pockets", "Unusual accent", "Hums/whistles", "Whispers/rasps"
-  ],
-  es: [
-    "Mirada perdida", "Murmura/arrastra las palabras", "Interrumpe siempre", "Se aclara la garganta a menudo",
-    "Evita el contacto visual", "Se hurga la nariz/los dientes", "Se muerde los labios/las uñas", "Se juega con el pelo",
-    "Respira ruidosamente", "Se frotar los ojos/la boca", "Fumador empedernido", "Se rasca mucho",
-    "Masca chicle/hojas", "Postura encorvada", "Picotea comida constantemente", "Habla en voz baja",
-    "Se cruje los nudillos", "Se acaricia la barbilla/barba", "Mirada esquiva", "Tartamudea/hace pausas",
-    "Bebe en exceso", "Habla/ríe fuerte", "Tamborilea con los dedos", "Zapatea con el pie",
-    "Manosea objetos/está inquieto", "Toca/recorre una cicatriz", "Brazos cruzados", "Inclina la cabeza y frunce el ceño",
-    "Gesticula salvajemente", "Se tira de la oreja/la ropa", "Risitas/risas entre dientes", "Juguetea con sus joyas",
-    "Manos en los bolsillos", "Acento inusual", "Tararea/silba", "Susurra/habla con voz rasposa"
-  ]
-},
+    en: [
+      "1000 yard stare", "Mumbles/slurs", "Always interrupts", "Often clears throat",
+      "Avoids eye contact", "Picks nose/teeth", "Bites lip/nails", "Plays with hair",
+      "Breathes loudly", "Rubs eyes/mouth", "Chain smoker", "Scratches a lot",
+      "Chews gum/leaves", "Slouching posture", "Constant snacking", "Speaks quietly",
+      "Cracks knuckles", "Strokes chin/beard", "Darting eyes", "Stutters/pauses",
+      "Drinks excessively", "Talks/laughs loudly", "Drums fingers", "Taps foot",
+      "Fiddles/fidgets", "Touches/traces scar", "Folded arms", "Tilts head & frowns",
+      "Gestures wildly", "Tugs ear/clothing", "Giggles/chuckles", "Twists jewelry",
+      "Hands in pockets", "Unusual accent", "Hums/whistles", "Whispers/rasps"
+    ],
+    es: [
+      "Mirada perdida", "Murmura/arrastra las palabras", "Interrumpe siempre", "Se aclara la garganta a menudo",
+      "Evita el contacto visual", "Se hurga la nariz/los dientes", "Se muerde los labios/las uñas", "Se juega con el pelo",
+      "Respira ruidosamente", "Se frotar los ojos/la boca", "Fumador empedernido", "Se rasca mucho",
+      "Masca chicle/hojas", "Postura encorvada", "Picotea comida constantemente", "Habla en voz baja",
+      "Se cruje los nudillos", "Se acaricia la barbilla/barba", "Mirada esquiva", "Tartamudea/hace pausas",
+      "Bebe en exceso", "Habla/ríe fuerte", "Tamborilea con los dedos", "Zapatea con el pie",
+      "Manosea objetos/está inquieto", "Toca/recorre una cicatriz", "Brazos cruzados", "Inclina la cabeza y frunce el ceño",
+      "Gesticula salvajemente", "Se tira de la oreja/la ropa", "Risitas/risas entre dientes", "Juguetea con sus joyas",
+      "Manos en los bolsillos", "Acento inusual", "Tararea/silba", "Susurra/habla con voz rasposa"
+    ]
+  },
   arcane_spells: {
-  en: [
-    "<small>The spell allows the caster to</small> Animate minion", "<small>The spell allows the caster to</small> Entangle/entrap",
-    "<small>The spell allows the caster to</small> Aura/armor", "<small>The spell allows the caster to</small> Fly/surf/levitate",
-    "<small>The spell allows the caster to</small> Barrier/wall", "<small>The spell allows the caster to</small> Forcefield/shield",
-    "<small>The spell allows the caster to</small> Blind/deafen", "<small>The spell allows the caster to</small> Heal/repair",
-    "<small>The spell allows the caster to</small> Bolt/ball/blast", "<small>The spell allows the caster to</small> Illusion/deceive",
-    "<small>The spell allows the caster to</small> Communicate", "<small>The spell allows the caster to</small> Protect/adapt",
-    "<small>The spell allows the caster to</small> Conceal/obscure", "<small>The spell allows the caster to</small> Ray/beam/arc",
-    "<small>The spell allows the caster to</small> Cone/fan/spray", "<small>The spell allows the caster to</small> Reduce/shrink",
-    "<small>The spell allows the caster to</small> Control/charm", "<small>The spell allows the caster to</small> Repel/deflect",
-    "<small>The spell allows the caster to</small> Create/restore", "<small>The spell allows the caster to</small> Reveal/identify",
-    "<small>The spell allows the caster to</small> Destroy/weaken", "<small>The spell allows the caster to</small> Shapeshift/mutate",
-    "<small>The spell allows the caster to</small> Detect/sense", "<small>The spell allows the caster to</small> Sphere/globe",
-    "<small>The spell allows the caster to</small> Dispel/Banish", "<small>The spell allows the caster to</small> Stun/confuse/fear",
-    "<small>The spell allows the caster to</small> Divination/scry", "<small>The spell allows the caster to</small> Summon/conjure",
-    "<small>The spell allows the caster to</small> Drain/absorb", "<small>The spell allows the caster to</small> Teleport/stride",
-    "<small>The spell allows the caster to</small> Enchant/imbue", "<small>The spell allows the caster to</small> Touch/strike/smite",
-    "<small>The spell allows the caster to</small> Endure/resist", "<small>The spell allows the caster to</small> Transmute/shape",
-    "<small>The spell allows the caster to</small> Enhance/enlarge", "<small>The spell allows the caster to</small> Ward/symbol/trap"
-  ],
-  es: [
-    "<small>El hechizo permite al lanzador</small> Animar a un esbirro", "<small>El hechizo permite al lanzador</small> Enredar/atrapar",
-    "<small>El hechizo permite al lanzador</small> Crear aura/armadura", "<small>El hechizo permite al lanzador</small> Volar/deslizarse/levitar",
-    "<small>El hechizo permite al lanzador</small> Crear barrera/muro", "<small>El hechizo permite al lanzador</small> Crear campo de fuerza/escudo",
-    "<small>El hechizo permite al lanzador</small> Cegar/ensordecer", "<small>El hechizo permite al lanzador</small> Sanar/reparar",
-    "<small>El hechizo permite al lanzador</small> Lanzar proyectil/bola/explosión", "<small>El hechizo permite al lanzador</small> Crear ilusión/engañar",
-    "<small>El hechizo permite al lanzador</small> Comunicarse", "<small>El hechizo permite al lanzador</small> Proteger/adaptar",
-    "<small>El hechizo permite al lanzador</small> Ocultar/oscurecer", "<small>El hechizo permite al lanzador</small> Lanzar rayo/haz/arco",
-    "<small>El hechizo permite al lanzador</small> Crear cono/abanico/aspersión", "<small>El hechizo permite al lanzador</small> Reducir/encoger",
-    "<small>El hechizo permite al lanzador</small> Controlar/hechizar", "<small>El hechizo permite al lanzador</small> Repeler/desviar",
-    "<small>El hechizo permite al lanzador</small> Crear/restaurar", "<small>El hechizo permite al lanzador</small> Revelar/identificar",
-    "<small>El hechizo permite al lanzador</small> Destruir/debilitar", "<small>El hechizo permite al lanzador</small> Cambiar de forma/mutar",
-    "<small>El hechizo permite al lanzador</small> Detectar/sentir", "<small>El hechizo permite al lanzador</small> Crear esfera/globo",
-    "<small>El hechizo permite al lanzador</small> Disipar/desterrar", "<small>El hechizo permite al lanzador</small> Aturdir/confundir/asustar",
-    "<small>El hechizo permite al lanzador</small> Adivinar/espiar", "<small>El hechizo permite al lanzador</small> Invocar/conjurar",
-    "<small>El hechizo permite al lanzador</small> Drenar/absorber", "<small>El hechizo permite al lanzador</small> Teletransportarse/viajar",
-    "<small>El hechizo permite al lanzador</small> Encantar/imbuir", "<small>El hechizo permite al lanzador</small> Tocar/golpear/castigar",
-    "<small>El hechizo permite al lanzador</small> Soportar/resistir", "<small>El hechizo permite al lanzador</small> Transmutar/dar forma",
-    "<small>El hechizo permite al lanzador</small> Potenciar/agrandar", "<small>El hechizo permite al lanzador</small> Crear resguardo/símbolo/trampa"
-  ]
-},
+    en: [
+      "<small>The spell allows the caster to</small> Animate minion", "<small>The spell allows the caster to</small> Entangle/entrap",
+      "<small>The spell allows the caster to</small> Aura/armor", "<small>The spell allows the caster to</small> Fly/surf/levitate",
+      "<small>The spell allows the caster to</small> Barrier/wall", "<small>The spell allows the caster to</small> Forcefield/shield",
+      "<small>The spell allows the caster to</small> Blind/deafen", "<small>The spell allows the caster to</small> Heal/repair",
+      "<small>The spell allows the caster to</small> Bolt/ball/blast", "<small>The spell allows the caster to</small> Illusion/deceive",
+      "<small>The spell allows the caster to</small> Communicate", "<small>The spell allows the caster to</small> Protect/adapt",
+      "<small>The spell allows the caster to</small> Conceal/obscure", "<small>The spell allows the caster to</small> Ray/beam/arc",
+      "<small>The spell allows the caster to</small> Cone/fan/spray", "<small>The spell allows the caster to</small> Reduce/shrink",
+      "<small>The spell allows the caster to</small> Control/charm", "<small>The spell allows the caster to</small> Repel/deflect",
+      "<small>The spell allows the caster to</small> Create/restore", "<small>The spell allows the caster to</small> Reveal/identify",
+      "<small>The spell allows the caster to</small> Destroy/weaken", "<small>The spell allows the caster to</small> Shapeshift/mutate",
+      "<small>The spell allows the caster to</small> Detect/sense", "<small>The spell allows the caster to</small> Sphere/globe",
+      "<small>The spell allows the caster to</small> Dispel/Banish", "<small>The spell allows the caster to</small> Stun/confuse/fear",
+      "<small>The spell allows the caster to</small> Divination/scry", "<small>The spell allows the caster to</small> Summon/conjure",
+      "<small>The spell allows the caster to</small> Drain/absorb", "<small>The spell allows the caster to</small> Teleport/stride",
+      "<small>The spell allows the caster to</small> Enchant/imbue", "<small>The spell allows the caster to</small> Touch/strike/smite",
+      "<small>The spell allows the caster to</small> Endure/resist", "<small>The spell allows the caster to</small> Transmute/shape",
+      "<small>The spell allows the caster to</small> Enhance/enlarge", "<small>The spell allows the caster to</small> Ward/symbol/trap"
+    ],
+    es: [
+      "<small>El hechizo permite al lanzador</small> Animar a un esbirro", "<small>El hechizo permite al lanzador</small> Enredar/atrapar",
+      "<small>El hechizo permite al lanzador</small> Crear aura/armadura", "<small>El hechizo permite al lanzador</small> Volar/deslizarse/levitar",
+      "<small>El hechizo permite al lanzador</small> Crear barrera/muro", "<small>El hechizo permite al lanzador</small> Crear campo de fuerza/escudo",
+      "<small>El hechizo permite al lanzador</small> Cegar/ensordecer", "<small>El hechizo permite al lanzador</small> Sanar/reparar",
+      "<small>El hechizo permite al lanzador</small> Lanzar proyectil/bola/explosión", "<small>El hechizo permite al lanzador</small> Crear ilusión/engañar",
+      "<small>El hechizo permite al lanzador</small> Comunicarse", "<small>El hechizo permite al lanzador</small> Proteger/adaptar",
+      "<small>El hechizo permite al lanzador</small> Ocultar/oscurecer", "<small>El hechizo permite al lanzador</small> Lanzar rayo/haz/arco",
+      "<small>El hechizo permite al lanzador</small> Crear cono/abanico/aspersión", "<small>El hechizo permite al lanzador</small> Reducir/encoger",
+      "<small>El hechizo permite al lanzador</small> Controlar/hechizar", "<small>El hechizo permite al lanzador</small> Repeler/desviar",
+      "<small>El hechizo permite al lanzador</small> Crear/restaurar", "<small>El hechizo permite al lanzador</small> Revelar/identificar",
+      "<small>El hechizo permite al lanzador</small> Destruir/debilitar", "<small>El hechizo permite al lanzador</small> Cambiar de forma/mutar",
+      "<small>El hechizo permite al lanzador</small> Detectar/sentir", "<small>El hechizo permite al lanzador</small> Crear esfera/globo",
+      "<small>El hechizo permite al lanzador</small> Disipar/desterrar", "<small>El hechizo permite al lanzador</small> Aturdir/confundir/asustar",
+      "<small>El hechizo permite al lanzador</small> Adivinar/espiar", "<small>El hechizo permite al lanzador</small> Invocar/conjurar",
+      "<small>El hechizo permite al lanzador</small> Drenar/absorber", "<small>El hechizo permite al lanzador</small> Teletransportarse/viajar",
+      "<small>El hechizo permite al lanzador</small> Encantar/imbuir", "<small>El hechizo permite al lanzador</small> Tocar/golpear/castigar",
+      "<small>El hechizo permite al lanzador</small> Soportar/resistir", "<small>El hechizo permite al lanzador</small> Transmutar/dar forma",
+      "<small>El hechizo permite al lanzador</small> Potenciar/agrandar", "<small>El hechizo permite al lanzador</small> Crear resguardo/símbolo/trampa"
+    ]
+  },
   arcane_spells_limitations: {
-  en: [
-    "<small>With the following limitation/drawback</small> Causes collateral/environmental damage",
-    "<small>With the following limitation/drawback</small> Drains caster resolve instead of costing karma",
-    "<small>With the following limitation/drawback</small> Requires a focus, raw material, or components",
-    "<small>With the following limitation/drawback</small> Only directly targets the caster and their gear",
-    "<small>With the following limitation/drawback</small> Ritualistic and requires a few minutes to cast",
-    "<small>With the following limitation/drawback</small> Requires gestures and/or incantations"
-  ],
-  es: [
-    "<small>Con la siguiente limitación/desventaja</small> Causa daño colateral o ambiental",
-    "<small>Con la siguiente limitación/desventaja</small> Agota la determinación del lanzador en lugar de costar karma",
-    "<small>Con la siguiente limitación/desventaja</small> Requiere un foco, materia prima o componentes",
-    "<small>Con la siguiente limitación/desventaja</small> Solo afecta directamente al lanzador y su equipo",
-    "<small>Con la siguiente limitación/desventaja</small> Es ritualista y requiere unos minutos para lanzarse",
-    "<small>Con la siguiente limitación/desventaja</small> Requiere gestos e incisiones o encantamientos"
-  ]
-},
+    en: [
+      "<small>With the following limitation/drawback</small> Causes collateral/environmental damage",
+      "<small>With the following limitation/drawback</small> Drains caster resolve instead of costing karma",
+      "<small>With the following limitation/drawback</small> Requires a focus, raw material, or components",
+      "<small>With the following limitation/drawback</small> Only directly targets the caster and their gear",
+      "<small>With the following limitation/drawback</small> Ritualistic and requires a few minutes to cast",
+      "<small>With the following limitation/drawback</small> Requires gestures and/or incantations"
+    ],
+    es: [
+      "<small>Con la siguiente limitación/desventaja</small> Causa daño colateral o ambiental",
+      "<small>Con la siguiente limitación/desventaja</small> Agota la determinación del lanzador en lugar de costar karma",
+      "<small>Con la siguiente limitación/desventaja</small> Requiere un foco, materia prima o componentes",
+      "<small>Con la siguiente limitación/desventaja</small> Solo afecta directamente al lanzador y su equipo",
+      "<small>Con la siguiente limitación/desventaja</small> Es ritualista y requiere unos minutos para lanzarse",
+      "<small>Con la siguiente limitación/desventaja</small> Requiere gestos e incisiones o encantamientos"
+    ]
+  },
   arcane_items: {
-  en: [
-    "<small>The item has the following form</small> Amulet/necklace", "<small>The item has the following form</small> Leather/light armor",
-    "<small>The item has the following form</small> Axe/machete", "<small>The item has the following form</small> Mace/club/hammer",
-    "<small>The item has the following form</small> Belt/girdle", "<small>The item has the following form</small> Manual/tome",
-    "<small>The item has the following form</small> Boots/shoes", "<small>The item has the following form</small> Metal/heavy armor",
-    "<small>The item has the following form</small> Bottle/flask", "<small>The item has the following form</small> Polearm/lance",
-    "<small>The item has the following form</small> Bow/rifle", "<small>The item has the following form</small> Potion/oil/dust",
-    "<small>The item has the following form</small> Bracers/bracelet", "<small>The item has the following form</small> Quiver/bandolier",
-    "<small>The item has the following form</small> Cloak/cape", "<small>The item has the following form</small> Ring/band",
-    "<small>The item has the following form</small> Crossbow/shotgun", "<small>The item has the following form</small> Robe/vest/shirt",
-    "<small>The item has the following form</small> Dagger/knife", "<small>The item has the following form</small> Scroll",
-    "<small>The item has the following form</small> Figurine/statuette", "<small>The item has the following form</small> Shield/buckler",
-    "<small>The item has the following form</small> Flail/whip", "<small>The item has the following form</small> Single arrow/bolt",
-    "<small>The item has the following form</small> Gem/crystal", "<small>The item has the following form</small> Skull/deck/cube",
-    "<small>The item has the following form</small> Gloves/gauntlets", "<small>The item has the following form</small> Sling/pistol",
-    "<small>The item has the following form</small> Goggles/mask", "<small>The item has the following form</small> Spear/trident",
-    "<small>The item has the following form</small> Hat/helm/circlet", "<small>The item has the following form</small> Staff/scepter",
-    "<small>The item has the following form</small> Haversack/bag", "<small>The item has the following form</small> Sword/blade",
-    "<small>The item has the following form</small> Horn/flute/harp", "<small>The item has the following form</small> Wand/rod"
-  ],
-  es: [
-    "<small>El objeto tiene la forma de un</small> Amuleto/collar", "<small>El objeto tiene la forma de una</small> Armadura de cuero/ligera",
-    "<small>El objeto tiene la forma de un</small> Hacha/machete", "<small>El objeto tiene la forma de una</small> Maza/garrote/martillo",
-    "<small>El objeto tiene la forma de un</small> Cinturón/faja", "<small>El objeto tiene la forma de un</small> Manual/tomo",
-    "<small>El objeto tiene la forma de unas</small> Botas/zapatos", "<small>El objeto tiene la forma de una</small> Armadura de metal/pesada",
-    "<small>El objeto tiene la forma de una</small> Botella/frasco", "<small>El objeto tiene la forma de una</small> Arma de asta/lanza",
-    "<small>El objeto tiene la forma de un</small> Arco/rifle", "<small>El objeto tiene la forma de una</small> Poción/aceite/polvo",
-    "<small>El objeto tiene la forma de unos</small> Brazaletes/pulsera", "<small>El objeto tiene la forma de un</small> Carcaj/bandolera",
-    "<small>El objeto tiene la forma de una</small> Capa/capote", "<small>El objeto tiene la forma de un</small> Anillo/aro",
-    "<small>El objeto tiene la forma de una</small> Ballesta/escopeta", "<small>El objeto tiene la forma de una</small> Túnica/chaleco/camisa",
-    "<small>El objeto tiene la forma de una</small> Daga/cuchillo", "<small>El objeto tiene la forma de un</small> Pergamino",
-    "<small>El objeto tiene la forma de una</small> Figurilla/estatuilla", "<small>El objeto tiene la forma de un</small> Escudo/broquel",
-    "<small>El objeto tiene la forma de un</small> Flagelo/látigo", "<small>El objeto tiene la forma de una</small> Flecha/perno individual",
-    "<small>El objeto tiene la forma de una</small> Gema/cristal", "<small>El objeto tiene la forma de un</small> Cráneo/mazo/cubo",
-    "<small>El objeto tiene la forma de unos</small> Guantes/guanteletes", "<small>El objeto tiene la forma de una</small> Honda/pistola",
-    "<small>El objeto tiene la forma de unas</small> Gafas/máscara", "<small>El objeto tiene la forma de una</small> Lanza/tridente",
-    "<small>El objeto tiene la forma de un</small> Sombrero/yelmo/diadema", "<small>El objeto tiene la forma de un</small> Bastón/cetro",
-    "<small>El objeto tiene la forma de un</small> Morral/bolsa", "<small>El objeto tiene la forma de una</small> Espada/hoja",
-    "<small>El objeto tiene la forma de un</small> Cuerno/flauta/arpa", "<small>El objeto tiene la forma de una</small> Varita/vara"
-  ]
-},
-arcane_item_features: {
-  en: [
-    "<small>The item has this distinctive feature</small> Adamantine/tough", "<small>The item has this distinctive feature</small> Invokes anger/rage",
-    "<small>The item has this distinctive feature</small> Animal motif", "<small>The item has this distinctive feature</small> Light/balanced",
-    "<small>The item has this distinctive feature</small> Animated/living", "<small>The item has this distinctive feature</small> Mundane form",
-    "<small>The item has this distinctive feature</small> Bane (specify foe)", "<small>The item has this distinctive feature</small> Mystical glow",
-    "<small>The item has this distinctive feature</small> Beautiful/artistic", "<small>The item has this distinctive feature</small> Notched/tattered",
-    "<small>The item has this distinctive feature</small> Blood drinker", "<small>The item has this distinctive feature</small> Odd smell/sounds",
-    "<small>The item has this distinctive feature</small> Crudely fashioned", "<small>The item has this distinctive feature</small> Ornate/decorative",
-    "<small>The item has this distinctive feature</small> Distinctive emblem", "<small>The item has this distinctive feature</small> Radiates energy",
-    "<small>The item has this distinctive feature</small> Distorts light", "<small>The item has this distinctive feature</small> Sentient/speaks",
-    "<small>The item has this distinctive feature</small> Emits a faint hum", "<small>The item has this distinctive feature</small> Soul devourer",
-    "<small>The item has this distinctive feature</small> Engraved/runic", "<small>The item has this distinctive feature</small> Spectral/ethereal",
-    "<small>The item has this distinctive feature</small> Gem-encrusted", "<small>The item has this distinctive feature</small> Strange feeling",
-    "<small>The item has this distinctive feature</small> Heavy/awkward", "<small>The item has this distinctive feature</small> Tarnished/rotten",
-    "<small>The item has this distinctive feature</small> Holy/blessed", "<small>The item has this distinctive feature</small> Unholy/demonic",
-    "<small>The item has this distinctive feature</small> Horrific visage", "<small>The item has this distinctive feature</small> Unique appearance",
-    "<small>The item has this distinctive feature</small> Hot/cold sensation", "<small>The item has this distinctive feature</small> Valuable material",
-    "<small>The item has this distinctive feature</small> Inspires dread", "<small>The item has this distinctive feature</small> Vorpal/keen-edged",
-    "<small>The item has this distinctive feature</small> Intricate/detailed", "<small>The item has this distinctive feature</small> Weird/alien design"
-  ],
-  es: [
-    "<small>El objeto tiene este rasgo distintivo:</small> Adamantino/resistente", "<small>El objeto tiene este rasgo distintivo:</small> Invoca ira/rabia",
-    "<small>El objeto tiene este rasgo distintivo:</small> Motivo animal", "<small>El objeto tiene este rasgo distintivo:</small> Ligero/equilibrado",
-    "<small>El objeto tiene este rasgo distintivo:</small> Animado/viviente", "<small>El objeto tiene este rasgo distintivo:</small> Forma mundana",
-    "<small>El objeto tiene este rasgo distintivo:</small> Perdición (especificar enemigo)", "<small>El objeto tiene este rasgo distintivo:</small> Brillo místico",
-    "<small>El objeto tiene este rasgo distintivo:</small> Hermoso/artístico", "<small>El objeto tiene este rasgo distintivo:</small> Mellado/andrajoso",
-    "<small>El objeto tiene este rasgo distintivo:</small> Bebedor de sangre", "<small>El objeto tiene este rasgo distintivo:</small> Olor/sonidos extraños",
-    "<small>El objeto tiene este rasgo distintivo:</small> Fabricación tosca", "<small>El objeto tiene este rasgo distintivo:</small> Ornato/decorativo",
-    "<small>El objeto tiene este rasgo distintivo:</small> Emblema distintivo", "<small>El objeto tiene este rasgo distintivo:</small> Irradia energía",
-    "<small>El objeto tiene este rasgo distintivo:</small> Distorsiona la luz", "<small>El objeto tiene este rasgo distintivo:</small> Sentiente/parlante",
-    "<small>El objeto tiene este rasgo distintivo:</small> Emite un zumbido tenue", "<small>El objeto tiene este rasgo distintivo:</small> Devorador de almas",
-    "<small>El objeto tiene este rasgo distintivo:</small> Grabado/rúnico", "<small>El objeto tiene este rasgo distintivo:</small> Espectral/etéreo",
-    "<small>El objeto tiene este rasgo distintivo:</small> Incrustaciones de gemas", "<small>El objeto tiene este rasgo distintivo:</small> Sensación extraña",
-    "<small>El objeto tiene este rasgo distintivo:</small> Pesado/estorboso", "<small>El objeto tiene este rasgo distintivo:</small> Deslucido/podrido",
-    "<small>El objeto tiene este rasgo distintivo:</small> Sagrado/bendito", "<small>El objeto tiene este rasgo distintivo:</small> Profano/demoníaco",
-    "<small>El objeto tiene este rasgo distintivo:</small> Rostro horroroso", "<small>El objeto tiene este rasgo distintivo:</small> Apariencia única",
-    "<small>El objeto tiene este rasgo distintivo:</small> Sensación de frío/calor", "<small>El objeto tiene este rasgo distintivo:</small> Material valioso",
-    "<small>El objeto tiene este rasgo distintivo:</small> Inspira pavor", "<small>El objeto tiene este rasgo distintivo:</small> Vorpal/filo agudo",
-    "<small>El objeto tiene este rasgo distintivo:</small> Intrincado/detallado", "<small>El objeto tiene este rasgo distintivo:</small> Diseño extraño/alienígena"
-  ]
-},
+    en: [
+      "<small>The item has the following form</small> Amulet/necklace", "<small>The item has the following form</small> Leather/light armor",
+      "<small>The item has the following form</small> Axe/machete", "<small>The item has the following form</small> Mace/club/hammer",
+      "<small>The item has the following form</small> Belt/girdle", "<small>The item has the following form</small> Manual/tome",
+      "<small>The item has the following form</small> Boots/shoes", "<small>The item has the following form</small> Metal/heavy armor",
+      "<small>The item has the following form</small> Bottle/flask", "<small>The item has the following form</small> Polearm/lance",
+      "<small>The item has the following form</small> Bow/rifle", "<small>The item has the following form</small> Potion/oil/dust",
+      "<small>The item has the following form</small> Bracers/bracelet", "<small>The item has the following form</small> Quiver/bandolier",
+      "<small>The item has the following form</small> Cloak/cape", "<small>The item has the following form</small> Ring/band",
+      "<small>The item has the following form</small> Crossbow/shotgun", "<small>The item has the following form</small> Robe/vest/shirt",
+      "<small>The item has the following form</small> Dagger/knife", "<small>The item has the following form</small> Scroll",
+      "<small>The item has the following form</small> Figurine/statuette", "<small>The item has the following form</small> Shield/buckler",
+      "<small>The item has the following form</small> Flail/whip", "<small>The item has the following form</small> Single arrow/bolt",
+      "<small>The item has the following form</small> Gem/crystal", "<small>The item has the following form</small> Skull/deck/cube",
+      "<small>The item has the following form</small> Gloves/gauntlets", "<small>The item has the following form</small> Sling/pistol",
+      "<small>The item has the following form</small> Goggles/mask", "<small>The item has the following form</small> Spear/trident",
+      "<small>The item has the following form</small> Hat/helm/circlet", "<small>The item has the following form</small> Staff/scepter",
+      "<small>The item has the following form</small> Haversack/bag", "<small>The item has the following form</small> Sword/blade",
+      "<small>The item has the following form</small> Horn/flute/harp", "<small>The item has the following form</small> Wand/rod"
+    ],
+    es: [
+      "<small>El objeto tiene la forma de un</small> Amuleto/collar", "<small>El objeto tiene la forma de una</small> Armadura de cuero/ligera",
+      "<small>El objeto tiene la forma de un</small> Hacha/machete", "<small>El objeto tiene la forma de una</small> Maza/garrote/martillo",
+      "<small>El objeto tiene la forma de un</small> Cinturón/faja", "<small>El objeto tiene la forma de un</small> Manual/tomo",
+      "<small>El objeto tiene la forma de unas</small> Botas/zapatos", "<small>El objeto tiene la forma de una</small> Armadura de metal/pesada",
+      "<small>El objeto tiene la forma de una</small> Botella/frasco", "<small>El objeto tiene la forma de una</small> Arma de asta/lanza",
+      "<small>El objeto tiene la forma de un</small> Arco/rifle", "<small>El objeto tiene la forma de una</small> Poción/aceite/polvo",
+      "<small>El objeto tiene la forma de unos</small> Brazaletes/pulsera", "<small>El objeto tiene la forma de un</small> Carcaj/bandolera",
+      "<small>El objeto tiene la forma de una</small> Capa/capote", "<small>El objeto tiene la forma de un</small> Anillo/aro",
+      "<small>El objeto tiene la forma de una</small> Ballesta/escopeta", "<small>El objeto tiene la forma de una</small> Túnica/chaleco/camisa",
+      "<small>El objeto tiene la forma de una</small> Daga/cuchillo", "<small>El objeto tiene la forma de un</small> Pergamino",
+      "<small>El objeto tiene la forma de una</small> Figurilla/estatuilla", "<small>El objeto tiene la forma de un</small> Escudo/broquel",
+      "<small>El objeto tiene la forma de un</small> Flagelo/látigo", "<small>El objeto tiene la forma de una</small> Flecha/perno individual",
+      "<small>El objeto tiene la forma de una</small> Gema/cristal", "<small>El objeto tiene la forma de un</small> Cráneo/mazo/cubo",
+      "<small>El objeto tiene la forma de unos</small> Guantes/guanteletes", "<small>El objeto tiene la forma de una</small> Honda/pistola",
+      "<small>El objeto tiene la forma de unas</small> Gafas/máscara", "<small>El objeto tiene la forma de una</small> Lanza/tridente",
+      "<small>El objeto tiene la forma de un</small> Sombrero/yelmo/diadema", "<small>El objeto tiene la forma de un</small> Bastón/cetro",
+      "<small>El objeto tiene la forma de un</small> Morral/bolsa", "<small>El objeto tiene la forma de una</small> Espada/hoja",
+      "<small>El objeto tiene la forma de un</small> Cuerno/flauta/arpa", "<small>El objeto tiene la forma de una</small> Varita/vara"
+    ]
+  },
+  arcane_item_features: {
+    en: [
+      "<small>The item has this distinctive feature</small> Adamantine/tough", "<small>The item has this distinctive feature</small> Invokes anger/rage",
+      "<small>The item has this distinctive feature</small> Animal motif", "<small>The item has this distinctive feature</small> Light/balanced",
+      "<small>The item has this distinctive feature</small> Animated/living", "<small>The item has this distinctive feature</small> Mundane form",
+      "<small>The item has this distinctive feature</small> Bane (specify foe)", "<small>The item has this distinctive feature</small> Mystical glow",
+      "<small>The item has this distinctive feature</small> Beautiful/artistic", "<small>The item has this distinctive feature</small> Notched/tattered",
+      "<small>The item has this distinctive feature</small> Blood drinker", "<small>The item has this distinctive feature</small> Odd smell/sounds",
+      "<small>The item has this distinctive feature</small> Crudely fashioned", "<small>The item has this distinctive feature</small> Ornate/decorative",
+      "<small>The item has this distinctive feature</small> Distinctive emblem", "<small>The item has this distinctive feature</small> Radiates energy",
+      "<small>The item has this distinctive feature</small> Distorts light", "<small>The item has this distinctive feature</small> Sentient/speaks",
+      "<small>The item has this distinctive feature</small> Emits a faint hum", "<small>The item has this distinctive feature</small> Soul devourer",
+      "<small>The item has this distinctive feature</small> Engraved/runic", "<small>The item has this distinctive feature</small> Spectral/ethereal",
+      "<small>The item has this distinctive feature</small> Gem-encrusted", "<small>The item has this distinctive feature</small> Strange feeling",
+      "<small>The item has this distinctive feature</small> Heavy/awkward", "<small>The item has this distinctive feature</small> Tarnished/rotten",
+      "<small>The item has this distinctive feature</small> Holy/blessed", "<small>The item has this distinctive feature</small> Unholy/demonic",
+      "<small>The item has this distinctive feature</small> Horrific visage", "<small>The item has this distinctive feature</small> Unique appearance",
+      "<small>The item has this distinctive feature</small> Hot/cold sensation", "<small>The item has this distinctive feature</small> Valuable material",
+      "<small>The item has this distinctive feature</small> Inspires dread", "<small>The item has this distinctive feature</small> Vorpal/keen-edged",
+      "<small>The item has this distinctive feature</small> Intricate/detailed", "<small>The item has this distinctive feature</small> Weird/alien design"
+    ],
+    es: [
+      "<small>El objeto tiene este rasgo distintivo:</small> Adamantino/resistente", "<small>El objeto tiene este rasgo distintivo:</small> Invoca ira/rabia",
+      "<small>El objeto tiene este rasgo distintivo:</small> Motivo animal", "<small>El objeto tiene este rasgo distintivo:</small> Ligero/equilibrado",
+      "<small>El objeto tiene este rasgo distintivo:</small> Animado/viviente", "<small>El objeto tiene este rasgo distintivo:</small> Forma mundana",
+      "<small>El objeto tiene este rasgo distintivo:</small> Perdición (especificar enemigo)", "<small>El objeto tiene este rasgo distintivo:</small> Brillo místico",
+      "<small>El objeto tiene este rasgo distintivo:</small> Hermoso/artístico", "<small>El objeto tiene este rasgo distintivo:</small> Mellado/andrajoso",
+      "<small>El objeto tiene este rasgo distintivo:</small> Bebedor de sangre", "<small>El objeto tiene este rasgo distintivo:</small> Olor/sonidos extraños",
+      "<small>El objeto tiene este rasgo distintivo:</small> Fabricación tosca", "<small>El objeto tiene este rasgo distintivo:</small> Ornato/decorativo",
+      "<small>El objeto tiene este rasgo distintivo:</small> Emblema distintivo", "<small>El objeto tiene este rasgo distintivo:</small> Irradia energía",
+      "<small>El objeto tiene este rasgo distintivo:</small> Distorsiona la luz", "<small>El objeto tiene este rasgo distintivo:</small> Sentiente/parlante",
+      "<small>El objeto tiene este rasgo distintivo:</small> Emite un zumbido tenue", "<small>El objeto tiene este rasgo distintivo:</small> Devorador de almas",
+      "<small>El objeto tiene este rasgo distintivo:</small> Grabado/rúnico", "<small>El objeto tiene este rasgo distintivo:</small> Espectral/etéreo",
+      "<small>El objeto tiene este rasgo distintivo:</small> Incrustaciones de gemas", "<small>El objeto tiene este rasgo distintivo:</small> Sensación extraña",
+      "<small>El objeto tiene este rasgo distintivo:</small> Pesado/estorboso", "<small>El objeto tiene este rasgo distintivo:</small> Deslucido/podrido",
+      "<small>El objeto tiene este rasgo distintivo:</small> Sagrado/bendito", "<small>El objeto tiene este rasgo distintivo:</small> Profano/demoníaco",
+      "<small>El objeto tiene este rasgo distintivo:</small> Rostro horroroso", "<small>El objeto tiene este rasgo distintivo:</small> Apariencia única",
+      "<small>El objeto tiene este rasgo distintivo:</small> Sensación de frío/calor", "<small>El objeto tiene este rasgo distintivo:</small> Material valioso",
+      "<small>El objeto tiene este rasgo distintivo:</small> Inspira pavor", "<small>El objeto tiene este rasgo distintivo:</small> Vorpal/filo agudo",
+      "<small>El objeto tiene este rasgo distintivo:</small> Intrincado/detallado", "<small>El objeto tiene este rasgo distintivo:</small> Diseño extraño/alienígena"
+    ]
+  },
   arcane_trappings: {
-  en: [
-    "<small>The spell/item uses or has power over</small> Acid/magma", "<small>The spell/item uses or has power over</small> Insects/bugs",
-    "<small>The spell/item uses or has power over</small> Air/wind/gas", "<small>The spell/item uses or has power over</small> Life/vitality/health",
-    "<small>The spell/item uses or has power over</small> Animal/beast", "<small>The spell/item uses or has power over</small> Light/sunlight",
-    "<small>The spell/item uses or has power over</small> Birds/airborne", "<small>The spell/item uses or has power over</small> Metal/mineral",
-    "<small>The spell/item uses or has power over</small> Blades/spikes", "<small>The spell/item uses or has power over</small> Mind/thought",
-    "<small>The spell/item uses or has power over</small> Blood/ichor", "<small>The spell/item uses or has power over</small> Plant/wood/bark",
-    "<small>The spell/item uses or has power over</small> Body/flesh/muscle", "<small>The spell/item uses or has power over</small> Poison/venom",
-    "<small>The spell/item uses or has power over</small> Bone/chitin", "<small>The spell/item uses or has power over</small> Shadow/gloom",
-    "<small>The spell/item uses or has power over</small> Darkness/void", "<small>The spell/item uses or has power over</small> Smoke/fog/mist",
-    "<small>The spell/item uses or has power over</small> Death/undead", "<small>The spell/item uses or has power over</small> Sonic/sound",
-    "<small>The spell/item uses or has power over</small> Earth/clay", "<small>The spell/item uses or has power over</small> Soul/spirit/ghost",
-    "<small>The spell/item uses or has power over</small> Feeling/emotion", "<small>The spell/item uses or has power over</small> Space/cosmic",
-    "<small>The spell/item uses or has power over</small> Fire/heat", "<small>The spell/item uses or has power over</small> Stone/rock/sand",
-    "<small>The spell/item uses or has power over</small> Fish/aquatic", "<small>The spell/item uses or has power over</small> Tentacles/monster",
-    "<small>The spell/item uses or has power over</small> Force/kinetic", "<small>The spell/item uses or has power over</small> Thunder/lightning",
-    "<small>The spell/item uses or has power over</small> Gravity/pressure", "<small>The spell/item uses or has power over</small> Time/entropy",
-    "<small>The spell/item uses or has power over</small> Human/creature", "<small>The spell/item uses or has power over</small> Water/liquid",
-    "<small>The spell/item uses or has power over</small> Ice/cold", "<small>The spell/item uses or has power over</small> Weather/storm"
-  ],
-  es: [
-    "<small>El hechizo/objeto usa o tiene poder sobre</small> Ácido/magma", "<small>El hechizo/objeto usa o tiene poder sobre</small> Insectos/bichos",
-    "<small>El hechizo/objeto usa o tiene poder sobre</small> Aire/viento/gas", "<small>El hechizo/objeto usa o tiene poder sobre</small> Vida/vitalidad/salud",
-    "<small>El hechizo/objeto usa o tiene poder sobre</small> Animales/bestias", "<small>El hechizo/objeto usa o tiene poder sobre</small> Luz/luz solar",
-    "<small>El hechizo/objeto usa o tiene poder sobre</small> Aves/seres voladores", "<small>El hechizo/objeto usa o tiene poder sobre</small> Metal/mineral",
-    "<small>El hechizo/objeto usa o tiene poder sobre</small> Hojas/púas", "<small>El hechizo/objeto usa o tiene poder sobre</small> Mente/pensamiento",
-    "<small>El hechizo/objeto usa o tiene poder sobre</small> Sangre/icor", "<small>El hechizo/objeto usa o tiene poder sobre</small> Plantas/madera/corteza",
-    "<small>El hechizo/objeto usa o tiene poder sobre</small> Cuerpo/carne/músculo", "<small>El hechizo/objeto usa o tiene poder sobre</small> Veneno/ponzoña",
-    "<small>El hechizo/objeto usa o tiene poder sobre</small> Hueso/quitina", "<small>El hechizo/objeto usa o tiene poder sobre</small> Sombra/penumbra",
-    "<small>El hechizo/objeto usa o tiene poder sobre</small> Oscuridad/vacío", "<small>El hechizo/objeto usa o tiene poder sobre</small> Humo/niebla/bruma",
-    "<small>El hechizo/objeto usa o tiene poder sobre</small> Muerte/no muertos", "<small>El hechizo/objeto usa o tiene poder sobre</small> Sónico/sonido",
-    "<small>El hechizo/objeto usa o tiene poder sobre</small> Tierra/arcilla", "<small>El hechizo/objeto usa o tiene poder sobre</small> Alma/espíritu/fantasma",
-    "<small>El hechizo/objeto usa o tiene poder sobre</small> Sentimiento/emoción", "<small>El hechizo/objeto usa o tiene poder sobre</small> Espacio/cósmico",
-    "<small>El hechizo/objeto usa o tiene poder sobre</small> Fuego/calor", "<small>El hechizo/objeto usa o tiene poder sobre</small> Piedra/roca/arena",
-    "<small>El hechizo/objeto usa o tiene poder sobre</small> Peces/acuático", "<small>El hechizo/objeto usa o tiene poder sobre</small> Tentáculos/monstruos",
-    "<small>El hechizo/objeto usa o tiene poder sobre</small> Fuerza/cinética", "<small>El hechizo/objeto usa o tiene poder sobre</small> Trueno/relámpago",
-    "<small>El hechizo/objeto usa o tiene poder sobre</small> Gravedad/presión", "<small>El hechizo/objeto usa o tiene poder sobre</small> Tiempo/entropía",
-    "<small>El hechizo/objeto usa o tiene poder sobre</small> Humanos/criaturas", "<small>El hechizo/objeto usa o tiene poder sobre</small> Agua/líquido",
-    "<small>El hechizo/objeto usa o tiene poder sobre</small> Hielo/frío", "<small>El hechizo/objeto usa o tiene poder sobre</small> Clima/tormenta"
-  ]
-},
+    en: [
+      "<small>The spell/item uses or has power over</small> Acid/magma", "<small>The spell/item uses or has power over</small> Insects/bugs",
+      "<small>The spell/item uses or has power over</small> Air/wind/gas", "<small>The spell/item uses or has power over</small> Life/vitality/health",
+      "<small>The spell/item uses or has power over</small> Animal/beast", "<small>The spell/item uses or has power over</small> Light/sunlight",
+      "<small>The spell/item uses or has power over</small> Birds/airborne", "<small>The spell/item uses or has power over</small> Metal/mineral",
+      "<small>The spell/item uses or has power over</small> Blades/spikes", "<small>The spell/item uses or has power over</small> Mind/thought",
+      "<small>The spell/item uses or has power over</small> Blood/ichor", "<small>The spell/item uses or has power over</small> Plant/wood/bark",
+      "<small>The spell/item uses or has power over</small> Body/flesh/muscle", "<small>The spell/item uses or has power over</small> Poison/venom",
+      "<small>The spell/item uses or has power over</small> Bone/chitin", "<small>The spell/item uses or has power over</small> Shadow/gloom",
+      "<small>The spell/item uses or has power over</small> Darkness/void", "<small>The spell/item uses or has power over</small> Smoke/fog/mist",
+      "<small>The spell/item uses or has power over</small> Death/undead", "<small>The spell/item uses or has power over</small> Sonic/sound",
+      "<small>The spell/item uses or has power over</small> Earth/clay", "<small>The spell/item uses or has power over</small> Soul/spirit/ghost",
+      "<small>The spell/item uses or has power over</small> Feeling/emotion", "<small>The spell/item uses or has power over</small> Space/cosmic",
+      "<small>The spell/item uses or has power over</small> Fire/heat", "<small>The spell/item uses or has power over</small> Stone/rock/sand",
+      "<small>The spell/item uses or has power over</small> Fish/aquatic", "<small>The spell/item uses or has power over</small> Tentacles/monster",
+      "<small>The spell/item uses or has power over</small> Force/kinetic", "<small>The spell/item uses or has power over</small> Thunder/lightning",
+      "<small>The spell/item uses or has power over</small> Gravity/pressure", "<small>The spell/item uses or has power over</small> Time/entropy",
+      "<small>The spell/item uses or has power over</small> Human/creature", "<small>The spell/item uses or has power over</small> Water/liquid",
+      "<small>The spell/item uses or has power over</small> Ice/cold", "<small>The spell/item uses or has power over</small> Weather/storm"
+    ],
+    es: [
+      "<small>El hechizo/objeto usa o tiene poder sobre</small> Ácido/magma", "<small>El hechizo/objeto usa o tiene poder sobre</small> Insectos/bichos",
+      "<small>El hechizo/objeto usa o tiene poder sobre</small> Aire/viento/gas", "<small>El hechizo/objeto usa o tiene poder sobre</small> Vida/vitalidad/salud",
+      "<small>El hechizo/objeto usa o tiene poder sobre</small> Animales/bestias", "<small>El hechizo/objeto usa o tiene poder sobre</small> Luz/luz solar",
+      "<small>El hechizo/objeto usa o tiene poder sobre</small> Aves/seres voladores", "<small>El hechizo/objeto usa o tiene poder sobre</small> Metal/mineral",
+      "<small>El hechizo/objeto usa o tiene poder sobre</small> Hojas/púas", "<small>El hechizo/objeto usa o tiene poder sobre</small> Mente/pensamiento",
+      "<small>El hechizo/objeto usa o tiene poder sobre</small> Sangre/icor", "<small>El hechizo/objeto usa o tiene poder sobre</small> Plantas/madera/corteza",
+      "<small>El hechizo/objeto usa o tiene poder sobre</small> Cuerpo/carne/músculo", "<small>El hechizo/objeto usa o tiene poder sobre</small> Veneno/ponzoña",
+      "<small>El hechizo/objeto usa o tiene poder sobre</small> Hueso/quitina", "<small>El hechizo/objeto usa o tiene poder sobre</small> Sombra/penumbra",
+      "<small>El hechizo/objeto usa o tiene poder sobre</small> Oscuridad/vacío", "<small>El hechizo/objeto usa o tiene poder sobre</small> Humo/niebla/bruma",
+      "<small>El hechizo/objeto usa o tiene poder sobre</small> Muerte/no muertos", "<small>El hechizo/objeto usa o tiene poder sobre</small> Sónico/sonido",
+      "<small>El hechizo/objeto usa o tiene poder sobre</small> Tierra/arcilla", "<small>El hechizo/objeto usa o tiene poder sobre</small> Alma/espíritu/fantasma",
+      "<small>El hechizo/objeto usa o tiene poder sobre</small> Sentimiento/emoción", "<small>El hechizo/objeto usa o tiene poder sobre</small> Espacio/cósmico",
+      "<small>El hechizo/objeto usa o tiene poder sobre</small> Fuego/calor", "<small>El hechizo/objeto usa o tiene poder sobre</small> Piedra/roca/arena",
+      "<small>El hechizo/objeto usa o tiene poder sobre</small> Peces/acuático", "<small>El hechizo/objeto usa o tiene poder sobre</small> Tentáculos/monstruos",
+      "<small>El hechizo/objeto usa o tiene poder sobre</small> Fuerza/cinética", "<small>El hechizo/objeto usa o tiene poder sobre</small> Trueno/relámpago",
+      "<small>El hechizo/objeto usa o tiene poder sobre</small> Gravedad/presión", "<small>El hechizo/objeto usa o tiene poder sobre</small> Tiempo/entropía",
+      "<small>El hechizo/objeto usa o tiene poder sobre</small> Humanos/criaturas", "<small>El hechizo/objeto usa o tiene poder sobre</small> Agua/líquido",
+      "<small>El hechizo/objeto usa o tiene poder sobre</small> Hielo/frío", "<small>El hechizo/objeto usa o tiene poder sobre</small> Clima/tormenta"
+    ]
+  },
   tags_person: {
-  en: [
-    "Arrogant/proud", "Injured/sick", "Attractive/seductive", "Intoxicated/crazy",
-    "Brutal/violent", "Lazy/apathetic", "Caring/protective", "Loud/unsubtle",
-    "Charming/suave", "Muscular/strong", "Clever/cunning", "Nosy/prying",
-    "Clumsy/inept", "Overconfident", "Cowardly/timid", "Paranoid/cautious",
-    "Creepy/weird", "Pious/righteous", "Cruel/ruthless", "Quick/nimble",
-    "Envious/suspicious", "Selfish/vain", "Friendly/affable", "Smelly/filthy",
-    "Greedy/impatient", "Sneaky/devious", "Gullible/foolish", "Squeamish/fussy",
-    "Helpful/supportive", "Stubborn/resolute", "Hostile/aggressive", "Treacherous/tricky",
-    "Humble/shy", "Ugly/monstrous", "Ignorant/oblivious", "Unfriendly/rude"
-  ],
-  es: [
-    "Arrogante/orgulloso", "Herido/enfermo", "Atractivo/seductor", "Ebrio/loco",
-    "Brutal/violento", "Perezoso/apático", "Cariñoso/protector", "Ruidoso/poco sutil",
-    "Encantador/elegante", "Musculoso/fuerte", "Listo/astuto", "Entrometido/fisgón",
-    "Torpe/inepto", "Presuntuoso", "Cobarde/tímido", "Paranoico/cauto",
-    "Siniestro/raro", "Piadoso/justo", "Cruel/despiadado", "Rápido/ágil",
-    "Envidioso/suspicaz", "Egoísta/vanidoso", "Amigable/afable", "Maloliente/sucio",
-    "Codicioso/impaciente", "Furtivo/taimado", "Crédulo/necio", "Aprensivo/quisquilloso",
-    "Servicial/atento", "Obstinado/resuelto", "Hostil/agresivo", "Traicionero/astuto",
-    "Humilde/tímido", "Feo/monstruoso", "Ignorante/distraído", "Antipático/grosero"
-  ]
-},
+    en: [
+      "Arrogant/proud", "Injured/sick", "Attractive/seductive", "Intoxicated/crazy",
+      "Brutal/violent", "Lazy/apathetic", "Caring/protective", "Loud/unsubtle",
+      "Charming/suave", "Muscular/strong", "Clever/cunning", "Nosy/prying",
+      "Clumsy/inept", "Overconfident", "Cowardly/timid", "Paranoid/cautious",
+      "Creepy/weird", "Pious/righteous", "Cruel/ruthless", "Quick/nimble",
+      "Envious/suspicious", "Selfish/vain", "Friendly/affable", "Smelly/filthy",
+      "Greedy/impatient", "Sneaky/devious", "Gullible/foolish", "Squeamish/fussy",
+      "Helpful/supportive", "Stubborn/resolute", "Hostile/aggressive", "Treacherous/tricky",
+      "Humble/shy", "Ugly/monstrous", "Ignorant/oblivious", "Unfriendly/rude"
+    ],
+    es: [
+      "Arrogante/orgulloso", "Herido/enfermo", "Atractivo/seductor", "Ebrio/loco",
+      "Brutal/violento", "Perezoso/apático", "Cariñoso/protector", "Ruidoso/poco sutil",
+      "Encantador/elegante", "Musculoso/fuerte", "Listo/astuto", "Entrometido/fisgón",
+      "Torpe/inepto", "Presuntuoso", "Cobarde/tímido", "Paranoico/cauto",
+      "Siniestro/raro", "Piadoso/justo", "Cruel/despiadado", "Rápido/ágil",
+      "Envidioso/suspicaz", "Egoísta/vanidoso", "Amigable/afable", "Maloliente/sucio",
+      "Codicioso/impaciente", "Furtivo/taimado", "Crédulo/necio", "Aprensivo/quisquilloso",
+      "Servicial/atento", "Obstinado/resuelto", "Hostil/agresivo", "Traicionero/astuto",
+      "Humilde/tímido", "Feo/monstruoso", "Ignorante/distraído", "Antipático/grosero"
+    ]
+  },
   tags_location: {
-  en: [
-    "Abandoned", "Large/sprawling", "Barricaded/locked", "Modernized",
-    "Cheap/slipshod", "Mysterious/strange", "Clean/tidy", "New/renovated",
-    "Cool/cold/drafty", "Old/decrepit", "Crowded/cluttered", "Old-fashioned",
-    "Damaged", "Overwhelming", "Damp/flooded", "Polluted/toxic",
-    "Demolished", "Prominent", "Dirty/messy", "Scorched/burning",
-    "Empty/looted", "Secure/guarded", "Exposed/open", "Small/cramped",
-    "Forbidden/closed", "Spooky/creepy", "Fortified/reinforced", "Unassuming",
-    "Functional/spartan", "Underwhelming", "Gloomy/unlit", "Vandalized",
-    "Imposing/lavish", "Warm/hot", "Infested/overrun", "Well-stocked"
-  ],
-  es: [
-    "Abandonado", "Grande/extenso", "Barricadeado/cerrado", "Modernizado",
-    "Barato/chapucero", "Misterioso/extraño", "Limpio/ordenado", "Nuevo/renovado",
-    "Fresco/frío/con corrientes", "Viejo/decrépito", "Abarrotado/desordenado", "Anticuado",
-    "Dañado", "Abrumador", "Húmedo/inundado", "Contaminado/tóxico",
-    "Demolido", "Prominente", "Sucio/desordenado", "Churruscado/ardiendo",
-    "Vacío/saqueado", "Seguro/custodiado", "Expuesto/abierto", "Pequeño/estrecho",
-    "Prohibido/cerrado", "Inquietante/siniestro", "Fortificado/reforzado", "Modesto",
-    "Funcional/espartano", "Decepcionante", "Lúgubre/sin luz", "Vandalizado",
-    "Imponente/lujoso", "Cálido/caluroso", "Infestado/invadido", "Bien abastecido"
-  ]
-},
+    en: [
+      "Abandoned", "Large/sprawling", "Barricaded/locked", "Modernized",
+      "Cheap/slipshod", "Mysterious/strange", "Clean/tidy", "New/renovated",
+      "Cool/cold/drafty", "Old/decrepit", "Crowded/cluttered", "Old-fashioned",
+      "Damaged", "Overwhelming", "Damp/flooded", "Polluted/toxic",
+      "Demolished", "Prominent", "Dirty/messy", "Scorched/burning",
+      "Empty/looted", "Secure/guarded", "Exposed/open", "Small/cramped",
+      "Forbidden/closed", "Spooky/creepy", "Fortified/reinforced", "Unassuming",
+      "Functional/spartan", "Underwhelming", "Gloomy/unlit", "Vandalized",
+      "Imposing/lavish", "Warm/hot", "Infested/overrun", "Well-stocked"
+    ],
+    es: [
+      "Abandonado", "Grande/extenso", "Barricadeado/cerrado", "Modernizado",
+      "Barato/chapucero", "Misterioso/extraño", "Limpio/ordenado", "Nuevo/renovado",
+      "Fresco/frío/con corrientes", "Viejo/decrépito", "Abarrotado/desordenado", "Anticuado",
+      "Dañado", "Abrumador", "Húmedo/inundado", "Contaminado/tóxico",
+      "Demolido", "Prominente", "Sucio/desordenado", "Churruscado/ardiendo",
+      "Vacío/saqueado", "Seguro/custodiado", "Expuesto/abierto", "Pequeño/estrecho",
+      "Prohibido/cerrado", "Inquietante/siniestro", "Fortificado/reforzado", "Modesto",
+      "Funcional/espartano", "Decepcionante", "Lúgubre/sin luz", "Vandalizado",
+      "Imponente/lujoso", "Cálido/caluroso", "Infestado/invadido", "Bien abastecido"
+    ]
+  },
   names_male: {
-  en: [
-    "Adam/Alonso", "Jeffrey/Jose", "Anthony/Andrés", "Jonathan/Leonardo",
-    "Benjamin/Antonio", "Joseph/Lorenzo", "Brian/Benicio", "Kevin/Luca",
-    "Charles/Bruno", "Matthew/Luciano", "Craig/Carlos", "Michael/Manuel",
-    "Daniel/Diego", "Paul/Marco", "David/Eduardo", "Phillip/Mateo",
-    "Edward/Elías", "Raymond/Mauricio", "Eric/Emiliano", "Robert/Miguel",
-    "Frank/Emmanuel", "Shane/Pablo", "Gary/Enzo", "Stephen/Pedro",
-    "George/Felipe", "Thomas/Rafael", "Gregory/Fernando", "Timothy/Rodrigo",
-    "Harold/Francisco", "Todd/Santino", "Howard/Franco", "Walter/Sergio",
-    "James/Ismael", "Wayne/Simón", "Jason/Jorge", "William/Tadeo"
-  ],
-  es: [
-    "Adam/Alonso", "Jeffrey/José", "Anthony/Andrés", "Jonathan/Leonardo",
-    "Benjamin/Antonio", "Joseph/Lorenzo", "Brian/Benicio", "Kevin/Luca",
-    "Charles/Bruno", "Matthew/Luciano", "Craig/Carlos", "Michael/Manuel",
-    "Daniel/Diego", "Paul/Marco", "David/Eduardo", "Phillip/Mateo",
-    "Edward/Elías", "Raymond/Mauricio", "Eric/Emiliano", "Robert/Miguel",
-    "Frank/Emmanuel", "Shane/Pablo", "Gary/Enzo", "Stephen/Pedro",
-    "George/Felipe", "Thomas/Rafael", "Gregory/Fernando", "Timothy/Rodrigo",
-    "Harold/Francisco", "Todd/Santino", "Howard/Franco", "Walter/Sergio",
-    "James/Ismael", "Wayne/Simón", "Jason/Jorge", "William/Tadeo"
-  ]
-},
+    en: [
+      "Adam/Alonso", "Jeffrey/Jose", "Anthony/Andrés", "Jonathan/Leonardo",
+      "Benjamin/Antonio", "Joseph/Lorenzo", "Brian/Benicio", "Kevin/Luca",
+      "Charles/Bruno", "Matthew/Luciano", "Craig/Carlos", "Michael/Manuel",
+      "Daniel/Diego", "Paul/Marco", "David/Eduardo", "Phillip/Mateo",
+      "Edward/Elías", "Raymond/Mauricio", "Eric/Emiliano", "Robert/Miguel",
+      "Frank/Emmanuel", "Shane/Pablo", "Gary/Enzo", "Stephen/Pedro",
+      "George/Felipe", "Thomas/Rafael", "Gregory/Fernando", "Timothy/Rodrigo",
+      "Harold/Francisco", "Todd/Santino", "Howard/Franco", "Walter/Sergio",
+      "James/Ismael", "Wayne/Simón", "Jason/Jorge", "William/Tadeo"
+    ],
+    es: [
+      "Adam/Alonso", "Jeffrey/José", "Anthony/Andrés", "Jonathan/Leonardo",
+      "Benjamin/Antonio", "Joseph/Lorenzo", "Brian/Benicio", "Kevin/Luca",
+      "Charles/Bruno", "Matthew/Luciano", "Craig/Carlos", "Michael/Manuel",
+      "Daniel/Diego", "Paul/Marco", "David/Eduardo", "Phillip/Mateo",
+      "Edward/Elías", "Raymond/Mauricio", "Eric/Emiliano", "Robert/Miguel",
+      "Frank/Emmanuel", "Shane/Pablo", "Gary/Enzo", "Stephen/Pedro",
+      "George/Felipe", "Thomas/Rafael", "Gregory/Fernando", "Timothy/Rodrigo",
+      "Harold/Francisco", "Todd/Santino", "Howard/Franco", "Walter/Sergio",
+      "James/Ismael", "Wayne/Simón", "Jason/Jorge", "William/Tadeo"
+    ]
+  },
   names_female: {
-  en: [
-    "Alice/Abigail", "Julia/Julieta", "Amy/Adriana", "Karen/Lola",
-    "Anna/Alicia", "Katie/Luciana", "Barbara/Amelia", "Kimberly/Luna",
-    "Bethany/Aurora", "Laura/María", "Carol/Catalina", "Lisa/Martina",
-    "Catherine/Chloe", "Louise/Miranda", "Christine/Clara", "Margaret/Natalia",
-    "Deborah/Claudia", "Michelle/Nicole", "Diana/Daniela", "Pamela/Olivia",
-    "Dorothy/Danna", "Patricia/Penélope", "Elizabeth/Delfina", "Rachel/Rafaela",
-    "Emily/Elena", "Rebecca/Regina", "Gail/Elisa", "Ruth/Sofía",
-    "Grace/Francesca", "Samantha/Valentina", "Helen/Gabriela", "Sarah/Violeta",
-    "Jennifer/Isabella", "Susan/Ximena", "Jessica/Josefa", "Tiffany/Zoe"
-  ],
-  es: [
-    "Alice/Abigail", "Julia/Julieta", "Amy/Adriana", "Karen/Lola",
-    "Anna/Alicia", "Katie/Luciana", "Barbara/Amelia", "Kimberly/Luna",
-    "Bethany/Aurora", "Laura/María", "Carol/Catalina", "Lisa/Martina",
-    "Catherine/Chloe", "Louise/Miranda", "Christine/Clara", "Margaret/Natalia",
-    "Deborah/Claudia", "Michelle/Nicole", "Diana/Daniela", "Pamela/Olivia",
-    "Dorothy/Danna", "Patricia/Penélope", "Elizabeth/Delfina", "Rachel/Rafaela",
-    "Emily/Elena", "Rebecca/Regina", "Gail/Elisa", "Ruth/Sofía",
-    "Grace/Francesca", "Samantha/Valentina", "Helen/Gabriela", "Sarah/Violeta",
-    "Jennifer/Isabella", "Susan/Ximena", "Jessica/Josefa", "Tiffany/Zoe"
-  ]
-},
+    en: [
+      "Alice/Abigail", "Julia/Julieta", "Amy/Adriana", "Karen/Lola",
+      "Anna/Alicia", "Katie/Luciana", "Barbara/Amelia", "Kimberly/Luna",
+      "Bethany/Aurora", "Laura/María", "Carol/Catalina", "Lisa/Martina",
+      "Catherine/Chloe", "Louise/Miranda", "Christine/Clara", "Margaret/Natalia",
+      "Deborah/Claudia", "Michelle/Nicole", "Diana/Daniela", "Pamela/Olivia",
+      "Dorothy/Danna", "Patricia/Penélope", "Elizabeth/Delfina", "Rachel/Rafaela",
+      "Emily/Elena", "Rebecca/Regina", "Gail/Elisa", "Ruth/Sofía",
+      "Grace/Francesca", "Samantha/Valentina", "Helen/Gabriela", "Sarah/Violeta",
+      "Jennifer/Isabella", "Susan/Ximena", "Jessica/Josefa", "Tiffany/Zoe"
+    ],
+    es: [
+      "Alice/Abigail", "Julia/Julieta", "Amy/Adriana", "Karen/Lola",
+      "Anna/Alicia", "Katie/Luciana", "Barbara/Amelia", "Kimberly/Luna",
+      "Bethany/Aurora", "Laura/María", "Carol/Catalina", "Lisa/Martina",
+      "Catherine/Chloe", "Louise/Miranda", "Christine/Clara", "Margaret/Natalia",
+      "Deborah/Claudia", "Michelle/Nicole", "Diana/Daniela", "Pamela/Olivia",
+      "Dorothy/Danna", "Patricia/Penélope", "Elizabeth/Delfina", "Rachel/Rafaela",
+      "Emily/Elena", "Rebecca/Regina", "Gail/Elisa", "Ruth/Sofía",
+      "Grace/Francesca", "Samantha/Valentina", "Helen/Gabriela", "Sarah/Violeta",
+      "Jennifer/Isabella", "Susan/Ximena", "Jessica/Josefa", "Tiffany/Zoe"
+    ]
+  },
   names_surname: {
-  en: [
-    "Allen/Aguilar", "Lee/López", "Anderson/Alvarado", "Little/Madrigal",
-    "Baker/Barrios", "Mason/Magaña", "Campbell/Burgos", "Miller/Martínez",
-    "Clark/Calderón", "Moore/Morales", "Cook/Castillo", "Nelson/Paredes",
-    "Davis/Cruz", "Parker/Pérez", "Evans/Díaz", "Price/Portillo",
-    "Ford/Estrada", "Robinson/Reyes", "Foster/Fernández", "Rogers/Rivera",
-    "Gibson/Flores", "Ross/Rodriguez", "Green/Garcia", "Scott/Rojas",
-    "Harris/Gómez", "Smith/Romero", "Hill/González", "Taylor/Salas",
-    "Jackson/Guerra", "Thompson/Sanchez", "Johnson/Gutiérrez", "Watson/Santiago",
-    "Jones/Hernández", "Wilson/Torres", "Kelly/Jiménez", "Young/Vargas"
-  ],
-  es: [
-    "Allen/Aguilar", "Lee/López", "Anderson/Alvarado", "Little/Madrigal",
-    "Baker/Barrios", "Mason/Magaña", "Campbell/Burgos", "Miller/Martínez",
-    "Clark/Calderón", "Moore/Morales", "Cook/Castillo", "Nelson/Paredes",
-    "Davis/Cruz", "Parker/Pérez", "Evans/Díaz", "Price/Portillo",
-    "Ford/Estrada", "Robinson/Reyes", "Foster/Fernández", "Rogers/Rivera",
-    "Gibson/Flores", "Ross/Rodríguez", "Green/García", "Scott/Rojas",
-    "Harris/Gómez", "Smith/Romero", "Hill/González", "Taylor/Salas",
-    "Jackson/Guerra", "Thompson/Sánchez", "Johnson/Gutiérrez", "Watson/Santiago",
-    "Jones/Hernández", "Wilson/Torres", "Kelly/Jiménez", "Young/Vargas"
-  ]
-},
+    en: [
+      "Allen/Aguilar", "Lee/López", "Anderson/Alvarado", "Little/Madrigal",
+      "Baker/Barrios", "Mason/Magaña", "Campbell/Burgos", "Miller/Martínez",
+      "Clark/Calderón", "Moore/Morales", "Cook/Castillo", "Nelson/Paredes",
+      "Davis/Cruz", "Parker/Pérez", "Evans/Díaz", "Price/Portillo",
+      "Ford/Estrada", "Robinson/Reyes", "Foster/Fernández", "Rogers/Rivera",
+      "Gibson/Flores", "Ross/Rodriguez", "Green/Garcia", "Scott/Rojas",
+      "Harris/Gómez", "Smith/Romero", "Hill/González", "Taylor/Salas",
+      "Jackson/Guerra", "Thompson/Sanchez", "Johnson/Gutiérrez", "Watson/Santiago",
+      "Jones/Hernández", "Wilson/Torres", "Kelly/Jiménez", "Young/Vargas"
+    ],
+    es: [
+      "Allen/Aguilar", "Lee/López", "Anderson/Alvarado", "Little/Madrigal",
+      "Baker/Barrios", "Mason/Magaña", "Campbell/Burgos", "Miller/Martínez",
+      "Clark/Calderón", "Moore/Morales", "Cook/Castillo", "Nelson/Paredes",
+      "Davis/Cruz", "Parker/Pérez", "Evans/Díaz", "Price/Portillo",
+      "Ford/Estrada", "Robinson/Reyes", "Foster/Fernández", "Rogers/Rivera",
+      "Gibson/Flores", "Ross/Rodríguez", "Green/García", "Scott/Rojas",
+      "Harris/Gómez", "Smith/Romero", "Hill/González", "Taylor/Salas",
+      "Jackson/Guerra", "Thompson/Sánchez", "Johnson/Gutiérrez", "Watson/Santiago",
+      "Jones/Hernández", "Wilson/Torres", "Kelly/Jiménez", "Young/Vargas"
+    ]
+  },
+  names_fictional: {
+    prefixes: [
+      "And", "Barth", "Cart", "Cyn", "Dar", "Denn",
+      "Eld", "Fill", "Gal", "Gor", "Haeth", "Hord",
+      "Izz", "Jaer", "Kyn", "Lok", "Lyth", "Mag",
+      "Mord", "Ness", "Nol", "Ord", "Port", "Quint",
+      "Rabb", "Roth", "Sard", "Sim", "Tann", "Thelm",
+      "Ulin", "Venc", "Vepp", "Wald", "Wern", "Zar"
+    ],
+    suffixes: [
+      "aer", "ak", "alis", "ard", "as", "astin",
+      "ed", "egar", "en", "ent", "er", "eray",
+      "esia", "ey", "ia", "ian", "iek", "ig",
+      "ild", "in", "ion", "ique", "ith", "obund",
+      "ock", "on", "ond", "op", "orish", "uis",
+      "uli", "un", "unak", "ustin", "utier", "yn"
+    ]
+  }
 };
 
 const twistIdeas = {
