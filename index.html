@@ -198,12 +198,12 @@
 
     <dialog id="modal-confirm">
       <article>
-        <header><strong data-i18n="reset_q">Reset?</strong></header>
+        <strong data-i18n="reset_q">Reset?</strong>
         <p data-i18n="reset_text">Current progress will be lost.</p>
-        <footer>
-          <button class="secondary outline" onclick="closeModal('modal-confirm')" data-i18n="modal_cancel">Cancel</button>
-          <button onclick="initDeck()" data-i18n="modal_yes">Yes, reset</button>
-        </footer>
+        <div class="grid-buttons">
+          <button onclick="closeModal('modal-confirm')" data-i18n="modal_cancel">Cancel</button>
+          <button onclick="initDeck()" data-i18n="modal_yes" class="contrast">Yes, reset</button>
+        </div>
       </article>
     </dialog>
 

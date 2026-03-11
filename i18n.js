@@ -33,6 +33,7 @@ const i18n = {
     crimes_unsolved: "Unsolved Mysteries",
     crimes_clues: "Crime Scene Clues",
     deck: "Deck", 
+    dice_title: "Dice roll",
     dungeon_denizens: "Dungeon Denizens",
     dungeon_events: "Dungeon Events",
     dungeon_features: "Dungeon Features",
@@ -192,7 +193,7 @@ const i18n = {
     names_male: "Nombres Masculinos",
     names_female: "Nombres Femeninos",
     names_surname: "Apellidos",
-
+    dice_title: "Dado",
     status: "Estado", wins: "Éxitos", losses: "Fallos", deck: "Mazo", oracle_title: "Oráculo",
     v_likely: "Muy Probable (2+)", likely: "Probable (3+)", maybe: "Tal vez (4+)", unlikely: "Improbable (5+)", v_unlikely: "Casi imposible (6)",
     start_adventure: "Empezar Escena Inicial", last_scene_warn: "⚠️ ÚLTIMA ESCENA", btn_win: "Victoria", btn_fail: "Fracaso",

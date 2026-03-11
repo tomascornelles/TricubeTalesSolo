@@ -132,6 +132,12 @@ input, select {
  margin-block-end: calc(2.5 * var(--spacing));
  }
 
+ .grid-buttons {
+ display: flex;
+ gap: 1rem;
+ margin-top: 1rem;
+ }
+
 @media only screen and (prefers-color-scheme: dark) {
   input, select { background-color: #0f172a; }
 }
