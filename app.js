@@ -166,10 +166,8 @@ function rollTwist(genre, labelKey) {
   const d = i18n[state.lang];
   const d1 = Math.floor(Math.random() * 6) + 1;
   const d2 = Math.floor(Math.random() * 6) + 1;
-  const ideas = twistIdeas[genre];
-  const idea = ideas[Math.floor(Math.random() * ideas.length)];
   closeModal('modal-twist-choice');
-  openModal('modal-info', labelKey, `<span class="modal-dice">${d1}, ${d2}</span><br><span class="twist-idea"><strong>${d.idea_label}:</strong> ${idea}</span>`);
+  openModal('modal-info', labelKey, `<kbd class="result-dice">${d1}</kbd><kbd class="result-dice">${d2}</kbd><br><img src="img/${genre}/${d1}${d2}.svg">`);
 }
 
 function openTwistModal() { openModal('modal-twist-choice'); }

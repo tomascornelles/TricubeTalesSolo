@@ -2,9 +2,10 @@
 
 :root {
   /* Paleta de Colores Inspirada en la Imagen */
-  --primary: #3b82f6; /* Azul brillante para acciones principales */
+  --primary: #926100; /* Azul brillante para acciones principales */
   --primary-background: #dbeafe; /* Azul claro para fondos activos */
   --primary-hover: #eaf2fa;
+  --background-color: #ece4d7 !important;
 
   /* Ajustes de Bordes y Espaciado (Más compacto) */
   --border-radius: 5px;
@@ -14,6 +15,7 @@
   /* Sombras sutiles para emular elevación */
   --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   --border-color: #e2e8f0;
+  --accordion-border-color: #baa98f !important;
 }
 
 /* Modo Oscuro (Opcional, adaptado) */
@@ -22,6 +24,10 @@
     --primary-background: #1e293b;
     --border-color: #334155;
     --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --background-color: #362c1e !important;
+    --card-background-color: #231f1a;
+    --border-color: #3b3838;
+    --accordion-border-color: #733f26 !important;
   }
 }
 
@@ -47,17 +53,16 @@ button, [role="button"] {
 }
 button:hover, [role="button"]:hover {
   background: #eaf2fa;
-  background: linear-gradient(180deg,rgba(255, 255, 255, 1) 2%, rgba(234, 242, 250, 1) 3%, rgba(234, 242, 250, 1) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 2%, rgb(231 216 191) 3%, rgb(229 218 201) 100%);
 }
 
 :is(button,input[type=submit],input[type=button],[role=button]).contrast {
   background: rgb(218 235 251);
-  background: linear-gradient(180deg,rgba(218, 235, 251, .5) 2%, rgba(218, 235, 251, 1) 3%, rgba(218, 235, 251, 1) 100%);
-  color: rgb(56, 96, 131);
+  background: linear-gradient(180deg, rgba(218, 235, 251, .5) 2%, rgb(245 222 176) 3%, rgb(225 190 115) 100%);
 }
 button.contrast:hover, [role="button"].contrast:hover {
   background: rgb(90 168 237);
-  background: linear-gradient(180deg,rgba(90, 168, 237, .25) 2%, rgba(90, 168, 237, .5) 3%, rgba(90, 168, 237, .5) 100%);
+  background: linear-gradient(180deg, rgba(218, 235, 251, .5) 2%, rgb(249 209 127) 3%, rgb(221 176 79) 100%);
 }
 
 @media only screen and (prefers-color-scheme: dark) {
@@ -187,3 +192,4 @@ footer { margin-top: 2rem; border-top: 1px solid #eee; padding: 1rem 0; display:
 .dices { display: flex; gap: 10px; }
 #reset-button { margin-top: 1rem; }
 #modal-body small { display: block; font-size: 1rem; margin-top: 1rem; }
+#modal-body img { max-width: 100%; height: auto; margin-top: 1rem; }
