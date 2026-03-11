@@ -77,14 +77,12 @@ button.contrast:hover, [role="button"].contrast:hover {
   }
 
   :is(button,input[type=submit],input[type=button],[role=button]).contrast {
-    background: rgb(90 168 237);
-    background: linear-gradient(180deg,rgba(255, 255, 255, .25) 2%, rgba(90, 168, 237, .5) 3%, rgba(90, 168, 237, .5) 100%);
-    color: rgb(218 235 251);
+    background: linear-gradient(180deg, rgba(255, 255, 255, .25) 2%, rgb(117 50 18) 3%, rgb(82 33 9) 100%);
+    color: rgb(227 219 206);
   }
 
   button.contrast:hover, [role="button"].contrast:hover {
-    background: rgb(218 235 251);
-    background: linear-gradient(180deg,rgba(255, 255, 255, .25) 2%, rgba(90, 168, 237, .25) 3%, rgba(90, 168, 237, .25) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, .25) 2%, rgb(87 35 10) 3%, rgb(73 28 6) 100%);
   }
 }
 
