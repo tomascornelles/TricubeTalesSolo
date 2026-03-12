@@ -19,6 +19,13 @@
   }
 }
 
+@media (min-width: 576px) {
+  :root,
+  :host {
+    --pico-font-size: 112.5%;
+  }
+}
+
 /* 3. Selección de modo (Cards pequeñas como "Screen", "Window") */
 .selection-grid {
   display: grid;
