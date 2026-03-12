@@ -1,6 +1,6 @@
 {
-  "short_name": "Tricube Solo",
-  "name": "Tricube Tales Solo",
+  "short_name": "TricubeSolo",
+  "name": "Tricube Tales Solo Companion",
   "icons": [
     {
       "src": "/favicon.png",
@@ -9,7 +9,6 @@
     }
   ],
   "start_url": ".",
-  "orientation": "portrait",
-  "theme_color": "#DC143C",
-  "background_color": "#f6f6f6"
+  "theme_color": "#F7E8D0",
+  "background_color": "#F7E8D0"
 }
