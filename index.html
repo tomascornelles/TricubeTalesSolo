@@ -6,7 +6,7 @@
     <title>Tricube Tales Solo</title>
     <link rel="manifest" href="manifest.json" />
     <link rel="shortcut icon" href="favicon.png" type="image/png" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.sand.min.css" >
     <link rel="stylesheet" href="style.css">
     <script src="i18n.js"></script>
     <script src="app.js"></script>
@@ -16,7 +16,7 @@
     <main class="container">
       <section id="game-section">
         <article>
-          <div class="dices">
+          <div role="group">
             <button onclick="rollDice(1)">1d6</button>
             <button class="contrast" onclick="rollDice(2)">2d6</button>
             <button onclick="rollDice(3)">3d6</button>
@@ -37,8 +37,8 @@
               </div>
 
               <div class="grid hidden" id="special-buttons">
-                <button class="primary" onclick="drawCard()" data-i18n="btn_continue">Continue</button>
-                <button id="twist-btn" class="secondary outline hidden" onclick="openTwistModal()" data-i18n="btn_twist">Twist!</button>
+                <button class="contrast" onclick="drawCard()" data-i18n="btn_continue">Continue</button>
+                <button id="twist-btn" class="hidden" onclick="openTwistModal()" data-i18n="btn_twist">Twist!</button>
               </div>
 
               <div id="final-screen" class="game-over-banner hidden">
@@ -63,7 +63,7 @@
 
           <article>
             <strong data-i18n="oracle_title">Oracle (Probability)</strong>
-            <div class="dices">
+            <div role="group">
               <select id="oracle-select">
                 <option value="2" data-i18n="v_likely">Very Likely (2+)</option>
                 <option value="3" data-i18n="likely">Likely (3+)</option>
@@ -74,11 +74,11 @@
               <button onclick="rollOracle()" data-i18n="yes_no" class="contrast">Yes/No</button>
             </div>
             <hr>
-            <div>
+            <div class="grid">
               <button onclick="rollScaledQuestion()" data-i18n="scaled_question"></button>
             </div>
             <hr>
-            <div>
+            <div class="grid">
               <button onclick="rollManualTable(['complex', 'related'], 'complex_answer')" data-i18n="complex_answer"></button>
             </div>
           </article>
@@ -164,11 +164,6 @@
               <button onclick="rollFantasyName()" data-i18n="names_fictional"></button>
             </details>
 
-
-
-
-
-
             <details class="gen-section" name="generators">
               <summary data-i18n="cat_twist">🌀 Twists</summary>
               <button onclick="rollTwist('fantasy', 'twist_fantasy')" data-i18n="twist_fantasy">Fantasy</button>
@@ -210,10 +205,11 @@
     <dialog id="modal-twist-choice">
       <article>
         <strong data-i18n="select_genre">Select Genre</strong>
+        <div class="grid-list">
           <button onclick="rollTwist('fantasy', 'twist_fantasy')" data-i18n="twist_fantasy">Fantasy</button>
           <button onclick="rollTwist('horror', 'twist_horror')" data-i18n="twist_horror">Horror</button>
           <button onclick="rollTwist('scifi', 'twist_scifi')" data-i18n="twist_scifi">Sci-Fi</button>
-       
+        </div>
           <hr>
           <button class="contrast" onclick="closeModal('modal-twist-choice')" data-i18n="modal_cancel">Cancel</button>
       </article>
@@ -223,12 +219,13 @@
     <dialog id="modal-disposition">
       <article>
         <strong data-i18n="select_disposition">Select Disposition</strong>
+        <div class="grid-list">
           <button onclick="rollSocialDisposition(3,6), closeModal('modal-disposition')" data-i18n="social_disposition_very_hostile"></button>
           <button onclick="rollSocialDisposition(2,6), closeModal('modal-disposition')" data-i18n="social_disposition_hostile"></button>
           <button onclick="rollSocialDisposition(1,6), closeModal('modal-disposition')" data-i18n="social_disposition_neutral"></button>
           <button onclick="rollSocialDisposition(1,5), closeModal('modal-disposition')" data-i18n="social_disposition_friendly"></button>
           <button onclick="rollSocialDisposition(1,4), closeModal('modal-disposition')" data-i18n="social_disposition_very_friendly"></button>
-        
+        </div>
           <hr>
           <button class="contrast" onclick="closeModal('modal-disposition')" data-i18n="modal_cancel">Cancel</button>
     </dialog>
