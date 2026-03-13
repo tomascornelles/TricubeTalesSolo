@@ -1834,5 +1834,461 @@ const questTables = {
       "<small>Pero también deben lidiar con</small> Propaganda vil"
     ]
   ]
+},
+  christmas_capers: {
+  title: "Christmas Capers",
+  en: [
+    [
+      "<small>The helpers are called out to</small> Rescue Santa",
+      "<small>The helpers are called out to</small> Repair the sleigh",
+      "<small>The helpers are called out to</small> Drop off some gifts",
+      "<small>The helpers are called out to</small> Deliver some coal",
+      "<small>The helpers are called out to</small> Protect Santa",
+      "<small>The helpers are called out to</small> Help Santa"
+    ],
+    [
+      "<small>Somewhere in, on, or near</small> An orphanage",
+      "<small>Somewhere in, on, or near</small> A hotel or resort",
+      "<small>Somewhere in, on, or near</small> A remote cabin",
+      "<small>Somewhere in, on, or near</small> A house or mansion",
+      "<small>Somewhere in, on, or near</small> An apartment block",
+      "<small>Somewhere in, on, or near</small> A hospital ward"
+    ],
+    [
+      "<small>While dealing with a</small> Mixed-up delivery",
+      "<small>While dealing with a</small> Witness or evidence",
+      "<small>While dealing with a</small> Magical mishap",
+      "<small>While dealing with a</small> Missing reindeer",
+      "<small>While dealing with a</small> Change of address",
+      "<small>While dealing with a</small> Miserly Scrooge"
+    ]
+  ],
+  es: [
+    [
+      "<small>Los ayudantes son llamados para</small> Rescatar a Santa",
+      "<small>Los ayudantes son llamados para</small> Reparar el trineo",
+      "<small>Los ayudantes son llamados para</small> Dejar algunos regalos",
+      "<small>Los ayudantes son llamados para</small> Entregar carbón",
+      "<small>Los ayudantes son llamados para</small> Proteger a Santa",
+      "<small>Los ayudantes son llamados para</small> Ayudar a Santa"
+    ],
+    [
+      "<small>En, sobre o cerca de</small> Un orfanato",
+      "<small>En, sobre o cerca de</small> Un hotel o complejo",
+      "<small>En, sobre o cerca de</small> Una cabaña remota",
+      "<small>En, sobre o cerca de</small> Una casa o mansión",
+      "<small>En, sobre o cerca de</small> Un bloque de apartamentos",
+      "<small>En, sobre o cerca de</small> Una sala de hospital"
+    ],
+    [
+      "<small>Mientras lidian con</small> Una entrega confundida",
+      "<small>Mientras lidian con</small> Un testigo o evidencia",
+      "<small>Mientras lidian con</small> Un percance mágico",
+      "<small>Mientras lidian con</small> Un reno perdido",
+      "<small>Mientras lidian con</small> Un cambio de dirección",
+      "<small>Mientras lidian con</small> Un avaro Scrooge"
+    ]
+  ]
+},
+  chrome_shells_neon_streets: {
+  title: "Chrome Shells & Neon Streets",
+  en: [
+    [
+      "<small>The crew must</small> Escort or deliver",
+      "<small>The crew must</small> Exchange or trade",
+      "<small>The crew must</small> Blow up",
+      "<small>The crew must</small> Kill or sabotage",
+      "<small>The crew must</small> Kidnap or steal",
+      "<small>The crew must</small> Frame or plant"
+    ],
+    [
+      "<small>The</small> Data stick",
+      "<small>The</small> Mole, snitch or leaker",
+      "<small>The</small> Rich executive",
+      "<small>The</small> High-tech equipment",
+      "<small>The</small> Dangerous fugitive",
+      "<small>The</small> Drugs or medicine"
+    ],
+    [
+      "<small>From, to, inside, or near a</small> Home or hotel",
+      "<small>From, to, inside, or near a</small> Bar or nightclub",
+      "<small>From, to, inside, or near a</small> Repair shop",
+      "<small>From, to, inside, or near a</small> Secure facility",
+      "<small>From, to, inside, or near a</small> Medical lab",
+      "<small>From, to, inside, or near a</small> Corporate building"
+    ],
+    [
+      "<small>While dealing with</small> A local gang or cult",
+      "<small>While dealing with</small> Surveillance drones",
+      "<small>While dealing with</small> A freelance hitman",
+      "<small>While dealing with</small> A bounty hunter",
+      "<small>While dealing with</small> Corporate goons",
+      "<small>While dealing with</small> An old enemy or rival"
+    ]
+  ],
+  es: [
+    [
+      "<small>El equipo debe</small> Escortar o entregar",
+      "<small>El equipo debe</small> Intercambiar o comerciar",
+      "<small>El equipo debe</small> Hacer explotar",
+      "<small>El equipo debe</small> Matar o sabotear",
+      "<small>El equipo debe</small> Secuestrar o robar",
+      "<small>El equipo debe</small> Incriminar o plantar pruebas"
+    ],
+    [
+      "<small>El/La</small> Unidad de datos",
+      "<small>El/La</small> Topo, soplón o filtrador",
+      "<small>El/La</small> Ejecutivo rico",
+      "<small>El/La</small> Equipo de alta tecnología",
+      "<small>El/La</small> Fugitivo peligroso",
+      "<small>El/La</small> Drogas o medicinas"
+    ],
+    [
+      "<small>Desde, hacia, dentro o cerca de</small> Una casa u hotel",
+      "<small>Desde, hacia, dentro o cerca de</small> Un bar o club nocturno",
+      "<small>Desde, hacia, dentro o cerca de</small> Un taller de reparaciones",
+      "<small>Desde, hacia, dentro o cerca de</small> Una instalación segura",
+      "<small>Desde, hacia, dentro o cerca de</small> Un laboratorio médico",
+      "<small>Desde, hacia, dentro o cerca de</small> Un edificio corporativo"
+    ],
+    [
+      "<small>Mientras lidian con</small> Una banda o culto local",
+      "<small>Mientras lidian con</small> Drones de vigilancia",
+      "<small>Mientras lidian con</small> Un asesino a sueldo independiente",
+      "<small>Mientras lidian con</small> Un cazarrecompensas",
+      "<small>Mientras lidian con</small> Matones corporativos",
+      "<small>Mientras lidian con</small> Un viejo enemigo o rival"
+    ]
+  ]
+},
+  conniving_cat_burglars: {
+  title: "Conniving Cat Burglars",
+  en: [
+    [
+      "<small>The job involves</small> Simple larceny",
+      "<small>The job involves</small> An abduction",
+      "<small>The job involves</small> A jewellery heist",
+      "<small>The job involves</small> A prison break",
+      "<small>The job involves</small> An art robbery",
+      "<small>The job involves</small> A safe burglary"
+    ],
+    [
+      "<small>Which takes place at</small> A family house",
+      "<small>Which takes place at</small> An animal shelter",
+      "<small>Which takes place at</small> A diner or restaurant",
+      "<small>Which takes place at</small> A pet store",
+      "<small>Which takes place at</small> An office building",
+      "<small>Which takes place at</small> A museum or gallery"
+    ],
+    [
+      "<small>While dealing with</small> Distracting prey",
+      "<small>While dealing with</small> A yapping dog",
+      "<small>While dealing with</small> The cat catcher",
+      "<small>While dealing with</small> A long journey",
+      "<small>While dealing with</small> Rival conniving cats",
+      "<small>While dealing with</small> An injury or liability"
+    ]
+  ],
+  es: [
+    [
+      "<small>El trabajo implica</small> Un hurto simple",
+      "<small>El trabajo implica</small> Un secuestro",
+      "<small>El trabajo implica</small> El robo de una joyería",
+      "<small>El trabajo implica</small> Una fuga de prisión",
+      "<small>El trabajo implica</small> El robo de una obra de arte",
+      "<small>El trabajo implica</small> El robo de una caja fuerte"
+    ],
+    [
+      "<small>Que tiene lugar en</small> Una casa familiar",
+      "<small>Que tiene lugar en</small> Un refugio de animales",
+      "<small>Que tiene lugar en</small> Una cafetería o restaurante",
+      "<small>Que tiene lugar en</small> Una tienda de mascotas",
+      "<small>Que tiene lugar en</small> Un edificio de oficinas",
+      "<small>Que tiene lugar en</small> Un museo o galería"
+    ],
+    [
+      "<small>Mientras lidian con</small> Presas que distraen",
+      "<small>Mientras lidian con</small> Un perro ladrador",
+      "<small>Mientras lidian con</small> El lacerante (atrapa-gatos)",
+      "<small>Mientras lidian con</small> Un largo viaje",
+      "<small>Mientras lidian con</small> Gatos rivales confabuladores",
+      "<small>Mientras lidian con</small> Una lesión o inconveniente"
+    ]
+  ]
+},
+  deep_trouble_oldport_bay: {
+  title: "Deep Trouble in Oldport Bay",
+  en: [
+    [
+      "<small>The survivors must</small> Deal with a monster",
+      "<small>The survivors must</small> Gather supplies",
+      "<small>The survivors must</small> Defend the building",
+      "<small>The survivors must</small> Aid other residents",
+      "<small>The survivors must</small> Search for something",
+      "<small>The survivors must</small> Repair something"
+    ],
+    [
+      "<small>From, on, or inside</small> The flooded cellar",
+      "<small>From, on, or inside</small> Behind a locked door",
+      "<small>From, on, or inside</small> The mechanical room",
+      "<small>From, on, or inside</small> Someone’s apartment",
+      "<small>From, on, or inside</small> The roof garden",
+      "<small>From, on, or inside</small> A ground-floor shop"
+    ],
+    [
+      "<small>While dealing with</small> Monsters inside",
+      "<small>While dealing with</small> Terrified residents",
+      "<small>While dealing with</small> The “thing” outside",
+      "<small>While dealing with</small> Desperate survivors",
+      "<small>While dealing with</small> A mutating resident",
+      "<small>While dealing with</small> The black obelisk"
+    ]
+  ],
+  es: [
+    [
+      "<small>Los supervivientes deben</small> Lidiar con un monstruo",
+      "<small>Los supervivientes deben</small> Reunir suministros",
+      "<small>Los supervivientes deben</small> Defender el edificio",
+      "<small>Los supervivientes deben</small> Ayudar a otros residentes",
+      "<small>Los supervivientes deben</small> Buscar algo",
+      "<small>Los supervivientes deben</small> Reparar algo"
+    ],
+    [
+      "<small>Desde, en o dentro de</small> El sótano inundado",
+      "<small>Desde, en o dentro de</small> Detrás de una puerta cerrada",
+      "<small>Desde, en o dentro de</small> La sala de máquinas",
+      "<small>Desde, en o dentro de</small> El apartamento de alguien",
+      "<small>Desde, en o dentro de</small> El jardín de la azotea",
+      "<small>Desde, en o dentro de</small> Una tienda de la planta baja"
+    ],
+    [
+      "<small>Mientras lidian con</small> Monstruos en el interior",
+      "<small>Mientras lidian con</small> Residentes aterrorizados",
+      "<small>Mientras lidian con</small> La “cosa” de afuera",
+      "<small>Mientras lidian con</small> Supervivientes desesperados",
+      "<small>Mientras lidian con</small> Un residente mutando",
+      "<small>Mientras lidian con</small> El obelisco negro"
+    ]
+  ]
+},
+  eldritch_apocalypse: {
+  title: "Eldritch Apocalypse",
+  en: [
+    [
+      "<small>The apocalypse is started by</small> An occult ritual",
+      "<small>The apocalypse is started by</small> A careless mistake",
+      "<small>The apocalypse is started by</small> An ancient artifact",
+      "<small>The apocalypse is started by</small> A supernatural virus",
+      "<small>The apocalypse is started by</small> Unworldly invaders",
+      "<small>The apocalypse is started by</small> A celestial event"
+    ],
+    [
+      "<small>And events begin at, in, or near</small> A museum or gallery",
+      "<small>And events begin at, in, or near</small> The heart of the city",
+      "<small>And events begin at, in, or near</small> A filming location",
+      "<small>And events begin at, in, or near</small> A famous building",
+      "<small>And events begin at, in, or near</small> An underground area",
+      "<small>And events begin at, in, or near</small> A mansion or villa"
+    ],
+    [
+      "<small>But things are also complicated by</small> Monstrous minions",
+      "<small>But things are also complicated by</small> Infiltration/takeover",
+      "<small>But things are also complicated by</small> Lingering danger",
+      "<small>But things are also complicated by</small> Overzealous cultists",
+      "<small>But things are also complicated by</small> An uneasy alliance",
+      "<small>But things are also complicated by</small> Collateral damage"
+    ]
+  ],
+  es: [
+    [
+      "<small>El apocalipsis comienza por</small> Un ritual ocultista",
+      "<small>El apocalipsis comienza por</small> Un error por descuido",
+      "<small>El apocalipsis comienza por</small> Un artefacto antiguo",
+      "<small>El apocalipsis comienza por</small> Un virus sobrenatural",
+      "<small>El apocalipsis comienza por</small> Invasores de otro mundo",
+      "<small>El apocalipsis comienza por</small> Un evento celestial"
+    ],
+    [
+      "<small>Y los eventos empiezan en o cerca de</small> Un museo o galería",
+      "<small>Y los eventos empiezan en o cerca de</small> El corazón de la ciudad",
+      "<small>Y los eventos empiezan en o cerca de</small> Un set de rodaje",
+      "<small>Y los eventos empiezan en o cerca de</small> Un edificio famoso",
+      "<small>Y los eventos empiezan en o cerca de</small> Una zona subterránea",
+      "<small>Y los eventos empiezan en o cerca de</small> Una mansión o villa"
+    ],
+    [
+      "<small>Pero las cosas se complican por</small> Esbirros monstruosos",
+      "<small>Pero las cosas se complican por</small> Infiltración o toma de poder",
+      "<small>Pero las cosas se complican por</small> Un peligro persistente",
+      "<small>Pero las cosas se complican por</small> Cultistas fanáticos",
+      "<small>Pero las cosas se complican por</small> Una alianza incómoda",
+      "<small>Pero las cosas se complican por</small> Daño colateral"
+    ]
+  ]
+},
+  eldritch_cultists: {
+  title: "Eldritch Cultists",
+  en: [
+    [
+      "<small>The cultists must</small> Perform a ritual",
+      "<small>The cultists must</small> Eliminate a threat",
+      "<small>The cultists must</small> Recruit an asset",
+      "<small>The cultists must</small> Destroy evidence",
+      "<small>The cultists must</small> Retrieve an artifact",
+      "<small>The cultists must</small> Infiltrate a faction"
+    ],
+    [
+      "<small>Which leads them to a</small> Park or secluded area",
+      "<small>Which leads them to a</small> Library or museum",
+      "<small>Which leads them to a</small> Mansion or villa",
+      "<small>Which leads them to a</small> Sewer or subway",
+      "<small>Which leads them to a</small> Bar or nightclub",
+      "<small>Which leads them to a</small> Church or shrine"
+    ],
+    [
+      "<small>But they must also deal with</small> Paranormal agents",
+      "<small>But they must also deal with</small> A heist or jailbreak",
+      "<small>But they must also deal with</small> Unwanted attention",
+      "<small>But they must also deal with</small> A violent street gang",
+      "<small>But they must also deal with</small> Zealous witch hunters",
+      "<small>But they must also deal with</small> A rival cult or cabal"
+    ]
+  ],
+  es: [
+    [
+      "<small>Los cultistas deben</small> Realizar un ritual",
+      "<small>Los cultistas deben</small> Eliminar una amenaza",
+      "<small>Los cultistas deben</small> Reclutar un activo",
+      "<small>Los cultistas deben</small> Destruir evidencia",
+      "<small>Los cultistas deben</small> Recuperar un artefacto",
+      "<small>Los cultistas deben</small> Infiltrarse en una facción"
+    ],
+    [
+      "<small>Lo que los lleva a</small> Un parque o área aislada",
+      "<small>Lo que los lleva a</small> Una biblioteca o museo",
+      "<small>Lo que los lleva a</small> Una mansión o villa",
+      "<small>Lo que los lleva a</small> Una alcantarilla o metro",
+      "<small>Lo que los lleva a</small> Un bar o club nocturno",
+      "<small>Lo que los lleva a</small> Una iglesia o santuario"
+    ],
+    [
+      "<small>Pero también deben lidiar con</small> Agentes paranormales",
+      "<small>Pero también deben lidiar con</small> Un robo o fuga de prisión",
+      "<small>Pero también deben lidiar con</small> Atención no deseada",
+      "<small>Pero también deben lidiar con</small> Una violenta banda callejera",
+      "<small>Pero también deben lidiar con</small> Cazadores de brujas fanáticos",
+      "<small>Pero también deben lidiar con</small> Un culto o cábala rival"
+    ]
+  ]
+},
+eldritch_detectives: {
+  title: "Eldritch Detectives",
+  en: [
+    [
+      "<small>The detectives investigate</small> A mysterious death",
+      "<small>The detectives investigate</small> Ghostly sightings",
+      "<small>The detectives investigate</small> A missing person",
+      "<small>The detectives investigate</small> An occult ritual",
+      "<small>The detectives investigate</small> A terrible curse",
+      "<small>The detectives investigate</small> An inexplicable event"
+    ],
+    [
+      "<small>On, in, or near</small> A passenger train",
+      "<small>On, in, or near</small> A house or hotel",
+      "<small>On, in, or near</small> A vacant building",
+      "<small>On, in, or near</small> The wilderness",
+      "<small>On, in, or near</small> A hospital/care home",
+      "<small>On, in, or near</small> A church/graveyard"
+    ],
+    [
+      "<small>While dealing with</small> An aggressive foe",
+      "<small>While dealing with</small> Nosy officials",
+      "<small>While dealing with</small> Rival investigators",
+      "<small>While dealing with</small> A tenacious reporter",
+      "<small>While dealing with</small> A dark revelation",
+      "<small>While dealing with</small> Unexpected danger"
+    ]
+  ],
+  es: [
+    [
+      "<small>Los detectives investigan</small> Una muerte misteriosa",
+      "<small>Los detectives investigan</small> Avistamientos fantasmales",
+      "<small>Los detectives investigan</small> Una persona desaparecida",
+      "<small>Los detectives investigan</small> Un ritual ocultista",
+      "<small>Los detectives investigan</small> Una terrible maldición",
+      "<small>Los detectives investigan</small> Un evento inexplicable"
+    ],
+    [
+      "<small>En, sobre o cerca de</small> Un tren de pasajeros",
+      "<small>En, sobre o cerca de</small> Una casa u hotel",
+      "<small>En, sobre o cerca de</small> Un edificio vacío",
+      "<small>En, sobre o cerca de</small> El desierto o naturaleza",
+      "<small>En, sobre o cerca de</small> Un hospital o residencia",
+      "<small>En, sobre o cerca de</small> Una iglesia o cementerio"
+    ],
+    [
+      "<small>Mientras lidian con</small> Un enemigo agresivo",
+      "<small>Mientras lidian con</small> Oficiales entrometidos",
+      "<small>Mientras lidian con</small> Investigadores rivales",
+      "<small>Mientras lidian con</small> Un reportero tenaz",
+      "<small>Mientras lidian con</small> Una revelación oscura",
+      "<small>Mientras lidian con</small> Peligro inesperado"
+    ]
+  ]
+},
+  firefighters: {
+  title: "Firefighters",
+  en: [
+    [
+      "<small>The firefighters must deal with a</small> Dangerous fire",
+      "<small>The firefighters must deal with a</small> Trapped civilian",
+      "<small>The firefighters must deal with a</small> Traffic accident",
+      "<small>The firefighters must deal with a</small> Flood or water leak",
+      "<small>The firefighters must deal with a</small> Hazardous waste spill",
+      "<small>The firefighters must deal with a</small> Structural collapse"
+    ],
+    [
+      "<small>From inside or near</small> A warehouse/factory",
+      "<small>From inside or near</small> An apartment block",
+      "<small>From inside or near</small> A busy street",
+      "<small>From inside or near</small> An office building",
+      "<small>From inside or near</small> A wooded park",
+      "<small>From inside or near</small> A hospital/care home"
+    ],
+    [
+      "<small>While also needing to</small> Rescue a person",
+      "<small>While also needing to</small> Rescue an animal",
+      "<small>While also needing to</small> Do lots of climbing",
+      "<small>While also needing to</small> Help scared citizens",
+      "<small>While also needing to</small> Aid an injured person",
+      "<small>While also needing to</small> Deal with the public"
+    ]
+  ],
+  es: [
+    [
+      "<small>Los bomberos deben lidiar con un</small> Incendio peligroso",
+      "<small>Los bomberos deben lidiar con un</small> Civil atrapado",
+      "<small>Los bomberos deben lidiar con un</small> Accidente de tráfico",
+      "<small>Los bomberos deben lidiar con un</small> Inundación o fuga de agua",
+      "<small>Los bomberos deben lidiar con un</small> Derrame de residuos peligrosos",
+      "<small>Los bomberos deben lidiar con un</small> Colapso estructural"
+    ],
+    [
+      "<small>Desde dentro o cerca de</small> Un almacén o fábrica",
+      "<small>Desde dentro o cerca de</small> Un bloque de apartamentos",
+      "<small>Desde dentro o cerca de</small> Una calle concurrida",
+      "<small>Desde dentro o cerca de</small> Un edificio de oficinas",
+      "<small>Desde dentro o cerca de</small> Un parque arbolado",
+      "<small>Desde dentro o cerca de</small> Un hospital o residencia"
+    ],
+    [
+      "<small>Mientras también necesitan</small> Rescatar a una persona",
+      "<small>Mientras también necesitan</small> Rescatar a un animal",
+      "<small>Mientras también necesitan</small> Escalar mucho",
+      "<small>Mientras también necesitan</small> Ayudar a ciudadanos asustados",
+      "<small>Mientras también necesitan</small> Auxiliar a una persona herida",
+      "<small>Mientras también necesitan</small> Lidiar con el público"
+    ]
+  ]
 }
 };
