@@ -167,7 +167,7 @@ function rollTwist(genre, labelKey) {
   const d1 = Math.floor(Math.random() * 6) + 1;
   const d2 = Math.floor(Math.random() * 6) + 1;
   closeModal('modal-twist-choice');
-  openModal('modal-info', labelKey, `<kbd class="result-dice">${d1}</kbd><kbd class="result-dice">${d2}</kbd><br><img src="img/${genre}/${d1}${d2}.svg">`);
+  openModal('modal-info', labelKey, `<span class="dice dice-${d1}"></span><span class="dice dice-${d2}"></span><br><img src="img/${genre}/${d1}${d2}.svg">`);
 }
 
 function openTwistModal() { openModal('modal-twist-choice'); }
@@ -191,7 +191,8 @@ function rollOracle() {
 function rollDice(n) {
   const results = [];
   for (let i = 0; i < n; i++) results.push(Math.floor(Math.random() * 6) + 1);
-  openModal('modal-info', "dice_title", `<kbd class="result-dice">${results.join('</kbd> <kbd class="result-dice">')}</kbd>`);
+  results.forEach((r,i) => results[i] = `<span class="dice dice-${r}"></span>`);
+  openModal('modal-info', "dice_title", results.join(''));
 }
 
 function drawSingleCard() {
