@@ -130,13 +130,81 @@ footer { margin-top: 2rem; border-top: 1px solid #eee; padding: 1rem 0; display:
 .result-card.♠, .result-card.♣ { font-size: 1.5rem; }
 #reset-button { margin-top: 1rem; }
 #modal-body small { display: block; font-size: 1rem; margin-top: 1rem; }
-#modal-body img { width: 12rem; max-width: 100%; height: auto; margin-top: 1rem; background: #e4d1ab; padding: 5rem 2rem; border-radius: var(--pico-border-radius); box-shadow: var(--pico-box-shadow); }
+#modal-body img { width: 12rem; max-width: 100%; height: auto; margin-top: 1rem; background: #e4d1ab; padding: 5rem 2rem; border-radius: var(--pico-border-radius); 
+  box-shadow: 0.2rem 0.2rem 0.5rem 0rem rgba(0,0,0,0.25), inset 0.1rem 0.2rem 0.1rem 0rem rgba(255,255,255,0.25); }
 
 
-.dice{display:inline-block;min-height:1em;padding-left:1em;background-size:1em;background-repeat:no-repeat; font-size:3rem; margin-inline: 1rem; }
-.dice-1{background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 77 77' height='21.6' width='21.6'%3E%3Cpath d='M1,26Q1,1 26,1h25Q76,1 76,26v25Q76,76 51,76h-25Q1,76 1,51z' style='fill:%23e4d1ab;stroke-width:1.5;stroke:%231e1e1b'/%3E%3Ccircle cx='38' cy='38' r='7.2' style='fill:%231e1e1b;stroke:none'/%3E%3C/svg%3E");}
-.dice-2{background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 77 77' height='21.6' width='21.6'%3E%3Cpath d='M1,26Q1,1 26,1h25Q76,1 76,26v25Q76,76 51,76h-25Q1,76 1,51z' style='fill:%23e4d1ab;stroke-width:1.5;stroke:%231e1e1b'/%3E%3Cg style='fill:%231e1e1b;stroke:none'%3E%3Ccircle cx='20' cy='20' r='7.2'/%3E%3Ccircle cx='57' cy='57' r='7.2'/%3E%3C/g%3E%3C/svg%3E");}
-.dice-3{background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 77 77' height='21.6' width='21.6'%3E%3Cpath d='M1,26Q1,1 26,1h25Q76,1 76,26v25Q76,76 51,76h-25Q1,76 1,51z' style='fill:%23e4d1ab;stroke-width:1.5;stroke:%231e1e1b'/%3E%3Cg style='fill:%231e1e1b;stroke:none'%3E%3Ccircle cx='20' cy='20' r='7.2'/%3E%3Ccircle cx='38' cy='38' r='7.2'/%3E%3Ccircle cx='57' cy='57' r='7.2'/%3E%3C/g%3E%3C/svg%3E");}
-.dice-4{background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 77 77' height='21.6' width='21.6'%3E%3Cpath d='M1,26Q1,1 26,1h25Q76,1 76,26v25Q76,76 51,76h-25Q1,76 1,51z' style='fill:%23e4d1ab;stroke-width:1.5;stroke:%231e1e1b'/%3E%3Cg style='fill:%231e1e1b;stroke:none'%3E%3Ccircle cx='20' cy='20' r='7.2'/%3E%3Ccircle cx='57' cy='57' r='7.2'/%3E%3Ccircle cx='57' cy='20' r='7.2'/%3E%3Ccircle cx='20' cy='57' r='7.2'/%3E%3C/g%3E%3C/svg%3E");}
-.dice-5{background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 77 77' height='21.6' width='21.6'%3E%3Cpath d='M1,26Q1,1 26,1h25Q76,1 76,26v25Q76,76 51,76h-25Q1,76 1,51z' style='fill:%23e4d1ab;stroke-width:1.5;stroke:%231e1e1b'/%3E%3Cg style='fill:%231e1e1b;stroke:none'%3E%3Ccircle cx='20' cy='20' r='7.2'/%3E%3Ccircle cx='57' cy='57' r='7.2'/%3E%3Ccircle cx='57' cy='20' r='7.2'/%3E%3Ccircle cx='20' cy='57' r='7.2'/%3E%3Ccircle cx='38' cy='38' r='7.2'/%3E%3C/g%3E%3C/svg%3E");}
-.dice-6{background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 77 77' height='21.6' width='21.6'%3E%3Cpath d='M1,26Q1,1 26,1h25Q76,1 76,26v25Q76,76 51,76h-25Q1,76 1,51z' style='fill:%23e4d1ab;stroke-width:1.5;stroke:%231e1e1b'/%3E%3Cg style='fill:%231e1e1b;stroke:none'%3E%3Ccircle cx='20' cy='20' r='7.2'/%3E%3Ccircle cx='57' cy='57' r='7.2'/%3E%3Ccircle cx='57' cy='20' r='7.2'/%3E%3Ccircle cx='20' cy='57' r='7.2'/%3E%3Ccircle cx='20' cy='38' r='7.2'/%3E%3Ccircle cx='57' cy='38' r='7.2'/%3E%3C/g%3E%3C/svg%3E");}
+:root {
+  --dice-bg: var(--pico-contrast-background);
+  --dot-color: var(--pico-background-color);
+  --dice-size: 4rem; 
+  --dot-size: 15%; /* Radio del punto */
+  --dice-radius: 0.5em;
+}
+
+.dice {
+display: inline-block;
+  width: var(--dice-size);
+  height: var(--dice-size);
+  background-color: var(--dice-bg);
+  border-radius: var(--dice-radius);
+  background-repeat: no-repeat;
+  /* Definimos el tamaño de cada punto individualmente */
+  background-size: var(--dot-size) var(--dot-size);
+  vertical-align: middle;
+  margin: 0 0.5rem;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0rem rgba(0,0,0,0.5), inset 0.1rem 0.2rem 0.1rem 0rem rgba(255,255,255,0.25);
+}
+
+/* La clave: radial-gradient en el centro y background-position para moverlos */
+/* Usamos el mismo gradiente para todos, lo que cambia es la posición */
+
+.dice-1 {
+  background-image: radial-gradient(var(--dot-color) 70%, transparent 70%);
+  background-position: center;
+}
+
+.dice-2 {
+  background-image: 
+    radial-gradient(var(--dot-color) 70%, transparent 70%),
+    radial-gradient(var(--dot-color) 70%, transparent 70%);
+  background-position: 20% 20%, 80% 80%;
+}
+
+.dice-3 {
+  background-image: 
+    radial-gradient(var(--dot-color) 70%, transparent 70%),
+    radial-gradient(var(--dot-color) 70%, transparent 70%),
+    radial-gradient(var(--dot-color) 70%, transparent 70%);
+  background-position: 20% 20%, 50% 50%, 80% 80%;
+}
+
+.dice-4 {
+  background-image: 
+    radial-gradient(var(--dot-color) 70%, transparent 70%),
+    radial-gradient(var(--dot-color) 70%, transparent 70%),
+    radial-gradient(var(--dot-color) 70%, transparent 70%),
+    radial-gradient(var(--dot-color) 70%, transparent 70%);
+  background-position: 20% 20%, 80% 20%, 20% 80%, 80% 80%;
+}
+
+.dice-5 {
+  background-image: 
+    radial-gradient(var(--dot-color) 70%, transparent 70%),
+    radial-gradient(var(--dot-color) 70%, transparent 70%),
+    radial-gradient(var(--dot-color) 70%, transparent 70%),
+    radial-gradient(var(--dot-color) 70%, transparent 70%),
+    radial-gradient(var(--dot-color) 70%, transparent 70%);
+  background-position: 20% 20%, 80% 20%, 50% 50%, 20% 80%, 80% 80%;
+}
+
+.dice-6 {
+  background-image: 
+    radial-gradient(var(--dot-color) 70%, transparent 70%),
+    radial-gradient(var(--dot-color) 70%, transparent 70%),
+    radial-gradient(var(--dot-color) 70%, transparent 70%),
+    radial-gradient(var(--dot-color) 70%, transparent 70%),
+    radial-gradient(var(--dot-color) 70%, transparent 70%),
+    radial-gradient(var(--dot-color) 70%, transparent 70%);
+  background-position: 20% 20%, 80% 20%, 20% 50%, 80% 50%, 20% 80%, 80% 80%;
+}
