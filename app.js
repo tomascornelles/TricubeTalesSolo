@@ -27,6 +27,7 @@ function load() {
     if(state.isGameOver) showEndScreen();
     translateUI();
   } else { initDeck(); }
+  loadQuests();
 }
 
 function openModal(id, titleKey = "", body = "") {
@@ -225,4 +226,24 @@ function renderHistory() {
     h.appendChild(span);
   });
 }
+
+function loadQuests() {
+  const select = document.getElementById('quest');
+  for (const table in questTables) {
+    const opt = document.createElement('option');
+    opt.value = table;
+    opt.innerText = questTables[table].title;
+    select.appendChild(opt);
+  }
+}
+
+const rollQuest = () => {
+  const table = document.getElementById('quest').value;
+  const quests = [];
+  questTables[table][state.lang].forEach(quest => {
+    quests.push(quest[Math.floor(Math.random() * quest.length)]);
+  });
+  openModal('modal-info', questTables[table].title, quests.join('<br>'));
+};
+
 window.onload = load;
