@@ -1451,7 +1451,7 @@ const names = { pre: ["And", "Barth", "Cyn", "Dar", "Eld", "Gal"], suf: ["aer", 
 
 const questTables = {
   default: {
-    title: "Default",
+    title: "Micro Edition",
     en: [
       [
         "<small>The characters decide to</small> Eliminate a threat",
@@ -2288,6 +2288,242 @@ eldritch_detectives: {
       "<small>Mientras también necesitan</small> Ayudar a ciudadanos asustados",
       "<small>Mientras también necesitan</small> Auxiliar a una persona herida",
       "<small>Mientras también necesitan</small> Lidiar con el público"
+    ]
+  ]
+},
+  ghost_banishers: {
+  title: "Goblin Gangsters",
+  en: [
+    [
+      "<small>The team investigates a</small> Violent poltergeist",
+      "<small>The team investigates a</small> Terrifying apparition",
+      "<small>The team investigates a</small> Vengeful spirit",
+      "<small>The team investigates a</small> Suspected possession",
+      "<small>The team investigates a</small> Monstrous entity",
+      "<small>The team investigates a</small> Phantom vehicle"
+    ],
+    [
+      "<small>Which leads them to a</small> Public library",
+      "<small>Which leads them to a</small> Sewer or subway",
+      "<small>Which leads them to a</small> High-rise building",
+      "<small>Which leads them to a</small> Restaurant or diner",
+      "<small>Which leads them to a</small> Hospital or care home",
+      "<small>Which leads them to a</small> Cinema or stadium"
+    ],
+    [
+      "<small>But they must also deal with</small> Local politics",
+      "<small>But they must also deal with</small> A financial dispute",
+      "<small>But they must also deal with</small> Technical issues",
+      "<small>But they must also deal with</small> A setup or betrayal",
+      "<small>But they must also deal with</small> Collateral damage",
+      "<small>But they must also deal with</small> Rival ghost hunters"
+    ]
+  ],
+  es: [
+    [
+      "<small>El equipo investiga un</small> Poltergeist violento",
+      "<small>El equipo investiga una</small> Aparición terrorífica",
+      "<small>El equipo investiga un</small> Espíritu vengativo",
+      "<small>El equipo investiga una</small> Sospecha de posesión",
+      "<small>El equipo investiga una</small> Entidad monstruosa",
+      "<small>El equipo investiga un</small> Vehículo fantasma"
+    ],
+    [
+      "<small>Lo que los lleva a una</small> Biblioteca pública",
+      "<small>Lo que los lleva a una</small> Alcantarilla o metro",
+      "<small>Lo que los lleva a un</small> Edificio de gran altura",
+      "<small>Lo que los lleva a un</small> Restaurante o cafetería",
+      "<small>Lo que los lleva a un</small> Hospital o residencia",
+      "<small>Lo que los lleva a un</small> Cine o estadio"
+    ],
+    [
+      "<small>Pero también deben lidiar con</small> Política local",
+      "<small>Pero también deben lidiar con</small> Una disputa financiera",
+      "<small>Pero también deben lidiar con</small> Problemas técnicos",
+      "<small>Pero también deben lidiar con</small> Una trampa o traición",
+      "<small>Pero también deben lidiar con</small> Daño colateral",
+      "<small>Pero también deben lidiar con</small> Cazafantasmas rivales"
+    ]
+  ]
+},
+  goblin_gangsters_criminal: {
+  title: "Goblin Gangsters",
+  en: [
+    [
+      "<small>The gangsters must</small> Locate or discover",
+      "<small>The gangsters must</small> Kidnap or purchase",
+      "<small>The gangsters must</small> Extort or obtain",
+      "<small>The gangsters must</small> Murder or destroy",
+      "<small>The gangsters must</small> Rob or steal",
+      "<small>The gangsters must</small> Frame or plant"
+    ],
+    [
+      "<small>The</small> Secret information",
+      "<small>The</small> Traitor or snitch",
+      "<small>The</small> Important person",
+      "<small>The</small> Mysterious civilian",
+      "<small>The</small> Undercover cop",
+      "<small>The</small> Drugs, guns, or cash"
+    ],
+    [
+      "<small>From, in, on, or near a</small> Tourist hotspot",
+      "<small>From, in, on, or near a</small> Diner or nightclub",
+      "<small>From, in, on, or near an</small> Amusement park",
+      "<small>From, in, on, or near a</small> Casino or bank",
+      "<small>From, in, on, or near a</small> High-rise building",
+      "<small>From, in, on, or near a</small> Business (a front?)"
+    ],
+    [
+      "<small>While dealing with</small> Rival criminals",
+      "<small>While dealing with</small> A nosy journalist",
+      "<small>While dealing with</small> The cops",
+      "<small>While dealing with</small> A natural disaster",
+      "<small>While dealing with</small> Meddling kids",
+      "<small>While dealing with</small> A fricking dragon!"
+    ]
+  ],
+  es: [
+    [
+      "<small>Los gánsteres deben</small> Localizar o descubrir",
+      "<small>Los gánsteres deben</small> Secuestrar o comprar",
+      "<small>Los gánsteres deben</small> Extorsionar u obtener",
+      "<small>Los gánsteres deben</small> Asesinar o destruir",
+      "<small>Los gánsteres deben</small> Atracar o robar",
+      "<small>Los gánsteres deben</small> Incriminar o plantar pruebas"
+    ],
+    [
+      "<small>El/La</small> Información secreta",
+      "<small>El/La</small> Traidor o soplón",
+      "<small>El/La</small> Persona importante",
+      "<small>El/La</small> Civil misterioso",
+      "<small>El/La</small> Policía encubierto",
+      "<small>El/La</small> Drogas, armas o dinero"
+    ],
+    [
+      "<small>Desde, en o cerca de</small> Un punto turístico",
+      "<small>Desde, en o cerca de</small> Una cafetería o club nocturno",
+      "<small>Desde, en o cerca de</small> Un parque de atracciones",
+      "<small>Desde, en o cerca de</small> Un casino o banco",
+      "<small>Desde, en o cerca de</small> Un edificio de gran altura",
+      "<small>Desde, en o cerca de</small> Un negocio (¿una tapadera?)"
+    ],
+    [
+      "<small>Mientras lidian con</small> Criminales rivales",
+      "<small>Mientras lidian con</small> Un periodista entrometido",
+      "<small>Mientras lidian con</small> La poli",
+      "<small>Mientras lidian con</small> Un desastre natural",
+      "<small>Mientras lidian con</small> Chavales entrometidos",
+      "<small>Mientras lidian con</small> ¡Un maldito dragón!"
+    ]
+  ]
+},
+guardians_shadow_frontier: {
+  title: "Guardians of the Shadow Frontier",
+  en: [
+    [
+      "<small>The guardians need to</small> Hunt down a threat",
+      "<small>The guardians need to</small> Defend civilians",
+      "<small>The guardians need to</small> Investigate rumors",
+      "<small>The guardians need to</small> Protect a settlement",
+      "<small>The guardians need to</small> Examine a corpse",
+      "<small>The guardians need to</small> Resolve a dispute"
+    ],
+    [
+      "<small>From somewhere in or near</small> A small town",
+      "<small>From somewhere in or near</small> A river or pool",
+      "<small>From somewhere in or near</small> A forest region",
+      "<small>From somewhere in or near</small> A cave or mine",
+      "<small>From somewhere in or near</small> Rural farmlands",
+      "<small>From somewhere in or near</small> The border/veil"
+    ],
+    [
+      "<small>While dealing with</small> Frightened locals",
+      "<small>While dealing with</small> A traitor or turncoat",
+      "<small>While dealing with</small> A plot or power play",
+      "<small>While dealing with</small> An aggressive militia",
+      "<small>While dealing with</small> A personal grudge",
+      "<small>While dealing with</small> A rogue sorcerer"
+    ]
+  ],
+  es: [
+    [
+      "<small>Los guardianes necesitan</small> Cazar una amenaza",
+      "<small>Los guardianes necesitan</small> Defender a los civiles",
+      "<small>Los guardianes necesitan</small> Investigar rumores",
+      "<small>Los guardianes necesitan</small> Proteger un asentamiento",
+      "<small>Los guardianes necesitan</small> Examinar un cadáver",
+      "<small>Los guardianes necesitan</small> Resolver una disputa"
+    ],
+    [
+      "<small>Desde algún lugar en o cerca de</small> Un pueblo pequeño",
+      "<small>Desde algún lugar en o cerca de</small> Un río o estanque",
+      "<small>Desde algún lugar en o cerca de</small> Una región forestal",
+      "<small>Desde algún lugar en o cerca de</small> Una cueva o mina",
+      "<small>Desde algún lugar en o cerca de</small> Tierras de cultivo rurales",
+      "<small>Desde algún lugar en o cerca de</small> La frontera o el velo"
+    ],
+    [
+      "<small>Mientras lidian con</small> Lugareños asustados",
+      "<small>Mientras lidian con</small> Un traidor o desertor",
+      "<small>Mientras lidian con</small> Un complot o lucha de poder",
+      "<small>Mientras lidian con</small> Una milicia agresiva",
+      "<small>Mientras lidian con</small> Un rencor personal",
+      "<small>Mientras lidian con</small> Un hechicero renegado"
+    ]
+  ]
+},
+  halfling_hustlers: {
+  title: "Halfling Hustlers",
+  en: [
+    [
+      "<small>The pint-sized punters hatch a plan to</small> Cut some purses",
+      "<small>The pint-sized punters hatch a plan to</small> Run a racket",
+      "<small>The pint-sized punters hatch a plan to</small> Swindle the rich",
+      "<small>The pint-sized punters hatch a plan to</small> Win a wager",
+      "<small>The pint-sized punters hatch a plan to</small> Rig a contest",
+      "<small>The pint-sized punters hatch a plan to</small> Rob a wealthy target"
+    ],
+    [
+      "<small>Near, at, or inside a</small> Popular tavern",
+      "<small>Near, at, or inside a</small> Street festival",
+      "<small>Near, at, or inside a</small> Fighting match",
+      "<small>Near, at, or inside a</small> Sporting event",
+      "<small>Near, at, or inside a</small> Local casino",
+      "<small>Near, at, or inside a</small> Lavish townhouse"
+    ],
+    [
+      "<small>While dealing with</small> Unexpected security",
+      "<small>While dealing with</small> A ruthless guild",
+      "<small>While dealing with</small> Suspicious guards",
+      "<small>While dealing with</small> A terrifying monster",
+      "<small>While dealing with</small> Dangerous rivals",
+      "<small>While dealing with</small> A clever opponent"
+    ]
+  ],
+  es: [
+    [
+      "<small>Los pequeños bribones traman un plan para</small> Cortar algunas bolsas",
+      "<small>Los pequeños bribones traman un plan para</small> Montar un chanchullo",
+      "<small>Los pequeños bribones traman un plan para</small> Estafar a los ricos",
+      "<small>Los pequeños bribones traman un plan para</small> Ganar una apuesta",
+      "<small>Los pequeños bribones traman un plan para</small> Amañar un concurso",
+      "<small>Los pequeños bribones traman un plan para</small> Robar a un objetivo adinerado"
+    ],
+    [
+      "<small>Cerca, en o dentro de</small> Una taberna popular",
+      "<small>Cerca, en o dentro de</small> Un festival callejero",
+      "<small>Cerca, en o dentro de</small> Un combate de lucha",
+      "<small>Cerca, en o dentro de</small> Un evento deportivo",
+      "<small>Cerca, en o dentro de</small> Un casino local",
+      "<small>Cerca, en o dentro de</small> Una lujosa casa señorial"
+    ],
+    [
+      "<small>Mientras lidian con</small> Seguridad inesperada",
+      "<small>Mientras lidian con</small> Un gremio despiadado",
+      "<small>Mientras lidian con</small> Guardias sospechosos",
+      "<small>Mientras lidian con</small> Un monstruo terrorífico",
+      "<small>Mientras lidian con</small> Rivales peligrosos",
+      "<small>Mientras lidian con</small> Un oponente astuto"
     ]
   ]
 }
