@@ -22,6 +22,7 @@ const i18n = {
     cat_ppl: "👥 People", 
     cat_social: "👥 Social Interaction",
     cat_tags: "🏷️ Descriptive Tags",
+    cat_towns: "🏘 Fantasy Town Oracle",
     cat_twist: "🌀 Twists",
     cat_urban: "🏘 Urban",
     cat_voyages: "🌏 Voyages",
@@ -103,6 +104,15 @@ const i18n = {
     status: "Status", 
     tags_location: "Location",
     tags_person: "Person",
+    town_impresions: "First Impressions",
+    town_name: "Town/City Name",
+    town_features: "Distinctive Features",
+    town_events: "City-Wide Events",
+    town_locations: "Locations of Interest",
+    town_location_features: "Location Features",
+    town_folk: "Town/City Folk",
+    town_npc_traits: "NPC Traits",
+    town_local_events: "Local Events",
     trait_agile: "Agile", 
     trait_crafty: "Crafty", 
     trait_strong: "Strong", 
@@ -150,6 +160,7 @@ const i18n = {
     cat_ppl: "👥 Gente", 
     cat_social: "👥 Interacción Social",
     cat_tags: "🏷️ Etiquetas Descriptivas",
+    cat_towns: "🏘 Ciudades de Fantasia",
     cat_twist: "🌀 Giros",
     cat_urban: "🏘 Urbano",
     cat_voyages: "🌏 Viajes",
@@ -229,6 +240,15 @@ const i18n = {
     status: "Estado", 
     tags_location: "Lugar",
     tags_person: "Persona",
+    town_impresions: "Primeras impresiones",
+    town_name: "Nombre de la Ciudad",
+    town_features: "Características de la Ciudad",
+    town_events: "Eventos de la Ciudad",
+    town_locations: "Lugares de la Ciudad",
+    town_location_features: "Características de los Lugar",
+    town_folk: "Población",
+    town_npc_traits: "Características",
+    town_local_events: "Eventos Locales",
     trait_agile: "Ágil", 
     trait_crafty: "Astuto", 
     trait_strong: "Fuerte", 
@@ -1439,62 +1459,210 @@ const manualTables = {
       "uli", "un", "unak", "ustin", "utier", "yn"
     ]
   },
-  first_impressions: {
-    title: "First Impressions",
+  town_impressions_settlement: {
     en: [
-      [
-        "<small>This settlement is best described as a</small> Market town",
-        "<small>This settlement is best described as a</small> Port town",
-        "<small>This settlement is best described as a</small> Temple town",
-        "<small>This settlement is best described as a</small> Castle town",
-        "<small>This settlement is best described as a</small> Mining town",
-        "<small>This settlement is best described as a</small> Large town or city"
-      ],
-      [
-        "<small>The system of governance appears to be</small> A powerful overlord",
-        "<small>The system of governance appears to be</small> Elected officials",
-        "<small>The system of governance appears to be</small> A royal family",
-        "<small>The system of governance appears to be</small> A theocratic order",
-        "<small>The system of governance appears to be</small> Guilds or merchants",
-        "<small>The system of governance appears to be</small> A magocracy"
-      ],
-      [
-        "<small>The populace initially comes across as</small> Cheerful",
-        "<small>The populace initially comes across as</small> Apathetic",
-        "<small>The populace initially comes across as</small> Suspicious",
-        "<small>The populace initially comes across as</small> Downtrodden",
-        "<small>The populace initially comes across as</small> Frightened",
-        "<small>The populace initially comes across as</small> Hostile"
-      ]
+      "<small>This settlement is best described as a</small> Market town",
+      "<small>This settlement is best described as a</small> Port town",
+      "<small>This settlement is best described as a</small> Temple town",
+      "<small>This settlement is best described as a</small> Castle town",
+      "<small>This settlement is best described as a</small> Mining town",
+      "<small>This settlement is best described as a</small> Large town or city"
     ],
     es: [
-      [
-        "<small>Este asentamiento se define mejor como un</small> Pueblo comercial",
-        "<small>Este asentamiento se define mejor como un</small> Pueblo portuario",
-        "<small>Este asentamiento se define mejor como un</small> Pueblo templo",
-        "<small>Este asentamiento se define mejor como un</small> Pueblo castillo",
-        "<small>Este asentamiento se define mejor como un</small> Pueblo minero",
-        "<small>Este asentamiento se define mejor como una</small> Gran ciudad o metrópolis"
-      ],
-      [
-        "<small>El sistema de gobierno parece ser</small> Un soberano poderoso",
-        "<small>El sistema de gobierno parece ser</small> Funcionarios electos",
-        "<small>El sistema de gobierno parece ser</small> Una familia real",
-        "<small>El sistema de gobierno parece ser</small> Una orden teocrática",
-        "<small>El sistema de gobierno parece ser</small> Gremios o mercaderes",
-        "<small>El sistema de gobierno parece ser</small> Una magocracia"
-      ],
-      [
-        "<small>Al principio, la población se muestra</small> Alegre",
-        "<small>Al principio, la población se muestra</small> Apática",
-        "<small>Al principio, la población se muestra</small> Suspicaz",
-        "<small>Al principio, la población se muestra</small> Oprimida",
-        "<small>Al principio, la población se muestra</small> Asustada",
-        "<small>Al principio, la población se muestra</small> Hostil"
-      ]
+      "<small>Este asentamiento se define mejor como un</small> Pueblo comercial",
+      "<small>Este asentamiento se define mejor como un</small> Pueblo portuario",
+      "<small>Este asentamiento se define mejor como un</small> Pueblo templo",
+      "<small>Este asentamiento se define mejor como un</small> Pueblo castillo",
+      "<small>Este asentamiento se define mejor como un</small> Pueblo minero",
+      "<small>Este asentamiento se define mejor como una</small> Gran ciudad o metrópolis"
+    ],
+  },
+  town_impressions_gobernance: {
+    en: [
+      "<small>The system of governance appears to be</small> A powerful overlord",
+      "<small>The system of governance appears to be</small> Elected officials",
+      "<small>The system of governance appears to be</small> A royal family",
+      "<small>The system of governance appears to be</small> A theocratic order",
+      "<small>The system of governance appears to be</small> Guilds or merchants",
+      "<small>The system of governance appears to be</small> A magocracy"
+    ],
+    es: [
+      "<small>El sistema de gobierno parece ser</small> Un soberano poderoso",
+      "<small>El sistema de gobierno parece ser</small> Funcionarios electos",
+      "<small>El sistema de gobierno parece ser</small> Una familia real",
+      "<small>El sistema de gobierno parece ser</small> Una orden teocrática",
+      "<small>El sistema de gobierno parece ser</small> Gremios o mercaderes",
+      "<small>El sistema de gobierno parece ser</small> Una magocracia"
+    ],
+  },
+  town_impressions_population: {
+    en: [
+      "<small>The populace initially comes across as</small> Cheerful",
+      "<small>The populace initially comes across as</small> Apathetic",
+      "<small>The populace initially comes across as</small> Suspicious",
+      "<small>The populace initially comes across as</small> Downtrodden",
+      "<small>The populace initially comes across as</small> Frightened",
+      "<small>The populace initially comes across as</small> Hostile"
+    ],
+    es: [
+      "<small>Al principio, la población se muestra</small> Alegre",
+      "<small>Al principio, la población se muestra</small> Apática",
+      "<small>Al principio, la población se muestra</small> Suspicaz",
+      "<small>Al principio, la población se muestra</small> Oprimida",
+      "<small>Al principio, la población se muestra</small> Asustada",
+      "<small>Al principio, la población se muestra</small> Hostil"
     ]
   },
-
+  town_features: {
+    en: [
+        "Bribery is common", "Built on old ruins", "Built over an abyss", "Corruption is rife", "Dangerous vermin", "Draconian laws",
+        "Eldritch wards", "Extensive sewers", "Faith in old gods", "Goblin underclass", "Gold buys anything", "Grisly foundations",
+        "Haunted streets", "Heads on spikes", "Honor and chivalry", "Imposing walls", "Lots of adventurers", "Magic means status",
+        "Military culture", "Monstrous laborers", "Mutated populace", "Pervasive magitech", "Potent magic source", "Powerful guilds",
+        "Rigid social classes", "Rival street gangs", "Ruled by a tyrant", "Sorcery is outlawed", "Thick black smog", "Undead sentries",
+        "Underworld guilds", "Unique architecture", "Vicious politics", "Vile stench", "Wealth disparity", "Xenophobic dogma"
+    ],
+    es: [
+        "El soborno es común", "Edificada sobre ruinas", "Construida sobre un abismo", "La corrupción abunda", "Alimañas peligrosas", "Leyes draconianas",
+        "Protecciones arcanas", "Alcantarillado extenso", "Fe en los viejos dioses", "Clase baja de goblins", "El oro lo compra todo", "Cimientos macabros",
+        "Calles embrujadas", "Cabezas en picas", "Honor y caballería", "Muros imponentes", "Muchos aventureros", "La magia da estatus",
+        "Cultura militar", "Trabajadores monstruosos", "Población mutada", "Tecnomagia omnipresente", "Fuente de magia potente", "Gremios poderosos",
+        "Clases sociales rígidas", "Bandas callejeras rivales", "Gobernada por un tirano", "Hechicería ilegalizada", "Esmog negro y espeso", "Centinelas no muertos",
+        "Gremios del bajo mundo", "Arquitectura única", "Política encarnizada", "Hedor vil", "Desigualdad de riqueza", "Dogma xenófobo"
+    ]
+  },
+  town_events: {
+    en: [
+        "Acts of sabotage", "Aggressive dragon", "Arena combat event", "Civil war or coup", "Crowning/election", "Curfew every night",
+        "Draught or famine", "Earthquake", "Flooded streets", "Icy/slippery streets", "Jousting event", "Magical curse",
+        "Menaced by undead", "Military parade", "Mourning populace", "Organized protests", "Prominent wedding", "Raging fires",
+        "Rampaging monster", "Religious festival", "Revolt or revolution", "Rife vandalism", "Riots and looting", "Ritual sacrifices",
+        "Roving press gangs", "Seasonal markets", "Sporting event", "Spree of murders", "Storm or tornado", "Street celebrations",
+        "Sweltering weather", "Under siege", "Vermin infestation", "Volcanic eruption", "Widespread plague", "Witch-hunt"
+    ],
+    es: [
+        "Actos de sabotaje", "Dragón agresivo", "Evento de combate en arena", "Guerra civil o golpe de Estado", "Coronación o elección", "Toque de queda nocturno",
+        "Sequía o hambruna", "Terremoto", "Calles inundadas", "Calles heladas o resbaladizas", "Torneo de justas", "Maldición mágica",
+        "Amenaza de no muertos", "Desfile militar", "Población de luto", "Protestas organizadas", "Boda de alto linaje", "Incendios voraces",
+        "Monstruo enfurecido", "Festival religioso", "Revuelta o revolución", "Vandalismo generalizado", "Disturbios y saqueos", "Sacrificios rituales",
+        "Bandas de reclutamiento forzoso", "Mercados estacionales", "Evento deportivo", "Racha de asesinatos", "Tormenta o tornado", "Celebraciones callejeras",
+        "Calor sofocante", "Bajo asedio", "Plaga de alimañas", "Erupción volcánica", "Peste generalizada", "Caza de brujas"
+    ]
+  },
+  town_locations: {
+    en: [
+      "Barber’s shop", "Docks/wharf", "Manor house", "Barracks", "Factory/workshop", "Market square",
+      "Bathhouse", "Farrier’s shop", "Park/garden", "Brewery", "Fletcher’s shop", "Potter’s shop",
+      "Bridge/aqueduct", "Gallows", "Sewers/catacombs", "Brothel", "General store", "Silversmith’s shop",
+      "Candlestick maker", "Granary/warehouse", "Smithy/forge", "Carpenter’s shop", "Guardhouse", "Stable",
+      "Cartographer’s shop", "Guildhall", "Stocks/pillory", "Castle/palace", "Herbalist’s shop", "Tailor’s shop",
+      "Church/temple", "Jeweler’s shop", "Tavern/inn", "Clerk’s office", "Library", "Theater/stadium",
+      "Cobbler’s shop", "Locksmith’s shop", "Town hall", "Abattoir/butcher", "Adventurer’s guild", "Alchemist’s shop",
+      "Almshouse", "Amphitheater", "Apothecary", "Arcane academy", "Armory", "Art gallery",
+      "Artificer’s shop", "Aviary", "Bakery", "Bank/vault"
+    ],
+    es: [
+      "Barbería", "Muelles", "Mansión señorial", "Cuarteles", "Fábrica o taller", "Plaza del mercado",
+      "Casa de baños", "Herrador", "Parque o jardín", "Cervecería", "Fletchería (flechas)", "Alfarería",
+      "Puente o acueducto", "Horca", "Alcantarillas o catacumbas", "Bordel", "Almacén general", "Platería",
+      "Cerería", "Granero o almacén", "Herrería o forja", "Carpintería", "Puesto de guardia", "Establo",
+      "Cartografía", "Sede del gremio", "Cepo o picota", "Castillo o palacio", "Herbolario", "Sastrería",
+      "Iglesia o templo", "Joyería", "Taberna o posada", "Oficina del escribano", "Biblioteca", "Teatro o estadio",
+      "Zapatería", "Cerrajería", "Ayuntamiento", "Matadero o carnicería", "Gremio de aventureros", "Alquimia",
+      "Hospicio", "Anfiteatro", "Boticario", "Academia arcana", "Armería", "Galería de arte",
+      "Taller de artificiero", "Aviario", "Panadería", "Banco o cámara acorazada"
+    ]
+  },
+  town_location_features: {
+    en: [
+      "Archaic/obsolete", "Bright/lit", "Cheap/tacky", "Cold/drafty", "Cramped/small", "Creepy/ominous",
+      "Crowded/busy", "Damaged/collapsed", "Damp/flooded", "Dark/unlit", "Derelict/empty", "Dull/boring",
+      "Exposed/open", "Forbidden/closed", "Fortified/reinforced", "Haphazard/chaotic", "Haunted/corrupted", "Impressive/grand",
+      "Infested/decayed", "Large/spacious", "Locked/secure", "Messy/filthy", "Modern/stylish", "Modest/simple",
+      "Mysterious/strange", "Obtrusive/distinct", "Overwhelming/vast", "Protected/guarded", "Restored/renovated", "Scorched/charred",
+      "Seedy/decrepit", "Shabby/pitiful", "Spartan/utilitarian", "Stocked/packed", "Tidy/clean", "Warm/hot"
+    ],
+    es: [
+      "Arcaico u obsoleto", "Brillante e iluminado", "Barato o cutre", "Frío y con corrientes", "Angosto o pequeño", "Espeluznante o inquietante",
+      "Atestado o concurrido", "Dañado o colapsado", "Húmedo o inundado", "Oscuro y sin luz", "Abandonado o vacío", "Soso o aburrido",
+      "Expuesto o abierto", "Prohibido o cerrado", "Fortificado o reforzado", "Desorganizado o caótico", "Encantado o corrupto", "Impresionante o grandioso",
+      "Infestado o podrido", "Grande o espacioso", "Cerrado o seguro", "Desordenado o asqueroso", "Moderno o elegante", "Modesto o simple",
+      "Misterioso o extraño", "Llamativo o distintivo", "Abrumador o vasto", "Protegido o vigilado", "Restaurado o renovado", "Churruscado o carbonizado",
+      "Sórdido o decrépito", "Desvencijado o lamentable", "Espartano u utilitario", "Surtido o abarrotado", "Ordenado o limpio", "Cálido o caluroso"
+    ]
+  },
+  town_folk: {
+    en: [
+      "Adventurer", "Alchemist", "Apprentice", "Armorer", "Artisan", "Artist",
+      "Baker or cook", "Barber", "Beggar", "Blacksmith", "Butcher", "Candlemaker",
+      "Carpenter", "Cobbler", "Entertainer", "Fence", "Herbalist", "Knight",
+      "Laborer", "Locksmith", "Merchant", "Noble", "Pickpocket", "Priest",
+      "Rat catcher", "Scholar", "Servant", "Soldier or guard", "Stonemason", "Street urchin",
+      "Tavern worker", "Tax collector", "Vagabond", "Weaver", "Wheelwright", "Wizard or witch"
+    ],
+    es: [
+      "Aventurero", "Alquimista", "Aprendiz", "Armero", "Artesano", "Artista",
+      "Panadero o cocinero", "Barbero", "Mendigo", "Herrero", "Carnicero", "Cerero",
+      "Carpintero", "Zapatero", "Artista o animador", "Perista", "Herbolario", "Caballero",
+      "Peón o trabajador", "Cerrajero", "Mercader", "Noble", "Carterista", "Sacerdote",
+      "Cazador de ratas", "Erudito", "Sirviente", "Soldado o guardia", "Cantero", "Golfillo callejero",
+      "Trabajador de taberna", "Recaudador de impuestos", "Vagabundo", "Tejedor", "Carretero", "Mago o bruja"
+    ]
+  },
+  town_npc_traits: {
+    en: [
+      "Agile/quick", "Angry/bitter", "Bold/daring", "Bossy/pushy", "Cautious/wary", "Charming/sweet",
+      "Chaste/solemn", "Clever/wise", "Cruel/brutal", "Cynical/mocking", "Devout/zealous", "Diligent/restless",
+      "Discreet/restrained", "Drunk/stoned", "Furtive/sneaky", "Generous/honest", "Greedy/gluttonous", "Grimy/smelly",
+      "Happy/jolly", "Humble/modest", "Hurt/sick", "Ignorant/foolish", "Jealous/intolerant", "Kind/friendly",
+      "Lazy/apathetic", "Lustful/lewd", "Melancholic/sad", "Paranoid/fearful", "Patient/gentle", "Proud/arrogant",
+      "Shy/demure", "Slow/clumsy", "Strong/brawny", "Vain/pompous", "Weak/frail", "Weird/eccentric"
+    ],
+    es: [
+      "Ágil o rápido", "Enfadado o amargado", "Audaz o atrevido", "Mandón o insistente", "Cauteloso o receloso", "Encantador o dulce",
+      "Casto o solemne", "Ingenioso o sabio", "Cruel o brutal", "Cínico o burlón", "Devoto o ferviente", "Diligente o inquieto",
+      "Discreto o contenido", "Borracho o colocado", "Furtivo o escurridizo", "Generoso u honrado", "Codicioso o glotón", "Mugriento o maloliente",
+      "Feliz o jovial", "Humilde o modesto", "Herido o enfermo", "Ignorante o necio", "Celoso o intolerante", "Amable o amigable",
+      "Perezoso o apático", "Lujurioso o lascivo", "Melancólico o triste", "Paranoico o temeroso", "Paciente o gentil", "Orgulloso o arrogante",
+      "Tímido o recatado", "Lento o torpe", "Fuerte o musculoso", "Vanidoso o pomposo", "Débil o frágil", "Extraño o excéntrico"
+    ]
+  },
+  town_local_events: {
+    en: [
+      "Accident/hazard", "Aggressive animal", "Altercation/quarrel", "Ambush or attack", "Arcane duel", "Assassination",
+      "Barricade/barrier", "Broken wagon", "Casualty/tragedy", "Change of weather", "Dangerous magic", "Depraved act",
+      "Dragon in the sky", "Drunken brawl", "Explosion or fire", "Fleeing fugitive", "Gang confrontation", "Horn or ringing bell",
+      "Injured mount/pet", "Large crowd", "Magical ritual", "Military brutality", "Obnoxious noble", "Pickpocket/theft",
+      "Prowling monster", "Robbery/mugging", "Sabotage/vandalism", "Screaming/shouting", "Shocking news", "Spying or prying",
+      "Stray dog or cat", "Street entertainer", "Structural collapse", "Subtle spellcaster", "Trapped civilians", "Troublesome youth"
+    ],
+    es: [
+      "Accidente o peligro", "Animal agresivo", "Altercado o disputa", "Emboscada o ataque", "Duelo arcano", "Asesinato",
+      "Barricada o barrera", "Carro averiado", "Víctima o tragedia", "Cambio de clima", "Magia peligrosa", "Acto depravado",
+      "Dragón en el cielo", "Trifulca de taberna", "Explosión o incendio", "Fugitivo en huida", "Enfrentamiento de bandas", "Cuerno o campana sonando",
+      "Montura o mascota herida", "Gran multitud", "Ritual mágico", "Brutalidad militar", "Noble odioso", "Carterista o robo",
+      "Monstruo al acecho", "Atraco o asalto", "Sabotaje o vandalismo", "Gritos o alaridos", "Noticias impactantes", "Espionaje o fisgoneo",
+      "Perro o gato callejero", "Artista callejero", "Colapso estructural", "Lanzador de conjuros sutil", "Civiles atrapados", "Juventud problemática"
+    ]
+  },
+  town_name: {
+    prefixes: [
+      "Angel", "Azure", "Bleak", "Blight", "Cold", "Crow",
+      "Dark", "Drake", "Dread", "Eagle", "Elfin", "Ember",
+      "Flame", "Frost", "Grim", "Hex", "High", "Iron",
+      "Mist", "Moon", "Night", "North", "Onyx", "River",
+      "Sigil", "Silver", "South", "Star", "Storm", "Sun",
+      "Talon", "Vice", "Wilt", "Winter", "Wraith", "Wyrm"
+    ],
+    suffixes: [
+      "bay", "bridge", "brook", "chapel", "cliff", "combe",
+      " Cove", "crest", " Dale", " Falls", "field", "ford",
+      " Fort", "gate", " Harbor", "haven", "hearth", " Hill",
+      "hold", "home", "march", "perch", "point", "port",
+      "reach", " Rock", " Seat", "side", " Springs", "stead",
+      "town", "vale", " Valley", "ville", "ward", "wood"
+    ]
+  }
 };
 
 const twistIdeas = {

@@ -163,21 +163,42 @@
               <button onclick="rollManualTable(['names_female', 'names_surname'], 'names_female')" data-i18n="names_female"></button>
               <button onclick="rollFantasyName()" data-i18n="names_fictional"></button>
             </details>
-
-            <details class="gen-section" name="generators">
-              <summary data-i18n="cat_twist">🌀 Twists</summary>
-              <button onclick="rollTwist('fantasy', 'twist_fantasy')" data-i18n="twist_fantasy">Fantasy</button>
-              <button onclick="rollTwist('horror', 'twist_horror')" data-i18n="twist_horror">Horror</button>
-              <button onclick="rollTwist('scifi', 'twist_scifi')" data-i18n="twist_scifi">Sci-Fi</button>
-            </details>
         </article>
 
-        <article>
-          <h4 data-i18n="quests">Quests</h4>
-          <div role="group">
-            <select id="quest">
-            </select>
-            <button onclick="rollQuest()" class="contrast" data-i18n="roll">roll</button>
+        <div class="grid">
+          <article>
+            <h4 data-i18n="cat_twist">🌀 Twists</h4>
+            <div class="grid">
+              <button class="twist-button" onclick="rollTwist('fantasy', 'twist_fantasy')" data-i18n="twist_fantasy">Fantasy</button>
+              <button class="twist-button" onclick="rollTwist('horror', 'twist_horror')" data-i18n="twist_horror">Horror</button>
+              <button class="twist-button" onclick="rollTwist('scifi', 'twist_scifi')" data-i18n="twist_scifi">Sci-Fi</button>
+            </div>
+          </article>
+
+          <article>
+            <h4 data-i18n="quests">Quests</h4>
+            <div role="group">
+              <select id="quest">
+              </select>
+              <button onclick="rollQuest()" class="contrast" data-i18n="roll">roll</button>
+            </div>
+          </article>
+        </div>
+
+        <article class="fantasy-towns">
+          <h4 data-i18n="cat_towns">Fantasy Towns</h4>
+          <div class="grid">
+              <button class="contrast" onclick="rollFantasyTownName()" data-i18n="town_name"></button>
+          </div>
+          <div class="grid">
+              <button onclick="rollManualTable(['town_impressions_settlement', 'town_impressions_gobernance', 'town_impressions_population'], 'town_impresions')" data-i18n="town_impresions"></button>
+              <button onclick="rollManualTable(['town_features', 'town_features', 'town_features'], 'town_features')" data-i18n="town_features"></button>
+              <button onclick="rollManualTable(['town_events'], 'town_events')" data-i18n="town_events"></button>
+          </div>
+          <div class="grid">
+              <button class="contrast" onclick="rollManualTable(['town_locations', 'town_location_features'], 'town_locations')" data-i18n="town_locations"></button>
+              <button onclick="rollManualTable(['town_folk', 'town_npc_traits'], 'town_folk')" data-i18n="town_folk"></button>
+              <button onclick="rollManualTable(['town_local_events'], 'town_local_events')" data-i18n="town_local_events"></button>
           </div>
         </article>
       </section>

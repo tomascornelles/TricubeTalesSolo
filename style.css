@@ -47,6 +47,10 @@
   border-color: var(--primary);
 }
 
+.fantasy-towns .grid {
+margin-top: 1rem;
+}
+
 /* 4. Toggles / Switch (Emulando los de la imagen) */
 [type="checkbox"][role="switch"] {
   height: 1.5rem;

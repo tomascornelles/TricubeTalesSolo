@@ -172,10 +172,17 @@ function rollTwist(genre, labelKey) {
 }
 
 function openTwistModal() { openModal('modal-twist-choice'); }
+
 function rollFantasyName() { 
   const p = manualTables.names_fictional.prefixes[Math.floor(Math.random()*manualTables.names_fictional.prefixes.length)]; 
   const s = manualTables.names_fictional.suffixes[Math.floor(Math.random()*manualTables.names_fictional.suffixes.length)]; 
   openModal('modal-info', "gen_name", `${p}${s}`); 
+}
+
+function rollFantasyTownName() { 
+  const p = manualTables.town_name.prefixes[Math.floor(Math.random()*manualTables.town_name.prefixes.length)]; 
+  const s = manualTables.town_name.suffixes[Math.floor(Math.random()*manualTables.town_name.suffixes.length)]; 
+  openModal('modal-info', "town_name", `${p}${s}`); 
 }
 
 function rollOracle() {
