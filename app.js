@@ -160,7 +160,7 @@ function rollSocialDisposition(h,f) {
 function rollScaledQuestion() {
   const r1 = Math.floor(Math.random() * 6);
   const d = manualTables.scaled_question[state.lang][r1];
-  openModal('modal-info', "scaled_question", `<kbd class="result-dice">${r1 + 1}</kbd><br>${d}`);
+  openModal('modal-info', "scaled_question", `<span class="dice dice-${r1 + 1}"></span><br>${d}`);
 }
 
 function rollTwist(genre, labelKey) {

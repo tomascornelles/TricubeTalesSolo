@@ -34,7 +34,7 @@ const i18n = {
     crimes_unsolved: "Unsolved Mysteries",
     deck: "Deck", 
     dice_title: "Dice roll",
-    disclaimer: "This app is an unofficial, non-commercial work. The content is not affiliated with Zadmar Games.\nDistributed under the CC BY 3.0 license.",
+    disclaimer: "Tricube Tales compatible\nThis app is an unofficial, non-commercial work. The content is not affiliated with Zadmar Games.\nDistributed under the CC BY 3.0 license.",
     dungeon_denizens: "Dungeon Denizens",
     dungeon_events: "Dungeon Events",
     dungeon_features: "Dungeon Features",
@@ -45,7 +45,7 @@ const i18n = {
     feat_wild: "Wild Feature", 
     game_over: "SESSION ENDED", 
     gen_name: "Name", 
-    gen_title: "Manual Generators",
+    gen_title: "Inspiration Tables",
     history: "Challenge History", 
     idea_label: "Idea",
     last_scene_warn: "⚠️ FINAL SCENE", 
@@ -76,7 +76,7 @@ const i18n = {
     plot_sec: "Secondary Plot",
     ppl_urban: "Urban People", 
     ppl_wild: "Wild People", 
-    quests: "Quests",
+    quests: "Quests generator",
     reset_deck: "Reset Deck", 
     reset_q: "Reset?", 
     reset_text: "Current progress will be lost.", 
@@ -162,7 +162,7 @@ const i18n = {
     crimes_unsolved: "Misterios no resueltos",
     deck: "Mazo", 
     dice_title: "Dado",
-    disclaimer: "Este juego es un trabajo no oficial. El contenido no es afiliado a Zadmar Games.\nDistribuido bajo la licencia CC BY 3.0.",
+    disclaimer: "Compatible con Tricube Tales.\nEste juego es un trabajo no oficial y no comercial. \nEl contenido no es afiliado a Zadmar Games.\nDistribuido bajo la licencia CC BY 3.0.",
     dungeon_denizens: "Habitantes",
     dungeon_events: "Eventos",
     dungeon_features: "Características",
@@ -173,7 +173,7 @@ const i18n = {
     feat_wild: "Salvaje", 
     game_over: "SESIÓN FINALIZADA", 
     gen_name: "Nombre", 
-    gen_title: "Generadores",
+    gen_title: "Tablas de inspiración",
     history: "Historial", 
     idea_label: "Idea",
     last_scene_warn: "⚠️ ÚLTIMA ESCENA", 
@@ -204,7 +204,7 @@ const i18n = {
     plot_sec: "Trama Secundaria",
     ppl_urban: "Gente Ciudad", 
     ppl_wild: "Gente Campo", 
-    quests: "Misiones",
+    quests: "Generador de misiones",
     reset_deck: "Reiniciar Mazo", 
     reset_q: "¿Reiniciar?", 
     reset_text: "Se perderá el progreso actual.", 
@@ -1438,7 +1438,63 @@ const manualTables = {
       "ock", "on", "ond", "op", "orish", "uis",
       "uli", "un", "unak", "ustin", "utier", "yn"
     ]
-  }
+  },
+  first_impressions: {
+    title: "First Impressions",
+    en: [
+      [
+        "<small>This settlement is best described as a</small> Market town",
+        "<small>This settlement is best described as a</small> Port town",
+        "<small>This settlement is best described as a</small> Temple town",
+        "<small>This settlement is best described as a</small> Castle town",
+        "<small>This settlement is best described as a</small> Mining town",
+        "<small>This settlement is best described as a</small> Large town or city"
+      ],
+      [
+        "<small>The system of governance appears to be</small> A powerful overlord",
+        "<small>The system of governance appears to be</small> Elected officials",
+        "<small>The system of governance appears to be</small> A royal family",
+        "<small>The system of governance appears to be</small> A theocratic order",
+        "<small>The system of governance appears to be</small> Guilds or merchants",
+        "<small>The system of governance appears to be</small> A magocracy"
+      ],
+      [
+        "<small>The populace initially comes across as</small> Cheerful",
+        "<small>The populace initially comes across as</small> Apathetic",
+        "<small>The populace initially comes across as</small> Suspicious",
+        "<small>The populace initially comes across as</small> Downtrodden",
+        "<small>The populace initially comes across as</small> Frightened",
+        "<small>The populace initially comes across as</small> Hostile"
+      ]
+    ],
+    es: [
+      [
+        "<small>Este asentamiento se define mejor como un</small> Pueblo comercial",
+        "<small>Este asentamiento se define mejor como un</small> Pueblo portuario",
+        "<small>Este asentamiento se define mejor como un</small> Pueblo templo",
+        "<small>Este asentamiento se define mejor como un</small> Pueblo castillo",
+        "<small>Este asentamiento se define mejor como un</small> Pueblo minero",
+        "<small>Este asentamiento se define mejor como una</small> Gran ciudad o metrópolis"
+      ],
+      [
+        "<small>El sistema de gobierno parece ser</small> Un soberano poderoso",
+        "<small>El sistema de gobierno parece ser</small> Funcionarios electos",
+        "<small>El sistema de gobierno parece ser</small> Una familia real",
+        "<small>El sistema de gobierno parece ser</small> Una orden teocrática",
+        "<small>El sistema de gobierno parece ser</small> Gremios o mercaderes",
+        "<small>El sistema de gobierno parece ser</small> Una magocracia"
+      ],
+      [
+        "<small>Al principio, la población se muestra</small> Alegre",
+        "<small>Al principio, la población se muestra</small> Apática",
+        "<small>Al principio, la población se muestra</small> Suspicaz",
+        "<small>Al principio, la población se muestra</small> Oprimida",
+        "<small>Al principio, la población se muestra</small> Asustada",
+        "<small>Al principio, la población se muestra</small> Hostil"
+      ]
+    ]
+  },
+
 };
 
 const twistIdeas = {
@@ -1562,3146 +1618,3146 @@ const questTables = {
   },
   academy_hooks: {
     title: "Academy of Monstrous Secrets",
-  en: [
-    [
-      "<small>The students decide to</small> Defeat a threat",
-      "<small>The students decide to</small> Solve a mystery",
-      "<small>The students decide to</small> Investigate a crime",
-      "<small>The students decide to</small> Win a contest",
-      "<small>The students decide to</small> Help someone in need",
-      "<small>The students decide to</small> Right a wrong"
+    en: [
+      [
+        "<small>The students decide to</small> Defeat a threat",
+        "<small>The students decide to</small> Solve a mystery",
+        "<small>The students decide to</small> Investigate a crime",
+        "<small>The students decide to</small> Win a contest",
+        "<small>The students decide to</small> Help someone in need",
+        "<small>The students decide to</small> Right a wrong"
+      ],
+      [
+        "<small>Which leads them to</small> Underground tunnels",
+        "<small>Which leads them to</small> A restricted area",
+        "<small>Which leads them to</small> A classroom or lab",
+        "<small>Which leads them to</small> Outside the academy",
+        "<small>Which leads them to</small> Somewhere haunted",
+        "<small>Which leads them to</small> A secret/hidden room"
+      ],
+      [
+        "<small>But they must also</small> Develop a new skill",
+        "<small>But they must also</small> Break school rules",
+        "<small>But they must also</small> Beware of an enemy",
+        "<small>But they must also</small> Foster a relationship",
+        "<small>But they must also</small> Resist temptation",
+        "<small>But they must also</small> Learn a dark secret"
+      ]
     ],
-    [
-      "<small>Which leads them to</small> Underground tunnels",
-      "<small>Which leads them to</small> A restricted area",
-      "<small>Which leads them to</small> A classroom or lab",
-      "<small>Which leads them to</small> Outside the academy",
-      "<small>Which leads them to</small> Somewhere haunted",
-      "<small>Which leads them to</small> A secret/hidden room"
-    ],
-    [
-      "<small>But they must also</small> Develop a new skill",
-      "<small>But they must also</small> Break school rules",
-      "<small>But they must also</small> Beware of an enemy",
-      "<small>But they must also</small> Foster a relationship",
-      "<small>But they must also</small> Resist temptation",
-      "<small>But they must also</small> Learn a dark secret"
+    es: [
+      [
+        "<small>Los estudiantes deciden</small> Derrotar una amenaza",
+        "<small>Los estudiantes deciden</small> Resolver un misterio",
+        "<small>Los estudiantes deciden</small> Investigar un crimen",
+        "<small>Los estudiantes deciden</small> Ganar un concurso",
+        "<small>Los estudiantes deciden</small> Ayudar a alguien necesitado",
+        "<small>Los estudiantes deciden</small> Enmendar un error"
+      ],
+      [
+        "<small>Lo que los lleva a</small> Túneles subterráneos",
+        "<small>Lo que los lleva a</small> Un área restringida",
+        "<small>Lo que los lleva a</small> Un aula o laboratorio",
+        "<small>Lo que los lleva a</small> Fuera de la academia",
+        "<small>Lo que los lleva a</small> Un lugar embrujado",
+        "<small>Lo que los lleva a</small> Una sala secreta o oculta"
+      ],
+      [
+        "<small>Pero también deben</small> Desarrollar una nueva habilidad",
+        "<small>Pero también deben</small> Romper las reglas de la escuela",
+        "<small>Pero también deben</small> Tener cuidado con un enemigo",
+        "<small>Pero también deben</small> Fomentar una relación",
+        "<small>Pero también deben</small> Resistir la tentación",
+        "<small>Pero también deben</small> Aprender un oscuro secreto"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>Los estudiantes deciden</small> Derrotar una amenaza",
-      "<small>Los estudiantes deciden</small> Resolver un misterio",
-      "<small>Los estudiantes deciden</small> Investigar un crimen",
-      "<small>Los estudiantes deciden</small> Ganar un concurso",
-      "<small>Los estudiantes deciden</small> Ayudar a alguien necesitado",
-      "<small>Los estudiantes deciden</small> Enmendar un error"
-    ],
-    [
-      "<small>Lo que los lleva a</small> Túneles subterráneos",
-      "<small>Lo que los lleva a</small> Un área restringida",
-      "<small>Lo que los lleva a</small> Un aula o laboratorio",
-      "<small>Lo que los lleva a</small> Fuera de la academia",
-      "<small>Lo que los lleva a</small> Un lugar embrujado",
-      "<small>Lo que los lleva a</small> Una sala secreta o oculta"
-    ],
-    [
-      "<small>Pero también deben</small> Desarrollar una nueva habilidad",
-      "<small>Pero también deben</small> Romper las reglas de la escuela",
-      "<small>Pero también deben</small> Tener cuidado con un enemigo",
-      "<small>Pero también deben</small> Fomentar una relación",
-      "<small>Pero también deben</small> Resistir la tentación",
-      "<small>Pero también deben</small> Aprender un oscuro secreto"
-    ]
-  ]
-},
+  },
   arcane_agents: {
     title: "Arcane Agents",
-  en: [
-    [
-      "<small>The agents have to</small> Eliminate a threat",
-      "<small>The agents have to</small> Investigate a cult",
-      "<small>The agents have to</small> Infiltrate an event",
-      "<small>The agents have to</small> Protect a location",
-      "<small>The agents have to</small> Hunt a rogue sorcerer",
-      "<small>The agents have to</small> Prevent an apocalypse"
+    en: [
+      [
+        "<small>The agents have to</small> Eliminate a threat",
+        "<small>The agents have to</small> Investigate a cult",
+        "<small>The agents have to</small> Infiltrate an event",
+        "<small>The agents have to</small> Protect a location",
+        "<small>The agents have to</small> Hunt a rogue sorcerer",
+        "<small>The agents have to</small> Prevent an apocalypse"
+      ],
+      [
+        "<small>Which leads them to</small> A hotel or villa",
+        "<small>Which leads them to</small> A theater or gallery",
+        "<small>Which leads them to</small> A carnival or circus",
+        "<small>Which leads them to</small> An underground area",
+        "<small>Which leads them to</small> An abandoned town",
+        "<small>Which leads them to</small> A private island"
+      ],
+      [
+        "<small>But they must also deal with</small> Innocent bystanders",
+        "<small>But they must also deal with</small> A parasitic incursion",
+        "<small>But they must also deal with</small> Limited resources",
+        "<small>But they must also deal with</small> A betrayal or ambush",
+        "<small>But they must also deal with</small> Unexpected danger",
+        "<small>But they must also deal with</small> A geas or curse"
+      ]
     ],
-    [
-      "<small>Which leads them to</small> A hotel or villa",
-      "<small>Which leads them to</small> A theater or gallery",
-      "<small>Which leads them to</small> A carnival or circus",
-      "<small>Which leads them to</small> An underground area",
-      "<small>Which leads them to</small> An abandoned town",
-      "<small>Which leads them to</small> A private island"
-    ],
-    [
-      "<small>But they must also deal with</small> Innocent bystanders",
-      "<small>But they must also deal with</small> A parasitic incursion",
-      "<small>But they must also deal with</small> Limited resources",
-      "<small>But they must also deal with</small> A betrayal or ambush",
-      "<small>But they must also deal with</small> Unexpected danger",
-      "<small>But they must also deal with</small> A geas or curse"
+    es: [
+      [
+        "<small>Los agentes tienen que</small> Eliminar una amenaza",
+        "<small>Los agentes tienen que</small> Investigar un culto",
+        "<small>Los agentes tienen que</small> Infiltrarse en un evento",
+        "<small>Los agentes tienen que</small> Proteger una ubicación",
+        "<small>Los agentes tienen que</small> Cazar a un hechicero renegado",
+        "<small>Los agentes tienen que</small> Prevenir un apocalipsis"
+      ],
+      [
+        "<small>Lo que los lleva a</small> Un hotel o villa",
+        "<small>Lo que los lleva a</small> Un teatro o galería",
+        "<small>Lo que los lleva a</small> Un carnaval o circo",
+        "<small>Lo que los lleva a</small> Una zona subterránea",
+        "<small>Lo que los lleva a</small> Un pueblo abandonado",
+        "<small>Lo que los lleva a</small> Una isla privada"
+      ],
+      [
+        "<small>Pero también deben lidiar con</small> Transeúntes inocentes",
+        "<small>Pero también deben lidiar con</small> Una incursión parasitaria",
+        "<small>Pero también deben lidiar con</small> Recursos limitados",
+        "<small>Pero también deben lidiar con</small> Una traición o emboscada",
+        "<small>Pero también deben lidiar con</small> Peligro inesperado",
+        "<small>Pero también deben lidiar con</small> Un geas o maldición"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>Los agentes tienen que</small> Eliminar una amenaza",
-      "<small>Los agentes tienen que</small> Investigar un culto",
-      "<small>Los agentes tienen que</small> Infiltrarse en un evento",
-      "<small>Los agentes tienen que</small> Proteger una ubicación",
-      "<small>Los agentes tienen que</small> Cazar a un hechicero renegado",
-      "<small>Los agentes tienen que</small> Prevenir un apocalipsis"
-    ],
-    [
-      "<small>Lo que los lleva a</small> Un hotel o villa",
-      "<small>Lo que los lleva a</small> Un teatro o galería",
-      "<small>Lo que los lleva a</small> Un carnaval o circo",
-      "<small>Lo que los lleva a</small> Una zona subterránea",
-      "<small>Lo que los lleva a</small> Un pueblo abandonado",
-      "<small>Lo que los lleva a</small> Una isla privada"
-    ],
-    [
-      "<small>Pero también deben lidiar con</small> Transeúntes inocentes",
-      "<small>Pero también deben lidiar con</small> Una incursión parasitaria",
-      "<small>Pero también deben lidiar con</small> Recursos limitados",
-      "<small>Pero también deben lidiar con</small> Una traición o emboscada",
-      "<small>Pero también deben lidiar con</small> Peligro inesperado",
-      "<small>Pero también deben lidiar con</small> Un geas o maldición"
-    ]
-  ]
-},
+  },
   arcane_resurection: {
-  title: "Arcane Resurrection",
-  en: [
-    [
-      "<small>The battle mages must</small> Deal with bandits",
-      "<small>The battle mages must</small> Rescue the innocent",
-      "<small>The battle mages must</small> Destroy a monster",
-      "<small>The battle mages must</small> Feed the townsfolk",
-      "<small>The battle mages must</small> Obtain wealth",
-      "<small>The battle mages must</small> Improve the town"
+    title: "Arcane Resurrection",
+    en: [
+      [
+        "<small>The battle mages must</small> Deal with bandits",
+        "<small>The battle mages must</small> Rescue the innocent",
+        "<small>The battle mages must</small> Destroy a monster",
+        "<small>The battle mages must</small> Feed the townsfolk",
+        "<small>The battle mages must</small> Obtain wealth",
+        "<small>The battle mages must</small> Improve the town"
+      ],
+      [
+        "<small>Which leads them to or near</small> Glyphstone town",
+        "<small>Which leads them to or near</small> A small village",
+        "<small>Which leads them to or near</small> The nearby forest",
+        "<small>Which leads them to or near</small> A mine or quarry",
+        "<small>Which leads them to or near</small> The farmlands",
+        "<small>Which leads them to or near</small> Neighboring territory"
+      ],
+      [
+        "<small>But they must also deal with</small> A spy or informant",
+        "<small>But they must also deal with</small> Debt collectors",
+        "<small>But they must also deal with</small> A curious mage",
+        "<small>But they must also deal with</small> Unpleasant nobles",
+        "<small>But they must also deal with</small> A looming threat",
+        "<small>But they must also deal with</small> Saboteurs or assassins"
+      ]
     ],
-    [
-      "<small>Which leads them to or near</small> Glyphstone town",
-      "<small>Which leads them to or near</small> A small village",
-      "<small>Which leads them to or near</small> The nearby forest",
-      "<small>Which leads them to or near</small> A mine or quarry",
-      "<small>Which leads them to or near</small> The farmlands",
-      "<small>Which leads them to or near</small> Neighboring territory"
-    ],
-    [
-      "<small>But they must also deal with</small> A spy or informant",
-      "<small>But they must also deal with</small> Debt collectors",
-      "<small>But they must also deal with</small> A curious mage",
-      "<small>But they must also deal with</small> Unpleasant nobles",
-      "<small>But they must also deal with</small> A looming threat",
-      "<small>But they must also deal with</small> Saboteurs or assassins"
+    es: [
+      [
+        "<small>Los magos de batalla deben</small> Lidiar con bandidos",
+        "<small>Los magos de batalla deben</small> Rescatar a los inocentes",
+        "<small>Los magos de batalla deben</small> Destruir a un monstruo",
+        "<small>Los magos de batalla deben</small> Alimentar a los aldeanos",
+        "<small>Los magos de batalla deben</small> Obtener riquezas",
+        "<small>Los magos de batalla deben</small> Mejorar el pueblo"
+      ],
+      [
+        "<small>Lo que los lleva a (o cerca de)</small> El pueblo de Piedra Glífica",
+        "<small>Lo que los lleva a (o cerca de)</small> Una pequeña aldea",
+        "<small>Lo que los lleva a (o cerca de)</small> El bosque cercano",
+        "<small>Lo que los lleva a (o cerca de)</small> Una mina o cantera",
+        "<small>Lo que los lleva a (o cerca de)</small> Las tierras de cultivo",
+        "<small>Lo que los lleva a (o cerca de)</small> Territorio vecino"
+      ],
+      [
+        "<small>Pero también deben lidiar con</small> Un espía o informante",
+        "<small>Pero también deben lidiar con</small> Cobradores de deudas",
+        "<small>Pero también deben lidiar con</small> Un mago curioso",
+        "<small>Pero también deben lidiar con</small> Nobles desagradables",
+        "<small>Pero también deben lidiar con</small> Una amenaza inminente",
+        "<small>Pero también deben lidiar con</small> Saboteadores o asesinos"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>Los magos de batalla deben</small> Lidiar con bandidos",
-      "<small>Los magos de batalla deben</small> Rescatar a los inocentes",
-      "<small>Los magos de batalla deben</small> Destruir a un monstruo",
-      "<small>Los magos de batalla deben</small> Alimentar a los aldeanos",
-      "<small>Los magos de batalla deben</small> Obtener riquezas",
-      "<small>Los magos de batalla deben</small> Mejorar el pueblo"
-    ],
-    [
-      "<small>Lo que los lleva a (o cerca de)</small> El pueblo de Piedra Glífica",
-      "<small>Lo que los lleva a (o cerca de)</small> Una pequeña aldea",
-      "<small>Lo que los lleva a (o cerca de)</small> El bosque cercano",
-      "<small>Lo que los lleva a (o cerca de)</small> Una mina o cantera",
-      "<small>Lo que los lleva a (o cerca de)</small> Las tierras de cultivo",
-      "<small>Lo que los lleva a (o cerca de)</small> Territorio vecino"
-    ],
-    [
-      "<small>Pero también deben lidiar con</small> Un espía o informante",
-      "<small>Pero también deben lidiar con</small> Cobradores de deudas",
-      "<small>Pero también deben lidiar con</small> Un mago curioso",
-      "<small>Pero también deben lidiar con</small> Nobles desagradables",
-      "<small>Pero también deben lidiar con</small> Una amenaza inminente",
-      "<small>Pero también deben lidiar con</small> Saboteadores o asesinos"
-    ]
-  ]
-},
+  },
   champions_of_fenrir: {
-  title: "Champions of Fenrir",
-  en: [
-    [
-      "<small>The werewolves must</small> Hunt down a threat",
-      "<small>The werewolves must</small> Investigate a rumor",
-      "<small>Thewolves must</small> Protect their territory",
-      "<small>The werewolves must</small> Rescue an ally",
-      "<small>The werewolves must</small> Commit sabotage",
-      "<small>The werewolves must</small> Recover an item"
+    title: "Champions of Fenrir",
+    en: [
+      [
+        "<small>The werewolves must</small> Hunt down a threat",
+        "<small>The werewolves must</small> Investigate a rumor",
+        "<small>Thewolves must</small> Protect their territory",
+        "<small>The werewolves must</small> Rescue an ally",
+        "<small>The werewolves must</small> Commit sabotage",
+        "<small>The werewolves must</small> Recover an item"
+      ],
+      [
+        "<small>Which leads them to a</small> Downtown building",
+        "<small>Which leads them to a</small> Public park or garden",
+        "<small>Which leads them to a</small> Holy site or landmark",
+        "<small>Which leads them to a</small> Secure location",
+        "<small>Which leads them to a</small> Research facility",
+        "<small>Which leads them to a</small> Forested area"
+      ],
+      [
+        "<small>But they must also deal with</small> The full moon",
+        "<small>But they must also deal with</small> A rival werewolf pack",
+        "<small>But they must also deal with</small> Investigators/hunters",
+        "<small>But they must also deal with</small> A magical threat",
+        "<small>But they must also deal with</small> A mysterious intruder",
+        "<small>The must also deal with</small> Unwanted attention"
+      ]
     ],
-    [
-      "<small>Which leads them to a</small> Downtown building",
-      "<small>Which leads them to a</small> Public park or garden",
-      "<small>Which leads them to a</small> Holy site or landmark",
-      "<small>Which leads them to a</small> Secure location",
-      "<small>Which leads them to a</small> Research facility",
-      "<small>Which leads them to a</small> Forested area"
-    ],
-    [
-      "<small>But they must also deal with</small> The full moon",
-      "<small>But they must also deal with</small> A rival werewolf pack",
-      "<small>But they must also deal with</small> Investigators/hunters",
-      "<small>But they must also deal with</small> A magical threat",
-      "<small>But they must also deal with</small> A mysterious intruder",
-      "<small>The must also deal with</small> Unwanted attention"
+    es: [
+      [
+        "<small>Los hombres lobo deben</small> Cazar una amenaza",
+        "<small>Los hombres lobo deben</small> Investigar un rumor",
+        "<small>Los hombres lobo deben</small> Proteger su territorio",
+        "<small>Los hombres lobo deben</small> Rescatar a un aliado",
+        "<small>Los hombres lobo deben</small> Cometer un sabotaje",
+        "<small>Los hombres lobo deben</small> Recuperar un objeto"
+      ],
+      [
+        "<small>Lo que los lleva a</small> Un edificio del centro",
+        "<small>Lo que los lleva a</small> Un parque o jardín público",
+        "<small>Lo que los lleva a</small> Un sitio sagrado o hito",
+        "<small>Lo que los lleva a</small> Una ubicación segura",
+        "<small>Lo que los lleva a</small> Una instalación de investigación",
+        "<small>Lo que los lleva a</small> Una zona boscosa"
+      ],
+      [
+        "<small>Pero también deben lidiar con</small> La luna llena",
+        "<small>Pero también deben lidiar con</small> Una manada de licántropos rival",
+        "<small>Pero también deben lidiar con</small> Investigadores/cazadores",
+        "<small>Pero también deben lidiar con</small> Una amenaza mágica",
+        "<small>Pero también deben lidiar con</small> Un intruso misterioso",
+        "<small>Pero también deben lidiar con</small> Atención no deseada"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>Los hombres lobo deben</small> Cazar una amenaza",
-      "<small>Los hombres lobo deben</small> Investigar un rumor",
-      "<small>Los hombres lobo deben</small> Proteger su territorio",
-      "<small>Los hombres lobo deben</small> Rescatar a un aliado",
-      "<small>Los hombres lobo deben</small> Cometer un sabotaje",
-      "<small>Los hombres lobo deben</small> Recuperar un objeto"
-    ],
-    [
-      "<small>Lo que los lleva a</small> Un edificio del centro",
-      "<small>Lo que los lleva a</small> Un parque o jardín público",
-      "<small>Lo que los lleva a</small> Un sitio sagrado o hito",
-      "<small>Lo que los lleva a</small> Una ubicación segura",
-      "<small>Lo que los lleva a</small> Una instalación de investigación",
-      "<small>Lo que los lleva a</small> Una zona boscosa"
-    ],
-    [
-      "<small>Pero también deben lidiar con</small> La luna llena",
-      "<small>Pero también deben lidiar con</small> Una manada de licántropos rival",
-      "<small>Pero también deben lidiar con</small> Investigadores/cazadores",
-      "<small>Pero también deben lidiar con</small> Una amenaza mágica",
-      "<small>Pero también deben lidiar con</small> Un intruso misterioso",
-      "<small>Pero también deben lidiar con</small> Atención no deseada"
-    ]
-  ]
-},
+  },
   champions_of_osiris: {
-  title: "Champions of Osiris",
-  en: [
-    [
-      "<small>The champions must</small> Slay a monster",
-      "<small>The champions must</small> Rob a servant of Set",
-      "<small>The champions must</small> Help those in need",
-      "<small>The champions must</small> Hunt an enemy",
-      "<small>The champions must</small> Investigate a rumor",
-      "<small>The champions must</small> Rescue an ally"
+    title: "Champions of Osiris",
+    en: [
+      [
+        "<small>The champions must</small> Slay a monster",
+        "<small>The champions must</small> Rob a servant of Set",
+        "<small>The champions must</small> Help those in need",
+        "<small>The champions must</small> Hunt an enemy",
+        "<small>The champions must</small> Investigate a rumor",
+        "<small>The champions must</small> Rescue an ally"
+      ],
+      [
+        "<small>Which leads them to a</small> Village, town, or city",
+        "<small>Which leads them to a</small> Temple or obelisk",
+        "<small>Which leads them to a</small> Set-controlled region",
+        "<small>Which leads them to a</small> Cave or tunnel",
+        "<small>Which leads them to a</small> River or oasis",
+        "<small>Which leads them to a</small> Tomb or burial site"
+      ],
+      [
+        "<small>But they must also deal with</small> Dangerous weather",
+        "<small>But they must also deal with</small> Fearsome predators",
+        "<small>But they must also deal with</small> A tenuous alliance",
+        "<small>But they must also deal with</small> An oracle or sorcerer",
+        "<small>But they must also deal with</small> Helpless civilians",
+        "<small>But they must also deal with</small> Vile propaganda"
+      ]
     ],
-    [
-      "<small>Which leads them to a</small> Village, town, or city",
-      "<small>Which leads them to a</small> Temple or obelisk",
-      "<small>Which leads them to a</small> Set-controlled region",
-      "<small>Which leads them to a</small> Cave or tunnel",
-      "<small>Which leads them to a</small> River or oasis",
-      "<small>Which leads them to a</small> Tomb or burial site"
-    ],
-    [
-      "<small>But they must also deal with</small> Dangerous weather",
-      "<small>But they must also deal with</small> Fearsome predators",
-      "<small>But they must also deal with</small> A tenuous alliance",
-      "<small>But they must also deal with</small> An oracle or sorcerer",
-      "<small>But they must also deal with</small> Helpless civilians",
-      "<small>But they must also deal with</small> Vile propaganda"
+    es: [
+      [
+        "<small>Los campeones deben</small> Matar a un monstruo",
+        "<small>Los campeones deben</small> Robar a un sirviente de Set",
+        "<small>Los campeones deben</small> Ayudar a los necesitados",
+        "<small>Los campeones deben</small> Cazar a un enemigo",
+        "<small>Los campeones deben</small> Investigar un rumor",
+        "<small>Los campeones deben</small> Rescatar a un aliado"
+      ],
+      [
+        "<small>Lo que los lleva a</small> Una aldea, pueblo o ciudad",
+        "<small>Lo que los lleva a</small> Un templo u obelisco",
+        "<small>Lo que los lleva a</small> Una región controlada por Set",
+        "<small>Lo que los lleva a</small> Una cueva o túnel",
+        "<small>Lo que los lleva a</small> Un río u oasis",
+        "<small>Lo que los lleva a</small> Una tumba o lugar de entierro"
+      ],
+      [
+        "<small>Pero también deben lidiar con</small> Clima peligroso",
+        "<small>Pero también deben lidiar con</small> Depredadores temibles",
+        "<small>Pero también deben lidiar con</small> Una alianza precaria",
+        "<small>Pero también deben lidiar con</small> Un oráculo o hechicero",
+        "<small>Pero también deben lidiar con</small> Civiles indefensos",
+        "<small>Pero también deben lidiar con</small> Propaganda vil"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>Los campeones deben</small> Matar a un monstruo",
-      "<small>Los campeones deben</small> Robar a un sirviente de Set",
-      "<small>Los campeones deben</small> Ayudar a los necesitados",
-      "<small>Los campeones deben</small> Cazar a un enemigo",
-      "<small>Los campeones deben</small> Investigar un rumor",
-      "<small>Los campeones deben</small> Rescatar a un aliado"
-    ],
-    [
-      "<small>Lo que los lleva a</small> Una aldea, pueblo o ciudad",
-      "<small>Lo que los lleva a</small> Un templo u obelisco",
-      "<small>Lo que los lleva a</small> Una región controlada por Set",
-      "<small>Lo que los lleva a</small> Una cueva o túnel",
-      "<small>Lo que los lleva a</small> Un río u oasis",
-      "<small>Lo que los lleva a</small> Una tumba o lugar de entierro"
-    ],
-    [
-      "<small>Pero también deben lidiar con</small> Clima peligroso",
-      "<small>Pero también deben lidiar con</small> Depredadores temibles",
-      "<small>Pero también deben lidiar con</small> Una alianza precaria",
-      "<small>Pero también deben lidiar con</small> Un oráculo o hechicero",
-      "<small>Pero también deben lidiar con</small> Civiles indefensos",
-      "<small>Pero también deben lidiar con</small> Propaganda vil"
-    ]
-  ]
-},
+  },
   christmas_capers: {
-  title: "Christmas Capers",
-  en: [
-    [
-      "<small>The helpers are called out to</small> Rescue Santa",
-      "<small>The helpers are called out to</small> Repair the sleigh",
-      "<small>The helpers are called out to</small> Drop off some gifts",
-      "<small>The helpers are called out to</small> Deliver some coal",
-      "<small>The helpers are called out to</small> Protect Santa",
-      "<small>The helpers are called out to</small> Help Santa"
+    title: "Christmas Capers",
+    en: [
+      [
+        "<small>The helpers are called out to</small> Rescue Santa",
+        "<small>The helpers are called out to</small> Repair the sleigh",
+        "<small>The helpers are called out to</small> Drop off some gifts",
+        "<small>The helpers are called out to</small> Deliver some coal",
+        "<small>The helpers are called out to</small> Protect Santa",
+        "<small>The helpers are called out to</small> Help Santa"
+      ],
+      [
+        "<small>Somewhere in, on, or near</small> An orphanage",
+        "<small>Somewhere in, on, or near</small> A hotel or resort",
+        "<small>Somewhere in, on, or near</small> A remote cabin",
+        "<small>Somewhere in, on, or near</small> A house or mansion",
+        "<small>Somewhere in, on, or near</small> An apartment block",
+        "<small>Somewhere in, on, or near</small> A hospital ward"
+      ],
+      [
+        "<small>While dealing with a</small> Mixed-up delivery",
+        "<small>While dealing with a</small> Witness or evidence",
+        "<small>While dealing with a</small> Magical mishap",
+        "<small>While dealing with a</small> Missing reindeer",
+        "<small>While dealing with a</small> Change of address",
+        "<small>While dealing with a</small> Miserly Scrooge"
+      ]
     ],
-    [
-      "<small>Somewhere in, on, or near</small> An orphanage",
-      "<small>Somewhere in, on, or near</small> A hotel or resort",
-      "<small>Somewhere in, on, or near</small> A remote cabin",
-      "<small>Somewhere in, on, or near</small> A house or mansion",
-      "<small>Somewhere in, on, or near</small> An apartment block",
-      "<small>Somewhere in, on, or near</small> A hospital ward"
-    ],
-    [
-      "<small>While dealing with a</small> Mixed-up delivery",
-      "<small>While dealing with a</small> Witness or evidence",
-      "<small>While dealing with a</small> Magical mishap",
-      "<small>While dealing with a</small> Missing reindeer",
-      "<small>While dealing with a</small> Change of address",
-      "<small>While dealing with a</small> Miserly Scrooge"
+    es: [
+      [
+        "<small>Los ayudantes son llamados para</small> Rescatar a Santa",
+        "<small>Los ayudantes son llamados para</small> Reparar el trineo",
+        "<small>Los ayudantes son llamados para</small> Dejar algunos regalos",
+        "<small>Los ayudantes son llamados para</small> Entregar carbón",
+        "<small>Los ayudantes son llamados para</small> Proteger a Santa",
+        "<small>Los ayudantes son llamados para</small> Ayudar a Santa"
+      ],
+      [
+        "<small>En, sobre o cerca de</small> Un orfanato",
+        "<small>En, sobre o cerca de</small> Un hotel o complejo",
+        "<small>En, sobre o cerca de</small> Una cabaña remota",
+        "<small>En, sobre o cerca de</small> Una casa o mansión",
+        "<small>En, sobre o cerca de</small> Un bloque de apartamentos",
+        "<small>En, sobre o cerca de</small> Una sala de hospital"
+      ],
+      [
+        "<small>Mientras lidian con</small> Una entrega confundida",
+        "<small>Mientras lidian con</small> Un testigo o evidencia",
+        "<small>Mientras lidian con</small> Un percance mágico",
+        "<small>Mientras lidian con</small> Un reno perdido",
+        "<small>Mientras lidian con</small> Un cambio de dirección",
+        "<small>Mientras lidian con</small> Un avaro Scrooge"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>Los ayudantes son llamados para</small> Rescatar a Santa",
-      "<small>Los ayudantes son llamados para</small> Reparar el trineo",
-      "<small>Los ayudantes son llamados para</small> Dejar algunos regalos",
-      "<small>Los ayudantes son llamados para</small> Entregar carbón",
-      "<small>Los ayudantes son llamados para</small> Proteger a Santa",
-      "<small>Los ayudantes son llamados para</small> Ayudar a Santa"
-    ],
-    [
-      "<small>En, sobre o cerca de</small> Un orfanato",
-      "<small>En, sobre o cerca de</small> Un hotel o complejo",
-      "<small>En, sobre o cerca de</small> Una cabaña remota",
-      "<small>En, sobre o cerca de</small> Una casa o mansión",
-      "<small>En, sobre o cerca de</small> Un bloque de apartamentos",
-      "<small>En, sobre o cerca de</small> Una sala de hospital"
-    ],
-    [
-      "<small>Mientras lidian con</small> Una entrega confundida",
-      "<small>Mientras lidian con</small> Un testigo o evidencia",
-      "<small>Mientras lidian con</small> Un percance mágico",
-      "<small>Mientras lidian con</small> Un reno perdido",
-      "<small>Mientras lidian con</small> Un cambio de dirección",
-      "<small>Mientras lidian con</small> Un avaro Scrooge"
-    ]
-  ]
-},
+  },
   chrome_shells_neon_streets: {
-  title: "Chrome Shells & Neon Streets",
-  en: [
-    [
-      "<small>The crew must</small> Escort or deliver",
-      "<small>The crew must</small> Exchange or trade",
-      "<small>The crew must</small> Blow up",
-      "<small>The crew must</small> Kill or sabotage",
-      "<small>The crew must</small> Kidnap or steal",
-      "<small>The crew must</small> Frame or plant"
+    title: "Chrome Shells & Neon Streets",
+    en: [
+      [
+        "<small>The crew must</small> Escort or deliver",
+        "<small>The crew must</small> Exchange or trade",
+        "<small>The crew must</small> Blow up",
+        "<small>The crew must</small> Kill or sabotage",
+        "<small>The crew must</small> Kidnap or steal",
+        "<small>The crew must</small> Frame or plant"
+      ],
+      [
+        "<small>The</small> Data stick",
+        "<small>The</small> Mole, snitch or leaker",
+        "<small>The</small> Rich executive",
+        "<small>The</small> High-tech equipment",
+        "<small>The</small> Dangerous fugitive",
+        "<small>The</small> Drugs or medicine"
+      ],
+      [
+        "<small>From, to, inside, or near a</small> Home or hotel",
+        "<small>From, to, inside, or near a</small> Bar or nightclub",
+        "<small>From, to, inside, or near a</small> Repair shop",
+        "<small>From, to, inside, or near a</small> Secure facility",
+        "<small>From, to, inside, or near a</small> Medical lab",
+        "<small>From, to, inside, or near a</small> Corporate building"
+      ],
+      [
+        "<small>While dealing with</small> A local gang or cult",
+        "<small>While dealing with</small> Surveillance drones",
+        "<small>While dealing with</small> A freelance hitman",
+        "<small>While dealing with</small> A bounty hunter",
+        "<small>While dealing with</small> Corporate goons",
+        "<small>While dealing with</small> An old enemy or rival"
+      ]
     ],
-    [
-      "<small>The</small> Data stick",
-      "<small>The</small> Mole, snitch or leaker",
-      "<small>The</small> Rich executive",
-      "<small>The</small> High-tech equipment",
-      "<small>The</small> Dangerous fugitive",
-      "<small>The</small> Drugs or medicine"
-    ],
-    [
-      "<small>From, to, inside, or near a</small> Home or hotel",
-      "<small>From, to, inside, or near a</small> Bar or nightclub",
-      "<small>From, to, inside, or near a</small> Repair shop",
-      "<small>From, to, inside, or near a</small> Secure facility",
-      "<small>From, to, inside, or near a</small> Medical lab",
-      "<small>From, to, inside, or near a</small> Corporate building"
-    ],
-    [
-      "<small>While dealing with</small> A local gang or cult",
-      "<small>While dealing with</small> Surveillance drones",
-      "<small>While dealing with</small> A freelance hitman",
-      "<small>While dealing with</small> A bounty hunter",
-      "<small>While dealing with</small> Corporate goons",
-      "<small>While dealing with</small> An old enemy or rival"
+    es: [
+      [
+        "<small>El equipo debe</small> Escortar o entregar",
+        "<small>El equipo debe</small> Intercambiar o comerciar",
+        "<small>El equipo debe</small> Hacer explotar",
+        "<small>El equipo debe</small> Matar o sabotear",
+        "<small>El equipo debe</small> Secuestrar o robar",
+        "<small>El equipo debe</small> Incriminar o plantar pruebas"
+      ],
+      [
+        "<small>El/La</small> Unidad de datos",
+        "<small>El/La</small> Topo, soplón o filtrador",
+        "<small>El/La</small> Ejecutivo rico",
+        "<small>El/La</small> Equipo de alta tecnología",
+        "<small>El/La</small> Fugitivo peligroso",
+        "<small>El/La</small> Drogas o medicinas"
+      ],
+      [
+        "<small>Desde, hacia, dentro o cerca de</small> Una casa u hotel",
+        "<small>Desde, hacia, dentro o cerca de</small> Un bar o club nocturno",
+        "<small>Desde, hacia, dentro o cerca de</small> Un taller de reparaciones",
+        "<small>Desde, hacia, dentro o cerca de</small> Una instalación segura",
+        "<small>Desde, hacia, dentro o cerca de</small> Un laboratorio médico",
+        "<small>Desde, hacia, dentro o cerca de</small> Un edificio corporativo"
+      ],
+      [
+        "<small>Mientras lidian con</small> Una banda o culto local",
+        "<small>Mientras lidian con</small> Drones de vigilancia",
+        "<small>Mientras lidian con</small> Un asesino a sueldo independiente",
+        "<small>Mientras lidian con</small> Un cazarrecompensas",
+        "<small>Mientras lidian con</small> Matones corporativos",
+        "<small>Mientras lidian con</small> Un viejo enemigo o rival"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>El equipo debe</small> Escortar o entregar",
-      "<small>El equipo debe</small> Intercambiar o comerciar",
-      "<small>El equipo debe</small> Hacer explotar",
-      "<small>El equipo debe</small> Matar o sabotear",
-      "<small>El equipo debe</small> Secuestrar o robar",
-      "<small>El equipo debe</small> Incriminar o plantar pruebas"
-    ],
-    [
-      "<small>El/La</small> Unidad de datos",
-      "<small>El/La</small> Topo, soplón o filtrador",
-      "<small>El/La</small> Ejecutivo rico",
-      "<small>El/La</small> Equipo de alta tecnología",
-      "<small>El/La</small> Fugitivo peligroso",
-      "<small>El/La</small> Drogas o medicinas"
-    ],
-    [
-      "<small>Desde, hacia, dentro o cerca de</small> Una casa u hotel",
-      "<small>Desde, hacia, dentro o cerca de</small> Un bar o club nocturno",
-      "<small>Desde, hacia, dentro o cerca de</small> Un taller de reparaciones",
-      "<small>Desde, hacia, dentro o cerca de</small> Una instalación segura",
-      "<small>Desde, hacia, dentro o cerca de</small> Un laboratorio médico",
-      "<small>Desde, hacia, dentro o cerca de</small> Un edificio corporativo"
-    ],
-    [
-      "<small>Mientras lidian con</small> Una banda o culto local",
-      "<small>Mientras lidian con</small> Drones de vigilancia",
-      "<small>Mientras lidian con</small> Un asesino a sueldo independiente",
-      "<small>Mientras lidian con</small> Un cazarrecompensas",
-      "<small>Mientras lidian con</small> Matones corporativos",
-      "<small>Mientras lidian con</small> Un viejo enemigo o rival"
-    ]
-  ]
-},
+  },
   conniving_cat_burglars: {
-  title: "Conniving Cat Burglars",
-  en: [
-    [
-      "<small>The job involves</small> Simple larceny",
-      "<small>The job involves</small> An abduction",
-      "<small>The job involves</small> A jewellery heist",
-      "<small>The job involves</small> A prison break",
-      "<small>The job involves</small> An art robbery",
-      "<small>The job involves</small> A safe burglary"
+    title: "Conniving Cat Burglars",
+    en: [
+      [
+        "<small>The job involves</small> Simple larceny",
+        "<small>The job involves</small> An abduction",
+        "<small>The job involves</small> A jewellery heist",
+        "<small>The job involves</small> A prison break",
+        "<small>The job involves</small> An art robbery",
+        "<small>The job involves</small> A safe burglary"
+      ],
+      [
+        "<small>Which takes place at</small> A family house",
+        "<small>Which takes place at</small> An animal shelter",
+        "<small>Which takes place at</small> A diner or restaurant",
+        "<small>Which takes place at</small> A pet store",
+        "<small>Which takes place at</small> An office building",
+        "<small>Which takes place at</small> A museum or gallery"
+      ],
+      [
+        "<small>While dealing with</small> Distracting prey",
+        "<small>While dealing with</small> A yapping dog",
+        "<small>While dealing with</small> The cat catcher",
+        "<small>While dealing with</small> A long journey",
+        "<small>While dealing with</small> Rival conniving cats",
+        "<small>While dealing with</small> An injury or liability"
+      ]
     ],
-    [
-      "<small>Which takes place at</small> A family house",
-      "<small>Which takes place at</small> An animal shelter",
-      "<small>Which takes place at</small> A diner or restaurant",
-      "<small>Which takes place at</small> A pet store",
-      "<small>Which takes place at</small> An office building",
-      "<small>Which takes place at</small> A museum or gallery"
-    ],
-    [
-      "<small>While dealing with</small> Distracting prey",
-      "<small>While dealing with</small> A yapping dog",
-      "<small>While dealing with</small> The cat catcher",
-      "<small>While dealing with</small> A long journey",
-      "<small>While dealing with</small> Rival conniving cats",
-      "<small>While dealing with</small> An injury or liability"
+    es: [
+      [
+        "<small>El trabajo implica</small> Un hurto simple",
+        "<small>El trabajo implica</small> Un secuestro",
+        "<small>El trabajo implica</small> El robo de una joyería",
+        "<small>El trabajo implica</small> Una fuga de prisión",
+        "<small>El trabajo implica</small> El robo de una obra de arte",
+        "<small>El trabajo implica</small> El robo de una caja fuerte"
+      ],
+      [
+        "<small>Que tiene lugar en</small> Una casa familiar",
+        "<small>Que tiene lugar en</small> Un refugio de animales",
+        "<small>Que tiene lugar en</small> Una cafetería o restaurante",
+        "<small>Que tiene lugar en</small> Una tienda de mascotas",
+        "<small>Que tiene lugar en</small> Un edificio de oficinas",
+        "<small>Que tiene lugar en</small> Un museo o galería"
+      ],
+      [
+        "<small>Mientras lidian con</small> Presas que distraen",
+        "<small>Mientras lidian con</small> Un perro ladrador",
+        "<small>Mientras lidian con</small> El lacerante (atrapa-gatos)",
+        "<small>Mientras lidian con</small> Un largo viaje",
+        "<small>Mientras lidian con</small> Gatos rivales confabuladores",
+        "<small>Mientras lidian con</small> Una lesión o inconveniente"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>El trabajo implica</small> Un hurto simple",
-      "<small>El trabajo implica</small> Un secuestro",
-      "<small>El trabajo implica</small> El robo de una joyería",
-      "<small>El trabajo implica</small> Una fuga de prisión",
-      "<small>El trabajo implica</small> El robo de una obra de arte",
-      "<small>El trabajo implica</small> El robo de una caja fuerte"
-    ],
-    [
-      "<small>Que tiene lugar en</small> Una casa familiar",
-      "<small>Que tiene lugar en</small> Un refugio de animales",
-      "<small>Que tiene lugar en</small> Una cafetería o restaurante",
-      "<small>Que tiene lugar en</small> Una tienda de mascotas",
-      "<small>Que tiene lugar en</small> Un edificio de oficinas",
-      "<small>Que tiene lugar en</small> Un museo o galería"
-    ],
-    [
-      "<small>Mientras lidian con</small> Presas que distraen",
-      "<small>Mientras lidian con</small> Un perro ladrador",
-      "<small>Mientras lidian con</small> El lacerante (atrapa-gatos)",
-      "<small>Mientras lidian con</small> Un largo viaje",
-      "<small>Mientras lidian con</small> Gatos rivales confabuladores",
-      "<small>Mientras lidian con</small> Una lesión o inconveniente"
-    ]
-  ]
-},
+  },
   deep_trouble_oldport_bay: {
-  title: "Deep Trouble in Oldport Bay",
-  en: [
-    [
-      "<small>The survivors must</small> Deal with a monster",
-      "<small>The survivors must</small> Gather supplies",
-      "<small>The survivors must</small> Defend the building",
-      "<small>The survivors must</small> Aid other residents",
-      "<small>The survivors must</small> Search for something",
-      "<small>The survivors must</small> Repair something"
+    title: "Deep Trouble in Oldport Bay",
+    en: [
+      [
+        "<small>The survivors must</small> Deal with a monster",
+        "<small>The survivors must</small> Gather supplies",
+        "<small>The survivors must</small> Defend the building",
+        "<small>The survivors must</small> Aid other residents",
+        "<small>The survivors must</small> Search for something",
+        "<small>The survivors must</small> Repair something"
+      ],
+      [
+        "<small>From, on, or inside</small> The flooded cellar",
+        "<small>From, on, or inside</small> Behind a locked door",
+        "<small>From, on, or inside</small> The mechanical room",
+        "<small>From, on, or inside</small> Someone’s apartment",
+        "<small>From, on, or inside</small> The roof garden",
+        "<small>From, on, or inside</small> A ground-floor shop"
+      ],
+      [
+        "<small>While dealing with</small> Monsters inside",
+        "<small>While dealing with</small> Terrified residents",
+        "<small>While dealing with</small> The “thing” outside",
+        "<small>While dealing with</small> Desperate survivors",
+        "<small>While dealing with</small> A mutating resident",
+        "<small>While dealing with</small> The black obelisk"
+      ]
     ],
-    [
-      "<small>From, on, or inside</small> The flooded cellar",
-      "<small>From, on, or inside</small> Behind a locked door",
-      "<small>From, on, or inside</small> The mechanical room",
-      "<small>From, on, or inside</small> Someone’s apartment",
-      "<small>From, on, or inside</small> The roof garden",
-      "<small>From, on, or inside</small> A ground-floor shop"
-    ],
-    [
-      "<small>While dealing with</small> Monsters inside",
-      "<small>While dealing with</small> Terrified residents",
-      "<small>While dealing with</small> The “thing” outside",
-      "<small>While dealing with</small> Desperate survivors",
-      "<small>While dealing with</small> A mutating resident",
-      "<small>While dealing with</small> The black obelisk"
+    es: [
+      [
+        "<small>Los supervivientes deben</small> Lidiar con un monstruo",
+        "<small>Los supervivientes deben</small> Reunir suministros",
+        "<small>Los supervivientes deben</small> Defender el edificio",
+        "<small>Los supervivientes deben</small> Ayudar a otros residentes",
+        "<small>Los supervivientes deben</small> Buscar algo",
+        "<small>Los supervivientes deben</small> Reparar algo"
+      ],
+      [
+        "<small>Desde, en o dentro de</small> El sótano inundado",
+        "<small>Desde, en o dentro de</small> Detrás de una puerta cerrada",
+        "<small>Desde, en o dentro de</small> La sala de máquinas",
+        "<small>Desde, en o dentro de</small> El apartamento de alguien",
+        "<small>Desde, en o dentro de</small> El jardín de la azotea",
+        "<small>Desde, en o dentro de</small> Una tienda de la planta baja"
+      ],
+      [
+        "<small>Mientras lidian con</small> Monstruos en el interior",
+        "<small>Mientras lidian con</small> Residentes aterrorizados",
+        "<small>Mientras lidian con</small> La “cosa” de afuera",
+        "<small>Mientras lidian con</small> Supervivientes desesperados",
+        "<small>Mientras lidian con</small> Un residente mutando",
+        "<small>Mientras lidian con</small> El obelisco negro"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>Los supervivientes deben</small> Lidiar con un monstruo",
-      "<small>Los supervivientes deben</small> Reunir suministros",
-      "<small>Los supervivientes deben</small> Defender el edificio",
-      "<small>Los supervivientes deben</small> Ayudar a otros residentes",
-      "<small>Los supervivientes deben</small> Buscar algo",
-      "<small>Los supervivientes deben</small> Reparar algo"
-    ],
-    [
-      "<small>Desde, en o dentro de</small> El sótano inundado",
-      "<small>Desde, en o dentro de</small> Detrás de una puerta cerrada",
-      "<small>Desde, en o dentro de</small> La sala de máquinas",
-      "<small>Desde, en o dentro de</small> El apartamento de alguien",
-      "<small>Desde, en o dentro de</small> El jardín de la azotea",
-      "<small>Desde, en o dentro de</small> Una tienda de la planta baja"
-    ],
-    [
-      "<small>Mientras lidian con</small> Monstruos en el interior",
-      "<small>Mientras lidian con</small> Residentes aterrorizados",
-      "<small>Mientras lidian con</small> La “cosa” de afuera",
-      "<small>Mientras lidian con</small> Supervivientes desesperados",
-      "<small>Mientras lidian con</small> Un residente mutando",
-      "<small>Mientras lidian con</small> El obelisco negro"
-    ]
-  ]
-},
+  },
   eldritch_apocalypse: {
-  title: "Eldritch Apocalypse",
-  en: [
-    [
-      "<small>The apocalypse is started by</small> An occult ritual",
-      "<small>The apocalypse is started by</small> A careless mistake",
-      "<small>The apocalypse is started by</small> An ancient artifact",
-      "<small>The apocalypse is started by</small> A supernatural virus",
-      "<small>The apocalypse is started by</small> Unworldly invaders",
-      "<small>The apocalypse is started by</small> A celestial event"
+    title: "Eldritch Apocalypse",
+    en: [
+      [
+        "<small>The apocalypse is started by</small> An occult ritual",
+        "<small>The apocalypse is started by</small> A careless mistake",
+        "<small>The apocalypse is started by</small> An ancient artifact",
+        "<small>The apocalypse is started by</small> A supernatural virus",
+        "<small>The apocalypse is started by</small> Unworldly invaders",
+        "<small>The apocalypse is started by</small> A celestial event"
+      ],
+      [
+        "<small>And events begin at, in, or near</small> A museum or gallery",
+        "<small>And events begin at, in, or near</small> The heart of the city",
+        "<small>And events begin at, in, or near</small> A filming location",
+        "<small>And events begin at, in, or near</small> A famous building",
+        "<small>And events begin at, in, or near</small> An underground area",
+        "<small>And events begin at, in, or near</small> A mansion or villa"
+      ],
+      [
+        "<small>But things are also complicated by</small> Monstrous minions",
+        "<small>But things are also complicated by</small> Infiltration/takeover",
+        "<small>But things are also complicated by</small> Lingering danger",
+        "<small>But things are also complicated by</small> Overzealous cultists",
+        "<small>But things are also complicated by</small> An uneasy alliance",
+        "<small>But things are also complicated by</small> Collateral damage"
+      ]
     ],
-    [
-      "<small>And events begin at, in, or near</small> A museum or gallery",
-      "<small>And events begin at, in, or near</small> The heart of the city",
-      "<small>And events begin at, in, or near</small> A filming location",
-      "<small>And events begin at, in, or near</small> A famous building",
-      "<small>And events begin at, in, or near</small> An underground area",
-      "<small>And events begin at, in, or near</small> A mansion or villa"
-    ],
-    [
-      "<small>But things are also complicated by</small> Monstrous minions",
-      "<small>But things are also complicated by</small> Infiltration/takeover",
-      "<small>But things are also complicated by</small> Lingering danger",
-      "<small>But things are also complicated by</small> Overzealous cultists",
-      "<small>But things are also complicated by</small> An uneasy alliance",
-      "<small>But things are also complicated by</small> Collateral damage"
+    es: [
+      [
+        "<small>El apocalipsis comienza por</small> Un ritual ocultista",
+        "<small>El apocalipsis comienza por</small> Un error por descuido",
+        "<small>El apocalipsis comienza por</small> Un artefacto antiguo",
+        "<small>El apocalipsis comienza por</small> Un virus sobrenatural",
+        "<small>El apocalipsis comienza por</small> Invasores de otro mundo",
+        "<small>El apocalipsis comienza por</small> Un evento celestial"
+      ],
+      [
+        "<small>Y los eventos empiezan en o cerca de</small> Un museo o galería",
+        "<small>Y los eventos empiezan en o cerca de</small> El corazón de la ciudad",
+        "<small>Y los eventos empiezan en o cerca de</small> Un set de rodaje",
+        "<small>Y los eventos empiezan en o cerca de</small> Un edificio famoso",
+        "<small>Y los eventos empiezan en o cerca de</small> Una zona subterránea",
+        "<small>Y los eventos empiezan en o cerca de</small> Una mansión o villa"
+      ],
+      [
+        "<small>Pero las cosas se complican por</small> Esbirros monstruosos",
+        "<small>Pero las cosas se complican por</small> Infiltración o toma de poder",
+        "<small>Pero las cosas se complican por</small> Un peligro persistente",
+        "<small>Pero las cosas se complican por</small> Cultistas fanáticos",
+        "<small>Pero las cosas se complican por</small> Una alianza incómoda",
+        "<small>Pero las cosas se complican por</small> Daño colateral"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>El apocalipsis comienza por</small> Un ritual ocultista",
-      "<small>El apocalipsis comienza por</small> Un error por descuido",
-      "<small>El apocalipsis comienza por</small> Un artefacto antiguo",
-      "<small>El apocalipsis comienza por</small> Un virus sobrenatural",
-      "<small>El apocalipsis comienza por</small> Invasores de otro mundo",
-      "<small>El apocalipsis comienza por</small> Un evento celestial"
-    ],
-    [
-      "<small>Y los eventos empiezan en o cerca de</small> Un museo o galería",
-      "<small>Y los eventos empiezan en o cerca de</small> El corazón de la ciudad",
-      "<small>Y los eventos empiezan en o cerca de</small> Un set de rodaje",
-      "<small>Y los eventos empiezan en o cerca de</small> Un edificio famoso",
-      "<small>Y los eventos empiezan en o cerca de</small> Una zona subterránea",
-      "<small>Y los eventos empiezan en o cerca de</small> Una mansión o villa"
-    ],
-    [
-      "<small>Pero las cosas se complican por</small> Esbirros monstruosos",
-      "<small>Pero las cosas se complican por</small> Infiltración o toma de poder",
-      "<small>Pero las cosas se complican por</small> Un peligro persistente",
-      "<small>Pero las cosas se complican por</small> Cultistas fanáticos",
-      "<small>Pero las cosas se complican por</small> Una alianza incómoda",
-      "<small>Pero las cosas se complican por</small> Daño colateral"
-    ]
-  ]
-},
+  },
   eldritch_cultists: {
-  title: "Eldritch Cultists",
-  en: [
-    [
-      "<small>The cultists must</small> Perform a ritual",
-      "<small>The cultists must</small> Eliminate a threat",
-      "<small>The cultists must</small> Recruit an asset",
-      "<small>The cultists must</small> Destroy evidence",
-      "<small>The cultists must</small> Retrieve an artifact",
-      "<small>The cultists must</small> Infiltrate a faction"
+    title: "Eldritch Cultists",
+    en: [
+      [
+        "<small>The cultists must</small> Perform a ritual",
+        "<small>The cultists must</small> Eliminate a threat",
+        "<small>The cultists must</small> Recruit an asset",
+        "<small>The cultists must</small> Destroy evidence",
+        "<small>The cultists must</small> Retrieve an artifact",
+        "<small>The cultists must</small> Infiltrate a faction"
+      ],
+      [
+        "<small>Which leads them to a</small> Park or secluded area",
+        "<small>Which leads them to a</small> Library or museum",
+        "<small>Which leads them to a</small> Mansion or villa",
+        "<small>Which leads them to a</small> Sewer or subway",
+        "<small>Which leads them to a</small> Bar or nightclub",
+        "<small>Which leads them to a</small> Church or shrine"
+      ],
+      [
+        "<small>But they must also deal with</small> Paranormal agents",
+        "<small>But they must also deal with</small> A heist or jailbreak",
+        "<small>But they must also deal with</small> Unwanted attention",
+        "<small>But they must also deal with</small> A violent street gang",
+        "<small>But they must also deal with</small> Zealous witch hunters",
+        "<small>But they must also deal with</small> A rival cult or cabal"
+      ]
     ],
-    [
-      "<small>Which leads them to a</small> Park or secluded area",
-      "<small>Which leads them to a</small> Library or museum",
-      "<small>Which leads them to a</small> Mansion or villa",
-      "<small>Which leads them to a</small> Sewer or subway",
-      "<small>Which leads them to a</small> Bar or nightclub",
-      "<small>Which leads them to a</small> Church or shrine"
-    ],
-    [
-      "<small>But they must also deal with</small> Paranormal agents",
-      "<small>But they must also deal with</small> A heist or jailbreak",
-      "<small>But they must also deal with</small> Unwanted attention",
-      "<small>But they must also deal with</small> A violent street gang",
-      "<small>But they must also deal with</small> Zealous witch hunters",
-      "<small>But they must also deal with</small> A rival cult or cabal"
+    es: [
+      [
+        "<small>Los cultistas deben</small> Realizar un ritual",
+        "<small>Los cultistas deben</small> Eliminar una amenaza",
+        "<small>Los cultistas deben</small> Reclutar un activo",
+        "<small>Los cultistas deben</small> Destruir evidencia",
+        "<small>Los cultistas deben</small> Recuperar un artefacto",
+        "<small>Los cultistas deben</small> Infiltrarse en una facción"
+      ],
+      [
+        "<small>Lo que los lleva a</small> Un parque o área aislada",
+        "<small>Lo que los lleva a</small> Una biblioteca o museo",
+        "<small>Lo que los lleva a</small> Una mansión o villa",
+        "<small>Lo que los lleva a</small> Una alcantarilla o metro",
+        "<small>Lo que los lleva a</small> Un bar o club nocturno",
+        "<small>Lo que los lleva a</small> Una iglesia o santuario"
+      ],
+      [
+        "<small>Pero también deben lidiar con</small> Agentes paranormales",
+        "<small>Pero también deben lidiar con</small> Un robo o fuga de prisión",
+        "<small>Pero también deben lidiar con</small> Atención no deseada",
+        "<small>Pero también deben lidiar con</small> Una violenta banda callejera",
+        "<small>Pero también deben lidiar con</small> Cazadores de brujas fanáticos",
+        "<small>Pero también deben lidiar con</small> Un culto o cábala rival"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>Los cultistas deben</small> Realizar un ritual",
-      "<small>Los cultistas deben</small> Eliminar una amenaza",
-      "<small>Los cultistas deben</small> Reclutar un activo",
-      "<small>Los cultistas deben</small> Destruir evidencia",
-      "<small>Los cultistas deben</small> Recuperar un artefacto",
-      "<small>Los cultistas deben</small> Infiltrarse en una facción"
+  },
+  eldritch_detectives: {
+    title: "Eldritch Detectives",
+    en: [
+      [
+        "<small>The detectives investigate</small> A mysterious death",
+        "<small>The detectives investigate</small> Ghostly sightings",
+        "<small>The detectives investigate</small> A missing person",
+        "<small>The detectives investigate</small> An occult ritual",
+        "<small>The detectives investigate</small> A terrible curse",
+        "<small>The detectives investigate</small> An inexplicable event"
+      ],
+      [
+        "<small>On, in, or near</small> A passenger train",
+        "<small>On, in, or near</small> A house or hotel",
+        "<small>On, in, or near</small> A vacant building",
+        "<small>On, in, or near</small> The wilderness",
+        "<small>On, in, or near</small> A hospital/care home",
+        "<small>On, in, or near</small> A church/graveyard"
+      ],
+      [
+        "<small>While dealing with</small> An aggressive foe",
+        "<small>While dealing with</small> Nosy officials",
+        "<small>While dealing with</small> Rival investigators",
+        "<small>While dealing with</small> A tenacious reporter",
+        "<small>While dealing with</small> A dark revelation",
+        "<small>While dealing with</small> Unexpected danger"
+      ]
     ],
-    [
-      "<small>Lo que los lleva a</small> Un parque o área aislada",
-      "<small>Lo que los lleva a</small> Una biblioteca o museo",
-      "<small>Lo que los lleva a</small> Una mansión o villa",
-      "<small>Lo que los lleva a</small> Una alcantarilla o metro",
-      "<small>Lo que los lleva a</small> Un bar o club nocturno",
-      "<small>Lo que los lleva a</small> Una iglesia o santuario"
-    ],
-    [
-      "<small>Pero también deben lidiar con</small> Agentes paranormales",
-      "<small>Pero también deben lidiar con</small> Un robo o fuga de prisión",
-      "<small>Pero también deben lidiar con</small> Atención no deseada",
-      "<small>Pero también deben lidiar con</small> Una violenta banda callejera",
-      "<small>Pero también deben lidiar con</small> Cazadores de brujas fanáticos",
-      "<small>Pero también deben lidiar con</small> Un culto o cábala rival"
+    es: [
+      [
+        "<small>Los detectives investigan</small> Una muerte misteriosa",
+        "<small>Los detectives investigan</small> Avistamientos fantasmales",
+        "<small>Los detectives investigan</small> Una persona desaparecida",
+        "<small>Los detectives investigan</small> Un ritual ocultista",
+        "<small>Los detectives investigan</small> Una terrible maldición",
+        "<small>Los detectives investigan</small> Un evento inexplicable"
+      ],
+      [
+        "<small>En, sobre o cerca de</small> Un tren de pasajeros",
+        "<small>En, sobre o cerca de</small> Una casa u hotel",
+        "<small>En, sobre o cerca de</small> Un edificio vacío",
+        "<small>En, sobre o cerca de</small> El desierto o naturaleza",
+        "<small>En, sobre o cerca de</small> Un hospital o residencia",
+        "<small>En, sobre o cerca de</small> Una iglesia o cementerio"
+      ],
+      [
+        "<small>Mientras lidian con</small> Un enemigo agresivo",
+        "<small>Mientras lidian con</small> Oficiales entrometidos",
+        "<small>Mientras lidian con</small> Investigadores rivales",
+        "<small>Mientras lidian con</small> Un reportero tenaz",
+        "<small>Mientras lidian con</small> Una revelación oscura",
+        "<small>Mientras lidian con</small> Peligro inesperado"
+      ]
     ]
-  ]
-},
-eldritch_detectives: {
-  title: "Eldritch Detectives",
-  en: [
-    [
-      "<small>The detectives investigate</small> A mysterious death",
-      "<small>The detectives investigate</small> Ghostly sightings",
-      "<small>The detectives investigate</small> A missing person",
-      "<small>The detectives investigate</small> An occult ritual",
-      "<small>The detectives investigate</small> A terrible curse",
-      "<small>The detectives investigate</small> An inexplicable event"
-    ],
-    [
-      "<small>On, in, or near</small> A passenger train",
-      "<small>On, in, or near</small> A house or hotel",
-      "<small>On, in, or near</small> A vacant building",
-      "<small>On, in, or near</small> The wilderness",
-      "<small>On, in, or near</small> A hospital/care home",
-      "<small>On, in, or near</small> A church/graveyard"
-    ],
-    [
-      "<small>While dealing with</small> An aggressive foe",
-      "<small>While dealing with</small> Nosy officials",
-      "<small>While dealing with</small> Rival investigators",
-      "<small>While dealing with</small> A tenacious reporter",
-      "<small>While dealing with</small> A dark revelation",
-      "<small>While dealing with</small> Unexpected danger"
-    ]
-  ],
-  es: [
-    [
-      "<small>Los detectives investigan</small> Una muerte misteriosa",
-      "<small>Los detectives investigan</small> Avistamientos fantasmales",
-      "<small>Los detectives investigan</small> Una persona desaparecida",
-      "<small>Los detectives investigan</small> Un ritual ocultista",
-      "<small>Los detectives investigan</small> Una terrible maldición",
-      "<small>Los detectives investigan</small> Un evento inexplicable"
-    ],
-    [
-      "<small>En, sobre o cerca de</small> Un tren de pasajeros",
-      "<small>En, sobre o cerca de</small> Una casa u hotel",
-      "<small>En, sobre o cerca de</small> Un edificio vacío",
-      "<small>En, sobre o cerca de</small> El desierto o naturaleza",
-      "<small>En, sobre o cerca de</small> Un hospital o residencia",
-      "<small>En, sobre o cerca de</small> Una iglesia o cementerio"
-    ],
-    [
-      "<small>Mientras lidian con</small> Un enemigo agresivo",
-      "<small>Mientras lidian con</small> Oficiales entrometidos",
-      "<small>Mientras lidian con</small> Investigadores rivales",
-      "<small>Mientras lidian con</small> Un reportero tenaz",
-      "<small>Mientras lidian con</small> Una revelación oscura",
-      "<small>Mientras lidian con</small> Peligro inesperado"
-    ]
-  ]
-},
+  },
   firefighters: {
-  title: "Firefighters",
-  en: [
-    [
-      "<small>The firefighters must deal with a</small> Dangerous fire",
-      "<small>The firefighters must deal with a</small> Trapped civilian",
-      "<small>The firefighters must deal with a</small> Traffic accident",
-      "<small>The firefighters must deal with a</small> Flood or water leak",
-      "<small>The firefighters must deal with a</small> Hazardous waste spill",
-      "<small>The firefighters must deal with a</small> Structural collapse"
+    title: "Firefighters",
+    en: [
+      [
+        "<small>The firefighters must deal with a</small> Dangerous fire",
+        "<small>The firefighters must deal with a</small> Trapped civilian",
+        "<small>The firefighters must deal with a</small> Traffic accident",
+        "<small>The firefighters must deal with a</small> Flood or water leak",
+        "<small>The firefighters must deal with a</small> Hazardous waste spill",
+        "<small>The firefighters must deal with a</small> Structural collapse"
+      ],
+      [
+        "<small>From inside or near</small> A warehouse/factory",
+        "<small>From inside or near</small> An apartment block",
+        "<small>From inside or near</small> A busy street",
+        "<small>From inside or near</small> An office building",
+        "<small>From inside or near</small> A wooded park",
+        "<small>From inside or near</small> A hospital/care home"
+      ],
+      [
+        "<small>While also needing to</small> Rescue a person",
+        "<small>While also needing to</small> Rescue an animal",
+        "<small>While also needing to</small> Do lots of climbing",
+        "<small>While also needing to</small> Help scared citizens",
+        "<small>While also needing to</small> Aid an injured person",
+        "<small>While also needing to</small> Deal with the public"
+      ]
     ],
-    [
-      "<small>From inside or near</small> A warehouse/factory",
-      "<small>From inside or near</small> An apartment block",
-      "<small>From inside or near</small> A busy street",
-      "<small>From inside or near</small> An office building",
-      "<small>From inside or near</small> A wooded park",
-      "<small>From inside or near</small> A hospital/care home"
-    ],
-    [
-      "<small>While also needing to</small> Rescue a person",
-      "<small>While also needing to</small> Rescue an animal",
-      "<small>While also needing to</small> Do lots of climbing",
-      "<small>While also needing to</small> Help scared citizens",
-      "<small>While also needing to</small> Aid an injured person",
-      "<small>While also needing to</small> Deal with the public"
+    es: [
+      [
+        "<small>Los bomberos deben lidiar con un</small> Incendio peligroso",
+        "<small>Los bomberos deben lidiar con un</small> Civil atrapado",
+        "<small>Los bomberos deben lidiar con un</small> Accidente de tráfico",
+        "<small>Los bomberos deben lidiar con un</small> Inundación o fuga de agua",
+        "<small>Los bomberos deben lidiar con un</small> Derrame de residuos peligrosos",
+        "<small>Los bomberos deben lidiar con un</small> Colapso estructural"
+      ],
+      [
+        "<small>Desde dentro o cerca de</small> Un almacén o fábrica",
+        "<small>Desde dentro o cerca de</small> Un bloque de apartamentos",
+        "<small>Desde dentro o cerca de</small> Una calle concurrida",
+        "<small>Desde dentro o cerca de</small> Un edificio de oficinas",
+        "<small>Desde dentro o cerca de</small> Un parque arbolado",
+        "<small>Desde dentro o cerca de</small> Un hospital o residencia"
+      ],
+      [
+        "<small>Mientras también necesitan</small> Rescatar a una persona",
+        "<small>Mientras también necesitan</small> Rescatar a un animal",
+        "<small>Mientras también necesitan</small> Escalar mucho",
+        "<small>Mientras también necesitan</small> Ayudar a ciudadanos asustados",
+        "<small>Mientras también necesitan</small> Auxiliar a una persona herida",
+        "<small>Mientras también necesitan</small> Lidiar con el público"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>Los bomberos deben lidiar con un</small> Incendio peligroso",
-      "<small>Los bomberos deben lidiar con un</small> Civil atrapado",
-      "<small>Los bomberos deben lidiar con un</small> Accidente de tráfico",
-      "<small>Los bomberos deben lidiar con un</small> Inundación o fuga de agua",
-      "<small>Los bomberos deben lidiar con un</small> Derrame de residuos peligrosos",
-      "<small>Los bomberos deben lidiar con un</small> Colapso estructural"
-    ],
-    [
-      "<small>Desde dentro o cerca de</small> Un almacén o fábrica",
-      "<small>Desde dentro o cerca de</small> Un bloque de apartamentos",
-      "<small>Desde dentro o cerca de</small> Una calle concurrida",
-      "<small>Desde dentro o cerca de</small> Un edificio de oficinas",
-      "<small>Desde dentro o cerca de</small> Un parque arbolado",
-      "<small>Desde dentro o cerca de</small> Un hospital o residencia"
-    ],
-    [
-      "<small>Mientras también necesitan</small> Rescatar a una persona",
-      "<small>Mientras también necesitan</small> Rescatar a un animal",
-      "<small>Mientras también necesitan</small> Escalar mucho",
-      "<small>Mientras también necesitan</small> Ayudar a ciudadanos asustados",
-      "<small>Mientras también necesitan</small> Auxiliar a una persona herida",
-      "<small>Mientras también necesitan</small> Lidiar con el público"
-    ]
-  ]
-},
+  },
   ghost_banishers: {
-  title: "Goblin Gangsters",
-  en: [
-    [
-      "<small>The team investigates a</small> Violent poltergeist",
-      "<small>The team investigates a</small> Terrifying apparition",
-      "<small>The team investigates a</small> Vengeful spirit",
-      "<small>The team investigates a</small> Suspected possession",
-      "<small>The team investigates a</small> Monstrous entity",
-      "<small>The team investigates a</small> Phantom vehicle"
+    title: "Goblin Gangsters",
+    en: [
+      [
+        "<small>The team investigates a</small> Violent poltergeist",
+        "<small>The team investigates a</small> Terrifying apparition",
+        "<small>The team investigates a</small> Vengeful spirit",
+        "<small>The team investigates a</small> Suspected possession",
+        "<small>The team investigates a</small> Monstrous entity",
+        "<small>The team investigates a</small> Phantom vehicle"
+      ],
+      [
+        "<small>Which leads them to a</small> Public library",
+        "<small>Which leads them to a</small> Sewer or subway",
+        "<small>Which leads them to a</small> High-rise building",
+        "<small>Which leads them to a</small> Restaurant or diner",
+        "<small>Which leads them to a</small> Hospital or care home",
+        "<small>Which leads them to a</small> Cinema or stadium"
+      ],
+      [
+        "<small>But they must also deal with</small> Local politics",
+        "<small>But they must also deal with</small> A financial dispute",
+        "<small>But they must also deal with</small> Technical issues",
+        "<small>But they must also deal with</small> A setup or betrayal",
+        "<small>But they must also deal with</small> Collateral damage",
+        "<small>But they must also deal with</small> Rival ghost hunters"
+      ]
     ],
-    [
-      "<small>Which leads them to a</small> Public library",
-      "<small>Which leads them to a</small> Sewer or subway",
-      "<small>Which leads them to a</small> High-rise building",
-      "<small>Which leads them to a</small> Restaurant or diner",
-      "<small>Which leads them to a</small> Hospital or care home",
-      "<small>Which leads them to a</small> Cinema or stadium"
-    ],
-    [
-      "<small>But they must also deal with</small> Local politics",
-      "<small>But they must also deal with</small> A financial dispute",
-      "<small>But they must also deal with</small> Technical issues",
-      "<small>But they must also deal with</small> A setup or betrayal",
-      "<small>But they must also deal with</small> Collateral damage",
-      "<small>But they must also deal with</small> Rival ghost hunters"
+    es: [
+      [
+        "<small>El equipo investiga un</small> Poltergeist violento",
+        "<small>El equipo investiga una</small> Aparición terrorífica",
+        "<small>El equipo investiga un</small> Espíritu vengativo",
+        "<small>El equipo investiga una</small> Sospecha de posesión",
+        "<small>El equipo investiga una</small> Entidad monstruosa",
+        "<small>El equipo investiga un</small> Vehículo fantasma"
+      ],
+      [
+        "<small>Lo que los lleva a una</small> Biblioteca pública",
+        "<small>Lo que los lleva a una</small> Alcantarilla o metro",
+        "<small>Lo que los lleva a un</small> Edificio de gran altura",
+        "<small>Lo que los lleva a un</small> Restaurante o cafetería",
+        "<small>Lo que los lleva a un</small> Hospital o residencia",
+        "<small>Lo que los lleva a un</small> Cine o estadio"
+      ],
+      [
+        "<small>Pero también deben lidiar con</small> Política local",
+        "<small>Pero también deben lidiar con</small> Una disputa financiera",
+        "<small>Pero también deben lidiar con</small> Problemas técnicos",
+        "<small>Pero también deben lidiar con</small> Una trampa o traición",
+        "<small>Pero también deben lidiar con</small> Daño colateral",
+        "<small>Pero también deben lidiar con</small> Cazafantasmas rivales"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>El equipo investiga un</small> Poltergeist violento",
-      "<small>El equipo investiga una</small> Aparición terrorífica",
-      "<small>El equipo investiga un</small> Espíritu vengativo",
-      "<small>El equipo investiga una</small> Sospecha de posesión",
-      "<small>El equipo investiga una</small> Entidad monstruosa",
-      "<small>El equipo investiga un</small> Vehículo fantasma"
-    ],
-    [
-      "<small>Lo que los lleva a una</small> Biblioteca pública",
-      "<small>Lo que los lleva a una</small> Alcantarilla o metro",
-      "<small>Lo que los lleva a un</small> Edificio de gran altura",
-      "<small>Lo que los lleva a un</small> Restaurante o cafetería",
-      "<small>Lo que los lleva a un</small> Hospital o residencia",
-      "<small>Lo que los lleva a un</small> Cine o estadio"
-    ],
-    [
-      "<small>Pero también deben lidiar con</small> Política local",
-      "<small>Pero también deben lidiar con</small> Una disputa financiera",
-      "<small>Pero también deben lidiar con</small> Problemas técnicos",
-      "<small>Pero también deben lidiar con</small> Una trampa o traición",
-      "<small>Pero también deben lidiar con</small> Daño colateral",
-      "<small>Pero también deben lidiar con</small> Cazafantasmas rivales"
-    ]
-  ]
-},
+  },
   goblin_gangsters_criminal: {
-  title: "Goblin Gangsters",
-  en: [
-    [
-      "<small>The gangsters must</small> Locate or discover",
-      "<small>The gangsters must</small> Kidnap or purchase",
-      "<small>The gangsters must</small> Extort or obtain",
-      "<small>The gangsters must</small> Murder or destroy",
-      "<small>The gangsters must</small> Rob or steal",
-      "<small>The gangsters must</small> Frame or plant"
+    title: "Goblin Gangsters",
+    en: [
+      [
+        "<small>The gangsters must</small> Locate or discover",
+        "<small>The gangsters must</small> Kidnap or purchase",
+        "<small>The gangsters must</small> Extort or obtain",
+        "<small>The gangsters must</small> Murder or destroy",
+        "<small>The gangsters must</small> Rob or steal",
+        "<small>The gangsters must</small> Frame or plant"
+      ],
+      [
+        "<small>The</small> Secret information",
+        "<small>The</small> Traitor or snitch",
+        "<small>The</small> Important person",
+        "<small>The</small> Mysterious civilian",
+        "<small>The</small> Undercover cop",
+        "<small>The</small> Drugs, guns, or cash"
+      ],
+      [
+        "<small>From, in, on, or near a</small> Tourist hotspot",
+        "<small>From, in, on, or near a</small> Diner or nightclub",
+        "<small>From, in, on, or near an</small> Amusement park",
+        "<small>From, in, on, or near a</small> Casino or bank",
+        "<small>From, in, on, or near a</small> High-rise building",
+        "<small>From, in, on, or near a</small> Business (a front?)"
+      ],
+      [
+        "<small>While dealing with</small> Rival criminals",
+        "<small>While dealing with</small> A nosy journalist",
+        "<small>While dealing with</small> The cops",
+        "<small>While dealing with</small> A natural disaster",
+        "<small>While dealing with</small> Meddling kids",
+        "<small>While dealing with</small> A fricking dragon!"
+      ]
     ],
-    [
-      "<small>The</small> Secret information",
-      "<small>The</small> Traitor or snitch",
-      "<small>The</small> Important person",
-      "<small>The</small> Mysterious civilian",
-      "<small>The</small> Undercover cop",
-      "<small>The</small> Drugs, guns, or cash"
-    ],
-    [
-      "<small>From, in, on, or near a</small> Tourist hotspot",
-      "<small>From, in, on, or near a</small> Diner or nightclub",
-      "<small>From, in, on, or near an</small> Amusement park",
-      "<small>From, in, on, or near a</small> Casino or bank",
-      "<small>From, in, on, or near a</small> High-rise building",
-      "<small>From, in, on, or near a</small> Business (a front?)"
-    ],
-    [
-      "<small>While dealing with</small> Rival criminals",
-      "<small>While dealing with</small> A nosy journalist",
-      "<small>While dealing with</small> The cops",
-      "<small>While dealing with</small> A natural disaster",
-      "<small>While dealing with</small> Meddling kids",
-      "<small>While dealing with</small> A fricking dragon!"
+    es: [
+      [
+        "<small>Los gánsteres deben</small> Localizar o descubrir",
+        "<small>Los gánsteres deben</small> Secuestrar o comprar",
+        "<small>Los gánsteres deben</small> Extorsionar u obtener",
+        "<small>Los gánsteres deben</small> Asesinar o destruir",
+        "<small>Los gánsteres deben</small> Atracar o robar",
+        "<small>Los gánsteres deben</small> Incriminar o plantar pruebas"
+      ],
+      [
+        "<small>El/La</small> Información secreta",
+        "<small>El/La</small> Traidor o soplón",
+        "<small>El/La</small> Persona importante",
+        "<small>El/La</small> Civil misterioso",
+        "<small>El/La</small> Policía encubierto",
+        "<small>El/La</small> Drogas, armas o dinero"
+      ],
+      [
+        "<small>Desde, en o cerca de</small> Un punto turístico",
+        "<small>Desde, en o cerca de</small> Una cafetería o club nocturno",
+        "<small>Desde, en o cerca de</small> Un parque de atracciones",
+        "<small>Desde, en o cerca de</small> Un casino o banco",
+        "<small>Desde, en o cerca de</small> Un edificio de gran altura",
+        "<small>Desde, en o cerca de</small> Un negocio (¿una tapadera?)"
+      ],
+      [
+        "<small>Mientras lidian con</small> Criminales rivales",
+        "<small>Mientras lidian con</small> Un periodista entrometido",
+        "<small>Mientras lidian con</small> La poli",
+        "<small>Mientras lidian con</small> Un desastre natural",
+        "<small>Mientras lidian con</small> Chavales entrometidos",
+        "<small>Mientras lidian con</small> ¡Un maldito dragón!"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>Los gánsteres deben</small> Localizar o descubrir",
-      "<small>Los gánsteres deben</small> Secuestrar o comprar",
-      "<small>Los gánsteres deben</small> Extorsionar u obtener",
-      "<small>Los gánsteres deben</small> Asesinar o destruir",
-      "<small>Los gánsteres deben</small> Atracar o robar",
-      "<small>Los gánsteres deben</small> Incriminar o plantar pruebas"
+  },
+  guardians_shadow_frontier: {
+    title: "Guardians of the Shadow Frontier",
+    en: [
+      [
+        "<small>The guardians need to</small> Hunt down a threat",
+        "<small>The guardians need to</small> Defend civilians",
+        "<small>The guardians need to</small> Investigate rumors",
+        "<small>The guardians need to</small> Protect a settlement",
+        "<small>The guardians need to</small> Examine a corpse",
+        "<small>The guardians need to</small> Resolve a dispute"
+      ],
+      [
+        "<small>From somewhere in or near</small> A small town",
+        "<small>From somewhere in or near</small> A river or pool",
+        "<small>From somewhere in or near</small> A forest region",
+        "<small>From somewhere in or near</small> A cave or mine",
+        "<small>From somewhere in or near</small> Rural farmlands",
+        "<small>From somewhere in or near</small> The border/veil"
+      ],
+      [
+        "<small>While dealing with</small> Frightened locals",
+        "<small>While dealing with</small> A traitor or turncoat",
+        "<small>While dealing with</small> A plot or power play",
+        "<small>While dealing with</small> An aggressive militia",
+        "<small>While dealing with</small> A personal grudge",
+        "<small>While dealing with</small> A rogue sorcerer"
+      ]
     ],
-    [
-      "<small>El/La</small> Información secreta",
-      "<small>El/La</small> Traidor o soplón",
-      "<small>El/La</small> Persona importante",
-      "<small>El/La</small> Civil misterioso",
-      "<small>El/La</small> Policía encubierto",
-      "<small>El/La</small> Drogas, armas o dinero"
-    ],
-    [
-      "<small>Desde, en o cerca de</small> Un punto turístico",
-      "<small>Desde, en o cerca de</small> Una cafetería o club nocturno",
-      "<small>Desde, en o cerca de</small> Un parque de atracciones",
-      "<small>Desde, en o cerca de</small> Un casino o banco",
-      "<small>Desde, en o cerca de</small> Un edificio de gran altura",
-      "<small>Desde, en o cerca de</small> Un negocio (¿una tapadera?)"
-    ],
-    [
-      "<small>Mientras lidian con</small> Criminales rivales",
-      "<small>Mientras lidian con</small> Un periodista entrometido",
-      "<small>Mientras lidian con</small> La poli",
-      "<small>Mientras lidian con</small> Un desastre natural",
-      "<small>Mientras lidian con</small> Chavales entrometidos",
-      "<small>Mientras lidian con</small> ¡Un maldito dragón!"
+    es: [
+      [
+        "<small>Los guardianes necesitan</small> Cazar una amenaza",
+        "<small>Los guardianes necesitan</small> Defender a los civiles",
+        "<small>Los guardianes necesitan</small> Investigar rumores",
+        "<small>Los guardianes necesitan</small> Proteger un asentamiento",
+        "<small>Los guardianes necesitan</small> Examinar un cadáver",
+        "<small>Los guardianes necesitan</small> Resolver una disputa"
+      ],
+      [
+        "<small>Desde algún lugar en o cerca de</small> Un pueblo pequeño",
+        "<small>Desde algún lugar en o cerca de</small> Un río o estanque",
+        "<small>Desde algún lugar en o cerca de</small> Una región forestal",
+        "<small>Desde algún lugar en o cerca de</small> Una cueva o mina",
+        "<small>Desde algún lugar en o cerca de</small> Tierras de cultivo rurales",
+        "<small>Desde algún lugar en o cerca de</small> La frontera o el velo"
+      ],
+      [
+        "<small>Mientras lidian con</small> Lugareños asustados",
+        "<small>Mientras lidian con</small> Un traidor o desertor",
+        "<small>Mientras lidian con</small> Un complot o lucha de poder",
+        "<small>Mientras lidian con</small> Una milicia agresiva",
+        "<small>Mientras lidian con</small> Un rencor personal",
+        "<small>Mientras lidian con</small> Un hechicero renegado"
+      ]
     ]
-  ]
-},
-guardians_shadow_frontier: {
-  title: "Guardians of the Shadow Frontier",
-  en: [
-    [
-      "<small>The guardians need to</small> Hunt down a threat",
-      "<small>The guardians need to</small> Defend civilians",
-      "<small>The guardians need to</small> Investigate rumors",
-      "<small>The guardians need to</small> Protect a settlement",
-      "<small>The guardians need to</small> Examine a corpse",
-      "<small>The guardians need to</small> Resolve a dispute"
-    ],
-    [
-      "<small>From somewhere in or near</small> A small town",
-      "<small>From somewhere in or near</small> A river or pool",
-      "<small>From somewhere in or near</small> A forest region",
-      "<small>From somewhere in or near</small> A cave or mine",
-      "<small>From somewhere in or near</small> Rural farmlands",
-      "<small>From somewhere in or near</small> The border/veil"
-    ],
-    [
-      "<small>While dealing with</small> Frightened locals",
-      "<small>While dealing with</small> A traitor or turncoat",
-      "<small>While dealing with</small> A plot or power play",
-      "<small>While dealing with</small> An aggressive militia",
-      "<small>While dealing with</small> A personal grudge",
-      "<small>While dealing with</small> A rogue sorcerer"
-    ]
-  ],
-  es: [
-    [
-      "<small>Los guardianes necesitan</small> Cazar una amenaza",
-      "<small>Los guardianes necesitan</small> Defender a los civiles",
-      "<small>Los guardianes necesitan</small> Investigar rumores",
-      "<small>Los guardianes necesitan</small> Proteger un asentamiento",
-      "<small>Los guardianes necesitan</small> Examinar un cadáver",
-      "<small>Los guardianes necesitan</small> Resolver una disputa"
-    ],
-    [
-      "<small>Desde algún lugar en o cerca de</small> Un pueblo pequeño",
-      "<small>Desde algún lugar en o cerca de</small> Un río o estanque",
-      "<small>Desde algún lugar en o cerca de</small> Una región forestal",
-      "<small>Desde algún lugar en o cerca de</small> Una cueva o mina",
-      "<small>Desde algún lugar en o cerca de</small> Tierras de cultivo rurales",
-      "<small>Desde algún lugar en o cerca de</small> La frontera o el velo"
-    ],
-    [
-      "<small>Mientras lidian con</small> Lugareños asustados",
-      "<small>Mientras lidian con</small> Un traidor o desertor",
-      "<small>Mientras lidian con</small> Un complot o lucha de poder",
-      "<small>Mientras lidian con</small> Una milicia agresiva",
-      "<small>Mientras lidian con</small> Un rencor personal",
-      "<small>Mientras lidian con</small> Un hechicero renegado"
-    ]
-  ]
-},
+  },
   halfling_hustlers: {
-  title: "Halfling Hustlers",
-  en: [
-    [
-      "<small>The pint-sized punters hatch a plan to</small> Cut some purses",
-      "<small>The pint-sized punters hatch a plan to</small> Run a racket",
-      "<small>The pint-sized punters hatch a plan to</small> Swindle the rich",
-      "<small>The pint-sized punters hatch a plan to</small> Win a wager",
-      "<small>The pint-sized punters hatch a plan to</small> Rig a contest",
-      "<small>The pint-sized punters hatch a plan to</small> Rob a wealthy target"
+    title: "Halfling Hustlers",
+    en: [
+      [
+        "<small>The pint-sized punters hatch a plan to</small> Cut some purses",
+        "<small>The pint-sized punters hatch a plan to</small> Run a racket",
+        "<small>The pint-sized punters hatch a plan to</small> Swindle the rich",
+        "<small>The pint-sized punters hatch a plan to</small> Win a wager",
+        "<small>The pint-sized punters hatch a plan to</small> Rig a contest",
+        "<small>The pint-sized punters hatch a plan to</small> Rob a wealthy target"
+      ],
+      [
+        "<small>Near, at, or inside a</small> Popular tavern",
+        "<small>Near, at, or inside a</small> Street festival",
+        "<small>Near, at, or inside a</small> Fighting match",
+        "<small>Near, at, or inside a</small> Sporting event",
+        "<small>Near, at, or inside a</small> Local casino",
+        "<small>Near, at, or inside a</small> Lavish townhouse"
+      ],
+      [
+        "<small>While dealing with</small> Unexpected security",
+        "<small>While dealing with</small> A ruthless guild",
+        "<small>While dealing with</small> Suspicious guards",
+        "<small>While dealing with</small> A terrifying monster",
+        "<small>While dealing with</small> Dangerous rivals",
+        "<small>While dealing with</small> A clever opponent"
+      ]
     ],
-    [
-      "<small>Near, at, or inside a</small> Popular tavern",
-      "<small>Near, at, or inside a</small> Street festival",
-      "<small>Near, at, or inside a</small> Fighting match",
-      "<small>Near, at, or inside a</small> Sporting event",
-      "<small>Near, at, or inside a</small> Local casino",
-      "<small>Near, at, or inside a</small> Lavish townhouse"
-    ],
-    [
-      "<small>While dealing with</small> Unexpected security",
-      "<small>While dealing with</small> A ruthless guild",
-      "<small>While dealing with</small> Suspicious guards",
-      "<small>While dealing with</small> A terrifying monster",
-      "<small>While dealing with</small> Dangerous rivals",
-      "<small>While dealing with</small> A clever opponent"
+    es: [
+      [
+        "<small>Los pequeños bribones traman un plan para</small> Cortar algunas bolsas",
+        "<small>Los pequeños bribones traman un plan para</small> Montar un chanchullo",
+        "<small>Los pequeños bribones traman un plan para</small> Estafar a los ricos",
+        "<small>Los pequeños bribones traman un plan para</small> Ganar una apuesta",
+        "<small>Los pequeños bribones traman un plan para</small> Amañar un concurso",
+        "<small>Los pequeños bribones traman un plan para</small> Robar a un objetivo adinerado"
+      ],
+      [
+        "<small>Cerca, en o dentro de</small> Una taberna popular",
+        "<small>Cerca, en o dentro de</small> Un festival callejero",
+        "<small>Cerca, en o dentro de</small> Un combate de lucha",
+        "<small>Cerca, en o dentro de</small> Un evento deportivo",
+        "<small>Cerca, en o dentro de</small> Un casino local",
+        "<small>Cerca, en o dentro de</small> Una lujosa casa señorial"
+      ],
+      [
+        "<small>Mientras lidian con</small> Seguridad inesperada",
+        "<small>Mientras lidian con</small> Un gremio despiadado",
+        "<small>Mientras lidian con</small> Guardias sospechosos",
+        "<small>Mientras lidian con</small> Un monstruo terrorífico",
+        "<small>Mientras lidian con</small> Rivales peligrosos",
+        "<small>Mientras lidian con</small> Un oponente astuto"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>Los pequeños bribones traman un plan para</small> Cortar algunas bolsas",
-      "<small>Los pequeños bribones traman un plan para</small> Montar un chanchullo",
-      "<small>Los pequeños bribones traman un plan para</small> Estafar a los ricos",
-      "<small>Los pequeños bribones traman un plan para</small> Ganar una apuesta",
-      "<small>Los pequeños bribones traman un plan para</small> Amañar un concurso",
-      "<small>Los pequeños bribones traman un plan para</small> Robar a un objetivo adinerado"
-    ],
-    [
-      "<small>Cerca, en o dentro de</small> Una taberna popular",
-      "<small>Cerca, en o dentro de</small> Un festival callejero",
-      "<small>Cerca, en o dentro de</small> Un combate de lucha",
-      "<small>Cerca, en o dentro de</small> Un evento deportivo",
-      "<small>Cerca, en o dentro de</small> Un casino local",
-      "<small>Cerca, en o dentro de</small> Una lujosa casa señorial"
-    ],
-    [
-      "<small>Mientras lidian con</small> Seguridad inesperada",
-      "<small>Mientras lidian con</small> Un gremio despiadado",
-      "<small>Mientras lidian con</small> Guardias sospechosos",
-      "<small>Mientras lidian con</small> Un monstruo terrorífico",
-      "<small>Mientras lidian con</small> Rivales peligrosos",
-      "<small>Mientras lidian con</small> Un oponente astuto"
-    ]
-  ]
-},
+  },
   heroes_of_sherwood: {
-  title: "Heroes of Sherwood Forest",
-  en: [
-    [
-      "<small>The outlaws decide to</small> Steal from the rich",
-      "<small>The outlaws decide to</small> Win a contest",
-      "<small>The outlaws decide to</small> Rescue a prisoner",
-      "<small>The outlaws decide to</small> Protect the innocent",
-      "<small>The outlaws decide to</small> Go on a hunt",
-      "<small>The outlaws decide to</small> Help those in need"
+    title: "Heroes of Sherwood Forest",
+    en: [
+      [
+        "<small>The outlaws decide to</small> Steal from the rich",
+        "<small>The outlaws decide to</small> Win a contest",
+        "<small>The outlaws decide to</small> Rescue a prisoner",
+        "<small>The outlaws decide to</small> Protect the innocent",
+        "<small>The outlaws decide to</small> Go on a hunt",
+        "<small>The outlaws decide to</small> Help those in need"
+      ],
+      [
+        "<small>In or near</small> Sherwood Forest",
+        "<small>In or near</small> A castle or manor",
+        "<small>In or near</small> A mystical landmark",
+        "<small>In or near</small> A church or abbey",
+        "<small>In or near</small> A town or village",
+        "<small>In or near</small> A natural cave"
+      ],
+      [
+        "<small>While dealing with</small> Sir Guy of Gisbourne",
+        "<small>While dealing with</small> Rival outlaws",
+        "<small>While dealing with</small> Templar knights",
+        "<small>While dealing with</small> Bounty hunters",
+        "<small>While dealing with</small> An injured civilian",
+        "<small>While dealing with</small> A witness or spy"
+      ]
     ],
-    [
-      "<small>In or near</small> Sherwood Forest",
-      "<small>In or near</small> A castle or manor",
-      "<small>In or near</small> A mystical landmark",
-      "<small>In or near</small> A church or abbey",
-      "<small>In or near</small> A town or village",
-      "<small>In or near</small> A natural cave"
-    ],
-    [
-      "<small>While dealing with</small> Sir Guy of Gisbourne",
-      "<small>While dealing with</small> Rival outlaws",
-      "<small>While dealing with</small> Templar knights",
-      "<small>While dealing with</small> Bounty hunters",
-      "<small>While dealing with</small> An injured civilian",
-      "<small>While dealing with</small> A witness or spy"
+    es: [
+      [
+        "<small>Los forajidos deciden</small> Robar a los ricos",
+        "<small>Los forajidos deciden</small> Ganar un concurso",
+        "<small>Los forajidos deciden</small> Rescatar a un prisionero",
+        "<small>Los forajidos deciden</small> Proteger a los inocentes",
+        "<small>Los forajidos deciden</small> Ir de caza",
+        "<small>Los forajidos deciden</small> Ayudar a los necesitados"
+      ],
+      [
+        "<small>En o cerca de</small> El bosque de Sherwood",
+        "<small>En o cerca de</small> Un castillo o mansión",
+        "<small>En o cerca de</small> Un hito místico",
+        "<small>En o cerca de</small> Una iglesia o abadía",
+        "<small>En o cerca de</small> Un pueblo o aldea",
+        "<small>En o cerca de</small> Una cueva natural"
+      ],
+      [
+        "<small>Mientras lidian con</small> Sir Guy de Gisbourne",
+        "<small>Mientras lidian con</small> Forajidos rivales",
+        "<small>Mientras lidian con</small> Caballeros templarios",
+        "<small>Mientras lidian con</small> Cazarrecompensas",
+        "<small>Mientras lidian con</small> Un civil herido",
+        "<small>Mientras lidian con</small> Un testigo o espía"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>Los forajidos deciden</small> Robar a los ricos",
-      "<small>Los forajidos deciden</small> Ganar un concurso",
-      "<small>Los forajidos deciden</small> Rescatar a un prisionero",
-      "<small>Los forajidos deciden</small> Proteger a los inocentes",
-      "<small>Los forajidos deciden</small> Ir de caza",
-      "<small>Los forajidos deciden</small> Ayudar a los necesitados"
-    ],
-    [
-      "<small>En o cerca de</small> El bosque de Sherwood",
-      "<small>En o cerca de</small> Un castillo o mansión",
-      "<small>En o cerca de</small> Un hito místico",
-      "<small>En o cerca de</small> Una iglesia o abadía",
-      "<small>En o cerca de</small> Un pueblo o aldea",
-      "<small>En o cerca de</small> Una cueva natural"
-    ],
-    [
-      "<small>Mientras lidian con</small> Sir Guy de Gisbourne",
-      "<small>Mientras lidian con</small> Forajidos rivales",
-      "<small>Mientras lidian con</small> Caballeros templarios",
-      "<small>Mientras lidian con</small> Cazarrecompensas",
-      "<small>Mientras lidian con</small> Un civil herido",
-      "<small>Mientras lidian con</small> Un testigo o espía"
-    ]
-  ]
-},
+  },
   horrible_henchmen: {
-  title: "Horrible Henchmen",
-  en: [
-    [
-      "<small>The master orders the henchmen to</small> Abduct someone",
-      "<small>The master orders the henchmen to</small> Recover a corpse",
-      "<small>The master orders the henchmen to</small> Steal a trinket",
-      "<small>The master orders the henchmen to</small> Eliminate a threat",
-      "<small>The master orders the henchmen to</small> Destroy evidence",
-      "<small>The master orders the henchmen to</small> Protect the master"
+    title: "Horrible Henchmen",
+    en: [
+      [
+        "<small>The master orders the henchmen to</small> Abduct someone",
+        "<small>The master orders the henchmen to</small> Recover a corpse",
+        "<small>The master orders the henchmen to</small> Steal a trinket",
+        "<small>The master orders the henchmen to</small> Eliminate a threat",
+        "<small>The master orders the henchmen to</small> Destroy evidence",
+        "<small>The master orders the henchmen to</small> Protect the master"
+      ],
+      [
+        "<small>Near, at, or inside</small> The local church",
+        "<small>Near, at, or inside</small> An opulent manor",
+        "<small>Near, at, or inside</small> The town theater",
+        "<small>Near, at, or inside</small> A prominent tavern",
+        "<small>Near, at, or inside</small> The town hall",
+        "<small>Near, at, or inside</small> The marketplace"
+      ],
+      [
+        "<small>While dealing with</small> Raiders or bandits",
+        "<small>While dealing with</small> An escaped prisoner",
+        "<small>While dealing with</small> Another “Big Bad”",
+        "<small>While dealing with</small> A rival for affection",
+        "<small>While dealing with</small> An attack on the town",
+        "<small>While dealing with</small> Master’s bad temper"
+      ]
     ],
-    [
-      "<small>Near, at, or inside</small> The local church",
-      "<small>Near, at, or inside</small> An opulent manor",
-      "<small>Near, at, or inside</small> The town theater",
-      "<small>Near, at, or inside</small> A prominent tavern",
-      "<small>Near, at, or inside</small> The town hall",
-      "<small>Near, at, or inside</small> The marketplace"
-    ],
-    [
-      "<small>While dealing with</small> Raiders or bandits",
-      "<small>While dealing with</small> An escaped prisoner",
-      "<small>While dealing with</small> Another “Big Bad”",
-      "<small>While dealing with</small> A rival for affection",
-      "<small>While dealing with</small> An attack on the town",
-      "<small>While dealing with</small> Master’s bad temper"
+    es: [
+      [
+        "<small>El amo ordena a los esbirros</small> Secuestrar a alguien",
+        "<small>El amo ordena a los esbirros</small> Recuperar un cadáver",
+        "<small>El amo ordena a los esbirros</small> Robar una baratija",
+        "<small>El amo ordena a los esbirros</small> Eliminar una amenaza",
+        "<small>El amo ordena a los esbirros</small> Destruir evidencia",
+        "<small>El amo ordena a los esbirros</small> Proteger al amo"
+      ],
+      [
+        "<small>Cerca, en o dentro de</small> La iglesia local",
+        "<small>Cerca, en o dentro de</small> Una mansión opulenta",
+        "<small>Cerca, en o dentro de</small> El teatro del pueblo",
+        "<small>Cerca, en o dentro de</small> Una taberna prominente",
+        "<small>Cerca, en o dentro de</small> El ayuntamiento",
+        "<small>Cerca, en o dentro de</small> El mercado"
+      ],
+      [
+        "<small>Mientras lidian con</small> Saqueadores o bandidos",
+        "<small>Mientras lidian con</small> Un prisionero escapado",
+        "<small>Mientras lidian con</small> Otro “Gran Villano”",
+        "<small>Mientras lidian con</small> Un rival por el afecto del amo",
+        "<small>Mientras lidian con</small> Un ataque al pueblo",
+        "<small>Mientras lidian con</small> El mal temperamento del amo"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>El amo ordena a los esbirros</small> Secuestrar a alguien",
-      "<small>El amo ordena a los esbirros</small> Recuperar un cadáver",
-      "<small>El amo ordena a los esbirros</small> Robar una baratija",
-      "<small>El amo ordena a los esbirros</small> Eliminar una amenaza",
-      "<small>El amo ordena a los esbirros</small> Destruir evidencia",
-      "<small>El amo ordena a los esbirros</small> Proteger al amo"
+  },
+  hunters_victorian_london: {
+    title: "Hunters of Victorian London",
+    en: [
+      [
+        "<small>The hunters must deal with a</small> Violent rampage",
+        "<small>The hunters must deal with a</small> Cursed monster",
+        "<small>The hunters must deal with a</small> Stealthy killer",
+        "<small>The hunters must deal with a</small> Reanimated corpse",
+        "<small>The hunters must deal with a</small> Terrible experiment",
+        "<small>The hunters must deal with a</small> Phantom criminal"
+      ],
+      [
+        "<small>Which leads them to a</small> Tall building or tower",
+        "<small>Which leads them to a</small> Hospital or asylum",
+        "<small>Which leads them to a</small> Mansion or house",
+        "<small>Which leads them to a</small> Bridge or rooftop",
+        "<small>Which leads them to a</small> Museum or library",
+        "<small>Which leads them to a</small> Subway or sewer"
+      ],
+      [
+        "<small>But they must also deal with a</small> Partner or hostage",
+        "<small>But they must also deal with a</small> Police investigation",
+        "<small>But they must also deal with a</small> Meddling aristocrat",
+        "<small>But they must also deal with a</small> Henchman or servant",
+        "<small>But they must also deal with a</small> Deadly serial killer",
+        "<small>But they must also deal with a</small> Dark twist or secret"
+      ]
     ],
-    [
-      "<small>Cerca, en o dentro de</small> La iglesia local",
-      "<small>Cerca, en o dentro de</small> Una mansión opulenta",
-      "<small>Cerca, en o dentro de</small> El teatro del pueblo",
-      "<small>Cerca, en o dentro de</small> Una taberna prominente",
-      "<small>Cerca, en o dentro de</small> El ayuntamiento",
-      "<small>Cerca, en o dentro de</small> El mercado"
-    ],
-    [
-      "<small>Mientras lidian con</small> Saqueadores o bandidos",
-      "<small>Mientras lidian con</small> Un prisionero escapado",
-      "<small>Mientras lidian con</small> Otro “Gran Villano”",
-      "<small>Mientras lidian con</small> Un rival por el afecto del amo",
-      "<small>Mientras lidian con</small> Un ataque al pueblo",
-      "<small>Mientras lidian con</small> El mal temperamento del amo"
+    es: [
+      [
+        "<small>Los cazadores deben lidiar con un</small> Ataque violento",
+        "<small>Los cazadores deben lidiar con un</small> Monstruo maldito",
+        "<small>Los cazadores deben lidiar con un</small> Asesino sigiloso",
+        "<small>Los cazadores deben lidiar con un</small> Cadáver reanimado",
+        "<small>Los cazadores deben lidiar con un</small> Experimento terrible",
+        "<small>Los cazadores deben lidiar con un</small> Criminal fantasma"
+      ],
+      [
+        "<small>Lo que los lleva a un</small> Edificio alto o torre",
+        "<small>Lo que los lleva a un</small> Hospital o manicomio",
+        "<small>Lo que los lleva a una</small> Mansión o casa",
+        "<small>Lo que los lleva a un</small> Puente o azotea",
+        "<small>Lo que los lleva a un</small> Museo o biblioteca",
+        "<small>Lo que los lleva al</small> Metro o alcantarilla"
+      ],
+      [
+        "<small>Pero también deben lidiar con un</small> Compañero o rehén",
+        "<small>Pero también deben lidiar con una</small> Investigación policial",
+        "<small>Pero también deben lidiar con un</small> Aristócrata entrometido",
+        "<small>Pero también deben lidiar con un</small> Secuaz o sirviente",
+        "<small>Pero también deben lidiar con un</small> Asesino en serie mortal",
+        "<small>Pero también deben lidiar con un</small> Giro oscuro o secreto"
+      ]
     ]
-  ]
-},
-hunters_victorian_london: {
-  title: "Hunters of Victorian London",
-  en: [
-    [
-      "<small>The hunters must deal with a</small> Violent rampage",
-      "<small>The hunters must deal with a</small> Cursed monster",
-      "<small>The hunters must deal with a</small> Stealthy killer",
-      "<small>The hunters must deal with a</small> Reanimated corpse",
-      "<small>The hunters must deal with a</small> Terrible experiment",
-      "<small>The hunters must deal with a</small> Phantom criminal"
+  },
+  interstellar_bounty_hunters: {
+    title: "Interstellar Bounty Hunters",
+    en: [
+      [
+        "<small>Track down and capture or kill</small> A dangerous fugitive",
+        "<small>Track down and capture or kill</small> A defaulted debtor",
+        "<small>Track down and capture or kill</small> A war criminal",
+        "<small>Track down and capture or kill</small> An escaped prisoner",
+        "<small>Track down and capture or kill</small> A valuable item",
+        "<small>Track down and capture or kill</small> A mysterious asset"
+      ],
+      [
+        "<small>From somewhere on</small> An ice world",
+        "<small>From somewhere on</small> A desert planet",
+        "<small>From somewhere on</small> A space station",
+        "<small>From somewhere on</small> A transport vessel",
+        "<small>From somewhere on</small> A gas giant",
+        "<small>From somewhere on</small> A forest paradise"
+      ],
+      [
+        "<small>While dealing with</small> An ambush or trap",
+        "<small>While dealing with</small> Unexpected betrayal",
+        "<small>While dealing with</small> Pirates or raiders",
+        "<small>While dealing with</small> Rival bounty hunters",
+        "<small>While dealing with</small> Scavengers or thieves",
+        "<small>While dealing with</small> Special client request"
+      ]
     ],
-    [
-      "<small>Which leads them to a</small> Tall building or tower",
-      "<small>Which leads them to a</small> Hospital or asylum",
-      "<small>Which leads them to a</small> Mansion or house",
-      "<small>Which leads them to a</small> Bridge or rooftop",
-      "<small>Which leads them to a</small> Museum or library",
-      "<small>Which leads them to a</small> Subway or sewer"
-    ],
-    [
-      "<small>But they must also deal with a</small> Partner or hostage",
-      "<small>But they must also deal with a</small> Police investigation",
-      "<small>But they must also deal with a</small> Meddling aristocrat",
-      "<small>But they must also deal with a</small> Henchman or servant",
-      "<small>But they must also deal with a</small> Deadly serial killer",
-      "<small>But they must also deal with a</small> Dark twist or secret"
+    es: [
+      [
+        "<small>Rastrea y captura o mata a</small> Un fugitivo peligroso",
+        "<small>Rastrea y captura o mata a</small> Un deudor moroso",
+        "<small>Rastrea y captura o mata a</small> Un criminal de guerra",
+        "<small>Rastrea y captura o mata a</small> Un prisionero escapado",
+        "<small>Rastrea y captura o mata a</small> Un objeto valioso",
+        "<small>Rastrea y captura o mata a</small> Un activo misterioso"
+      ],
+      [
+        "<small>En algún lugar de</small> Un mundo de hielo",
+        "<small>En algún lugar de</small> Un planeta desértico",
+        "<small>En algún lugar de</small> Una estación espacial",
+        "<small>En algún lugar de</small> Una nave de transporte",
+        "<small>En algún lugar de</small> Un gigante gaseoso",
+        "<small>En algún lugar de</small> Un paraíso forestal"
+      ],
+      [
+        "<small>Mientras lidian con</small> Una emboscada o trampa",
+        "<small>Mientras lidian con</small> Una traición inesperada",
+        "<small>Mientras lidian con</small> Piratas o asaltantes",
+        "<small>Mientras lidian con</small> Cazarrecompensas rivales",
+        "<small>Mientras lidian con</small> Carroñeros o ladrones",
+        "<small>Mientras lidian con</small> Una petición especial del cliente"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>Los cazadores deben lidiar con un</small> Ataque violento",
-      "<small>Los cazadores deben lidiar con un</small> Monstruo maldito",
-      "<small>Los cazadores deben lidiar con un</small> Asesino sigiloso",
-      "<small>Los cazadores deben lidiar con un</small> Cadáver reanimado",
-      "<small>Los cazadores deben lidiar con un</small> Experimento terrible",
-      "<small>Los cazadores deben lidiar con un</small> Criminal fantasma"
-    ],
-    [
-      "<small>Lo que los lleva a un</small> Edificio alto o torre",
-      "<small>Lo que los lleva a un</small> Hospital o manicomio",
-      "<small>Lo que los lleva a una</small> Mansión o casa",
-      "<small>Lo que los lleva a un</small> Puente o azotea",
-      "<small>Lo que los lleva a un</small> Museo o biblioteca",
-      "<small>Lo que los lleva al</small> Metro o alcantarilla"
-    ],
-    [
-      "<small>Pero también deben lidiar con un</small> Compañero o rehén",
-      "<small>Pero también deben lidiar con una</small> Investigación policial",
-      "<small>Pero también deben lidiar con un</small> Aristócrata entrometido",
-      "<small>Pero también deben lidiar con un</small> Secuaz o sirviente",
-      "<small>Pero también deben lidiar con un</small> Asesino en serie mortal",
-      "<small>Pero también deben lidiar con un</small> Giro oscuro o secreto"
-    ]
-  ]
-},
-interstellar_bounty_hunters: {
-  title: "Interstellar Bounty Hunters",
-  en: [
-    [
-      "<small>Track down and capture or kill</small> A dangerous fugitive",
-      "<small>Track down and capture or kill</small> A defaulted debtor",
-      "<small>Track down and capture or kill</small> A war criminal",
-      "<small>Track down and capture or kill</small> An escaped prisoner",
-      "<small>Track down and capture or kill</small> A valuable item",
-      "<small>Track down and capture or kill</small> A mysterious asset"
-    ],
-    [
-      "<small>From somewhere on</small> An ice world",
-      "<small>From somewhere on</small> A desert planet",
-      "<small>From somewhere on</small> A space station",
-      "<small>From somewhere on</small> A transport vessel",
-      "<small>From somewhere on</small> A gas giant",
-      "<small>From somewhere on</small> A forest paradise"
-    ],
-    [
-      "<small>While dealing with</small> An ambush or trap",
-      "<small>While dealing with</small> Unexpected betrayal",
-      "<small>While dealing with</small> Pirates or raiders",
-      "<small>While dealing with</small> Rival bounty hunters",
-      "<small>While dealing with</small> Scavengers or thieves",
-      "<small>While dealing with</small> Special client request"
-    ]
-  ],
-  es: [
-    [
-      "<small>Rastrea y captura o mata a</small> Un fugitivo peligroso",
-      "<small>Rastrea y captura o mata a</small> Un deudor moroso",
-      "<small>Rastrea y captura o mata a</small> Un criminal de guerra",
-      "<small>Rastrea y captura o mata a</small> Un prisionero escapado",
-      "<small>Rastrea y captura o mata a</small> Un objeto valioso",
-      "<small>Rastrea y captura o mata a</small> Un activo misterioso"
-    ],
-    [
-      "<small>En algún lugar de</small> Un mundo de hielo",
-      "<small>En algún lugar de</small> Un planeta desértico",
-      "<small>En algún lugar de</small> Una estación espacial",
-      "<small>En algún lugar de</small> Una nave de transporte",
-      "<small>En algún lugar de</small> Un gigante gaseoso",
-      "<small>En algún lugar de</small> Un paraíso forestal"
-    ],
-    [
-      "<small>Mientras lidian con</small> Una emboscada o trampa",
-      "<small>Mientras lidian con</small> Una traición inesperada",
-      "<small>Mientras lidian con</small> Piratas o asaltantes",
-      "<small>Mientras lidian con</small> Cazarrecompensas rivales",
-      "<small>Mientras lidian con</small> Carroñeros o ladrones",
-      "<small>Mientras lidian con</small> Una petición especial del cliente"
-    ]
-  ]
-},
+  },
   interstellar_explorers: {
-  title: "Interstellar Explorers",
-  en: [
-    [
-      "<small>The explorers discover a</small> Strange new species",
-      "<small>The explorers discover a</small> Low-tech civilization",
-      "<small>The explorers discover a</small> Scene of destruction",
-      "<small>The explorers discover a</small> Lost Earth colony",
-      "<small>The explorers discover a</small> Dangerous threat",
-      "<small>The explorers discover a</small> Mysterious artifact"
+    title: "Interstellar Explorers",
+    en: [
+      [
+        "<small>The explorers discover a</small> Strange new species",
+        "<small>The explorers discover a</small> Low-tech civilization",
+        "<small>The explorers discover a</small> Scene of destruction",
+        "<small>The explorers discover a</small> Lost Earth colony",
+        "<small>The explorers discover a</small> Dangerous threat",
+        "<small>The explorers discover a</small> Mysterious artifact"
+      ],
+      [
+        "<small>Situated on a</small> Barren rocky planet",
+        "<small>Situated on a</small> Habitable moon",
+        "<small>Situated on a</small> Tidally locked planet",
+        "<small>Situated on a</small> Megastructure",
+        "<small>Situated on a</small> Frozen water planet",
+        "<small>Situated on a</small> Earth-like world"
+      ],
+      [
+        "<small>While dealing with</small> Asteroids or debris",
+        "<small>While dealing with</small> Starship problems",
+        "<small>While dealing with</small> Parasites or disease",
+        "<small>While dealing with</small> Alien romance",
+        "<small>While dealing with</small> Hazardous conditions",
+        "<small>While dealing with</small> Hostile forces"
+      ]
     ],
-    [
-      "<small>Situated on a</small> Barren rocky planet",
-      "<small>Situated on a</small> Habitable moon",
-      "<small>Situated on a</small> Tidally locked planet",
-      "<small>Situated on a</small> Megastructure",
-      "<small>Situated on a</small> Frozen water planet",
-      "<small>Situated on a</small> Earth-like world"
-    ],
-    [
-      "<small>While dealing with</small> Asteroids or debris",
-      "<small>While dealing with</small> Starship problems",
-      "<small>While dealing with</small> Parasites or disease",
-      "<small>While dealing with</small> Alien romance",
-      "<small>While dealing with</small> Hazardous conditions",
-      "<small>While dealing with</small> Hostile forces"
+    es: [
+      [
+        "<small>Los exploradores descubren una</small> Nueva especie extraña",
+        "<small>Los exploradores descubren una</small> Civilización de baja tecnología",
+        "<small>Los exploradores descubren una</small> Escena de destrucción",
+        "<small>Los exploradores descubren una</small> Colonia terrestre perdida",
+        "<small>Los exploradores descubren una</small> Amenaza peligrosa",
+        "<small>Los exploradores descubren un</small> Artefacto misterioso"
+      ],
+      [
+        "<small>Situado en un</small> Planeta rocoso yermo",
+        "<small>Situado en una</small> Luna habitable",
+        "<small>Situado en un</small> Planeta con acoplamiento de marea",
+        "<small>Situado en una</small> Megaestructura",
+        "<small>Situado en un</small> Planeta de agua helada",
+        "<small>Situado en un</small> Mundo similar a la Tierra"
+      ],
+      [
+        "<small>Mientras lidian con</small> Asteroides o escombros",
+        "<small>Mientras lidian con</small> Problemas en la nave",
+        "<small>Mientras lidian con</small> Parásitos o enfermedades",
+        "<small>Mientras lidian con</small> Un romance alienígena",
+        "<small>Mientras lidian con</small> Condiciones peligrosas",
+        "<small>Mientras lidian con</small> Fuerzas hostiles"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>Los exploradores descubren una</small> Nueva especie extraña",
-      "<small>Los exploradores descubren una</small> Civilización de baja tecnología",
-      "<small>Los exploradores descubren una</small> Escena de destrucción",
-      "<small>Los exploradores descubren una</small> Colonia terrestre perdida",
-      "<small>Los exploradores descubren una</small> Amenaza peligrosa",
-      "<small>Los exploradores descubren un</small> Artefacto misterioso"
-    ],
-    [
-      "<small>Situado en un</small> Planeta rocoso yermo",
-      "<small>Situado en una</small> Luna habitable",
-      "<small>Situado en un</small> Planeta con acoplamiento de marea",
-      "<small>Situado en una</small> Megaestructura",
-      "<small>Situado en un</small> Planeta de agua helada",
-      "<small>Situado en un</small> Mundo similar a la Tierra"
-    ],
-    [
-      "<small>Mientras lidian con</small> Asteroides o escombros",
-      "<small>Mientras lidian con</small> Problemas en la nave",
-      "<small>Mientras lidian con</small> Parásitos o enfermedades",
-      "<small>Mientras lidian con</small> Un romance alienígena",
-      "<small>Mientras lidian con</small> Condiciones peligrosas",
-      "<small>Mientras lidian con</small> Fuerzas hostiles"
-    ]
-  ]
-},
+  },
   interstellar_laser_knights: {
-  title: "Interstellar Laser Knights",
-  en: [
-    [
-      "<small>The knights have been ordered to</small> Rescue a dignitary",
-      "<small>The knights have been ordered to</small> Aid citizens in need",
-      "<small>The knights have been ordered to</small> Hunt down a fugitive",
-      "<small>The knights have been ordered to</small> Recover an artifact",
-      "<small>The knights have been ordered to</small> Gather evidence",
-      "<small>The knights have been ordered to</small> Mediate a dispute"
+    title: "Interstellar Laser Knights",
+    en: [
+      [
+        "<small>The knights have been ordered to</small> Rescue a dignitary",
+        "<small>The knights have been ordered to</small> Aid citizens in need",
+        "<small>The knights have been ordered to</small> Hunt down a fugitive",
+        "<small>The knights have been ordered to</small> Recover an artifact",
+        "<small>The knights have been ordered to</small> Gather evidence",
+        "<small>The knights have been ordered to</small> Mediate a dispute"
+      ],
+      [
+        "<small>From somewhere on</small> A volcanic planet",
+        "<small>From somewhere on</small> A water world",
+        "<small>From somewhere on</small> An inhabited asteroid",
+        "<small>From somewhere on</small> A jungle planet",
+        "<small>From somewhere on</small> A dangerous moon",
+        "<small>From somewhere on</small> A city planet"
+      ],
+      [
+        "<small>While dealing with</small> A vicious crime lord",
+        "<small>While dealing with</small> Innocent bystanders",
+        "<small>While dealing with</small> A hired assassin",
+        "<small>While dealing with</small> A natural hazard",
+        "<small>While dealing with</small> Military tensions",
+        "<small>While dealing with</small> An ancient enemy"
+      ]
     ],
-    [
-      "<small>From somewhere on</small> A volcanic planet",
-      "<small>From somewhere on</small> A water world",
-      "<small>From somewhere on</small> An inhabited asteroid",
-      "<small>From somewhere on</small> A jungle planet",
-      "<small>From somewhere on</small> A dangerous moon",
-      "<small>From somewhere on</small> A city planet"
-    ],
-    [
-      "<small>While dealing with</small> A vicious crime lord",
-      "<small>While dealing with</small> Innocent bystanders",
-      "<small>While dealing with</small> A hired assassin",
-      "<small>While dealing with</small> A natural hazard",
-      "<small>While dealing with</small> Military tensions",
-      "<small>While dealing with</small> An ancient enemy"
+    es: [
+      [
+        "<small>Los caballeros han recibido la orden de</small> Rescatar a un dignatario",
+        "<small>Los caballeros han recibido la orden de</small> Ayudar a ciudadanos necesitados",
+        "<small>Los caballeros han recibido la orden de</small> Cazar a un fugitivo",
+        "<small>Los caballeros han recibido la orden de</small> Recuperar un artefacto",
+        "<small>Los caballeros han recibido la orden de</small> Reunir pruebas",
+        "<small>Los caballeros han recibido la orden de</small> Mediar en una disputa"
+      ],
+      [
+        "<small>En algún lugar de</small> Un planeta volcánico",
+        "<small>En algún lugar de</small> Un mundo acuático",
+        "<small>En algún lugar de</small> Un asteroide habitado",
+        "<small>En algún lugar de</small> Un planeta selvático",
+        "<small>En algún lugar de</small> Una luna peligrosa",
+        "<small>En algún lugar de</small> Un planeta ciudad"
+      ],
+      [
+        "<small>Mientras lidian con</small> Un despiadado señor del crimen",
+        "<small>Mientras lidian con</small> Transeúntes inocentes",
+        "<small>Mientras lidian con</small> Un asesino a sueldo",
+        "<small>Mientras lidian con</small> Un peligro natural",
+        "<small>Mientras lidian con</small> Tensiones militares",
+        "<small>Mientras lidian con</small> Un antiguo enemigo"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>Los caballeros han recibido la orden de</small> Rescatar a un dignatario",
-      "<small>Los caballeros han recibido la orden de</small> Ayudar a ciudadanos necesitados",
-      "<small>Los caballeros han recibido la orden de</small> Cazar a un fugitivo",
-      "<small>Los caballeros han recibido la orden de</small> Recuperar un artefacto",
-      "<small>Los caballeros han recibido la orden de</small> Reunir pruebas",
-      "<small>Los caballeros han recibido la orden de</small> Mediar en una disputa"
-    ],
-    [
-      "<small>En algún lugar de</small> Un planeta volcánico",
-      "<small>En algún lugar de</small> Un mundo acuático",
-      "<small>En algún lugar de</small> Un asteroide habitado",
-      "<small>En algún lugar de</small> Un planeta selvático",
-      "<small>En algún lugar de</small> Una luna peligrosa",
-      "<small>En algún lugar de</small> Un planeta ciudad"
-    ],
-    [
-      "<small>Mientras lidian con</small> Un despiadado señor del crimen",
-      "<small>Mientras lidian con</small> Transeúntes inocentes",
-      "<small>Mientras lidian con</small> Un asesino a sueldo",
-      "<small>Mientras lidian con</small> Un peligro natural",
-      "<small>Mientras lidian con</small> Tensiones militares",
-      "<small>Mientras lidian con</small> Un antiguo enemigo"
-    ]
-  ]
-},
+  },
   interstellar_mech_war: {
-  title: "Interstellar Mech War",
-  en: [
-    [
-      "<small>The squad is ordered to</small> Destroy a target",
-      "<small>The squad is ordered to</small> Retrieve an asset",
-      "<small>The squad is ordered to</small> Escort a VIP",
-      "<small>The squad is ordered to</small> Gather intel",
-      "<small>The squad is ordered to</small> Raid the enemy",
-      "<small>The squad is ordered to</small> Guard a location"
+    title: "Interstellar Mech War",
+    en: [
+      [
+        "<small>The squad is ordered to</small> Destroy a target",
+        "<small>The squad is ordered to</small> Retrieve an asset",
+        "<small>The squad is ordered to</small> Escort a VIP",
+        "<small>The squad is ordered to</small> Gather intel",
+        "<small>The squad is ordered to</small> Raid the enemy",
+        "<small>The squad is ordered to</small> Guard a location"
+      ],
+      [
+        "<small>Somewhere near, in, or on</small> An orbital station",
+        "<small>Somewhere near, in, or on</small> No man’s land",
+        "<small>Somewhere near, in, or on</small> A colony outpost",
+        "<small>Somewhere near, in, or on</small> A prize location",
+        "<small>Somewhere near, in, or on</small> Enemy territory",
+        "<small>Somewhere near, in, or on</small> An active war zone"
+      ],
+      [
+        "<small>While dealing with</small> Restricted tech",
+        "<small>While dealing with</small> Unexpected hazards",
+        "<small>While dealing with</small> A surprise or ambush",
+        "<small>While dealing with</small> A deadly weapon",
+        "<small>While dealing with</small> Scavangers or pirates",
+        "<small>While dealing with</small> A traitor or spy"
+      ]
     ],
-    [
-      "<small>Somewhere near, in, or on</small> An orbital station",
-      "<small>Somewhere near, in, or on</small> No man’s land",
-      "<small>Somewhere near, in, or on</small> A colony outpost",
-      "<small>Somewhere near, in, or on</small> A prize location",
-      "<small>Somewhere near, in, or on</small> Enemy territory",
-      "<small>Somewhere near, in, or on</small> An active war zone"
-    ],
-    [
-      "<small>While dealing with</small> Restricted tech",
-      "<small>While dealing with</small> Unexpected hazards",
-      "<small>While dealing with</small> A surprise or ambush",
-      "<small>While dealing with</small> A deadly weapon",
-      "<small>While dealing with</small> Scavangers or pirates",
-      "<small>While dealing with</small> A traitor or spy"
+    es: [
+      [
+        "<small>El escuadrón tiene la orden de</small> Destruir un objetivo",
+        "<small>El escuadrón tiene la orden de</small> Recuperar un activo",
+        "<small>El escuadrón tiene la orden de</small> Escortar a un VIP",
+        "<small>El escuadrón tiene la orden de</small> Reunir inteligencia",
+        "<small>El escuadrón tiene la orden de</small> Asaltar al enemigo",
+        "<small>El escuadrón tiene la orden de</small> Custodiar una ubicación"
+      ],
+      [
+        "<small>En algún lugar cerca, en o sobre</small> Una estación orbital",
+        "<small>En algún lugar cerca, en o sobre</small> Tierra de nadie",
+        "<small>En algún lugar cerca, en o sobre</small> Un puesto de avanzada",
+        "<small>En algún lugar cerca, en o sobre</small> Una ubicación estratégica",
+        "<small>En algún lugar cerca, en o sobre</small> Territorio enemigo",
+        "<small>En algún lugar cerca, en o sobre</small> Una zona de guerra activa"
+      ],
+      [
+        "<small>Mientras lidian con</small> Tecnología restringida",
+        "<small>Mientras lidian con</small> Peligros inesperados",
+        "<small>Mientras lidian con</small> Una sorpresa o emboscada",
+        "<small>Mientras lidian con</small> Un arma letal",
+        "<small>Mientras lidian con</small> Carroñeros o piratas",
+        "<small>Mientras lidian con</small> Un traidor o espía"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>El escuadrón tiene la orden de</small> Destruir un objetivo",
-      "<small>El escuadrón tiene la orden de</small> Recuperar un activo",
-      "<small>El escuadrón tiene la orden de</small> Escortar a un VIP",
-      "<small>El escuadrón tiene la orden de</small> Reunir inteligencia",
-      "<small>El escuadrón tiene la orden de</small> Asaltar al enemigo",
-      "<small>El escuadrón tiene la orden de</small> Custodiar una ubicación"
-    ],
-    [
-      "<small>En algún lugar cerca, en o sobre</small> Una estación orbital",
-      "<small>En algún lugar cerca, en o sobre</small> Tierra de nadie",
-      "<small>En algún lugar cerca, en o sobre</small> Un puesto de avanzada",
-      "<small>En algún lugar cerca, en o sobre</small> Una ubicación estratégica",
-      "<small>En algún lugar cerca, en o sobre</small> Territorio enemigo",
-      "<small>En algún lugar cerca, en o sobre</small> Una zona de guerra activa"
-    ],
-    [
-      "<small>Mientras lidian con</small> Tecnología restringida",
-      "<small>Mientras lidian con</small> Peligros inesperados",
-      "<small>Mientras lidian con</small> Una sorpresa o emboscada",
-      "<small>Mientras lidian con</small> Un arma letal",
-      "<small>Mientras lidian con</small> Carroñeros o piratas",
-      "<small>Mientras lidian con</small> Un traidor o espía"
-    ]
-  ]
-},
+  },
   interstellar_rebels: {
-  title: "Interstellar Rebels",
-  en: [
-    [
-      "<small>The rebels decide to</small> Destroy a facility",
-      "<small>The rebels decide to</small> Hunt down a fugitive",
-      "<small>The rebels decide to</small> Protect those in need",
-      "<small>The rebels decide to</small> Rescue a prisoner",
-      "<small>The rebels decide to</small> Steal plans or intel",
-      "<small>The rebels decide to</small> Capture a resource"
+    title: "Interstellar Rebels",
+    en: [
+      [
+        "<small>The rebels decide to</small> Destroy a facility",
+        "<small>The rebels decide to</small> Hunt down a fugitive",
+        "<small>The rebels decide to</small> Protect those in need",
+        "<small>The rebels decide to</small> Rescue a prisoner",
+        "<small>The rebels decide to</small> Steal plans or intel",
+        "<small>The rebels decide to</small> Capture a resource"
+      ],
+      [
+        "<small>Which leads them to</small> A backwater planet",
+        "<small>Which leads them to</small> An outpost world",
+        "<small>Which leads them to</small> A space port/station",
+        "<small>Which leads them to</small> A dead world",
+        "<small>Which leads them to</small> A lawless colony",
+        "<small>Which leads them to</small> A habitable moon"
+      ],
+      [
+        "<small>But they must also deal with a</small> Heavily armed patrol",
+        "<small>But they must also deal with a</small> Dangerous spaceship",
+        "<small>But they must also deal with a</small> Debt or favor",
+        "<small>But they must also deal with a</small> Trap or ambush",
+        "<small>But they must also deal with a</small> Change of plans",
+        "<small>But they must also deal with a</small> Criminal faction"
+      ]
     ],
-    [
-      "<small>Which leads them to</small> A backwater planet",
-      "<small>Which leads them to</small> An outpost world",
-      "<small>Which leads them to</small> A space port/station",
-      "<small>Which leads them to</small> A dead world",
-      "<small>Which leads them to</small> A lawless colony",
-      "<small>Which leads them to</small> A habitable moon"
-    ],
-    [
-      "<small>But they must also deal with a</small> Heavily armed patrol",
-      "<small>But they must also deal with a</small> Dangerous spaceship",
-      "<small>But they must also deal with a</small> Debt or favor",
-      "<small>But they must also deal with a</small> Trap or ambush",
-      "<small>But they must also deal with a</small> Change of plans",
-      "<small>But they must also deal with a</small> Criminal faction"
+    es: [
+      [
+        "<small>Los rebeldes deciden</small> Destruir una instalación",
+        "<small>Los rebeldes deciden</small> Cazar a un fugitivo",
+        "<small>Los rebeldes deciden</small> Proteger a los necesitados",
+        "<small>Los rebeldes deciden</small> Rescatar a un prisionero",
+        "<small>Los rebeldes deciden</small> Robar planos o inteligencia",
+        "<small>Los rebeldes deciden</small> Capturar un recurso"
+      ],
+      [
+        "<small>Lo que los lleva a</small> Un planeta remoto",
+        "<small>Lo que los lleva a</small> Un mundo de avanzada",
+        "<small>Lo que los lleva a</small> Un puerto o estación espacial",
+        "<small>Lo que los lleva a</small> Un mundo muerto",
+        "<small>Lo que los lleva a</small> Una colonia sin ley",
+        "<small>Lo que los lleva a</small> Una luna habitable"
+      ],
+      [
+        "<small>Pero también deben lidiar con</small> Una patrulla fuertemente armada",
+        "<small>Pero también deben lidiar con</small> Una nave espacial peligrosa",
+        "<small>Pero también deben lidiar con</small> Una deuda o favor",
+        "<small>Pero también deben lidiar con</small> Una trampa o emboscada",
+        "<small>Pero también deben lidiar con</small> Un cambio de planes",
+        "<small>Pero también deben lidiar con</small> Una facción criminal"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>Los rebeldes deciden</small> Destruir una instalación",
-      "<small>Los rebeldes deciden</small> Cazar a un fugitivo",
-      "<small>Los rebeldes deciden</small> Proteger a los necesitados",
-      "<small>Los rebeldes deciden</small> Rescatar a un prisionero",
-      "<small>Los rebeldes deciden</small> Robar planos o inteligencia",
-      "<small>Los rebeldes deciden</small> Capturar un recurso"
-    ],
-    [
-      "<small>Lo que los lleva a</small> Un planeta remoto",
-      "<small>Lo que los lleva a</small> Un mundo de avanzada",
-      "<small>Lo que los lleva a</small> Un puerto o estación espacial",
-      "<small>Lo que los lleva a</small> Un mundo muerto",
-      "<small>Lo que los lleva a</small> Una colonia sin ley",
-      "<small>Lo que los lleva a</small> Una luna habitable"
-    ],
-    [
-      "<small>Pero también deben lidiar con</small> Una patrulla fuertemente armada",
-      "<small>Pero también deben lidiar con</small> Una nave espacial peligrosa",
-      "<small>Pero también deben lidiar con</small> Una deuda o favor",
-      "<small>Pero también deben lidiar con</small> Una trampa o emboscada",
-      "<small>Pero también deben lidiar con</small> Un cambio de planes",
-      "<small>Pero también deben lidiar con</small> Una facción criminal"
-    ]
-  ]
-},
+  },
   interstellar_smugglers: {
-  title: "Interstellar Smugglers",
-  en: [
-    [
-      "<small>The crew needs to smuggle</small> Alcohol or narcotics",
-      "<small>The crew needs to smuggle</small> Medical supplies",
-      "<small>The crew needs to smuggle</small> A dangerous alien",
-      "<small>The crew needs to smuggle</small> A fugitive or refugee",
-      "<small>The crew needs to smuggle</small> Military equipment",
-      "<small>The crew needs to smuggle</small> Stolen tech or plans"
+    title: "Interstellar Smugglers",
+    en: [
+      [
+        "<small>The crew needs to smuggle</small> Alcohol or narcotics",
+        "<small>The crew needs to smuggle</small> Medical supplies",
+        "<small>The crew needs to smuggle</small> A dangerous alien",
+        "<small>The crew needs to smuggle</small> A fugitive or refugee",
+        "<small>The crew needs to smuggle</small> Military equipment",
+        "<small>The crew needs to smuggle</small> Stolen tech or plans"
+      ],
+      [
+        "<small>From</small> A mining world",
+        "<small>From</small> A fetid swamp planet",
+        "<small>From</small> A distant rim world",
+        "<small>From</small> A large starship",
+        "<small>From</small> A tidally locked planet",
+        "<small>From</small> An artificial world"
+      ],
+      [
+        "<small>To</small> A mining world",
+        "<small>To</small> A fetid swamp planet",
+        "<small>To</small> A distant rim world",
+        "<small>To</small> A large starship",
+        "<small>To</small> A tidally locked planet",
+        "<small>To</small> An artificial world"
+      ],
+      [
+        "<small>While dealing with</small> A bounty hunter",
+        "<small>While dealing with</small> A tight time limit",
+        "<small>While dealing with</small> A fickle client",
+        "<small>While dealing with</small> A deadly pursuit",
+        "<small>While dealing with</small> Technical difficulties",
+        "<small>While dealing with</small> Unexpected hazards"
+      ]
     ],
-    [
-      "<small>From</small> A mining world",
-      "<small>From</small> A fetid swamp planet",
-      "<small>From</small> A distant rim world",
-      "<small>From</small> A large starship",
-      "<small>From</small> A tidally locked planet",
-      "<small>From</small> An artificial world"
-    ],
-    [
-      "<small>To</small> A mining world",
-      "<small>To</small> A fetid swamp planet",
-      "<small>To</small> A distant rim world",
-      "<small>To</small> A large starship",
-      "<small>To</small> A tidally locked planet",
-      "<small>To</small> An artificial world"
-    ],
-    [
-      "<small>While dealing with</small> A bounty hunter",
-      "<small>While dealing with</small> A tight time limit",
-      "<small>While dealing with</small> A fickle client",
-      "<small>While dealing with</small> A deadly pursuit",
-      "<small>While dealing with</small> Technical difficulties",
-      "<small>While dealing with</small> Unexpected hazards"
+    es: [
+      [
+        "<small>La tripulación debe contrabandear</small> Alcohol o narcóticos",
+        "<small>La tripulación debe contrabandear</small> Suministros médicos",
+        "<small>La tripulación debe contrabandear</small> Un alienígena peligroso",
+        "<small>La tripulación debe contrabandear</small> Un fugitivo o refugiado",
+        "<small>La tripulación debe contrabandear</small> Equipo militar",
+        "<small>La tripulación debe contrabandear</small> Tecnología o planos robados"
+      ],
+      [
+        "<small>Desde</small> Un mundo minero",
+        "<small>Desde</small> Un planeta de pantanos fétidos",
+        "<small>Desde</small> Un mundo del borde exterior",
+        "<small>Desde</small> Una gran nave estelar",
+        "<small>Desde</small> Un planeta con acoplamiento de marea",
+        "<small>Desde</small> Un mundo artificial"
+      ],
+      [
+        "<small>Hacia</small> Un mundo minero",
+        "<small>Hacia</small> Un planeta de pantanos fétidos",
+        "<small>Hacia</small> Un mundo del borde exterior",
+        "<small>Hacia</small> Una gran nave estelar",
+        "<small>Hacia</small> Un planeta con acoplamiento de marea",
+        "<small>Hacia</small> Un mundo artificial"
+      ],
+      [
+        "<small>Mientras lidian con</small> Un cazarrecompensas",
+        "<small>Mientras lidian con</small> Un límite de tiempo estricto",
+        "<small>Mientras lidian con</small> Un cliente voluble",
+        "<small>Mientras lidian con</small> Una persecución mortal",
+        "<small>Mientras lidian con</small> Dificultades técnicas",
+        "<small>Mientras lidian con</small> Peligros inesperados"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>La tripulación debe contrabandear</small> Alcohol o narcóticos",
-      "<small>La tripulación debe contrabandear</small> Suministros médicos",
-      "<small>La tripulación debe contrabandear</small> Un alienígena peligroso",
-      "<small>La tripulación debe contrabandear</small> Un fugitivo o refugiado",
-      "<small>La tripulación debe contrabandear</small> Equipo militar",
-      "<small>La tripulación debe contrabandear</small> Tecnología o planos robados"
-    ],
-    [
-      "<small>Desde</small> Un mundo minero",
-      "<small>Desde</small> Un planeta de pantanos fétidos",
-      "<small>Desde</small> Un mundo del borde exterior",
-      "<small>Desde</small> Una gran nave estelar",
-      "<small>Desde</small> Un planeta con acoplamiento de marea",
-      "<small>Desde</small> Un mundo artificial"
-    ],
-    [
-      "<small>Hacia</small> Un mundo minero",
-      "<small>Hacia</small> Un planeta de pantanos fétidos",
-      "<small>Hacia</small> Un mundo del borde exterior",
-      "<small>Hacia</small> Una gran nave estelar",
-      "<small>Hacia</small> Un planeta con acoplamiento de marea",
-      "<small>Hacia</small> Un mundo artificial"
-    ],
-    [
-      "<small>Mientras lidian con</small> Un cazarrecompensas",
-      "<small>Mientras lidian con</small> Un límite de tiempo estricto",
-      "<small>Mientras lidian con</small> Un cliente voluble",
-      "<small>Mientras lidian con</small> Una persecución mortal",
-      "<small>Mientras lidian con</small> Dificultades técnicas",
-      "<small>Mientras lidian con</small> Peligros inesperados"
-    ]
-  ]
-},
+  },
   interstellar_troopers: {
-  title: "Interstellar Troopers",
-  en: [
-    [
-      "<small>The troopers are ordered to</small> Investigate a mystery",
-      "<small>The troopers are ordered to</small> Explore a location",
-      "<small>The troopers are ordered to</small> Destroy a facility",
-      "<small>The troopers are ordered to</small> Capture an enemy",
-      "<small>The troopers are ordered to</small> Recover valuable data",
-      "<small>The troopers are ordered to</small> Rescue civilians"
+    title: "Interstellar Troopers",
+    en: [
+      [
+        "<small>The troopers are ordered to</small> Investigate a mystery",
+        "<small>The troopers are ordered to</small> Explore a location",
+        "<small>The troopers are ordered to</small> Destroy a facility",
+        "<small>The troopers are ordered to</small> Capture an enemy",
+        "<small>The troopers are ordered to</small> Recover valuable data",
+        "<small>The troopers are ordered to</small> Rescue civilians"
+      ],
+      [
+        "<small>From somewhere near, in or on</small> A hostile world",
+        "<small>From somewhere near, in or on</small> A space station",
+        "<small>From somewhere near, in or on</small> An enemy base",
+        "<small>From somewhere near, in or on</small> A wrecked spaceship",
+        "<small>From somewhere near, in or on</small> A colonized planet",
+        "<small>From somewhere near, in or on</small> Ancient ruins"
+      ],
+      [
+        "<small>While dealing with</small> Dangerous aliens",
+        "<small>While dealing with</small> Difficult weather",
+        "<small>While dealing with</small> Automated defences",
+        "<small>While dealing with</small> A malicious AI",
+        "<small>While dealing with</small> Freebooters",
+        "<small>While dealing with</small> A change of orders"
+      ]
     ],
-    [
-      "<small>From somewhere near, in or on</small> A hostile world",
-      "<small>From somewhere near, in or on</small> A space station",
-      "<small>From somewhere near, in or on</small> An enemy base",
-      "<small>From somewhere near, in or on</small> A wrecked spaceship",
-      "<small>From somewhere near, in or on</small> A colonized planet",
-      "<small>From somewhere near, in or on</small> Ancient ruins"
-    ],
-    [
-      "<small>While dealing with</small> Dangerous aliens",
-      "<small>While dealing with</small> Difficult weather",
-      "<small>While dealing with</small> Automated defences",
-      "<small>While dealing with</small> A malicious AI",
-      "<small>While dealing with</small> Freebooters",
-      "<small>While dealing with</small> A change of orders"
+    es: [
+      [
+        "<small>Los soldados tienen la orden de</small> Investigar un misterio",
+        "<small>Los soldados tienen la orden de</small> Explorar una ubicación",
+        "<small>Los soldados tienen la orden de</small> Destruir una instalación",
+        "<small>Los soldados tienen la orden de</small> Capturar a un enemigo",
+        "<small>Los soldados tienen la orden de</small> Recuperar datos valiosos",
+        "<small>Los soldados tienen la orden de</small> Rescatar civiles"
+      ],
+      [
+        "<small>Desde algún lugar cerca, en o sobre</small> Un mundo hostil",
+        "<small>Desde algún lugar cerca, en o sobre</small> Una estación espacial",
+        "<small>Desde algún lugar cerca, en o sobre</small> Una base enemiga",
+        "<small>Desde algún lugar cerca, en o sobre</small> Una nave espacial naufragada",
+        "<small>Desde algún lugar cerca, en o sobre</small> Un planeta colonizado",
+        "<small>Desde algún lugar cerca, en o sobre</small> Ruinas antiguas"
+      ],
+      [
+        "<small>Mientras lidian con</small> Alienígenas peligrosos",
+        "<small>Mientras lidian con</small> Clima adverso",
+        "<small>Mientras lidian con</small> Defensas automatizadas",
+        "<small>Mientras lidian con</small> Una IA maliciosa",
+        "<small>Mientras lidian con</small> Filibusteros espaciales",
+        "<small>Mientras lidian con</small> Un cambio de órdenes"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>Los soldados tienen la orden de</small> Investigar un misterio",
-      "<small>Los soldados tienen la orden de</small> Explorar una ubicación",
-      "<small>Los soldados tienen la orden de</small> Destruir una instalación",
-      "<small>Los soldados tienen la orden de</small> Capturar a un enemigo",
-      "<small>Los soldados tienen la orden de</small> Recuperar datos valiosos",
-      "<small>Los soldados tienen la orden de</small> Rescatar civiles"
-    ],
-    [
-      "<small>Desde algún lugar cerca, en o sobre</small> Un mundo hostil",
-      "<small>Desde algún lugar cerca, en o sobre</small> Una estación espacial",
-      "<small>Desde algún lugar cerca, en o sobre</small> Una base enemiga",
-      "<small>Desde algún lugar cerca, en o sobre</small> Una nave espacial naufragada",
-      "<small>Desde algún lugar cerca, en o sobre</small> Un planeta colonizado",
-      "<small>Desde algún lugar cerca, en o sobre</small> Ruinas antiguas"
-    ],
-    [
-      "<small>Mientras lidian con</small> Alienígenas peligrosos",
-      "<small>Mientras lidian con</small> Clima adverso",
-      "<small>Mientras lidian con</small> Defensas automatizadas",
-      "<small>Mientras lidian con</small> Una IA maliciosa",
-      "<small>Mientras lidian con</small> Filibusteros espaciales",
-      "<small>Mientras lidian con</small> Un cambio de órdenes"
-    ]
-  ]
-},
+  },
   maidenstead_mysteries: {
-  title: "Maidenstead Mysteries",
-  en: [
-    [
-      "<small>The sleuths investigate</small> A locked-room crime",
-      "<small>The sleuths investigate</small> A vanishing person",
-      "<small>The sleuths investigate</small> An unexplained theft",
-      "<small>The sleuths investigate</small> A freak accident",
-      "<small>The sleuths investigate</small> An impossible escape",
-      "<small>The sleuths investigate</small> A bizarre sighting"
+    title: "Maidenstead Mysteries",
+    en: [
+      [
+        "<small>The sleuths investigate</small> A locked-room crime",
+        "<small>The sleuths investigate</small> A vanishing person",
+        "<small>The sleuths investigate</small> An unexplained theft",
+        "<small>The sleuths investigate</small> A freak accident",
+        "<small>The sleuths investigate</small> An impossible escape",
+        "<small>The sleuths investigate</small> A bizarre sighting"
+      ],
+      [
+        "<small>Which leads them to</small> A run-down hotel",
+        "<small>Which leads them to</small> A spooky old house",
+        "<small>Which leads them to</small> An eerie museum",
+        "<small>Which leads them to</small> A creepy film studio",
+        "<small>Which leads them to</small> A forlorn churchyard",
+        "<small>Which leads them to</small> A dilapidated hospital"
+      ],
+      [
+        "<small>But they must also deal with</small> A medium or psychic",
+        "<small>But they must also deal with</small> Rival investigators",
+        "<small>But they must also deal with</small> Unwanted publicity",
+        "<small>But they must also deal with</small> Legal challenges",
+        "<small>But they must also deal with</small> Family matters",
+        "<small>But they must also deal with</small> A shocking revelation"
+      ]
     ],
-    [
-      "<small>Which leads them to</small> A run-down hotel",
-      "<small>Which leads them to</small> A spooky old house",
-      "<small>Which leads them to</small> An eerie museum",
-      "<small>Which leads them to</small> A creepy film studio",
-      "<small>Which leads them to</small> A forlorn churchyard",
-      "<small>Which leads them to</small> A dilapidated hospital"
-    ],
-    [
-      "<small>But they must also deal with</small> A medium or psychic",
-      "<small>But they must also deal with</small> Rival investigators",
-      "<small>But they must also deal with</small> Unwanted publicity",
-      "<small>But they must also deal with</small> Legal challenges",
-      "<small>But they must also deal with</small> Family matters",
-      "<small>But they must also deal with</small> A shocking revelation"
+    es: [
+      [
+        "<small>Los sabuesos investigan</small> Un crimen en una habitación cerrada",
+        "<small>Los sabuesos investigan</small> Una desaparición misteriosa",
+        "<small>Los sabuesos investigan</small> Un robo inexplicable",
+        "<small>Los sabuesos investigan</small> Un accidente extraño",
+        "<small>Los sabuesos investigan</small> Un escape imposible",
+        "<small>Los sabuesos investigan</small> Un avistamiento bizarro"
+      ],
+      [
+        "<small>Lo que los lleva a</small> Un hotel de mala muerte",
+        "<small>Lo que los lleva a</small> Una vieja casa espeluznante",
+        "<small>Lo que los lleva a</small> Un museo inquietante",
+        "<small>Lo que los lleva a</small> Un estudio de cine lúgubre",
+        "<small>Lo que los lleva a</small> Un cementerio abandonado",
+        "<small>Lo que los lleva a</small> Un hospital ruinoso"
+      ],
+      [
+        "<small>Pero también deben lidiar con</small> Un médium o vidente",
+        "<small>Pero también deben lidiar con</small> Investigadores rivales",
+        "<small>Pero también deben lidiar con</small> Publicidad no deseada",
+        "<small>Pero también deben lidiar con</small> Desafíos legales",
+        "<small>Pero también deben lidiar con</small> Asuntos familiares",
+        "<small>Pero también deben lidiar con</small> Una revelación impactante"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>Los sabuesos investigan</small> Un crimen en una habitación cerrada",
-      "<small>Los sabuesos investigan</small> Una desaparición misteriosa",
-      "<small>Los sabuesos investigan</small> Un robo inexplicable",
-      "<small>Los sabuesos investigan</small> Un accidente extraño",
-      "<small>Los sabuesos investigan</small> Un escape imposible",
-      "<small>Los sabuesos investigan</small> Un avistamiento bizarro"
-    ],
-    [
-      "<small>Lo que los lleva a</small> Un hotel de mala muerte",
-      "<small>Lo que los lleva a</small> Una vieja casa espeluznante",
-      "<small>Lo que los lleva a</small> Un museo inquietante",
-      "<small>Lo que los lleva a</small> Un estudio de cine lúgubre",
-      "<small>Lo que los lleva a</small> Un cementerio abandonado",
-      "<small>Lo que los lleva a</small> Un hospital ruinoso"
-    ],
-    [
-      "<small>Pero también deben lidiar con</small> Un médium o vidente",
-      "<small>Pero también deben lidiar con</small> Investigadores rivales",
-      "<small>Pero también deben lidiar con</small> Publicidad no deseada",
-      "<small>Pero también deben lidiar con</small> Desafíos legales",
-      "<small>Pero también deben lidiar con</small> Asuntos familiares",
-      "<small>Pero también deben lidiar con</small> Una revelación impactante"
-    ]
-  ]
-},
+  },
   metahuman_uprising: {
-  title: "Metahuman Uprising",
-  en: [
-    [
-      "<small>The heroes must deal with</small> A mad scientist",
-      "<small>The heroes must deal with</small> A young villain",
-      "<small>The heroes must deal with</small> An evil genius",
-      "<small>The heroes must deal with</small> A callous mercenary",
-      "<small>The heroes must deal with</small> A crazy fanatic",
-      "<small>The heroes must deal with</small> An ancient “god”"
+    title: "Metahuman Uprising",
+    en: [
+      [
+        "<small>The heroes must deal with</small> A mad scientist",
+        "<small>The heroes must deal with</small> A young villain",
+        "<small>The heroes must deal with</small> An evil genius",
+        "<small>The heroes must deal with</small> A callous mercenary",
+        "<small>The heroes must deal with</small> A crazy fanatic",
+        "<small>The heroes must deal with</small> An ancient “god”"
+      ],
+      [
+        "<small>Who plans to kill, capture, or steal</small> A political figure",
+        "<small>Who plans to kill, capture, or steal</small> A lucrative target",
+        "<small>Who plans to kill, capture, or steal</small> Another metahuman",
+        "<small>Who plans to kill, capture, or steal</small> Government secrets",
+        "<small>Who plans to kill, capture, or steal</small> A military officer",
+        "<small>Who plans to kill, capture, or steal</small> Ordinary civilians"
+      ],
+      [
+        "<small>With the further complication of</small> Personal obligations",
+        "<small>With the further complication of</small> Meddling humans",
+        "<small>With the further complication of</small> Gung-ho minions",
+        "<small>With the further complication of</small> Undesirable allies",
+        "<small>With the further complication of</small> Innocent bystanders",
+        "<small>With the further complication of</small> Plans within plans"
+      ]
     ],
-    [
-      "<small>Who plans to kill, capture, or steal</small> A political figure",
-      "<small>Who plans to kill, capture, or steal</small> A lucrative target",
-      "<small>Who plans to kill, capture, or steal</small> Another metahuman",
-      "<small>Who plans to kill, capture, or steal</small> Government secrets",
-      "<small>Who plans to kill, capture, or steal</small> A military officer",
-      "<small>Who plans to kill, capture, or steal</small> Ordinary civilians"
-    ],
-    [
-      "<small>With the further complication of</small> Personal obligations",
-      "<small>With the further complication of</small> Meddling humans",
-      "<small>With the further complication of</small> Gung-ho minions",
-      "<small>With the further complication of</small> Undesirable allies",
-      "<small>With the further complication of</small> Innocent bystanders",
-      "<small>With the further complication of</small> Plans within plans"
+    es: [
+      [
+        "<small>Los héroes deben lidiar con</small> Un científico loco",
+        "<small>Los héroes deben lidiar con</small> Un joven villano",
+        "<small>Los héroes deben lidiar con</small> Un genio malvado",
+        "<small>Los héroes deben lidiar con</small> Un mercenario despiadado",
+        "<small>Los héroes deben lidiar con</small> Un fanático demente",
+        "<small>Los héroes deben lidiar con</small> Un antiguo “dios”"
+      ],
+      [
+        "<small>Que planea matar, capturar o robar a</small> Una figura política",
+        "<small>Que planea matar, capturar o robar a</small> Un objetivo lucrativo",
+        "<small>Que planea matar, capturar o robar a</small> Otro metahumano",
+        "<small>Que planea matar, capturar o robar</small> Secretos del gobierno",
+        "<small>Que planea matar, capturar o robar a</small> Un oficial militar",
+        "<small>Que planea matar, capturar o robar a</small> Civiles comunes"
+      ],
+      [
+        "<small>Con la complicación añadida de</small> Obligaciones personales",
+        "<small>Con la complicación añadida de</small> Humanos entrometidos",
+        "<small>Con la complicación añadida de</small> Secuaces temerarios",
+        "<small>Con la complicación añadida de</small> Aliados indeseables",
+        "<small>Con la complicación añadida de</small> Transeúntes inocentes",
+        "<small>Con la complicación añadida de</small> Planes dentro de planes"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>Los héroes deben lidiar con</small> Un científico loco",
-      "<small>Los héroes deben lidiar con</small> Un joven villano",
-      "<small>Los héroes deben lidiar con</small> Un genio malvado",
-      "<small>Los héroes deben lidiar con</small> Un mercenario despiadado",
-      "<small>Los héroes deben lidiar con</small> Un fanático demente",
-      "<small>Los héroes deben lidiar con</small> Un antiguo “dios”"
-    ],
-    [
-      "<small>Que planea matar, capturar o robar a</small> Una figura política",
-      "<small>Que planea matar, capturar o robar a</small> Un objetivo lucrativo",
-      "<small>Que planea matar, capturar o robar a</small> Otro metahumano",
-      "<small>Que planea matar, capturar o robar</small> Secretos del gobierno",
-      "<small>Que planea matar, capturar o robar a</small> Un oficial militar",
-      "<small>Que planea matar, capturar o robar a</small> Civiles comunes"
-    ],
-    [
-      "<small>Con la complicación añadida de</small> Obligaciones personales",
-      "<small>Con la complicación añadida de</small> Humanos entrometidos",
-      "<small>Con la complicación añadida de</small> Secuaces temerarios",
-      "<small>Con la complicación añadida de</small> Aliados indeseables",
-      "<small>Con la complicación añadida de</small> Transeúntes inocentes",
-      "<small>Con la complicación añadida de</small> Planes dentro de planes"
-    ]
-  ]
-},
+  },
   minerunners: {
-  title: "Minerunners",
-  en: [
-    [
-      "<small>The minerunners need to</small> Recover a lost artifact",
-      "<small>The minerunners need to</small> Eliminate a threat",
-      "<small>The minerunners need to</small> Rescue another crew",
-      "<small>The minerunners need to</small> Capture a specimen",
-      "<small>The minerunners need to</small> Provide assistance",
-      "<small>The minerunners need to</small> Obtain information"
+    title: "Minerunners",
+    en: [
+      [
+        "<small>The minerunners need to</small> Recover a lost artifact",
+        "<small>The minerunners need to</small> Eliminate a threat",
+        "<small>The minerunners need to</small> Rescue another crew",
+        "<small>The minerunners need to</small> Capture a specimen",
+        "<small>The minerunners need to</small> Provide assistance",
+        "<small>The minerunners need to</small> Obtain information"
+      ],
+      [
+        "<small>From somewhere in or near a</small> Deep mineshaft",
+        "<small>From somewhere in or near a</small> New vein of ore",
+        "<small>From somewhere in or near a</small> Distant passageway",
+        "<small>From somewhere in or near a</small> Natural chamber",
+        "<small>From somewhere in or near a</small> Residential area",
+        "<small>From somewhere in or near a</small> Great chasm"
+      ],
+      [
+        "<small>While dealing with a</small> Damaged war wagon",
+        "<small>While dealing with a</small> Huge zombie horde",
+        "<small>While dealing with a</small> Serious injury",
+        "<small>While dealing with a</small> Mysterious enemy",
+        "<small>While dealing with a</small> Trap or ambush",
+        "<small>While dealing with a</small> Flood or cave-in"
+      ]
     ],
-    [
-      "<small>From somewhere in or near a</small> Deep mineshaft",
-      "<small>From somewhere in or near a</small> New vein of ore",
-      "<small>From somewhere in or near a</small> Distant passageway",
-      "<small>From somewhere in or near a</small> Natural chamber",
-      "<small>From somewhere in or near a</small> Residential area",
-      "<small>From somewhere in or near a</small> Great chasm"
-    ],
-    [
-      "<small>While dealing with a</small> Damaged war wagon",
-      "<small>While dealing with a</small> Huge zombie horde",
-      "<small>While dealing with a</small> Serious injury",
-      "<small>While dealing with a</small> Mysterious enemy",
-      "<small>While dealing with a</small> Trap or ambush",
-      "<small>While dealing with a</small> Flood or cave-in"
+    es: [
+      [
+        "<small>Los mineros deben</small> Recuperar un artefacto perdido",
+        "<small>Los mineros deben</small> Eliminar una amenaza",
+        "<small>Los mineros deben</small> Rescatar a otra tripulación",
+        "<small>Los mineros deben</small> Capturar un espécimen",
+        "<small>Los mineros deben</small> Prestar asistencia",
+        "<small>Los mineros deben</small> Obtener información"
+      ],
+      [
+        "<small>Desde algún lugar en o cerca de</small> Un pozo minero profundo",
+        "<small>Desde algún lugar en o cerca de</small> Una nueva veta de mineral",
+        "<small>Desde algún lugar en o cerca de</small> Un pasadizo distante",
+        "<small>Desde algún lugar en o cerca de</small> Una cámara natural",
+        "<small>Desde algún lugar en o cerca de</small> Una zona residencial",
+        "<small>Desde algún lugar en o cerca de</small> Un gran abismo"
+      ],
+      [
+        "<small>Mientras lidian con</small> Un vagón de guerra dañado",
+        "<small>Mientras lidian con</small> Una enorme horda de zombis",
+        "<small>Mientras lidian con</small> Una herida grave",
+        "<small>Mientras lidian con</small> Un enemigo misterioso",
+        "<small>Mientras lidian con</small> Una trampa o emboscada",
+        "<small>Mientras lidian con</small> Una inundación o derrumbe"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>Los mineros deben</small> Recuperar un artefacto perdido",
-      "<small>Los mineros deben</small> Eliminar una amenaza",
-      "<small>Los mineros deben</small> Rescatar a otra tripulación",
-      "<small>Los mineros deben</small> Capturar un espécimen",
-      "<small>Los mineros deben</small> Prestar asistencia",
-      "<small>Los mineros deben</small> Obtener información"
-    ],
-    [
-      "<small>Desde algún lugar en o cerca de</small> Un pozo minero profundo",
-      "<small>Desde algún lugar en o cerca de</small> Una nueva veta de mineral",
-      "<small>Desde algún lugar en o cerca de</small> Un pasadizo distante",
-      "<small>Desde algún lugar en o cerca de</small> Una cámara natural",
-      "<small>Desde algún lugar en o cerca de</small> Una zona residencial",
-      "<small>Desde algún lugar en o cerca de</small> Un gran abismo"
-    ],
-    [
-      "<small>Mientras lidian con</small> Un vagón de guerra dañado",
-      "<small>Mientras lidian con</small> Una enorme horda de zombis",
-      "<small>Mientras lidian con</small> Una herida grave",
-      "<small>Mientras lidian con</small> Un enemigo misterioso",
-      "<small>Mientras lidian con</small> Una trampa o emboscada",
-      "<small>Mientras lidian con</small> Una inundación o derrumbe"
-    ]
-  ]
-},
+  },
   mythical_heroes: {
-  title: "Mythical Heroes",
-  en: [
-    [
-      "<small>The heroes embark on a quest to</small> Slay a monster/tyrant",
-      "<small>The heroes embark on a quest to</small> Rescue a prisoner",
-      "<small>The heroes embark on a quest to</small> Defend a settlement",
-      "<small>The heroes embark on a quest to</small> Recover lost treasure",
-      "<small>The heroes embark on a quest to</small> Obtain a weapon",
-      "<small>The heroes embark on a quest to</small> Capture a monster"
+    title: "Mythical Heroes",
+    en: [
+      [
+        "<small>The heroes embark on a quest to</small> Slay a monster/tyrant",
+        "<small>The heroes embark on a quest to</small> Rescue a prisoner",
+        "<small>The heroes embark on a quest to</small> Defend a settlement",
+        "<small>The heroes embark on a quest to</small> Recover lost treasure",
+        "<small>The heroes embark on a quest to</small> Obtain a weapon",
+        "<small>The heroes embark on a quest to</small> Capture a monster"
+      ],
+      [
+        "<small>Along the way they must also</small> Receive a blessing",
+        "<small>Along the way they must also</small> Survive an ambush",
+        "<small>Along the way they must also</small> Defeat a rival",
+        "<small>Along the way they must also</small> Navigate a hazard",
+        "<small>Along the way they must also</small> Protect the weak",
+        "<small>Along the way they must also</small> Consult an oracle"
+      ],
+      [
+        "<small>While facing and overcoming</small> A puzzle or riddle",
+        "<small>While facing and overcoming</small> Divine vengeance",
+        "<small>While facing and overcoming</small> A moral dilemma",
+        "<small>While facing and overcoming</small> Time constraints",
+        "<small>While facing and overcoming</small> A feud or rivalry",
+        "<small>While facing and overcoming</small> Treachery or betrayal"
+      ]
     ],
-    [
-      "<small>Along the way they must also</small> Receive a blessing",
-      "<small>Along the way they must also</small> Survive an ambush",
-      "<small>Along the way they must also</small> Defeat a rival",
-      "<small>Along the way they must also</small> Navigate a hazard",
-      "<small>Along the way they must also</small> Protect the weak",
-      "<small>Along the way they must also</small> Consult an oracle"
-    ],
-    [
-      "<small>While facing and overcoming</small> A puzzle or riddle",
-      "<small>While facing and overcoming</small> Divine vengeance",
-      "<small>While facing and overcoming</small> A moral dilemma",
-      "<small>While facing and overcoming</small> Time constraints",
-      "<small>While facing and overcoming</small> A feud or rivalry",
-      "<small>While facing and overcoming</small> Treachery or betrayal"
+    es: [
+      [
+        "<small>Los héroes se embarcan en una gesta para</small> Matar a un monstruo o tirano",
+        "<small>Los héroes se embarcan en una gesta para</small> Rescatar a un prisionero",
+        "<small>Los héroes se embarcan en una gesta para</small> Defender un asentamiento",
+        "<small>Los héroes se embarcan en una gesta para</small> Recuperar un tesoro perdido",
+        "<small>Los héroes se embarcan en una gesta para</small> Obtener un arma",
+        "<small>Los héroes se embarcan en una gesta para</small> Capturar a un monstruo"
+      ],
+      [
+        "<small>Por el camino también deben</small> Recibir una bendición",
+        "<small>Por el camino también deben</small> Sobrevivir a una emboscada",
+        "<small>Por el camino también deben</small> Derrotar a un rival",
+        "<small>Por el camino también deben</small> Sortear un peligro",
+        "<small>Por el camino también deben</small> Proteger a los débiles",
+        "<small>Por el camino también deben</small> Consultar a un oráculo"
+      ],
+      [
+        "<small>Mientras enfrentan y superan</small> Un puzle o acertijo",
+        "<small>Mientras enfrentan y superan</small> La venganza divina",
+        "<small>Mientras enfrentan y superan</small> Un dilema moral",
+        "<small>Mientras enfrentan y superan</small> Restricciones de tiempo",
+        "<small>Mientras enfrentan y superan</small> Una disputa o rivalidad",
+        "<small>Mientras enfrentan y superan</small> Una traición"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>Los héroes se embarcan en una gesta para</small> Matar a un monstruo o tirano",
-      "<small>Los héroes se embarcan en una gesta para</small> Rescatar a un prisionero",
-      "<small>Los héroes se embarcan en una gesta para</small> Defender un asentamiento",
-      "<small>Los héroes se embarcan en una gesta para</small> Recuperar un tesoro perdido",
-      "<small>Los héroes se embarcan en una gesta para</small> Obtener un arma",
-      "<small>Los héroes se embarcan en una gesta para</small> Capturar a un monstruo"
-    ],
-    [
-      "<small>Por el camino también deben</small> Recibir una bendición",
-      "<small>Por el camino también deben</small> Sobrevivir a una emboscada",
-      "<small>Por el camino también deben</small> Derrotar a un rival",
-      "<small>Por el camino también deben</small> Sortear un peligro",
-      "<small>Por el camino también deben</small> Proteger a los débiles",
-      "<small>Por el camino también deben</small> Consultar a un oráculo"
-    ],
-    [
-      "<small>Mientras enfrentan y superan</small> Un puzle o acertijo",
-      "<small>Mientras enfrentan y superan</small> La venganza divina",
-      "<small>Mientras enfrentan y superan</small> Un dilema moral",
-      "<small>Mientras enfrentan y superan</small> Restricciones de tiempo",
-      "<small>Mientras enfrentan y superan</small> Una disputa o rivalidad",
-      "<small>Mientras enfrentan y superan</small> Una traición"
-    ]
-  ]
-},
+  },
   pirates_bone_blade: {
-  title: "Pirates of the Bone Blade",
-  en: [
-    [
-      "<small>The pirates decide to</small> Pillage and plunder",
-      "<small>The pirates decide to</small> Rescue an ally",
-      "<small>The pirates decide to</small> Recover lost treasure",
-      "<small>The pirates decide to</small> Kidnap and ransom",
-      "<small>The pirates decide to</small> Destroy an enemy",
-      "<small>The pirates decide to</small> Follow Jake’s trail"
+    title: "Pirates of the Bone Blade",
+    en: [
+      [
+        "<small>The pirates decide to</small> Pillage and plunder",
+        "<small>The pirates decide to</small> Rescue an ally",
+        "<small>The pirates decide to</small> Recover lost treasure",
+        "<small>The pirates decide to</small> Kidnap and ransom",
+        "<small>The pirates decide to</small> Destroy an enemy",
+        "<small>The pirates decide to</small> Follow Jake’s trail"
+      ],
+      [
+        "<small>Near, on, or within</small> A coastal fortress",
+        "<small>Near, on, or within</small> Some old ruins",
+        "<small>Near, on, or within</small> A tropical island",
+        "<small>Near, on, or within</small> A sheltered bay",
+        "<small>Near, on, or within</small> Another ship",
+        "<small>Near, on, or within</small> A seaside village"
+      ],
+      [
+        "<small>While dealing with</small> A huge sea monster",
+        "<small>While dealing with</small> Unfriendly locals",
+        "<small>While dealing with</small> A disorderly crew",
+        "<small>While dealing with</small> A supernatural threat",
+        "<small>While dealing with</small> Rival raiders",
+        "<small>While dealing with</small> Dangerous weather"
+      ]
     ],
-    [
-      "<small>Near, on, or within</small> A coastal fortress",
-      "<small>Near, on, or within</small> Some old ruins",
-      "<small>Near, on, or within</small> A tropical island",
-      "<small>Near, on, or within</small> A sheltered bay",
-      "<small>Near, on, or within</small> Another ship",
-      "<small>Near, on, or within</small> A seaside village"
-    ],
-    [
-      "<small>While dealing with</small> A huge sea monster",
-      "<small>While dealing with</small> Unfriendly locals",
-      "<small>While dealing with</small> A disorderly crew",
-      "<small>While dealing with</small> A supernatural threat",
-      "<small>While dealing with</small> Rival raiders",
-      "<small>While dealing with</small> Dangerous weather"
+    es: [
+      [
+        "<small>Los piratas deciden</small> Saquear y pillar",
+        "<small>Los piratas deciden</small> Rescatar a un aliado",
+        "<small>Los piratas deciden</small> Recuperar un tesoro perdido",
+        "<small>Los piratas deciden</small> Secuestrar y pedir rescate",
+        "<small>Los piratas deciden</small> Destruir a un enemigo",
+        "<small>Los piratas deciden</small> Seguir el rastro de Jake"
+      ],
+      [
+        "<small>Cerca, en o dentro de</small> Una fortaleza costera",
+        "<small>Cerca, en o dentro de</small> Unas viejas ruinas",
+        "<small>Cerca, en o dentro de</small> Una isla tropical",
+        "<small>Cerca, en o dentro de</small> Una bahía resguardada",
+        "<small>Cerca, en o dentro de</small> Otro barco",
+        "<small>Cerca, en o dentro de</small> Una aldea costera"
+      ],
+      [
+        "<small>Mientras lidian con</small> Un enorme monstruo marino",
+        "<small>Mientras lidian con</small> Lugareños hostiles",
+        "<small>Mientras lidian con</small> Una tripulación indisciplinada",
+        "<small>Mientras lidian con</small> Una amenaza sobrenatural",
+        "<small>Mientras lidian con</small> Invasores rivales",
+        "<small>Mientras lidian con</small> Un clima peligroso"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>Los piratas deciden</small> Saquear y pillar",
-      "<small>Los piratas deciden</small> Rescatar a un aliado",
-      "<small>Los piratas deciden</small> Recuperar un tesoro perdido",
-      "<small>Los piratas deciden</small> Secuestrar y pedir rescate",
-      "<small>Los piratas deciden</small> Destruir a un enemigo",
-      "<small>Los piratas deciden</small> Seguir el rastro de Jake"
-    ],
-    [
-      "<small>Cerca, en o dentro de</small> Una fortaleza costera",
-      "<small>Cerca, en o dentro de</small> Unas viejas ruinas",
-      "<small>Cerca, en o dentro de</small> Una isla tropical",
-      "<small>Cerca, en o dentro de</small> Una bahía resguardada",
-      "<small>Cerca, en o dentro de</small> Otro barco",
-      "<small>Cerca, en o dentro de</small> Una aldea costera"
-    ],
-    [
-      "<small>Mientras lidian con</small> Un enorme monstruo marino",
-      "<small>Mientras lidian con</small> Lugareños hostiles",
-      "<small>Mientras lidian con</small> Una tripulación indisciplinada",
-      "<small>Mientras lidian con</small> Una amenaza sobrenatural",
-      "<small>Mientras lidian con</small> Invasores rivales",
-      "<small>Mientras lidian con</small> Un clima peligroso"
-    ]
-  ]
-},
+  },
   putrid_politicians: {
-  title: "Putrid Politicians",
-  en: [
-    [
-      "<small>The politicians decide to</small> Find a new scapegoat",
-      "<small>The politicians decide to</small> Dispose of a rival",
-      "<small>The politicians decide to</small> Exert some influence",
-      "<small>The politicians decide to</small> Line their pockets",
-      "<small>The politicians decide to</small> Discover a secret",
-      "<small>The politicians decide to</small> Attend a fundraiser"
+    title: "Putrid Politicians",
+    en: [
+      [
+        "<small>The politicians decide to</small> Find a new scapegoat",
+        "<small>The politicians decide to</small> Dispose of a rival",
+        "<small>The politicians decide to</small> Exert some influence",
+        "<small>The politicians decide to</small> Line their pockets",
+        "<small>The politicians decide to</small> Discover a secret",
+        "<small>The politicians decide to</small> Attend a fundraiser"
+      ],
+      [
+        "<small>Which leads them to</small> The capitol building",
+        "<small>Which leads them to</small> An exclusive club",
+        "<small>Which leads them to</small> A luxurious mansion",
+        "<small>Which leads them to</small> A fancy restaurant",
+        "<small>Which leads them to</small> A grand temple",
+        "<small>Which leads them to</small> An arena or theater"
+      ],
+      [
+        "<small>But they must also deal with</small> Compromising intel",
+        "<small>But they must also deal with</small> Past indiscretions",
+        "<small>But they must also deal with</small> Criminal charges",
+        "<small>But they must also deal with</small> Airing dirty laundry",
+        "<small>But they must also deal with</small> Agitators or activists",
+        "<small>But they must also deal with</small> Loose lips"
+      ]
     ],
-    [
-      "<small>Which leads them to</small> The capitol building",
-      "<small>Which leads them to</small> An exclusive club",
-      "<small>Which leads them to</small> A luxurious mansion",
-      "<small>Which leads them to</small> A fancy restaurant",
-      "<small>Which leads them to</small> A grand temple",
-      "<small>Which leads them to</small> An arena or theater"
-    ],
-    [
-      "<small>But they must also deal with</small> Compromising intel",
-      "<small>But they must also deal with</small> Past indiscretions",
-      "<small>But they must also deal with</small> Criminal charges",
-      "<small>But they must also deal with</small> Airing dirty laundry",
-      "<small>But they must also deal with</small> Agitators or activists",
-      "<small>But they must also deal with</small> Loose lips"
+    es: [
+      [
+        "<small>Los políticos deciden</small> Buscar un nuevo chivo expiatorio",
+        "<small>Los políticos deciden</small> Deshacerse de un rival",
+        "<small>Los políticos deciden</small> Ejercer algo de influencia",
+        "<small>Los políticos deciden</small> Llenarse los bolsillos",
+        "<small>Los políticos deciden</small> Descubrir un secreto",
+        "<small>Los políticos deciden</small> Asistir a una recaudación de fondos"
+      ],
+      [
+        "<small>Lo que los lleva a</small> El edificio del capitolio",
+        "<small>Lo que los lleva a</small> Un club exclusivo",
+        "<small>Lo que los lleva a</small> Una mansión lujosa",
+        "<small>Lo que los lleva a</small> Un restaurante elegante",
+        "<small>Lo que los lleva a</small> Un gran templo",
+        "<small>Lo que los lleva a</small> Una arena o teatro"
+      ],
+      [
+        "<small>Pero también deben lidiar con</small> Información comprometedora",
+        "<small>Pero también deben lidiar con</small> Indiscreciones del pasado",
+        "<small>Pero también deben lidiar con</small> Cargos criminales",
+        "<small>Pero también deben lidiar con</small> Trapos sucios al sol",
+        "<small>Pero también deben lidiar con</small> Agitadores o activistas",
+        "<small>Pero también deben lidiar con</small> Lenguas largas"
+      ]
     ]
-  ],
-  es: [
-    [
-      "<small>Los políticos deciden</small> Buscar un nuevo chivo expiatorio",
-      "<small>Los políticos deciden</small> Deshacerse de un rival",
-      "<small>Los políticos deciden</small> Ejercer algo de influencia",
-      "<small>Los políticos deciden</small> Llenarse los bolsillos",
-      "<small>Los políticos deciden</small> Descubrir un secreto",
-      "<small>Los políticos deciden</small> Asistir a una recaudación de fondos"
-    ],
-    [
-      "<small>Lo que los lleva a</small> El edificio del capitolio",
-      "<small>Lo que los lleva a</small> Un club exclusivo",
-      "<small>Lo que los lleva a</small> Una mansión lujosa",
-      "<small>Lo que los lleva a</small> Un restaurante elegante",
-      "<small>Lo que los lleva a</small> Un gran templo",
-      "<small>Lo que los lleva a</small> Una arena o teatro"
-    ],
-    [
-      "<small>Pero también deben lidiar con</small> Información comprometedora",
-      "<small>Pero también deben lidiar con</small> Indiscreciones del pasado",
-      "<small>Pero también deben lidiar con</small> Cargos criminales",
-      "<small>Pero también deben lidiar con</small> Trapos sucios al sol",
-      "<small>Pero también deben lidiar con</small> Agitadores o activistas",
-      "<small>Pero también deben lidiar con</small> Lenguas largas"
-    ]
-  ]
-},
+  },
   rabbit_tales: {
-  title: "Rabbit Tales",
-  en: [
-    [
-      "<small>The rabbits must</small> Find a food source",
-      "<small>The rabbits must</small> Seek out some herbs",
-      "<small>The rabbits must</small> Rescue a rabbit",
-      "<small>The rabbits must</small> Scout for a new home",
-      "<small>The rabbits must</small> Deliver a warning",
-      "<small>The rabbits must</small> Investigate a vision"
+    title: "Rabbit Tales",
+    en: [
+      [
+        "<small>The rabbits must</small> Find a food source",
+        "<small>The rabbits must</small> Seek out some herbs",
+        "<small>The rabbits must</small> Rescue a rabbit",
+        "<small>The rabbits must</small> Scout for a new home",
+        "<small>The rabbits must</small> Deliver a warning",
+        "<small>The rabbits must</small> Investigate a vision"
+      ],
+      [
+        "<small>In, around, or beneath a</small> Dense thicket",
+        "<small>In, around, or beneath a</small> Building or farm",
+        "<small>In, around, or beneath a</small> Dried-up streambed",
+        "<small>In, around, or beneath a</small> Verdant meadow",
+        "<small>In, around, or beneath a</small> Mysterious forest",
+        "<small>In, around, or beneath a</small> Human path or road"
+      ],
+      [
+        "<small>While dealing with</small> A circling hawk",
+        "<small>While dealing with</small> Prowling predators",
+        "<small>While dealing with</small> A snare or trap",
+        "<small>While dealing with</small> A storm or flood",
+        "<small>While dealing with</small> Strange rabbits",
+        "<small>While dealing with</small> Mysterious omens"
+      ]
     ],
-    [
-      "<small>In, around, or beneath a</small> Dense thicket",
-      "<small>In, around, or beneath a</small> Building or farm",
-      "<small>In, around, or beneath a</small> Dried-up streambed",
-      "<small>In, around, or beneath a</small> Verdant meadow",
-      "<small>In, around, or beneath a</small> Mysterious forest",
-      "<small>In, around, or beneath a</small> Human path or road"
-    ],
-    [
-      "<small>While dealing with</small> A circling hawk",
-      "<small>While dealing with</small> Prowling predators",
-      "<small>While dealing with</small> A snare or trap",
-      "<small>While dealing with</small> A storm or flood",
-      "<small>While dealing with</small> Strange rabbits",
-      "<small>While dealing with</small> Mysterious omens"
-    ]
-  ],
-  es: [
-    [
-      "<small>Los conejos deben</small> Encontrar una fuente de alimento",
-      "<small>Los conejos deben</small> Buscar algunas hierbas",
-      "<small>Los conejos deben</small> Rescatar a un conejo",
-      "<small>Los conejos deben</small> Explorar un nuevo hogar",
-      "<small>Los conejos deben</small> Entregar una advertencia",
-      "<small>Los conejos deben</small> Investigar una visión"
-    ],
-    [
-      "<small>En, alrededor o bajo</small> Un matorral espeso",
-      "<small>En, alrededor o bajo</small> Un edificio o granja",
-      "<small>En, alrededor o bajo</small> El lecho seco de un arroyo",
-      "<small>En, alrededor o bajo</small> Un prado verdeante",
-      "<small>En, alrededor o bajo</small> Un bosque misterioso",
-      "<small>En, alrededor o bajo</small> Un camino o carretera humana"
-    ],
-    [
-      "<small>Mientras lidian con</small> Un halcón al acecho",
-      "<small>Mientras lidian con</small> Depredadores merodeando",
-      "<small>Mientras lidian con</small> Una trampa o lazo",
-      "<small>Mientras lidian con</small> Una tormenta o inundación",
-      "<small>Mientras lidian con</small> Conejos extraños",
-      "<small>Mientras lidian con</small> Presagios misteriosos"
-    ]
-  ]
-},
+      es: [
+        [
+          "<small>Los conejos deben</small> Encontrar una fuente de alimento",
+          "<small>Los conejos deben</small> Buscar algunas hierbas",
+          "<small>Los conejos deben</small> Rescatar a un conejo",
+          "<small>Los conejos deben</small> Explorar un nuevo hogar",
+          "<small>Los conejos deben</small> Entregar una advertencia",
+          "<small>Los conejos deben</small> Investigar una visión"
+        ],
+        [
+          "<small>En, alrededor o bajo</small> Un matorral espeso",
+          "<small>En, alrededor o bajo</small> Un edificio o granja",
+          "<small>En, alrededor o bajo</small> El lecho seco de un arroyo",
+          "<small>En, alrededor o bajo</small> Un prado verdeante",
+          "<small>En, alrededor o bajo</small> Un bosque misterioso",
+          "<small>En, alrededor o bajo</small> Un camino o carretera humana"
+        ],
+        [
+          "<small>Mientras lidian con</small> Un halcón al acecho",
+          "<small>Mientras lidian con</small> Depredadores merodeando",
+          "<small>Mientras lidian con</small> Una trampa o lazo",
+          "<small>Mientras lidian con</small> Una tormenta o inundación",
+          "<small>Mientras lidian con</small> Conejos extraños",
+          "<small>Mientras lidian con</small> Presagios misteriosos"
+        ]
+      ]
+  },
   road_hogs: {
-  title: "Road Hogs",
-  en: [
-    [
-      "<small>The bikers must</small> Capture a criminal",
-      "<small>The bikers must</small> Hunt down a fugitive",
-      "<small>The bikers must</small> Protect the innocent",
-      "<small>The bikers must</small> Rescue a hostage",
-      "<small>The bikers must</small> Infiltrate a group",
-      "<small>The bikers must</small> Recover stolen goods"
-    ],
-    [
-      "<small>Which leads them to a</small> Warehouse or factory",
-      "<small>Which leads them to a</small> Bar, diner, or club",
-      "<small>Which leads them to a</small> Ranch or commune",
-      "<small>Which leads them to a</small> Church or town hall",
-      "<small>Which leads them to a</small> Hotel, motel, or hostel",
-      "<small>Which leads them to a</small> Hospital or morgue"
-    ],
-    [
-      "<small>But they must also deal with</small> Dangerous tourists",
-      "<small>But they must also deal with</small> A rival biker gang",
-      "<small>But they must also deal with</small> Magical mayhem",
-      "<small>But they must also deal with</small> A sheriff or politician",
-      "<small>But they must also deal with</small> An ambush or trap",
-      "<small>But they must also deal with</small> A monstrous threat"
-    ]
-  ],
-  es: [
-    [
-      "<small>Los moteros deben</small> Capturar a un criminal",
-      "<small>Los moteros deben</small> Cazar a un fugitivo",
-      "<small>Los moteros deben</small> Proteger a los inocentes",
-      "<small>Los moteros deben</small> Rescatar a un rehén",
-      "<small>Los moteros deben</small> Infiltrarse en un grupo",
-      "<small>Los moteros deben</small> Recuperar mercancía robada"
-    ],
-    [
-      "<small>Lo que los lleva a</small> Un almacén o fábrica",
-      "<small>Lo que los lleva a</small> Un bar, cafetería o club",
-      "<small>Lo que los lleva a</small> Un rancho o comuna",
-      "<small>Lo que los lleva a</small> Una iglesia o ayuntamiento",
-      "<small>Lo que los lleva a</small> Un hotel, motel u hostal",
-      "<small>Lo que los lleva a</small> Un hospital o morgue"
-    ],
-    [
-      "<small>Pero también deben lidiar con</small> Turistas peligrosos",
-      "<small>Pero también deben lidiar con</small> Una banda de moteros rival",
-      "<small>Pero también deben lidiar con</small> Caos mágico",
-      "<small>Pero también deben lidiar con</small> Un sheriff o político",
-      "<small>Pero también deben lidiar con</small> Una emboscada o trampa",
-      "<small>Pero también deben lidiar con</small> Una amenaza monstruosa"
-    ]
-  ]
-},
+    title: "Road Hogs",
+      en: [
+        [
+          "<small>The bikers must</small> Capture a criminal",
+          "<small>The bikers must</small> Hunt down a fugitive",
+          "<small>The bikers must</small> Protect the innocent",
+          "<small>The bikers must</small> Rescue a hostage",
+          "<small>The bikers must</small> Infiltrate a group",
+          "<small>The bikers must</small> Recover stolen goods"
+        ],
+        [
+          "<small>Which leads them to a</small> Warehouse or factory",
+          "<small>Which leads them to a</small> Bar, diner, or club",
+          "<small>Which leads them to a</small> Ranch or commune",
+          "<small>Which leads them to a</small> Church or town hall",
+          "<small>Which leads them to a</small> Hotel, motel, or hostel",
+          "<small>Which leads them to a</small> Hospital or morgue"
+        ],
+        [
+          "<small>But they must also deal with</small> Dangerous tourists",
+          "<small>But they must also deal with</small> A rival biker gang",
+          "<small>But they must also deal with</small> Magical mayhem",
+          "<small>But they must also deal with</small> A sheriff or politician",
+          "<small>But they must also deal with</small> An ambush or trap",
+          "<small>But they must also deal with</small> A monstrous threat"
+        ]
+      ],
+      es: [
+        [
+          "<small>Los moteros deben</small> Capturar a un criminal",
+          "<small>Los moteros deben</small> Cazar a un fugitivo",
+          "<small>Los moteros deben</small> Proteger a los inocentes",
+          "<small>Los moteros deben</small> Rescatar a un rehén",
+          "<small>Los moteros deben</small> Infiltrarse en un grupo",
+          "<small>Los moteros deben</small> Recuperar mercancía robada"
+        ],
+        [
+          "<small>Lo que los lleva a</small> Un almacén o fábrica",
+          "<small>Lo que los lleva a</small> Un bar, cafetería o club",
+          "<small>Lo que los lleva a</small> Un rancho o comuna",
+          "<small>Lo que los lleva a</small> Una iglesia o ayuntamiento",
+          "<small>Lo que los lleva a</small> Un hotel, motel u hostal",
+          "<small>Lo que los lleva a</small> Un hospital o morgue"
+        ],
+        [
+          "<small>Pero también deben lidiar con</small> Turistas peligrosos",
+          "<small>Pero también deben lidiar con</small> Una banda de moteros rival",
+          "<small>Pero también deben lidiar con</small> Caos mágico",
+          "<small>Pero también deben lidiar con</small> Un sheriff o político",
+          "<small>Pero también deben lidiar con</small> Una emboscada o trampa",
+          "<small>Pero también deben lidiar con</small> Una amenaza monstruosa"
+        ]
+      ]
+  },
   rotten_odds: {
-  title: "Rotten Odds",
-  en: [
-    [
-      "<small>The survivors must</small> Rescue someone",
-      "<small>The survivors must</small> Gather supplies",
-      "<small>The survivors must</small> Secure an area",
-      "<small>The survivors must</small> Investigate a lead",
-      "<small>The survivors must</small> Search a location",
-      "<small>The survivors must</small> Repair something"
-    ],
-    [
-      "<small>From or within</small> A shopping mall",
-      "<small>From or within</small> A high-rise hotel",
-      "<small>From or within</small> A cruise ship",
-      "<small>From or within</small> An amusement park",
-      "<small>From or within</small> A supermax prison",
-      "<small>From or within</small> A research facility"
-    ],
-    [
-      "<small>While dealing with</small> Hardened criminals",
-      "<small>While dealing with</small> Evolved zombies",
-      "<small>While dealing with</small> A paramilitary group",
-      "<small>While dealing with</small> Rival survivors",
-      "<small>While dealing with</small> Wild animals",
-      "<small>While dealing with</small> Urban hazards"
-    ]
-  ],
-  es: [
-    [
-      "<small>Los supervivientes deben</small> Rescatar a alguien",
-      "<small>Los supervivientes deben</small> Reunir suministros",
-      "<small>Los supervivientes deben</small> Asegurar un área",
-      "<small>Los supervivientes deben</small> Investigar una pista",
-      "<small>Los supervivientes deben</small> Registrar una ubicación",
-      "<small>Los supervivientes deben</small> Reparar algo"
-    ],
-    [
-      "<small>Desde o dentro de</small> Un centro comercial",
-      "<small>Desde o dentro de</small> Un hotel de gran altura",
-      "<small>Desde o dentro de</small> Un crucero",
-      "<small>Desde o dentro de</small> Un parque de atracciones",
-      "<small>Desde o dentro de</small> Una prisión de máxima seguridad",
-      "<small>Desde o dentro de</small> Una instalación de investigación"
-    ],
-    [
-      "<small>Mientras lidian con</small> Criminales curtidos",
-      "<small>Mientras lidian con</small> Zombis evolucionados",
-      "<small>Mientras lidian con</small> Un grupo paramilitar",
-      "<small>Mientras lidian con</small> Supervivientes rivales",
-      "<small>Mientras lidian con</small> Animales salvajes",
-      "<small>Mientras lidian con</small> Peligros urbanos"
-    ]
-  ]
-},
+    title: "Rotten Odds",
+      en: [
+        [
+          "<small>The survivors must</small> Rescue someone",
+          "<small>The survivors must</small> Gather supplies",
+          "<small>The survivors must</small> Secure an area",
+          "<small>The survivors must</small> Investigate a lead",
+          "<small>The survivors must</small> Search a location",
+          "<small>The survivors must</small> Repair something"
+        ],
+        [
+          "<small>From or within</small> A shopping mall",
+          "<small>From or within</small> A high-rise hotel",
+          "<small>From or within</small> A cruise ship",
+          "<small>From or within</small> An amusement park",
+          "<small>From or within</small> A supermax prison",
+          "<small>From or within</small> A research facility"
+        ],
+        [
+          "<small>While dealing with</small> Hardened criminals",
+          "<small>While dealing with</small> Evolved zombies",
+          "<small>While dealing with</small> A paramilitary group",
+          "<small>While dealing with</small> Rival survivors",
+          "<small>While dealing with</small> Wild animals",
+          "<small>While dealing with</small> Urban hazards"
+        ]
+      ],
+      es: [
+        [
+          "<small>Los supervivientes deben</small> Rescatar a alguien",
+          "<small>Los supervivientes deben</small> Reunir suministros",
+          "<small>Los supervivientes deben</small> Asegurar un área",
+          "<small>Los supervivientes deben</small> Investigar una pista",
+          "<small>Los supervivientes deben</small> Registrar una ubicación",
+          "<small>Los supervivientes deben</small> Reparar algo"
+        ],
+        [
+          "<small>Desde o dentro de</small> Un centro comercial",
+          "<small>Desde o dentro de</small> Un hotel de gran altura",
+          "<small>Desde o dentro de</small> Un crucero",
+          "<small>Desde o dentro de</small> Un parque de atracciones",
+          "<small>Desde o dentro de</small> Una prisión de máxima seguridad",
+          "<small>Desde o dentro de</small> Una instalación de investigación"
+        ],
+        [
+          "<small>Mientras lidian con</small> Criminales curtidos",
+          "<small>Mientras lidian con</small> Zombis evolucionados",
+          "<small>Mientras lidian con</small> Un grupo paramilitar",
+          "<small>Mientras lidian con</small> Supervivientes rivales",
+          "<small>Mientras lidian con</small> Animales salvajes",
+          "<small>Mientras lidian con</small> Peligros urbanos"
+        ]
+      ]
+  },
   samhain_slaughter: {
-  title: "Samhain Slaughter",
-  en: [
-    [
-      "<small>The kids must find and defeat</small> An animated doll",
-      "<small>The kids must find and defeat</small> An undead slasher",
-      "<small>The kids must find and defeat</small> An alien entity",
-      "<small>The kids must find and defeat</small> A supernatural beast",
-      "<small>The kids must find and defeat</small> An evil clown",
-      "<small>The kids must find and defeat</small> A demon or spirit"
-    ],
-    [
-      "<small>Recently spotted</small> On school campus",
-      "<small>Recently spotted</small> Walking the streets",
-      "<small>Recently spotted</small> Near a local church",
-      "<small>Recently spotted</small> At a private house",
-      "<small>Recently spotted</small> In the public library",
-      "<small>Recently spotted</small> In a derelict building"
-    ],
-    [
-      "<small>While dealing with</small> A psycho teacher",
-      "<small>While dealing with</small> A nosy journalist",
-      "<small>While dealing with</small> Suspicious cops",
-      "<small>While dealing with</small> Family troubles",
-      "<small>While dealing with</small> Unnatural weather",
-      "<small>While dealing with</small> A zombie outbreak"
-    ]
-  ],
-  es: [
-    [
-      "<small>Los chicos deben encontrar y derrotar a</small> Un muñeco animado",
-      "<small>Los chicos deben encontrar y derrotar a</small> Un asesino no muerto",
-      "<small>Los chicos deben encontrar y derrotar a</small> Una entidad alienígena",
-      "<small>Los chicos deben encontrar y derrotar a</small> Una bestia sobrenatural",
-      "<small>Los chicos deben encontrar y derrotar a</small> Un payaso malvado",
-      "<small>Los chicos deben encontrar y derrotar a</small> Un demonio o espíritu"
-    ],
-    [
-      "<small>Avistado recientemente</small> En el campus escolar",
-      "<small>Avistado recientemente</small> Caminando por las calles",
-      "<small>Avistado recientemente</small> Cerca de una iglesia local",
-      "<small>Avistado recientemente</small> En una casa privada",
-      "<small>Avistado recientemente</small> En la biblioteca pública",
-      "<small>Avistado recientemente</small> En un edificio abandonado"
-    ],
-    [
-      "<small>Mientras lidian con</small> Un profesor psicópata",
-      "<small>Mientras lidian con</small> Un periodista entrometido",
-      "<small>Mientras lidian con</small> Policías sospechosos",
-      "<small>Mientras lidian con</small> Problemas familiares",
-      "<small>Mientras lidian con</small> Clima antinatural",
-      "<small>Mientras lidian con</small> Un brote de zombis"
-    ]
-  ]
-},
+    title: "Samhain Slaughter",
+      en: [
+        [
+          "<small>The kids must find and defeat</small> An animated doll",
+          "<small>The kids must find and defeat</small> An undead slasher",
+          "<small>The kids must find and defeat</small> An alien entity",
+          "<small>The kids must find and defeat</small> A supernatural beast",
+          "<small>The kids must find and defeat</small> An evil clown",
+          "<small>The kids must find and defeat</small> A demon or spirit"
+        ],
+        [
+          "<small>Recently spotted</small> On school campus",
+          "<small>Recently spotted</small> Walking the streets",
+          "<small>Recently spotted</small> Near a local church",
+          "<small>Recently spotted</small> At a private house",
+          "<small>Recently spotted</small> In the public library",
+          "<small>Recently spotted</small> In a derelict building"
+        ],
+        [
+          "<small>While dealing with</small> A psycho teacher",
+          "<small>While dealing with</small> A nosy journalist",
+          "<small>While dealing with</small> Suspicious cops",
+          "<small>While dealing with</small> Family troubles",
+          "<small>While dealing with</small> Unnatural weather",
+          "<small>While dealing with</small> A zombie outbreak"
+        ]
+      ],
+      es: [
+        [
+          "<small>Los chicos deben encontrar y derrotar a</small> Un muñeco animado",
+          "<small>Los chicos deben encontrar y derrotar a</small> Un asesino no muerto",
+          "<small>Los chicos deben encontrar y derrotar a</small> Una entidad alienígena",
+          "<small>Los chicos deben encontrar y derrotar a</small> Una bestia sobrenatural",
+          "<small>Los chicos deben encontrar y derrotar a</small> Un payaso malvado",
+          "<small>Los chicos deben encontrar y derrotar a</small> Un demonio o espíritu"
+        ],
+        [
+          "<small>Avistado recientemente</small> En el campus escolar",
+          "<small>Avistado recientemente</small> Caminando por las calles",
+          "<small>Avistado recientemente</small> Cerca de una iglesia local",
+          "<small>Avistado recientemente</small> En una casa privada",
+          "<small>Avistado recientemente</small> En la biblioteca pública",
+          "<small>Avistado recientemente</small> En un edificio abandonado"
+        ],
+        [
+          "<small>Mientras lidian con</small> Un profesor psicópata",
+          "<small>Mientras lidian con</small> Un periodista entrometido",
+          "<small>Mientras lidian con</small> Policías sospechosos",
+          "<small>Mientras lidian con</small> Problemas familiares",
+          "<small>Mientras lidian con</small> Clima antinatural",
+          "<small>Mientras lidian con</small> Un brote de zombis"
+        ]
+      ]
+  },
   sharp_knives_dark_streets: {
-  title: "Sharp Knives & Dark Streets",
-  en: [
-    [
-      "<small>The crew is hired to</small> Assassinate someone",
-      "<small>The crew is hired to</small> Commit a robbery",
-      "<small>The crew is hired to</small> Intimidate someone",
-      "<small>The crew is hired to</small> Gather intelligence",
-      "<small>The crew is hired to</small> Commit a burglary",
-      "<small>The crew is hired to</small> Kidnap someone"
-    ],
-    [
-      "<small>Near, on, or within</small> A shop or guildhall",
-      "<small>Near, on, or within</small> A house or mansion",
-      "<small>Near, on, or within</small> The marketplace",
-      "<small>Near, on, or within</small> A tavern or brothel",
-      "<small>Near, on, or within</small> A church or temple",
-      "<small>Near, on, or within</small> The docks or slums"
-    ],
-    [
-      "<small>While dealing with</small> The city watch",
-      "<small>While dealing with</small> A criminal gang",
-      "<small>While dealing with</small> A sorcerer or artificer",
-      "<small>While dealing with</small> An automaton",
-      "<small>While dealing with</small> A powerful noble",
-      "<small>While dealing with</small> Dangerous cultists"
-    ]
-  ],
-  es: [
-    [
-      "<small>La banda ha sido contratada para</small> Asesinar a alguien",
-      "<small>La banda ha sido contratada para</small> Cometer un atraco",
-      "<small>La banda ha sido contratada para</small> Intimidar a alguien",
-      "<small>La banda ha sido contratada para</small> Reunir inteligencia",
-      "<small>La banda ha sido contratada para</small> Cometer un robo con fractura",
-      "<small>La banda ha sido contratada para</small> Secuestrar a alguien"
-    ],
-    [
-      "<small>Cerca, en o dentro de</small> Una tienda o gremio",
-      "<small>Cerca, en o dentro de</small> Una casa o mansión",
-      "<small>Cerca, en o dentro de</small> El mercado",
-      "<small>Cerca, en o dentro de</small> Una taberna o burdel",
-      "<small>Cerca, en o dentro de</small> Una iglesia o templo",
-      "<small>Cerca, en o dentro de</small> Los muelles o barrios bajos"
-    ],
-    [
-      "<small>Mientras lidian con</small> La guardia de la ciudad",
-      "<small>Mientras lidian con</small> Una banda criminal",
-      "<small>Mientras lidian con</small> Un hechicero o artífice",
-      "<small>Mientras lidian con</small> Un autómata",
-      "<small>Mientras lidian con</small> Un noble poderoso",
-      "<small>Mientras lidian con</small> Cultistas peligrosos"
-    ]
-  ]
-},
+    title: "Sharp Knives & Dark Streets",
+      en: [
+        [
+          "<small>The crew is hired to</small> Assassinate someone",
+          "<small>The crew is hired to</small> Commit a robbery",
+          "<small>The crew is hired to</small> Intimidate someone",
+          "<small>The crew is hired to</small> Gather intelligence",
+          "<small>The crew is hired to</small> Commit a burglary",
+          "<small>The crew is hired to</small> Kidnap someone"
+        ],
+        [
+          "<small>Near, on, or within</small> A shop or guildhall",
+          "<small>Near, on, or within</small> A house or mansion",
+          "<small>Near, on, or within</small> The marketplace",
+          "<small>Near, on, or within</small> A tavern or brothel",
+          "<small>Near, on, or within</small> A church or temple",
+          "<small>Near, on, or within</small> The docks or slums"
+        ],
+        [
+          "<small>While dealing with</small> The city watch",
+          "<small>While dealing with</small> A criminal gang",
+          "<small>While dealing with</small> A sorcerer or artificer",
+          "<small>While dealing with</small> An automaton",
+          "<small>While dealing with</small> A powerful noble",
+          "<small>While dealing with</small> Dangerous cultists"
+        ]
+      ],
+      es: [
+        [
+          "<small>La banda ha sido contratada para</small> Asesinar a alguien",
+          "<small>La banda ha sido contratada para</small> Cometer un atraco",
+          "<small>La banda ha sido contratada para</small> Intimidar a alguien",
+          "<small>La banda ha sido contratada para</small> Reunir inteligencia",
+          "<small>La banda ha sido contratada para</small> Cometer un robo con fractura",
+          "<small>La banda ha sido contratada para</small> Secuestrar a alguien"
+        ],
+        [
+          "<small>Cerca, en o dentro de</small> Una tienda o gremio",
+          "<small>Cerca, en o dentro de</small> Una casa o mansión",
+          "<small>Cerca, en o dentro de</small> El mercado",
+          "<small>Cerca, en o dentro de</small> Una taberna o burdel",
+          "<small>Cerca, en o dentro de</small> Una iglesia o templo",
+          "<small>Cerca, en o dentro de</small> Los muelles o barrios bajos"
+        ],
+        [
+          "<small>Mientras lidian con</small> La guardia de la ciudad",
+          "<small>Mientras lidian con</small> Una banda criminal",
+          "<small>Mientras lidian con</small> Un hechicero o artífice",
+          "<small>Mientras lidian con</small> Un autómata",
+          "<small>Mientras lidian con</small> Un noble poderoso",
+          "<small>Mientras lidian con</small> Cultistas peligrosos"
+        ]
+      ]
+  },
   spellrunners: {
-  title: "Spellrunners",
-  en: [
-    [
-      "<small>The spellrunners are hired to</small> Spy or obtain intel",
-      "<small>The spellrunners are hired to</small> Steal something",
-      "<small>The spellrunners are hired to</small> Assassinate someone",
-      "<small>The spellrunners are hired to</small> Rescue someone",
-      "<small>The spellrunners are hired to</small> Commit sabotage",
-      "<small>The spellrunners are hired to</small> Provide assistance"
-    ],
-    [
-      "<small>Somewhere in, on, or near a</small> Museum or gallery",
-      "<small>Somewhere in, on, or near a</small> Government facility",
-      "<small>Somewhere in, on, or near a</small> Hotel or office block",
-      "<small>Somewhere in, on, or near a</small> High-tech facility",
-      "<small>Somewhere in, on, or near a</small> Residential building",
-      "<small>Somewhere in, on, or near a</small> Construction site"
-    ],
-    [
-      "<small>While dealing with</small> A secret meeting",
-      "<small>While dealing with</small> Rival spellrunners",
-      "<small>While dealing with</small> A well-connected foe",
-      "<small>While dealing with</small> A viral infection",
-      "<small>While dealing with</small> Law enforcement",
-      "<small>While dealing with</small> A hit squad"
-    ]
-  ],
-  es: [
-    [
-      "<small>Los spellrunners han sido contratados para</small> Espiar u obtener inteligencia",
-      "<small>Los spellrunners han sido contratados para</small> Robar algo",
-      "<small>Los spellrunners han sido contratados para</small> Asesinar a alguien",
-      "<small>Los spellrunners han sido contratados para</small> Rescatar a alguien",
-      "<small>Los spellrunners han sido contratados para</small> Cometer un sabotaje",
-      "<small>Los spellrunners han sido contratados para</small> Prestar asistencia"
-    ],
-    [
-      "<small>En algún lugar en, sobre o cerca de</small> Un museo o galería",
-      "<small>En algún lugar en, sobre o cerca de</small> Una instalación gubernamental",
-      "<small>En algún lugar en, sobre o cerca de</small> Un hotel o bloque de oficinas",
-      "<small>En algún lugar en, sobre o cerca de</small> Una instalación de alta tecnología",
-      "<small>En algún lugar en, sobre o cerca de</small> Un edificio residencial",
-      "<small>En algún lugar en, sobre o cerca de</small> Una zona de construcción"
-    ],
-    [
-      "<small>Mientras lidian con</small> Una reunión secreta",
-      "<small>Mientras lidian con</small> Spellrunners rivales",
-      "<small>Mientras lidian con</small> Un enemigo bien conectado",
-      "<small>Mientras lidian con</small> Una infección viral",
-      "<small>Mientras lidian con</small> Las fuerzas del orden",
-      "<small>Mientras lidian con</small> Un escuadrón de la muerte"
-    ]
-  ]
-},
+    title: "Spellrunners",
+      en: [
+        [
+          "<small>The spellrunners are hired to</small> Spy or obtain intel",
+          "<small>The spellrunners are hired to</small> Steal something",
+          "<small>The spellrunners are hired to</small> Assassinate someone",
+          "<small>The spellrunners are hired to</small> Rescue someone",
+          "<small>The spellrunners are hired to</small> Commit sabotage",
+          "<small>The spellrunners are hired to</small> Provide assistance"
+        ],
+        [
+          "<small>Somewhere in, on, or near a</small> Museum or gallery",
+          "<small>Somewhere in, on, or near a</small> Government facility",
+          "<small>Somewhere in, on, or near a</small> Hotel or office block",
+          "<small>Somewhere in, on, or near a</small> High-tech facility",
+          "<small>Somewhere in, on, or near a</small> Residential building",
+          "<small>Somewhere in, on, or near a</small> Construction site"
+        ],
+        [
+          "<small>While dealing with</small> A secret meeting",
+          "<small>While dealing with</small> Rival spellrunners",
+          "<small>While dealing with</small> A well-connected foe",
+          "<small>While dealing with</small> A viral infection",
+          "<small>While dealing with</small> Law enforcement",
+          "<small>While dealing with</small> A hit squad"
+        ]
+      ],
+      es: [
+        [
+          "<small>Los spellrunners han sido contratados para</small> Espiar u obtener inteligencia",
+          "<small>Los spellrunners han sido contratados para</small> Robar algo",
+          "<small>Los spellrunners han sido contratados para</small> Asesinar a alguien",
+          "<small>Los spellrunners han sido contratados para</small> Rescatar a alguien",
+          "<small>Los spellrunners han sido contratados para</small> Cometer un sabotaje",
+          "<small>Los spellrunners han sido contratados para</small> Prestar asistencia"
+        ],
+        [
+          "<small>En algún lugar en, sobre o cerca de</small> Un museo o galería",
+          "<small>En algún lugar en, sobre o cerca de</small> Una instalación gubernamental",
+          "<small>En algún lugar en, sobre o cerca de</small> Un hotel o bloque de oficinas",
+          "<small>En algún lugar en, sobre o cerca de</small> Una instalación de alta tecnología",
+          "<small>En algún lugar en, sobre o cerca de</small> Un edificio residencial",
+          "<small>En algún lugar en, sobre o cerca de</small> Una zona de construcción"
+        ],
+        [
+          "<small>Mientras lidian con</small> Una reunión secreta",
+          "<small>Mientras lidian con</small> Spellrunners rivales",
+          "<small>Mientras lidian con</small> Un enemigo bien conectado",
+          "<small>Mientras lidian con</small> Una infección viral",
+          "<small>Mientras lidian con</small> Las fuerzas del orden",
+          "<small>Mientras lidian con</small> Un escuadrón de la muerte"
+        ]
+      ]
+  },
   stone_age_hunters: {
-  title: "Stone Age Hunters",
-  en: [
-    [
-      "<small>The hunters must</small> Hunt an animal",
-      "<small>The hunters must</small> Gather resources",
-      "<small>The hunters must</small> Deal with rivals",
-      "<small>The hunters must</small> Build or find shelter",
-      "<small>The hunters must</small> Rescue someone",
-      "<small>The hunters must</small> Eliminate a threat"
-    ],
-    [
-      "<small>In, on, or beside</small> A rocky region",
-      "<small>In, on, or beside</small> Open grasslands",
-      "<small>In, on, or beside</small> A valley or canyon",
-      "<small>In, on, or beside</small> A forest or woodland",
-      "<small>In, on, or beside</small> A lake or river",
-      "<small>In, on, or beside</small> A coastal area"
-    ],
-    [
-      "<small>While dealing with</small> Fierce predators",
-      "<small>While dealing with</small> A trap or ambush",
-      "<small>While dealing with</small> Dwindling supplies",
-      "<small>While dealing with</small> Environment hazards",
-      "<small>While dealing with</small> Contested territory",
-      "<small>While dealing with</small> Tribal superstitions"
-    ]
-  ],
-  es: [
-    [
-      "<small>Los cazadores deben</small> Cazar un animal",
-      "<small>Los cazadores deben</small> Recolectar recursos",
-      "<small>Los cazadores deben</small> Lidiar con rivales",
-      "<small>Los cazadores deben</small> Construir o encontrar refugio",
-      "<small>Los cazadores deben</small> Rescatar a alguien",
-      "<small>Los cazadores deben</small> Eliminar una amenaza"
-    ],
-    [
-      "<small>En, sobre o junto a</small> Una región rocosa",
-      "<small>En, sobre o junto a</small> Praderas abiertas",
-      "<small>En, sobre o junto a</small> Un valle o cañón",
-      "<small>En, sobre o junto a</small> Un bosque o zona boscosa",
-      "<small>En, sobre o junto a</small> Un lago o río",
-      "<small>En, sobre o junto a</small> Una zona costera"
-    ],
-    [
-      "<small>Mientras lidian con</small> Depredadores feroces",
-      "<small>Mientras lidian con</small> Una trampa o emboscada",
-      "<small>Mientras lidian con</small> Suministros escasos",
-      "<small>Mientras lidian con</small> Peligros del entorno",
-      "<small>Mientras lidian con</small> Territorio en disputa",
-      "<small>Mientras lidian con</small> Supersticiones tribales"
-    ]
-  ]
-},
+    title: "Stone Age Hunters",
+      en: [
+        [
+          "<small>The hunters must</small> Hunt an animal",
+          "<small>The hunters must</small> Gather resources",
+          "<small>The hunters must</small> Deal with rivals",
+          "<small>The hunters must</small> Build or find shelter",
+          "<small>The hunters must</small> Rescue someone",
+          "<small>The hunters must</small> Eliminate a threat"
+        ],
+        [
+          "<small>In, on, or beside</small> A rocky region",
+          "<small>In, on, or beside</small> Open grasslands",
+          "<small>In, on, or beside</small> A valley or canyon",
+          "<small>In, on, or beside</small> A forest or woodland",
+          "<small>In, on, or beside</small> A lake or river",
+          "<small>In, on, or beside</small> A coastal area"
+        ],
+        [
+          "<small>While dealing with</small> Fierce predators",
+          "<small>While dealing with</small> A trap or ambush",
+          "<small>While dealing with</small> Dwindling supplies",
+          "<small>While dealing with</small> Environment hazards",
+          "<small>While dealing with</small> Contested territory",
+          "<small>While dealing with</small> Tribal superstitions"
+        ]
+      ],
+      es: [
+        [
+          "<small>Los cazadores deben</small> Cazar un animal",
+          "<small>Los cazadores deben</small> Recolectar recursos",
+          "<small>Los cazadores deben</small> Lidiar con rivales",
+          "<small>Los cazadores deben</small> Construir o encontrar refugio",
+          "<small>Los cazadores deben</small> Rescatar a alguien",
+          "<small>Los cazadores deben</small> Eliminar una amenaza"
+        ],
+        [
+          "<small>En, sobre o junto a</small> Una región rocosa",
+          "<small>En, sobre o junto a</small> Praderas abiertas",
+          "<small>En, sobre o junto a</small> Un valle o cañón",
+          "<small>En, sobre o junto a</small> Un bosque o zona boscosa",
+          "<small>En, sobre o junto a</small> Un lago o río",
+          "<small>En, sobre o junto a</small> Una zona costera"
+        ],
+        [
+          "<small>Mientras lidian con</small> Depredadores feroces",
+          "<small>Mientras lidian con</small> Una trampa o emboscada",
+          "<small>Mientras lidian con</small> Suministros escasos",
+          "<small>Mientras lidian con</small> Peligros del entorno",
+          "<small>Mientras lidian con</small> Territorio en disputa",
+          "<small>Mientras lidian con</small> Supersticiones tribales"
+        ]
+      ]
+  },
   stranger_tales: {
-  title: "Stranger Tales",
-  en: [
-    [
-      "<small>The gang decides to</small> Hunt for lost treasure",
-      "<small>The gang decides to</small> Investigate a creep",
-      "<small>The gang decides to</small> Locate a missing kid",
-      "<small>The gang decides to</small> Spy on someone",
-      "<small>The gang decides to</small> Chase urban legends",
-      "<small>The gang decides to</small> Discover the truth"
-    ],
-    [
-      "<small>Which leads them to</small> An abandoned house",
-      "<small>Which leads them to</small> The local mall",
-      "<small>Which leads them to</small> A roadhouse or motel",
-      "<small>Which leads them to</small> The nearby woods",
-      "<small>Which leads them to</small> A neighbor’s home",
-      "<small>Which leads them to</small> Local caves or mines"
-    ],
-    [
-      "<small>But they must also deal with</small> Sibling rivalry",
-      "<small>But they must also deal with</small> The local sheriff",
-      "<small>But they must also deal with</small> Dangerous folks",
-      "<small>But they must also deal with</small> School bullies",
-      "<small>But they must also deal with</small> A recent crime spree",
-      "<small>But they must also deal with</small> Adult supervision"
-    ]
-  ],
-  es: [
-    [
-      "<small>La pandilla decide</small> Buscar un tesoro perdido",
-      "<small>La pandilla decide</small> Investigar a un tipo raro",
-      "<small>La pandilla decide</small> Localizar a un niño desaparecido",
-      "<small>La pandilla decide</small> Espiar a alguien",
-      "<small>La pandilla decide</small> Ir tras leyendas urbanas",
-      "<small>La pandilla decide</small> Descubrir la verdad"
-    ],
-    [
-      "<small>Lo que los lleva a</small> Una casa abandonada",
-      "<small>Lo que los lleva a</small> El centro comercial local",
-      "<small>Lo que los lleva a</small> Un bar de carretera o motel",
-      "<small>Lo que los lleva a</small> El bosque cercano",
-      "<small>Lo que los lleva a</small> La casa de un vecino",
-      "<small>Lo que los lleva a</small> Cuevas o minas locales"
-    ],
-    [
-      "<small>Pero también deben lidiar con</small> Rivalidad entre hermanos",
-      "<small>Pero también deben lidiar con</small> El sheriff local",
-      "<small>Pero también deben lidiar con</small> Tipos peligrosos",
-      "<small>Pero también deben lidiar con</small> Matones del colegio",
-      "<small>Pero también deben lidiar con</small> Una reciente racha de crímenes",
-      "<small>Pero también deben lidiar con</small> Supervisión adulta"
-    ]
-  ]
-},
+    title: "Stranger Tales",
+      en: [
+        [
+          "<small>The gang decides to</small> Hunt for lost treasure",
+          "<small>The gang decides to</small> Investigate a creep",
+          "<small>The gang decides to</small> Locate a missing kid",
+          "<small>The gang decides to</small> Spy on someone",
+          "<small>The gang decides to</small> Chase urban legends",
+          "<small>The gang decides to</small> Discover the truth"
+        ],
+        [
+          "<small>Which leads them to</small> An abandoned house",
+          "<small>Which leads them to</small> The local mall",
+          "<small>Which leads them to</small> A roadhouse or motel",
+          "<small>Which leads them to</small> The nearby woods",
+          "<small>Which leads them to</small> A neighbor’s home",
+          "<small>Which leads them to</small> Local caves or mines"
+        ],
+        [
+          "<small>But they must also deal with</small> Sibling rivalry",
+          "<small>But they must also deal with</small> The local sheriff",
+          "<small>But they must also deal with</small> Dangerous folks",
+          "<small>But they must also deal with</small> School bullies",
+          "<small>But they must also deal with</small> A recent crime spree",
+          "<small>But they must also deal with</small> Adult supervision"
+        ]
+      ],
+      es: [
+        [
+          "<small>La pandilla decide</small> Buscar un tesoro perdido",
+          "<small>La pandilla decide</small> Investigar a un tipo raro",
+          "<small>La pandilla decide</small> Localizar a un niño desaparecido",
+          "<small>La pandilla decide</small> Espiar a alguien",
+          "<small>La pandilla decide</small> Ir tras leyendas urbanas",
+          "<small>La pandilla decide</small> Descubrir la verdad"
+        ],
+        [
+          "<small>Lo que los lleva a</small> Una casa abandonada",
+          "<small>Lo que los lleva a</small> El centro comercial local",
+          "<small>Lo que los lleva a</small> Un bar de carretera o motel",
+          "<small>Lo que los lleva a</small> El bosque cercano",
+          "<small>Lo que los lleva a</small> La casa de un vecino",
+          "<small>Lo que los lleva a</small> Cuevas o minas locales"
+        ],
+        [
+          "<small>Pero también deben lidiar con</small> Rivalidad entre hermanos",
+          "<small>Pero también deben lidiar con</small> El sheriff local",
+          "<small>Pero también deben lidiar con</small> Tipos peligrosos",
+          "<small>Pero también deben lidiar con</small> Matones del colegio",
+          "<small>Pero también deben lidiar con</small> Una reciente racha de crímenes",
+          "<small>Pero también deben lidiar con</small> Supervisión adulta"
+        ]
+      ]
+  },
   summer_camp_slayers: {
-  title: "Summer Camp Slayers",
-  en: [
-    [
-      "<small>Someone at summer camp encounters a</small> Shapeshifter",
-      "<small>Someone at summer camp encounters a</small> Troubled spirit",
-      "<small>Someone at summer camp encounters a</small> Ravenous horror",
-      "<small>Someone at summer camp encounters a</small> Masked stalker",
-      "<small>Someone at summer camp encounters a</small> Shadowy figure",
-      "<small>Someone at summer camp encounters a</small> Mutated animal"
-    ],
-    [
-      "<small>Later it strikes again near, on, or in the</small> Woods or hiking trail",
-      "<small>Later it strikes again near, on, or in the</small> Lake or boathouse",
-      "<small>Later it strikes again near, on, or in the</small> Sports or games field",
-      "<small>Later it strikes again near, on, or in the</small> Cabins or showers",
-      "<small>Later it strikes again near, on, or in the</small> Art and crafts zone",
-      "<small>Later it strikes again near, on, or in the</small> Dining area"
-    ],
-    [
-      "<small>But there is a complication involving</small> A mysterious site",
-      "<small>But there is a complication involving</small> Uninvited guests",
-      "<small>But there is a complication involving</small> A surprising motive",
-      "<small>But there is a complication involving</small> A technological twist",
-      "<small>But there is a complication involving</small> An unwelcome prank",
-      "<small>But there is a complication involving</small> Annoying witnesses"
-    ]
-  ],
-  es: [
-    [
-      "<small>Alguien en el campamento de verano encuentra a</small> Un cambiapieles",
-      "<small>Alguien en el campamento de verano encuentra a</small> Un espíritu atormentado",
-      "<small>Alguien en el campamento de verano encuentra a</small> Un horror voraz",
-      "<small>Alguien en el campamento de verano encuentra a</small> Un acosador enmascarado",
-      "<small>Alguien en el campamento de verano encuentra a</small> Una figura sombría",
-      "<small>Alguien en el campamento de verano encuentra a</small> Un animal mutado"
-    ],
-    [
-      "<small>Más tarde, ataca de nuevo cerca, sobre o en</small> El bosque o ruta de senderismo",
-      "<small>Más tarde, ataca de nuevo cerca, sobre o en</small> El lago o el cobertizo de botes",
-      "<small>Más tarde, ataca de nuevo cerca, sobre o en</small> El campo de deportes o juegos",
-      "<small>Más tarde, ataca de nuevo cerca, sobre o en</small> Las cabañas o duchas",
-      "<small>Más tarde, ataca de nuevo cerca, sobre o en</small> La zona de manualidades",
-      "<small>Más tarde, ataca de nuevo cerca, sobre o en</small> El comedor"
-    ],
-    [
-      "<small>Pero hay una complicación relacionada con</small> Un lugar misterioso",
-      "<small>Pero hay una complicación relacionada con</small> Invitados no deseados",
-      "<small>Pero hay una complicación relacionada con</small> Un motivo sorprendente",
-      "<small>Pero hay una complicación relacionada con</small> Un giro tecnológico",
-      "<small>Pero hay una complicación relacionada con</small> Una broma pesada",
-      "<small>Pero hay una complicación relacionada con</small> Testigos molestos"
-    ]
-  ]
-},
+    title: "Summer Camp Slayers",
+      en: [
+        [
+          "<small>Someone at summer camp encounters a</small> Shapeshifter",
+          "<small>Someone at summer camp encounters a</small> Troubled spirit",
+          "<small>Someone at summer camp encounters a</small> Ravenous horror",
+          "<small>Someone at summer camp encounters a</small> Masked stalker",
+          "<small>Someone at summer camp encounters a</small> Shadowy figure",
+          "<small>Someone at summer camp encounters a</small> Mutated animal"
+        ],
+        [
+          "<small>Later it strikes again near, on, or in the</small> Woods or hiking trail",
+          "<small>Later it strikes again near, on, or in the</small> Lake or boathouse",
+          "<small>Later it strikes again near, on, or in the</small> Sports or games field",
+          "<small>Later it strikes again near, on, or in the</small> Cabins or showers",
+          "<small>Later it strikes again near, on, or in the</small> Art and crafts zone",
+          "<small>Later it strikes again near, on, or in the</small> Dining area"
+        ],
+        [
+          "<small>But there is a complication involving</small> A mysterious site",
+          "<small>But there is a complication involving</small> Uninvited guests",
+          "<small>But there is a complication involving</small> A surprising motive",
+          "<small>But there is a complication involving</small> A technological twist",
+          "<small>But there is a complication involving</small> An unwelcome prank",
+          "<small>But there is a complication involving</small> Annoying witnesses"
+        ]
+      ],
+      es: [
+        [
+          "<small>Alguien en el campamento de verano encuentra a</small> Un cambiapieles",
+          "<small>Alguien en el campamento de verano encuentra a</small> Un espíritu atormentado",
+          "<small>Alguien en el campamento de verano encuentra a</small> Un horror voraz",
+          "<small>Alguien en el campamento de verano encuentra a</small> Un acosador enmascarado",
+          "<small>Alguien en el campamento de verano encuentra a</small> Una figura sombría",
+          "<small>Alguien en el campamento de verano encuentra a</small> Un animal mutado"
+        ],
+        [
+          "<small>Más tarde, ataca de nuevo cerca, sobre o en</small> El bosque o ruta de senderismo",
+          "<small>Más tarde, ataca de nuevo cerca, sobre o en</small> El lago o el cobertizo de botes",
+          "<small>Más tarde, ataca de nuevo cerca, sobre o en</small> El campo de deportes o juegos",
+          "<small>Más tarde, ataca de nuevo cerca, sobre o en</small> Las cabañas o duchas",
+          "<small>Más tarde, ataca de nuevo cerca, sobre o en</small> La zona de manualidades",
+          "<small>Más tarde, ataca de nuevo cerca, sobre o en</small> El comedor"
+        ],
+        [
+          "<small>Pero hay una complicación relacionada con</small> Un lugar misterioso",
+          "<small>Pero hay una complicación relacionada con</small> Invitados no deseados",
+          "<small>Pero hay una complicación relacionada con</small> Un motivo sorprendente",
+          "<small>Pero hay una complicación relacionada con</small> Un giro tecnológico",
+          "<small>Pero hay una complicación relacionada con</small> Una broma pesada",
+          "<small>Pero hay una complicación relacionada con</small> Testigos molestos"
+        ]
+      ]
+  },
   sundered_chains: {
-  title: "Sundered Chains",
-  en: [
-    [
-      "<small>One artifact fell into the hands of a</small> Meddling mage",
-      "<small>One artifact fell into the hands of a</small> Secretive scholar",
-      "<small>One artifact fell into the hands of a</small> Private collector",
-      "<small>One artifact fell into the hands of a</small> Wealthy heir",
-      "<small>One artifact fell into the hands of a</small> Crime boss",
-      "<small>One artifact fell into the hands of a</small> Supernatural entity"
-    ],
-    [
-      "<small>And they are using it for</small> Accumulating power",
-      "<small>And they are using it for</small> Helping others",
-      "<small>And they are using it for</small> Obtaining wealth",
-      "<small>And they are using it for</small> Manipulating people",
-      "<small>And they are using it for</small> A personal vendetta",
-      "<small>And they are using it for</small> No purpose at all"
-    ],
-    [
-      "<small>With the further complication of</small> Following a false trail",
-      "<small>With the further complication of</small> A terrible price to pay",
-      "<small>With the further complication of</small> The winner takes all",
-      "<small>With the further complication of</small> A rival supernatural",
-      "<small>With the further complication of</small> Corrupted magic",
-      "<small>With the further complication of</small> A troublesome cult"
-    ]
-  ],
-  es: [
-    [
-      "<small>Un artefacto cayó en manos de un</small> Mago entrometido",
-      "<small>Un artefacto cayó en manos de un</small> Erudito reservado",
-      "<small>Un artefacto cayó en manos de un</small> Coleccionista privado",
-      "<small>Un artefacto cayó en manos de un</small> Heredero adinerado",
-      "<small>Un artefacto cayó en manos de un</small> Jefe del crimen",
-      "<small>Un artefacto cayó en manos de una</small> Entidad sobrenatural"
-    ],
-    [
-      "<small>Y lo está usando para</small> Acumular poder",
-      "<small>Y lo está usando para</small> Ayudar a otros",
-      "<small>Y lo está usando para</small> Obtener riqueza",
-      "<small>Y lo está usando para</small> Manipular a la gente",
-      "<small>Y lo está usando para</small> Una venganza personal",
-      "<small>Y lo está usando para</small> Absolutamente ningún propósito"
-    ],
-    [
-      "<small>Con la complicación añadida de</small> Seguir un rastro falso",
-      "<small>Con la complicación añadida de</small> Un precio terrible que pagar",
-      "<small>Con la complicación añadida de</small> El ganador se lo lleva todo",
-      "<small>Con la complicación añadida de</small> Un rival sobrenatural",
-      "<small>Con la complicación añadida de</small> Magia corrupta",
-      "<small>Con la complicación añadida de</small> Un culto problemático"
-    ]
-  ]
-},
+    title: "Sundered Chains",
+      en: [
+        [
+          "<small>One artifact fell into the hands of a</small> Meddling mage",
+          "<small>One artifact fell into the hands of a</small> Secretive scholar",
+          "<small>One artifact fell into the hands of a</small> Private collector",
+          "<small>One artifact fell into the hands of a</small> Wealthy heir",
+          "<small>One artifact fell into the hands of a</small> Crime boss",
+          "<small>One artifact fell into the hands of a</small> Supernatural entity"
+        ],
+        [
+          "<small>And they are using it for</small> Accumulating power",
+          "<small>And they are using it for</small> Helping others",
+          "<small>And they are using it for</small> Obtaining wealth",
+          "<small>And they are using it for</small> Manipulating people",
+          "<small>And they are using it for</small> A personal vendetta",
+          "<small>And they are using it for</small> No purpose at all"
+        ],
+        [
+          "<small>With the further complication of</small> Following a false trail",
+          "<small>With the further complication of</small> A terrible price to pay",
+          "<small>With the further complication of</small> The winner takes all",
+          "<small>With the further complication of</small> A rival supernatural",
+          "<small>With the further complication of</small> Corrupted magic",
+          "<small>With the further complication of</small> A troublesome cult"
+        ]
+      ],
+      es: [
+        [
+          "<small>Un artefacto cayó en manos de un</small> Mago entrometido",
+          "<small>Un artefacto cayó en manos de un</small> Erudito reservado",
+          "<small>Un artefacto cayó en manos de un</small> Coleccionista privado",
+          "<small>Un artefacto cayó en manos de un</small> Heredero adinerado",
+          "<small>Un artefacto cayó en manos de un</small> Jefe del crimen",
+          "<small>Un artefacto cayó en manos de una</small> Entidad sobrenatural"
+        ],
+        [
+          "<small>Y lo está usando para</small> Acumular poder",
+          "<small>Y lo está usando para</small> Ayudar a otros",
+          "<small>Y lo está usando para</small> Obtener riqueza",
+          "<small>Y lo está usando para</small> Manipular a la gente",
+          "<small>Y lo está usando para</small> Una venganza personal",
+          "<small>Y lo está usando para</small> Absolutamente ningún propósito"
+        ],
+        [
+          "<small>Con la complicación añadida de</small> Seguir un rastro falso",
+          "<small>Con la complicación añadida de</small> Un precio terrible que pagar",
+          "<small>Con la complicación añadida de</small> El ganador se lo lleva todo",
+          "<small>Con la complicación añadida de</small> Un rival sobrenatural",
+          "<small>Con la complicación añadida de</small> Magia corrupta",
+          "<small>Con la complicación añadida de</small> Un culto problemático"
+        ]
+      ]
+  },
   sylvan_sentinels: {
-  title: "Sylvan Sentinels",
-  en: [
-    [
-      "<small>The sentinels must</small> Scout or gather intel",
-      "<small>The sentinels must</small> Protect the forest",
-      "<small>The sentinels must</small> Eliminate a threat",
-      "<small>The sentinels must</small> Assist a settlement",
-      "<small>The sentinels must</small> Find and rescue",
-      "<small>The sentinels must</small> Threaten or negotiate"
-    ],
-    [
-      "<small>Somewhere in, on, or near</small> The forest edge",
-      "<small>Somewhere in, on, or near</small> An elven settlement",
-      "<small>Somewhere in, on, or near</small> The coastline",
-      "<small>Somewhere in, on, or near</small> A river or stream",
-      "<small>Somewhere in, on, or near</small> The heart of the forest",
-      "<small>Somewhere in, on, or near</small> A cliff or mountain"
-    ],
-    [
-      "<small>While also dealing with</small> Poachers or foresters",
-      "<small>While also dealing with</small> Bandits or pirates",
-      "<small>While also dealing with</small> A natural hazard",
-      "<small>While also dealing with</small> Explorers or travelers",
-      "<small>While also dealing with</small> Hostile intruders",
-      "<small>While also dealing with</small> Dangerous monsters"
-    ]
-  ],
-  es: [
-    [
-      "<small>Los centinelas deben</small> Explorar o reunir inteligencia",
-      "<small>Los centinelas deben</small> Proteger el bosque",
-      "<small>Los centinelas deben</small> Eliminar una amenaza",
-      "<small>Los centinelas deben</small> Ayudar a un asentamiento",
-      "<small>Los centinelas deben</small> Buscar y rescatar",
-      "<small>Los centinelas deben</small> Amenazar o negociar"
-    ],
-    [
-      "<small>En algún lugar en, sobre o cerca de</small> El límite del bosque",
-      "<small>En algún lugar en, sobre o cerca de</small> Un asentamiento élfico",
-      "<small>En algún lugar en, sobre o cerca de</small> La costa",
-      "<small>En algún lugar en, sobre o cerca de</small> Un río o arroyo",
-      "<small>En algún lugar en, sobre o cerca de</small> El corazón del bosque",
-      "<small>En algún lugar en, sobre o cerca de</small> Un acantilado o montaña"
-    ],
-    [
-      "<small>Mientras lidian también con</small> Cazadores furtivos o leñadores",
-      "<small>Mientras lidian también con</small> Bandidos o piratas",
-      "<small>Mientras lidian también con</small> Un peligro natural",
-      "<small>Mientras lidian también con</small> Exploradores o viajeros",
-      "<small>Mientras lidian también con</small> Intrusos hostiles",
-      "<small>Mientras lidian también con</small> Monstruos peligrosos"
-    ]
-  ]
-},
+    title: "Sylvan Sentinels",
+      en: [
+        [
+          "<small>The sentinels must</small> Scout or gather intel",
+          "<small>The sentinels must</small> Protect the forest",
+          "<small>The sentinels must</small> Eliminate a threat",
+          "<small>The sentinels must</small> Assist a settlement",
+          "<small>The sentinels must</small> Find and rescue",
+          "<small>The sentinels must</small> Threaten or negotiate"
+        ],
+        [
+          "<small>Somewhere in, on, or near</small> The forest edge",
+          "<small>Somewhere in, on, or near</small> An elven settlement",
+          "<small>Somewhere in, on, or near</small> The coastline",
+          "<small>Somewhere in, on, or near</small> A river or stream",
+          "<small>Somewhere in, on, or near</small> The heart of the forest",
+          "<small>Somewhere in, on, or near</small> A cliff or mountain"
+        ],
+        [
+          "<small>While also dealing with</small> Poachers or foresters",
+          "<small>While also dealing with</small> Bandits or pirates",
+          "<small>While also dealing with</small> A natural hazard",
+          "<small>While also dealing with</small> Explorers or travelers",
+          "<small>While also dealing with</small> Hostile intruders",
+          "<small>While also dealing with</small> Dangerous monsters"
+        ]
+      ],
+      es: [
+        [
+          "<small>Los centinelas deben</small> Explorar o reunir inteligencia",
+          "<small>Los centinelas deben</small> Proteger el bosque",
+          "<small>Los centinelas deben</small> Eliminar una amenaza",
+          "<small>Los centinelas deben</small> Ayudar a un asentamiento",
+          "<small>Los centinelas deben</small> Buscar y rescatar",
+          "<small>Los centinelas deben</small> Amenazar o negociar"
+        ],
+        [
+          "<small>En algún lugar en, sobre o cerca de</small> El límite del bosque",
+          "<small>En algún lugar en, sobre o cerca de</small> Un asentamiento élfico",
+          "<small>En algún lugar en, sobre o cerca de</small> La costa",
+          "<small>En algún lugar en, sobre o cerca de</small> Un río o arroyo",
+          "<small>En algún lugar en, sobre o cerca de</small> El corazón del bosque",
+          "<small>En algún lugar en, sobre o cerca de</small> Un acantilado o montaña"
+        ],
+        [
+          "<small>Mientras lidian también con</small> Cazadores furtivos o leñadores",
+          "<small>Mientras lidian también con</small> Bandidos o piratas",
+          "<small>Mientras lidian también con</small> Un peligro natural",
+          "<small>Mientras lidian también con</small> Exploradores o viajeros",
+          "<small>Mientras lidian también con</small> Intrusos hostiles",
+          "<small>Mientras lidian también con</small> Monstruos peligrosos"
+        ]
+      ]
+  },
   tales_of_the_city_guard: {
-  title: "Tales of the City Guard",
-  en: [
-    [
-      "<small>The guards are sent to</small> Solve a mystery",
-      "<small>The guards are sent to</small> Arrest a criminal",
-      "<small>The guards are sent to</small> Resolve a dispute",
-      "<small>The guards are sent to</small> Patrol the streets",
-      "<small>The guards are sent to</small> Question a suspect",
-      "<small>The guards are sent to</small> Assist a civilian"
-    ],
-    [
-      "<small>Which leads them to</small> An expensive home",
-      "<small>Which leads them to</small> The market or a shop",
-      "<small>Which leads them to</small> A temple or tower",
-      "<small>Which leads them to</small> The docks or slums",
-      "<small>Which leads them to</small> A guild HQ or bank",
-      "<small>Which leads them to</small> A theater or tavern"
-    ],
-    [
-      "<small>But they must also deal with</small> Rowdy adventurers",
-      "<small>But they must also deal with</small> Criminals or raiders",
-      "<small>But they must also deal with</small> Corrupt officials",
-      "<small>But they must also deal with</small> A spy, traitor, or mole",
-      "<small>But they must also deal with</small> Arson or vandalism",
-      "<small>But they must also deal with</small> Magical mayhem"
-    ]
-  ],
-  es: [
-    [
-      "<small>Los guardias son enviados a</small> Resolver un misterio",
-      "<small>Los guardias son enviados a</small> Arrestar a un criminal",
-      "<small>Los guardias son enviados a</small> Resolver una disputa",
-      "<small>Los guardias son enviados a</small> Patrullar las calles",
-      "<small>Los guardias son enviados a</small> Interrogar a un sospechoso",
-      "<small>Los guardias son enviados a</small> Ayudar a un civil"
-    ],
-    [
-      "<small>Lo que los lleva a</small> Una casa lujosa",
-      "<small>Lo que los lleva a</small> El mercado o una tienda",
-      "<small>Lo que los lleva a</small> Un templo o torre",
-      "<small>Lo que los lleva a</small> Los muelles o barrios bajos",
-      "<small>Lo que los lleva a</small> Una sede gremial o banco",
-      "<small>Lo que los lleva a</small> Un teatro o taberna"
-    ],
-    [
-      "<small>Pero también deben lidiar con</small> Aventureros escandalosos",
-      "<small>Pero también deben lidiar con</small> Criminales o asaltantes",
-      "<small>Pero también deben lidiar con</small> Oficiales corruptos",
-      "<small>Pero también deben lidiar con</small> Un espía, traidor o infiltrado",
-      "<small>Pero también deben lidiar con</small> Incendio provocado o vandalismo",
-      "<small>Pero también deben lidiar con</small> Caos mágico"
-    ]
-  ]
-},
+    title: "Tales of the City Guard",
+      en: [
+        [
+          "<small>The guards are sent to</small> Solve a mystery",
+          "<small>The guards are sent to</small> Arrest a criminal",
+          "<small>The guards are sent to</small> Resolve a dispute",
+          "<small>The guards are sent to</small> Patrol the streets",
+          "<small>The guards are sent to</small> Question a suspect",
+          "<small>The guards are sent to</small> Assist a civilian"
+        ],
+        [
+          "<small>Which leads them to</small> An expensive home",
+          "<small>Which leads them to</small> The market or a shop",
+          "<small>Which leads them to</small> A temple or tower",
+          "<small>Which leads them to</small> The docks or slums",
+          "<small>Which leads them to</small> A guild HQ or bank",
+          "<small>Which leads them to</small> A theater or tavern"
+        ],
+        [
+          "<small>But they must also deal with</small> Rowdy adventurers",
+          "<small>But they must also deal with</small> Criminals or raiders",
+          "<small>But they must also deal with</small> Corrupt officials",
+          "<small>But they must also deal with</small> A spy, traitor, or mole",
+          "<small>But they must also deal with</small> Arson or vandalism",
+          "<small>But they must also deal with</small> Magical mayhem"
+        ]
+      ],
+      es: [
+        [
+          "<small>Los guardias son enviados a</small> Resolver un misterio",
+          "<small>Los guardias son enviados a</small> Arrestar a un criminal",
+          "<small>Los guardias son enviados a</small> Resolver una disputa",
+          "<small>Los guardias son enviados a</small> Patrullar las calles",
+          "<small>Los guardias son enviados a</small> Interrogar a un sospechoso",
+          "<small>Los guardias son enviados a</small> Ayudar a un civil"
+        ],
+        [
+          "<small>Lo que los lleva a</small> Una casa lujosa",
+          "<small>Lo que los lleva a</small> El mercado o una tienda",
+          "<small>Lo que los lleva a</small> Un templo o torre",
+          "<small>Lo que los lleva a</small> Los muelles o barrios bajos",
+          "<small>Lo que los lleva a</small> Una sede gremial o banco",
+          "<small>Lo que los lleva a</small> Un teatro o taberna"
+        ],
+        [
+          "<small>Pero también deben lidiar con</small> Aventureros escandalosos",
+          "<small>Pero también deben lidiar con</small> Criminales o asaltantes",
+          "<small>Pero también deben lidiar con</small> Oficiales corruptos",
+          "<small>Pero también deben lidiar con</small> Un espía, traidor o infiltrado",
+          "<small>Pero también deben lidiar con</small> Incendio provocado o vandalismo",
+          "<small>Pero también deben lidiar con</small> Caos mágico"
+        ]
+      ]
+  },
   tales_of_the_goblin_horde: {
-  title: "Tales of the Goblin Horde",
-  en: [
-    [
-      "<small>The goblin bosses are ordered to</small> Slaughter the enemy",
-      "<small>The goblin bosses are ordered to</small> Capture someone",
-      "<small>The goblin bosses are ordered to</small> Steal something",
-      "<small>The goblin bosses are ordered to</small> Sabotage something",
-      "<small>The goblin bosses are ordered to</small> Kill some adventurers",
-      "<small>The goblin bosses are ordered to</small> Recruit more goblins"
-    ],
-    [
-      "<small>On, near, or within</small> The human lands",
-      "<small>On, near, or within</small> Hightree Ridge",
-      "<small>On, near, or within</small> Shadowglade Forest",
-      "<small>On, near, or within</small> Northside Plateau",
-      "<small>On, near, or within</small> Twilight Wood",
-      "<small>On, near, or within</small> A deep cave or mine"
-    ],
-    [
-      "<small>While dealing with</small> Rival gang bosses",
-      "<small>While dealing with</small> Aggressive beastfolk",
-      "<small>While dealing with</small> A psychopathic druid",
-      "<small>While dealing with</small> A monstrous beast",
-      "<small>While dealing with</small> Another goblin tribe",
-      "<small>While dealing with</small> Chief’s special orders"
-    ]
-  ],
-  es: [
-    [
-      "<small>Los jefes trasgos tienen orden de</small> Masacrar al enemigo",
-      "<small>Los jefes trasgos tienen orden de</small> Capturar a alguien",
-      "<small>Los jefes trasgos tienen orden de</small> Robar algo",
-      "<small>Los jefes trasgos tienen orden de</small> Sabotear algo",
-      "<small>Los jefes trasgos tienen orden de</small> Matar a unos aventureros",
-      "<small>Los jefes trasgos tienen orden de</small> Reclutar más trasgos"
-    ],
-    [
-      "<small>En, cerca o dentro de</small> Las tierras humanas",
-      "<small>En, cerca o dentro de</small> La Cresta de Árbol Alto",
-      "<small>En, cerca o dentro de</small> El Bosque de Claroscuro",
-      "<small>En, cerca o dentro de</small> La Meseta del Norte",
-      "<small>En, cerca o dentro de</small> El Bosque del Crepúsculo",
-      "<small>En, cerca o dentro de</small> Una cueva o mina profunda"
-    ],
-    [
-      "<small>Mientras lidian con</small> Jefes de bandas rivales",
-      "<small>Mientras lidian con</small> Hombres bestia agresivos",
-      "<small>Mientras lidian con</small> Un druida psicópata",
-      "<small>Mientras lidian con</small> Una bestia monstruosa",
-      "<small>Mientras lidian con</small> Otra tribu de trasgos",
-      "<small>Mientras lidian con</small> Órdenes especiales del Jefe"
-    ]
-  ]
-},
+    title: "Tales of the Goblin Horde",
+      en: [
+        [
+          "<small>The goblin bosses are ordered to</small> Slaughter the enemy",
+          "<small>The goblin bosses are ordered to</small> Capture someone",
+          "<small>The goblin bosses are ordered to</small> Steal something",
+          "<small>The goblin bosses are ordered to</small> Sabotage something",
+          "<small>The goblin bosses are ordered to</small> Kill some adventurers",
+          "<small>The goblin bosses are ordered to</small> Recruit more goblins"
+        ],
+        [
+          "<small>On, near, or within</small> The human lands",
+          "<small>On, near, or within</small> Hightree Ridge",
+          "<small>On, near, or within</small> Shadowglade Forest",
+          "<small>On, near, or within</small> Northside Plateau",
+          "<small>On, near, or within</small> Twilight Wood",
+          "<small>On, near, or within</small> A deep cave or mine"
+        ],
+        [
+          "<small>While dealing with</small> Rival gang bosses",
+          "<small>While dealing with</small> Aggressive beastfolk",
+          "<small>While dealing with</small> A psychopathic druid",
+          "<small>While dealing with</small> A monstrous beast",
+          "<small>While dealing with</small> Another goblin tribe",
+          "<small>While dealing with</small> Chief’s special orders"
+        ]
+      ],
+      es: [
+        [
+          "<small>Los jefes trasgos tienen orden de</small> Masacrar al enemigo",
+          "<small>Los jefes trasgos tienen orden de</small> Capturar a alguien",
+          "<small>Los jefes trasgos tienen orden de</small> Robar algo",
+          "<small>Los jefes trasgos tienen orden de</small> Sabotear algo",
+          "<small>Los jefes trasgos tienen orden de</small> Matar a unos aventureros",
+          "<small>Los jefes trasgos tienen orden de</small> Reclutar más trasgos"
+        ],
+        [
+          "<small>En, cerca o dentro de</small> Las tierras humanas",
+          "<small>En, cerca o dentro de</small> La Cresta de Árbol Alto",
+          "<small>En, cerca o dentro de</small> El Bosque de Claroscuro",
+          "<small>En, cerca o dentro de</small> La Meseta del Norte",
+          "<small>En, cerca o dentro de</small> El Bosque del Crepúsculo",
+          "<small>En, cerca o dentro de</small> Una cueva o mina profunda"
+        ],
+        [
+          "<small>Mientras lidian con</small> Jefes de bandas rivales",
+          "<small>Mientras lidian con</small> Hombres bestia agresivos",
+          "<small>Mientras lidian con</small> Un druida psicópata",
+          "<small>Mientras lidian con</small> Una bestia monstruosa",
+          "<small>Mientras lidian con</small> Otra tribu de trasgos",
+          "<small>Mientras lidian con</small> Órdenes especiales del Jefe"
+        ]
+      ]
+  },
   little_adventurers: {
-  title: "Tales of the Little Adventurers",
-  en: [
-    [
-      "<small>The young adventurers decide to</small> Protect the town",
-      "<small>The young adventurers decide to</small> Rescue a creature",
-      "<small>The young adventurers decide to</small> Defeat a fearsome foe",
-      "<small>The young adventurers decide to</small> Recover something",
-      "<small>The young adventurers decide to</small> Find someone",
-      "<small>The young adventurers decide to</small> Hunt for treasure"
-    ],
-    [
-      "<small>From somewhere in or near</small> A wizard’s tower",
-      "<small>From somewhere in or near</small> A temple or guildhall",
-      "<small>From somewhere in or near</small> An old watchtower",
-      "<small>From somewhere in or near</small> A farm outside town",
-      "<small>From somewhere in or near</small> A workshop or smithy",
-      "<small>From somewhere in or near</small> The nearby forest"
-    ],
-    [
-      "<small>While dealing with</small> A spreading fire",
-      "<small>While dealing with</small> Thieves or bandits",
-      "<small>While dealing with</small> A potential threat",
-      "<small>While dealing with</small> An injured creature",
-      "<small>While dealing with</small> A local troublemaker",
-      "<small>While dealing with</small> A dangerous monster"
-    ]
-  ],
-  es: [
-    [
-      "<small>Los jóvenes aventureros deciden</small> Proteger el pueblo",
-      "<small>Los jóvenes aventureros deciden</small> Rescatar a una criatura",
-      "<small>Los jóvenes aventureros deciden</small> Derrotar a un enemigo temible",
-      "<small>Los jóvenes aventureros deciden</small> Recuperar algo",
-      "<small>Los jóvenes aventureros deciden</small> Encontrar a alguien",
-      "<small>Los jóvenes aventureros deciden</small> Buscar un tesoro"
-    ],
-    [
-      "<small>En algún lugar en o cerca de</small> La torre de un mago",
-      "<small>En algún lugar en o cerca de</small> Un templo o gremio",
-      "<small>En algún lugar en o cerca de</small> Una vieja atalaya",
-      "<small>En algún lugar en o cerca de</small> Una granja a las afueras",
-      "<small>En algún lugar en o cerca de</small> Un taller o herrería",
-      "<small>En algún lugar en o cerca de</small> El bosque cercano"
-    ],
-    [
-      "<small>Mientras lidian con</small> Un incendio que se propaga",
-      "<small>Mientras lidian con</small> Ladrones o bandidos",
-      "<small>Mientras lidian con</small> Una amenaza potencial",
-      "<small>Mientras lidian con</small> Una criatura herida",
-      "<small>Mientras lidian con</small> Un alborotador local",
-      "<small>Mientras lidian con</small> Un monstruo peligroso"
-    ]
-  ]
-},
+    title: "Tales of the Little Adventurers",
+      en: [
+        [
+          "<small>The young adventurers decide to</small> Protect the town",
+          "<small>The young adventurers decide to</small> Rescue a creature",
+          "<small>The young adventurers decide to</small> Defeat a fearsome foe",
+          "<small>The young adventurers decide to</small> Recover something",
+          "<small>The young adventurers decide to</small> Find someone",
+          "<small>The young adventurers decide to</small> Hunt for treasure"
+        ],
+        [
+          "<small>From somewhere in or near</small> A wizard’s tower",
+          "<small>From somewhere in or near</small> A temple or guildhall",
+          "<small>From somewhere in or near</small> An old watchtower",
+          "<small>From somewhere in or near</small> A farm outside town",
+          "<small>From somewhere in or near</small> A workshop or smithy",
+          "<small>From somewhere in or near</small> The nearby forest"
+        ],
+        [
+          "<small>While dealing with</small> A spreading fire",
+          "<small>While dealing with</small> Thieves or bandits",
+          "<small>While dealing with</small> A potential threat",
+          "<small>While dealing with</small> An injured creature",
+          "<small>While dealing with</small> A local troublemaker",
+          "<small>While dealing with</small> A dangerous monster"
+        ]
+      ],
+      es: [
+        [
+          "<small>Los jóvenes aventureros deciden</small> Proteger el pueblo",
+          "<small>Los jóvenes aventureros deciden</small> Rescatar a una criatura",
+          "<small>Los jóvenes aventureros deciden</small> Derrotar a un enemigo temible",
+          "<small>Los jóvenes aventureros deciden</small> Recuperar algo",
+          "<small>Los jóvenes aventureros deciden</small> Encontrar a alguien",
+          "<small>Los jóvenes aventureros deciden</small> Buscar un tesoro"
+        ],
+        [
+          "<small>En algún lugar en o cerca de</small> La torre de un mago",
+          "<small>En algún lugar en o cerca de</small> Un templo o gremio",
+          "<small>En algún lugar en o cerca de</small> Una vieja atalaya",
+          "<small>En algún lugar en o cerca de</small> Una granja a las afueras",
+          "<small>En algún lugar en o cerca de</small> Un taller o herrería",
+          "<small>En algún lugar en o cerca de</small> El bosque cercano"
+        ],
+        [
+          "<small>Mientras lidian con</small> Un incendio que se propaga",
+          "<small>Mientras lidian con</small> Ladrones o bandidos",
+          "<small>Mientras lidian con</small> Una amenaza potencial",
+          "<small>Mientras lidian con</small> Una criatura herida",
+          "<small>Mientras lidian con</small> Un alborotador local",
+          "<small>Mientras lidian con</small> Un monstruo peligroso"
+        ]
+      ]
+  },
   the_fools_who_follow: {
-  title: "The Fools Who Follow",
-  en: [
-    [
-      "<small>The Chosen One must</small> Find or discover",
-      "<small>The Chosen One must</small> Capture or steal",
-      "<small>The Chosen One must</small> Rescue or recover",
-      "<small>The Chosen One must</small> Defeat or destroy",
-      "<small>The Chosen One must</small> Protect or guard",
-      "<small>The Chosen One must</small> Escort or deliver"
-    ],
-    [
-      "<small>The</small> Secret knowledge",
-      "<small>The</small> Dangerous monster",
-      "<small>The</small> Sorcerer or witch",
-      "<small>The</small> Mysterious civilian",
-      "<small>The</small> Band of outlaws",
-      "<small>The</small> Magical item/device"
-    ],
-    [
-      "<small>From, in, on, or near a</small> Temple or castle",
-      "<small>From, in, on, or near a</small> Hilltop or mountain",
-      "<small>From, in, on, or near a</small> Wilderness region",
-      "<small>From, in, on, or near a</small> Town or village",
-      "<small>From, in, on, or near a</small> River or lake",
-      "<small>From, in, on, or near a</small> Underground region"
-    ],
-    [
-      "<small>While dealing with</small> A fearsome beast",
-      "<small>While dealing with</small> A bounty hunter",
-      "<small>While dealing with</small> An ancient curse",
-      "<small>While dealing with</small> Deadly cultists",
-      "<small>While dealing with</small> Dark Lord’s minions",
-      "<small>While dealing with</small> Severe weather"
-    ]
-  ],
-  es: [
-    [
-      "<small>El Elegido debe</small> Hallar o descubrir",
-      "<small>El Elegido debe</small> Capturar o robar",
-      "<small>El Elegido debe</small> Rescatar o recuperar",
-      "<small>El Elegido debe</small> Derrotar o destruir",
-      "<small>El Elegido debe</small> Proteger o custodiar",
-      "<small>El Elegido debe</small> Escoltas o entregar"
-    ],
-    [
-      "<small>El/La</small> Conocimiento secreto",
-      "<small>El/La</small> Monstruo peligroso",
-      "<small>El/La</small> Hechicero o bruja",
-      "<small>El/La</small> Civil misterioso",
-      "<small>El/La</small> Banda de forajidos",
-      "<small>El/La</small> Objeto o artefacto mágico"
-    ],
-    [
-      "<small>Desde, en o cerca de</small> Un templo o castillo",
-      "<small>Desde, en o cerca de</small> Una cima o montaña",
-      "<small>Desde, en o cerca de</small> Una región salvaje",
-      "<small>Desde, en o cerca de</small> Un pueblo o aldea",
-      "<small>Desde, en o cerca de</small> Un río o lago",
-      "<small>Desde, en o cerca de</small> Una región subterránea"
-    ],
-    [
-      "<small>Mientras lidian con</small> Una bestia temible",
-      "<small>Mientras lidian con</small> Un cazarrecompensas",
-      "<small>Mientras lidian con</small> Una maldición antigua",
-      "<small>Mientras lidian con</small> Cultistas letales",
-      "<small>Mientras lidian con</small> Esbirros del Señor Oscuro",
-      "<small>Mientras lidian con</small> Clima severo"
-    ]
-  ]
-},
+    title: "The Fools Who Follow",
+      en: [
+        [
+          "<small>The Chosen One must</small> Find or discover",
+          "<small>The Chosen One must</small> Capture or steal",
+          "<small>The Chosen One must</small> Rescue or recover",
+          "<small>The Chosen One must</small> Defeat or destroy",
+          "<small>The Chosen One must</small> Protect or guard",
+          "<small>The Chosen One must</small> Escort or deliver"
+        ],
+        [
+          "<small>The</small> Secret knowledge",
+          "<small>The</small> Dangerous monster",
+          "<small>The</small> Sorcerer or witch",
+          "<small>The</small> Mysterious civilian",
+          "<small>The</small> Band of outlaws",
+          "<small>The</small> Magical item/device"
+        ],
+        [
+          "<small>From, in, on, or near a</small> Temple or castle",
+          "<small>From, in, on, or near a</small> Hilltop or mountain",
+          "<small>From, in, on, or near a</small> Wilderness region",
+          "<small>From, in, on, or near a</small> Town or village",
+          "<small>From, in, on, or near a</small> River or lake",
+          "<small>From, in, on, or near a</small> Underground region"
+        ],
+        [
+          "<small>While dealing with</small> A fearsome beast",
+          "<small>While dealing with</small> A bounty hunter",
+          "<small>While dealing with</small> An ancient curse",
+          "<small>While dealing with</small> Deadly cultists",
+          "<small>While dealing with</small> Dark Lord’s minions",
+          "<small>While dealing with</small> Severe weather"
+        ]
+      ],
+      es: [
+        [
+          "<small>El Elegido debe</small> Hallar o descubrir",
+          "<small>El Elegido debe</small> Capturar o robar",
+          "<small>El Elegido debe</small> Rescatar o recuperar",
+          "<small>El Elegido debe</small> Derrotar o destruir",
+          "<small>El Elegido debe</small> Proteger o custodiar",
+          "<small>El Elegido debe</small> Escoltas o entregar"
+        ],
+        [
+          "<small>El/La</small> Conocimiento secreto",
+          "<small>El/La</small> Monstruo peligroso",
+          "<small>El/La</small> Hechicero o bruja",
+          "<small>El/La</small> Civil misterioso",
+          "<small>El/La</small> Banda de forajidos",
+          "<small>El/La</small> Objeto o artefacto mágico"
+        ],
+        [
+          "<small>Desde, en o cerca de</small> Un templo o castillo",
+          "<small>Desde, en o cerca de</small> Una cima o montaña",
+          "<small>Desde, en o cerca de</small> Una región salvaje",
+          "<small>Desde, en o cerca de</small> Un pueblo o aldea",
+          "<small>Desde, en o cerca de</small> Un río o lago",
+          "<small>Desde, en o cerca de</small> Una región subterránea"
+        ],
+        [
+          "<small>Mientras lidian con</small> Una bestia temible",
+          "<small>Mientras lidian con</small> Un cazarrecompensas",
+          "<small>Mientras lidian con</small> Una maldición antigua",
+          "<small>Mientras lidian con</small> Cultistas letales",
+          "<small>Mientras lidian con</small> Esbirros del Señor Oscuro",
+          "<small>Mientras lidian con</small> Clima severo"
+        ]
+      ]
+  },
   the_wyrms_that_turned: {
-  title: "The Wyrms That Turned",
-  en: [
-    [
-      "<small>The dragons must</small> Protect their lair",
-      "<small>The dragons must</small> Kidnap a hostage",
-      "<small>The dragons must</small> Gather treasure",
-      "<small>The dragons must</small> Hunt for food",
-      "<small>The dragons must</small> Deal with a threat",
-      "<small>The dragons must</small> Cause destruction"
-    ],
-    [
-      "<small>Which leads them to or near a</small> Mountain or plateau",
-      "<small>Which leads them to or near a</small> Forest or swamp",
-      "<small>Which leads them to or near a</small> Lake or coastline",
-      "<small>Which leads them to or near a</small> Farm or homestead",
-      "<small>Which leads them to or near a</small> Village or town",
-      "<small>Which leads them to or near a</small> Castle or stronghold"
-    ],
-    [
-      "<small>But they must also deal with</small> Would-be lair looters",
-      "<small>But they must also deal with</small> A fierce monster",
-      "<small>But they must also deal with</small> An ambush or trap",
-      "<small>But they must also deal with</small> A wandering knight",
-      "<small>But they must also deal with</small> Dangerous neighbors",
-      "<small>But they must also deal with</small> A powerful wizard"
-    ]
-  ],
-  es: [
-    [
-      "<small>Los dragones deben</small> Proteger su guarida",
-      "<small>Los dragones deben</small> Secuestrar a un rehén",
-      "<small>Los dragones deben</small> Amasar tesoros",
-      "<small>Los dragones deben</small> Cazar alimento",
-      "<small>Los dragones deben</small> Lidiar con una amenaza",
-      "<small>Los dragones deben</small> Sembrar la destrucción"
-    ],
-    [
-      "<small>Lo que los lleva a o cerca de</small> Una montaña o meseta",
-      "<small>Lo que los lleva a o cerca de</small> Un bosque o pantano",
-      "<small>Lo que los lleva a o cerca de</small> Un lago o línea costera",
-      "<small>Lo que los lleva a o cerca de</small> Una granja o hacienda",
-      "<small>Lo que los lleva a o cerca de</small> Una aldea o pueblo",
-      "<small>Lo que los lleva a o cerca de</small> Un castillo o fortaleza"
-    ],
-    [
-      "<small>Pero también deben lidiar con</small> Aspirantes a saqueadores",
-      "<small>Pero también deben lidiar con</small> Un monstruo feroz",
-      "<small>Pero también deben lidiar con</small> Una emboscada o trampa",
-      "<small>Pero también deben lidiar con</small> Un caballero errante",
-      "<small>Pero también deben lidiar con</small> Vecinos peligrosos",
-      "<small>Pero también deben lidiar con</small> Un mago poderoso"
-    ]
-  ]
-},
+    title: "The Wyrms That Turned",
+      en: [
+        [
+          "<small>The dragons must</small> Protect their lair",
+          "<small>The dragons must</small> Kidnap a hostage",
+          "<small>The dragons must</small> Gather treasure",
+          "<small>The dragons must</small> Hunt for food",
+          "<small>The dragons must</small> Deal with a threat",
+          "<small>The dragons must</small> Cause destruction"
+        ],
+        [
+          "<small>Which leads them to or near a</small> Mountain or plateau",
+          "<small>Which leads them to or near a</small> Forest or swamp",
+          "<small>Which leads them to or near a</small> Lake or coastline",
+          "<small>Which leads them to or near a</small> Farm or homestead",
+          "<small>Which leads them to or near a</small> Village or town",
+          "<small>Which leads them to or near a</small> Castle or stronghold"
+        ],
+        [
+          "<small>But they must also deal with</small> Would-be lair looters",
+          "<small>But they must also deal with</small> A fierce monster",
+          "<small>But they must also deal with</small> An ambush or trap",
+          "<small>But they must also deal with</small> A wandering knight",
+          "<small>But they must also deal with</small> Dangerous neighbors",
+          "<small>But they must also deal with</small> A powerful wizard"
+        ]
+      ],
+      es: [
+        [
+          "<small>Los dragones deben</small> Proteger su guarida",
+          "<small>Los dragones deben</small> Secuestrar a un rehén",
+          "<small>Los dragones deben</small> Amasar tesoros",
+          "<small>Los dragones deben</small> Cazar alimento",
+          "<small>Los dragones deben</small> Lidiar con una amenaza",
+          "<small>Los dragones deben</small> Sembrar la destrucción"
+        ],
+        [
+          "<small>Lo que los lleva a o cerca de</small> Una montaña o meseta",
+          "<small>Lo que los lleva a o cerca de</small> Un bosque o pantano",
+          "<small>Lo que los lleva a o cerca de</small> Un lago o línea costera",
+          "<small>Lo que los lleva a o cerca de</small> Una granja o hacienda",
+          "<small>Lo que los lleva a o cerca de</small> Una aldea o pueblo",
+          "<small>Lo que los lleva a o cerca de</small> Un castillo o fortaleza"
+        ],
+        [
+          "<small>Pero también deben lidiar con</small> Aspirantes a saqueadores",
+          "<small>Pero también deben lidiar con</small> Un monstruo feroz",
+          "<small>Pero también deben lidiar con</small> Una emboscada o trampa",
+          "<small>Pero también deben lidiar con</small> Un caballero errante",
+          "<small>Pero también deben lidiar con</small> Vecinos peligrosos",
+          "<small>Pero también deben lidiar con</small> Un mago poderoso"
+        ]
+      ]
+  },
   tomb_guardians: {
-  title: "Tomb Guardians",
-  en: [
-    [
-      "<small>The intruders are</small> Greedy adventurers",
-      "<small>The intruders are</small> Enthusiastic settlers",
-      "<small>The intruders are</small> Curious explorers",
-      "<small>The intruders are</small> Aggressive invaders",
-      "<small>The intruders are</small> Fierce monsters",
-      "<small>The intruders are</small> Zealous crusaders"
-    ],
-    [
-      "<small>And they</small> Bring reinforcements",
-      "<small>And they</small> Know the tomb",
-      "<small>And they</small> Can resist dark magic",
-      "<small>And they</small> Are well prepared",
-      "<small>And they</small> Cause lots of damage",
-      "<small>And they</small> Threaten the tomb"
-    ],
-    [
-      "<small>But they will also</small> Blunder into a trap",
-      "<small>But they will also</small> Suffer from the curse",
-      "<small>But they will also</small> Fail to pay attention",
-      "<small>But they will also</small> Betray each other",
-      "<small>But they will also</small> Take a wrong turning",
-      "<small>But they will also</small> Free the guardians"
-    ]
-  ],
-  es: [
-    [
-      "<small>Los intrusos son</small> Aventureros codiciosos",
-      "<small>Los intrusos son</small> Colonos entusiastas",
-      "<small>Los intrusos son</small> Exploradores curiosos",
-      "<small>Los intrusos son</small> Invasores agresivos",
-      "<small>Los intrusos son</small> Monstruos feroces",
-      "<small>Los intrusos son</small> Cruzados fervientes"
-    ],
-    [
-      "<small>Y ellos</small> Traen refuerzos",
-      "<small>Y ellos</small> Conocen la tumba",
-      "<small>Y ellos</small> Pueden resistir la magia oscura",
-      "<small>Y ellos</small> Están bien preparados",
-      "<small>Y ellos</small> Causan muchos daños",
-      "<small>Y ellos</small> Amenazan la tumba"
-    ],
-    [
-      "<small>Pero también</small> Caerán torpemente en una trampa",
-      "<small>Pero también</small> Sufrirán la maldición",
-      "<small>Pero también</small> No prestarán atención",
-      "<small>Pero también</small> Se traicionarán entre sí",
-      "<small>Pero también</small> Tomarán un camino equivocado",
-      "<small>Pero también</small> Liberarán a los guardianes"
-    ]
-  ]
-},
+    title: "Tomb Guardians",
+      en: [
+        [
+          "<small>The intruders are</small> Greedy adventurers",
+          "<small>The intruders are</small> Enthusiastic settlers",
+          "<small>The intruders are</small> Curious explorers",
+          "<small>The intruders are</small> Aggressive invaders",
+          "<small>The intruders are</small> Fierce monsters",
+          "<small>The intruders are</small> Zealous crusaders"
+        ],
+        [
+          "<small>And they</small> Bring reinforcements",
+          "<small>And they</small> Know the tomb",
+          "<small>And they</small> Can resist dark magic",
+          "<small>And they</small> Are well prepared",
+          "<small>And they</small> Cause lots of damage",
+          "<small>And they</small> Threaten the tomb"
+        ],
+        [
+          "<small>But they will also</small> Blunder into a trap",
+          "<small>But they will also</small> Suffer from the curse",
+          "<small>But they will also</small> Fail to pay attention",
+          "<small>But they will also</small> Betray each other",
+          "<small>But they will also</small> Take a wrong turning",
+          "<small>But they will also</small> Free the guardians"
+        ]
+      ],
+      es: [
+        [
+          "<small>Los intrusos son</small> Aventureros codiciosos",
+          "<small>Los intrusos son</small> Colonos entusiastas",
+          "<small>Los intrusos son</small> Exploradores curiosos",
+          "<small>Los intrusos son</small> Invasores agresivos",
+          "<small>Los intrusos son</small> Monstruos feroces",
+          "<small>Los intrusos son</small> Cruzados fervientes"
+        ],
+        [
+          "<small>Y ellos</small> Traen refuerzos",
+          "<small>Y ellos</small> Conocen la tumba",
+          "<small>Y ellos</small> Pueden resistir la magia oscura",
+          "<small>Y ellos</small> Están bien preparados",
+          "<small>Y ellos</small> Causan muchos daños",
+          "<small>Y ellos</small> Amenazan la tumba"
+        ],
+        [
+          "<small>Pero también</small> Caerán torpemente en una trampa",
+          "<small>Pero también</small> Sufrirán la maldición",
+          "<small>Pero también</small> No prestarán atención",
+          "<small>Pero también</small> Se traicionarán entre sí",
+          "<small>Pero también</small> Tomarán un camino equivocado",
+          "<small>Pero también</small> Liberarán a los guardianes"
+        ]
+      ]
+  },
   troll_couriers: {
-  title: "Troll Couriers of the Sky Isles",
-  en: [
-    [
-      "<small>The trolls are hired to</small> Provide a getaway",
-      "<small>The trolls are hired to</small> Transport a prisoner",
-      "<small>The trolls are hired to</small> Deliver a letter",
-      "<small>The trolls are hired to</small> Escort a VIP",
-      "<small>The trolls are hired to</small> Smuggle valuables",
-      "<small>The trolls are hired to</small> Rescue someone"
-    ],
-    [
-      "<small>Somewhere near, in, or on</small> An inn or tavern",
-      "<small>Somewhere near, in, or on</small> A large mansion",
-      "<small>Somewhere near, in, or on</small> An arcane academy",
-      "<small>Somewhere near, in, or on</small> A secure fortress",
-      "<small>Somewhere near, in, or on</small> An uncharted island",
-      "<small>Somewhere near, in, or on</small> The lower realm"
-    ],
-    [
-      "<small>While dealing with</small> Treachery or betrayal",
-      "<small>While dealing with</small> Sky pirates/monsters",
-      "<small>While dealing with</small> A sneaky stowaway",
-      "<small>While dealing with</small> Changing the deal",
-      "<small>While dealing with</small> Hazardous weather",
-      "<small>While dealing with</small> An angry wizard"
-    ]
-  ],
-  es: [
-    [
-      "<small>Los troles son contratados para</small> Facilitar una huida",
-      "<small>Los troles son contratados para</small> Transportar a un prisionero",
-      "<small>Los troles son contratados para</small> Entregar una carta",
-      "<small>Los troles son contratados para</small> Escortar a una personalidad",
-      "<small>Los troles son contratados para</small> Contrabandear objetos de valor",
-      "<small>Los troles son contratados para</small> Rescatar a alguien"
-    ],
-    [
-      "<small>Cerca, en o sobre</small> Una posada o taberna",
-      "<small>Cerca, en o sobre</small> Una gran mansión",
-      "<small>Cerca, en o sobre</small> Una academia arcana",
-      "<small>Cerca, en o sobre</small> Una fortaleza segura",
-      "<small>Cerca, en o sobre</small> Una isla inexplorada",
-      "<small>Cerca, en o sobre</small> El reino inferior"
-    ],
-    [
-      "<small>Mientras lidian con</small> Traición o deslealtad",
-      "<small>Mientras lidian con</small> Piratas o monstruos del cielo",
-      "<small>Mientras lidian con</small> Un polizón sigiloso",
-      "<small>Mientras lidian con</small> Cambios en el trato",
-      "<small>Mientras lidian con</small> Clima peligroso",
-      "<small>Mientras lidian con</small> Un mago enfurecido"
-    ]
-  ]
-},
+    title: "Troll Couriers of the Sky Isles",
+      en: [
+        [
+          "<small>The trolls are hired to</small> Provide a getaway",
+          "<small>The trolls are hired to</small> Transport a prisoner",
+          "<small>The trolls are hired to</small> Deliver a letter",
+          "<small>The trolls are hired to</small> Escort a VIP",
+          "<small>The trolls are hired to</small> Smuggle valuables",
+          "<small>The trolls are hired to</small> Rescue someone"
+        ],
+        [
+          "<small>Somewhere near, in, or on</small> An inn or tavern",
+          "<small>Somewhere near, in, or on</small> A large mansion",
+          "<small>Somewhere near, in, or on</small> An arcane academy",
+          "<small>Somewhere near, in, or on</small> A secure fortress",
+          "<small>Somewhere near, in, or on</small> An uncharted island",
+          "<small>Somewhere near, in, or on</small> The lower realm"
+        ],
+        [
+          "<small>While dealing with</small> Treachery or betrayal",
+          "<small>While dealing with</small> Sky pirates/monsters",
+          "<small>While dealing with</small> A sneaky stowaway",
+          "<small>While dealing with</small> Changing the deal",
+          "<small>While dealing with</small> Hazardous weather",
+          "<small>While dealing with</small> An angry wizard"
+        ]
+      ],
+      es: [
+        [
+          "<small>Los troles son contratados para</small> Facilitar una huida",
+          "<small>Los troles son contratados para</small> Transportar a un prisionero",
+          "<small>Los troles son contratados para</small> Entregar una carta",
+          "<small>Los troles son contratados para</small> Escortar a una personalidad",
+          "<small>Los troles son contratados para</small> Contrabandear objetos de valor",
+          "<small>Los troles son contratados para</small> Rescatar a alguien"
+        ],
+        [
+          "<small>Cerca, en o sobre</small> Una posada o taberna",
+          "<small>Cerca, en o sobre</small> Una gran mansión",
+          "<small>Cerca, en o sobre</small> Una academia arcana",
+          "<small>Cerca, en o sobre</small> Una fortaleza segura",
+          "<small>Cerca, en o sobre</small> Una isla inexplorada",
+          "<small>Cerca, en o sobre</small> El reino inferior"
+        ],
+        [
+          "<small>Mientras lidian con</small> Traición o deslealtad",
+          "<small>Mientras lidian con</small> Piratas o monstruos del cielo",
+          "<small>Mientras lidian con</small> Un polizón sigiloso",
+          "<small>Mientras lidian con</small> Cambios en el trato",
+          "<small>Mientras lidian con</small> Clima peligroso",
+          "<small>Mientras lidian con</small> Un mago enfurecido"
+        ]
+      ]
+  },
   twisted_wishes: {
-  title: "Twisted Wishes",
-  en: [
-    [
-      "<small>You are summoned by</small> An ambitious scholar",
-      "<small>You are summoned by</small> A vain celebrity",
-      "<small>You are summoned by</small> A corrupt politician",
-      "<small>You are summoned by</small> A wealthy executive",
-      "<small>You are summoned by</small> An ignorant fool",
-      "<small>You are summoned by</small> A stubborn idealist"
-    ],
-    [
-      "<small>And they wish for</small> Youth or beauty",
-      "<small>And they wish for</small> Love or lust",
-      "<small>And they wish for</small> Justice or revenge",
-      "<small>And they wish for</small> Wealth or status",
-      "<small>And they wish for</small> Fame or glory",
-      "<small>And they wish for</small> Knowledge or power"
-    ],
-    [
-      "<small>But beware of</small> Impossible demands",
-      "<small>But beware of</small> Complicated wording",
-      "<small>But beware of</small> A conflict of interest",
-      "<small>But beware of</small> Careful phrasing",
-      "<small>But beware of</small> A reluctant wisher",
-      "<small>But beware of</small> Paranormal hunters"
-    ]
-  ],
-  es: [
-    [
-      "<small>Has sido invocado por</small> Un erudito ambicioso",
-      "<small>Has sido invocado por</small> Una celebridad vanidosa",
-      "<small>Has sido invocado por</small> Un político corrupto",
-      "<small>Has sido invocado por</small> Un ejecutivo adinerado",
-      "<small>Has sido invocado por</small> Un tonto ignorante",
-      "<small>Has sido invocado por</small> Un idealista obstinado"
-    ],
-    [
-      "<small>Y desea</small> Juventud o belleza",
-      "<small>Y desea</small> Amor o lujuria",
-      "<small>Y desea</small> Justicia o venganza",
-      "<small>Y desea</small> Riqueza o estatus",
-      "<small>Y desea</small> Fama o gloria",
-      "<small>Y desea</small> Conocimiento o poder"
-    ],
-    [
-      "<small>Pero cuidado con</small> Exigencias imposibles",
-      "<small>Pero cuidado con</small> Una redacción complicada",
-      "<small>Pero cuidado con</small> Un conflicto de intereses",
-      "<small>Pero cuidado con</small> Un fraseo meticuloso",
-      "<small>Pero cuidado con</small> Alguien que desea a regañadientes",
-      "<small>Pero cuidado con</small> Cazadores de lo paranormal"
-    ]
-  ]
-},
+    title: "Twisted Wishes",
+      en: [
+        [
+          "<small>You are summoned by</small> An ambitious scholar",
+          "<small>You are summoned by</small> A vain celebrity",
+          "<small>You are summoned by</small> A corrupt politician",
+          "<small>You are summoned by</small> A wealthy executive",
+          "<small>You are summoned by</small> An ignorant fool",
+          "<small>You are summoned by</small> A stubborn idealist"
+        ],
+        [
+          "<small>And they wish for</small> Youth or beauty",
+          "<small>And they wish for</small> Love or lust",
+          "<small>And they wish for</small> Justice or revenge",
+          "<small>And they wish for</small> Wealth or status",
+          "<small>And they wish for</small> Fame or glory",
+          "<small>And they wish for</small> Knowledge or power"
+        ],
+        [
+          "<small>But beware of</small> Impossible demands",
+          "<small>But beware of</small> Complicated wording",
+          "<small>But beware of</small> A conflict of interest",
+          "<small>But beware of</small> Careful phrasing",
+          "<small>But beware of</small> A reluctant wisher",
+          "<small>But beware of</small> Paranormal hunters"
+        ]
+      ],
+      es: [
+        [
+          "<small>Has sido invocado por</small> Un erudito ambicioso",
+          "<small>Has sido invocado por</small> Una celebridad vanidosa",
+          "<small>Has sido invocado por</small> Un político corrupto",
+          "<small>Has sido invocado por</small> Un ejecutivo adinerado",
+          "<small>Has sido invocado por</small> Un tonto ignorante",
+          "<small>Has sido invocado por</small> Un idealista obstinado"
+        ],
+        [
+          "<small>Y desea</small> Juventud o belleza",
+          "<small>Y desea</small> Amor o lujuria",
+          "<small>Y desea</small> Justicia o venganza",
+          "<small>Y desea</small> Riqueza o estatus",
+          "<small>Y desea</small> Fama o gloria",
+          "<small>Y desea</small> Conocimiento o poder"
+        ],
+        [
+          "<small>Pero cuidado con</small> Exigencias imposibles",
+          "<small>Pero cuidado con</small> Una redacción complicada",
+          "<small>Pero cuidado con</small> Un conflicto de intereses",
+          "<small>Pero cuidado con</small> Un fraseo meticuloso",
+          "<small>Pero cuidado con</small> Alguien que desea a regañadientes",
+          "<small>Pero cuidado con</small> Cazadores de lo paranormal"
+        ]
+      ]
+  },
   voyage_isle_of_skulls: {
-  title: "Voyage to the Isle of Skulls",
-  en: [
-    [
-      "<small>The team is ordered to</small> Collect a specimen",
-      "<small>The team is ordered to</small> Explore a location",
-      "<small>The team is ordered to</small> Find someone",
-      "<small>The team is ordered to</small> Protect something",
-      "<small>The team is ordered to</small> Take measurements",
-      "<small>The team is ordered to</small> Rescue someone"
-    ],
-    [
-      "<small>From somewhere near, in or on</small> A dense forest",
-      "<small>From somewhere near, in or on</small> A river or lake",
-      "<small>From somewhere near, in or on</small> A swampy region",
-      "<small>From somewhere near, in or on</small> A beach or coastline",
-      "<small>From somewhere near, in or on</small> A ruin or shipwreck",
-      "<small>From somewhere near, in or on</small> A mountain range"
-    ],
-    [
-      "<small>While dealing with</small> A tenacious predator",
-      "<small>While dealing with</small> Dangerous weather",
-      "<small>While dealing with</small> Seismic activity",
-      "<small>While dealing with</small> Island tribal folk",
-      "<small>While dealing with</small> A shipwreck survivor",
-      "<small>While dealing with</small> A betrayal or setup"
-    ]
-  ],
-  es: [
-    [
-      "<small>El equipo tiene órdenes de</small> Recolectar un espécimen",
-      "<small>El equipo tiene órdenes de</small> Explorar una ubicación",
-      "<small>El equipo tiene órdenes de</small> Encontrar a alguien",
-      "<small>El equipo tiene órdenes de</small> Proteger algo",
-      "<small>El equipo tiene órdenes de</small> Tomar mediciones",
-      "<small>El equipo tiene órdenes de</small> Rescatar a alguien"
-    ],
-    [
-      "<small>En algún lugar cerca, en o sobre</small> Un bosque denso",
-      "<small>En algún lugar cerca, en o sobre</small> Un río o lago",
-      "<small>En algún lugar cerca, en o sobre</small> Una región pantanosa",
-      "<small>En algún lugar cerca, en o sobre</small> Una playa o línea costera",
-      "<small>En algún lugar cerca, en o sobre</small> Una ruina o naufragio",
-      "<small>En algún lugar cerca, en o sobre</small> Una cadena montañosa"
-    ],
-    [
-      "<small>Mientras lidian con</small> Un depredador tenaz",
-      "<small>Mientras lidian con</small> Clima peligroso",
-      "<small>Mientras lidian con</small> Actividad sísmica",
-      "<small>Mientras lidian con</small> Tribus de la isla",
-      "<small>Mientras lidian con</small> Un superviviente de un naufragio",
-      "<small>Mientras lidian con</small> Una traición o trampa"
-    ]
-  ]
-},
+    title: "Voyage to the Isle of Skulls",
+      en: [
+        [
+          "<small>The team is ordered to</small> Collect a specimen",
+          "<small>The team is ordered to</small> Explore a location",
+          "<small>The team is ordered to</small> Find someone",
+          "<small>The team is ordered to</small> Protect something",
+          "<small>The team is ordered to</small> Take measurements",
+          "<small>The team is ordered to</small> Rescue someone"
+        ],
+        [
+          "<small>From somewhere near, in or on</small> A dense forest",
+          "<small>From somewhere near, in or on</small> A river or lake",
+          "<small>From somewhere near, in or on</small> A swampy region",
+          "<small>From somewhere near, in or on</small> A beach or coastline",
+          "<small>From somewhere near, in or on</small> A ruin or shipwreck",
+          "<small>From somewhere near, in or on</small> A mountain range"
+        ],
+        [
+          "<small>While dealing with</small> A tenacious predator",
+          "<small>While dealing with</small> Dangerous weather",
+          "<small>While dealing with</small> Seismic activity",
+          "<small>While dealing with</small> Island tribal folk",
+          "<small>While dealing with</small> A shipwreck survivor",
+          "<small>While dealing with</small> A betrayal or setup"
+        ]
+      ],
+      es: [
+        [
+          "<small>El equipo tiene órdenes de</small> Recolectar un espécimen",
+          "<small>El equipo tiene órdenes de</small> Explorar una ubicación",
+          "<small>El equipo tiene órdenes de</small> Encontrar a alguien",
+          "<small>El equipo tiene órdenes de</small> Proteger algo",
+          "<small>El equipo tiene órdenes de</small> Tomar mediciones",
+          "<small>El equipo tiene órdenes de</small> Rescatar a alguien"
+        ],
+        [
+          "<small>En algún lugar cerca, en o sobre</small> Un bosque denso",
+          "<small>En algún lugar cerca, en o sobre</small> Un río o lago",
+          "<small>En algún lugar cerca, en o sobre</small> Una región pantanosa",
+          "<small>En algún lugar cerca, en o sobre</small> Una playa o línea costera",
+          "<small>En algún lugar cerca, en o sobre</small> Una ruina o naufragio",
+          "<small>En algún lugar cerca, en o sobre</small> Una cadena montañosa"
+        ],
+        [
+          "<small>Mientras lidian con</small> Un depredador tenaz",
+          "<small>Mientras lidian con</small> Clima peligroso",
+          "<small>Mientras lidian con</small> Actividad sísmica",
+          "<small>Mientras lidian con</small> Tribus de la isla",
+          "<small>Mientras lidian con</small> Un superviviente de un naufragio",
+          "<small>Mientras lidian con</small> Una traición o trampa"
+        ]
+      ]
+  },
   wardens_weird_west: {
-  title: "Wardens of the Weird West",
-  en: [
-    [
-      "<small>The wardens are called upon to</small> Solve a mystery",
-      "<small>The wardens are called upon to</small> Find a missing person",
-      "<small>The wardens are called upon to</small> Track down a killer",
-      "<small>The wardens are called upon to</small> Defeat a monster",
-      "<small>The wardens are called upon to</small> Negotiate a deal",
-      "<small>The wardens are called upon to</small> Protect a location"
-    ],
-    [
-      "<small>Inside or near</small> A frontier town",
-      "<small>Inside or near</small> A steam locomotive",
-      "<small>Inside or near</small> An abandoned mine",
-      "<small>Inside or near</small> A logging camp",
-      "<small>Inside or near</small> A ranch or farm",
-      "<small>Inside or near</small> A mountain cabin"
-    ],
-    [
-      "<small>While dealing with</small> Angry locals",
-      "<small>While dealing with</small> Being stalked by evil",
-      "<small>While dealing with</small> An ambush or trap",
-      "<small>While dealing with</small> Double the trouble",
-      "<small>While dealing with</small> A mischievous spirit",
-      "<small>While dealing with</small> A gang of outlaws"
-    ]
-  ],
-  es: [
-    [
-      "<small>Los custodios han sido llamados para</small> Resolver un misterio",
-      "<small>Los custodios han sido llamados para</small> Hallar a una persona desaparecida",
-      "<small>Los custodios han sido llamados para</small> Rastrear a un asesino",
-      "<small>Los custodios han sido llamados para</small> Derrotar a un monstruo",
-      "<small>Los custodios han sido llamados para</small> Negociar un trato",
-      "<small>Los custodios han sido llamados para</small> Proteger una ubicación"
-    ],
-    [
-      "<small>Dentro o cerca de</small> Un pueblo fronterizo",
-      "<small>Dentro o cerca de</small> Una locomotora de vapor",
-      "<small>Dentro o cerca de</small> Una mina abandonada",
-      "<small>Dentro o cerca de</small> Un campamento maderero",
-      "<small>Dentro o cerca de</small> Un rancho o granja",
-      "<small>Dentro o cerca de</small> Una cabaña de montaña"
-    ],
-    [
-      "<small>Mientras lidian con</small> Lugareños furiosos",
-      "<small>Mientras lidian con</small> Ser acechados por el mal",
-      "<small>Mientras lidian con</small> Una emboscada o trampa",
-      "<small>Mientras lidian con</small> El doble de problemas",
-      "<small>Mientras lidian con</small> Un espíritu travieso",
-      "<small>Mientras lidian con</small> Una banda de forajidos"
-    ]
-  ]
-},
+    title: "Wardens of the Weird West",
+      en: [
+        [
+          "<small>The wardens are called upon to</small> Solve a mystery",
+          "<small>The wardens are called upon to</small> Find a missing person",
+          "<small>The wardens are called upon to</small> Track down a killer",
+          "<small>The wardens are called upon to</small> Defeat a monster",
+          "<small>The wardens are called upon to</small> Negotiate a deal",
+          "<small>The wardens are called upon to</small> Protect a location"
+        ],
+        [
+          "<small>Inside or near</small> A frontier town",
+          "<small>Inside or near</small> A steam locomotive",
+          "<small>Inside or near</small> An abandoned mine",
+          "<small>Inside or near</small> A logging camp",
+          "<small>Inside or near</small> A ranch or farm",
+          "<small>Inside or near</small> A mountain cabin"
+        ],
+        [
+          "<small>While dealing with</small> Angry locals",
+          "<small>While dealing with</small> Being stalked by evil",
+          "<small>While dealing with</small> An ambush or trap",
+          "<small>While dealing with</small> Double the trouble",
+          "<small>While dealing with</small> A mischievous spirit",
+          "<small>While dealing with</small> A gang of outlaws"
+        ]
+      ],
+      es: [
+        [
+          "<small>Los custodios han sido llamados para</small> Resolver un misterio",
+          "<small>Los custodios han sido llamados para</small> Hallar a una persona desaparecida",
+          "<small>Los custodios han sido llamados para</small> Rastrear a un asesino",
+          "<small>Los custodios han sido llamados para</small> Derrotar a un monstruo",
+          "<small>Los custodios han sido llamados para</small> Negociar un trato",
+          "<small>Los custodios han sido llamados para</small> Proteger una ubicación"
+        ],
+        [
+          "<small>Dentro o cerca de</small> Un pueblo fronterizo",
+          "<small>Dentro o cerca de</small> Una locomotora de vapor",
+          "<small>Dentro o cerca de</small> Una mina abandonada",
+          "<small>Dentro o cerca de</small> Un campamento maderero",
+          "<small>Dentro o cerca de</small> Un rancho o granja",
+          "<small>Dentro o cerca de</small> Una cabaña de montaña"
+        ],
+        [
+          "<small>Mientras lidian con</small> Lugareños furiosos",
+          "<small>Mientras lidian con</small> Ser acechados por el mal",
+          "<small>Mientras lidian con</small> Una emboscada o trampa",
+          "<small>Mientras lidian con</small> El doble de problemas",
+          "<small>Mientras lidian con</small> Un espíritu travieso",
+          "<small>Mientras lidian con</small> Una banda de forajidos"
+        ]
+      ]
+  },
   welcome_to_drakonheim: {
-  title: "Welcome to Drakonheim",
-  en: [
-    [
-      "<small>The adventurers are hired to</small> Defeat a monster",
-      "<small>The adventurers are hired to</small> Discover a secret",
-      "<small>The adventurers are hired to</small> Find someone",
-      "<small>The adventurers are hired to</small> Retrieve something",
-      "<small>The adventurers are hired to</small> Investigate a crime",
-      "<small>The adventurers are hired to</small> Negotiate a deal"
-    ],
-    [
-      "<small>From or within</small> The wealthy district",
-      "<small>From or within</small> An abandoned area",
-      "<small>From or within</small> The marketplace",
-      "<small>From or within</small> The riverfront docks",
-      "<small>From or within</small> The dwarven enclave",
-      "<small>From or within</small> Outside the city"
-    ],
-    [
-      "<small>While dealing with</small> Rival adventurers",
-      "<small>While dealing with</small> A political enemy",
-      "<small>While dealing with</small> Monsters or undead",
-      "<small>While dealing with</small> Thieves or scouts",
-      "<small>While dealing with</small> A strict time limit",
-      "<small>While dealing with</small> A setup or betrayal"
-    ]
-  ],
-  es: [
-    [
-      "<small>Los aventureros son contratados para</small> Derrotar a un monstruo",
-      "<small>Los aventureros son contratados para</small> Descubrir un secreto",
-      "<small>Los aventureros son contratados para</small> Encontrar a alguien",
-      "<small>Los aventureros son contratados para</small> Recuperar algo",
-      "<small>Los aventureros son contratados para</small> Investigar un crimen",
-      "<small>Los aventureros son contratados para</small> Negociar un trato"
-    ],
-    [
-      "<small>Desde o dentro de</small> El distrito rico",
-      "<small>Desde o dentro de</small> Una zona abandonada",
-      "<small>Desde o dentro de</small> El mercado",
-      "<small>Desde o dentro de</small> Los muelles del río",
-      "<small>Desde o dentro de</small> El enclave enano",
-      "<small>Desde o dentro de</small> Fuera de la ciudad"
-    ],
-    [
-      "<small>Mientras lidian con</small> Aventureros rivales",
-      "<small>Mientras lidian con</small> Un enemigo político",
-      "<small>Mientras lidian con</small> Monstruos o no muertos",
-      "<small>Mientras lidian con</small> Ladrones o exploradores",
-      "<small>Mientras lidian con</small> Un límite de tiempo estricto",
-      "<small>Mientras lidian con</small> Una trampa o traición"
-    ]
-  ]
-},
-wicked_dreams: {
-  title: "Wicked Dreams",
-  en: [
-    [
-      "<small>You are summoned by</small> Contrived stupidity",
-      "<small>You are summoned by</small> A sacrifice or offering",
-      "<small>You are summoned by</small> Destructive behavior",
-      "<small>You are summoned by</small> An eldritch device",
-      "<small>You are summoned by</small> Luck or happenstance",
-      "<small>You are summoned by</small> An ancient prophecy"
-    ],
-    [
-      "<small>Somewhere in or near a</small> Summer camp",
-      "<small>Somewhere in or near a</small> College or university",
-      "<small>Somewhere in or near a</small> Derelict building",
-      "<small>Somewhere in or near a</small> Private house or villa",
-      "<small>Somewhere in or near a</small> Cemetery or church",
-      "<small>Somewhere in or near a</small> Library or museum"
-    ],
-    [
-      "<small>But beware of</small> Monster hunters",
-      "<small>But beware of</small> Police detectives",
-      "<small>But beware of</small> Otherworldly rivalry",
-      "<small>But beware of</small> Divine intervention",
-      "<small>But beware of</small> Power-hungry cultists",
-      "<small>But beware of</small> Arcane secrets"
-    ]
-  ],
-  es: [
-    [
-      "<small>Has sido invocado por</small> Una estupidez forzada",
-      "<small>Has sido invocado por</small> Un sacrificio u ofrenda",
-      "<small>Has sido invocado por</small> Un comportamiento destructivo",
-      "<small>Has sido invocado por</small> Un artefacto primigenio",
-      "<small>Has sido invocado por</small> Suerte o azar",
-      "<small>Has sido invocado por</small> Una profecía antigua"
-    ],
-    [
-      "<small>En algún lugar en o cerca de</small> Un campamento de verano",
-      "<small>En algún lugar en o cerca de</small> Un colegio o universidad",
-      "<small>En algún lugar en o cerca de</small> Un edificio abandonado",
-      "<small>En algún lugar en o cerca de</small> Una casa privada o villa",
-      "<small>En algún lugar en o cerca de</small> Un cementerio o iglesia",
-      "<small>En algún lugar en o cerca de</small> Una biblioteca o museo"
-    ],
-    [
-      "<small>Pero cuidado con</small> Cazadores de monstruos",
-      "<small>Pero cuidado con</small> Detectives de la policía",
-      "<small>Pero cuidado con</small> Rivalidades de otros mundos",
-      "<small>Pero cuidado con</small> La intervención divina",
-      "<small>Pero cuidado con</small> Cultistas hambrientos de poder",
-      "<small>Pero cuidado con</small> Secretos arcanos"
-    ]
-  ]
-}
+    title: "Welcome to Drakonheim",
+      en: [
+        [
+          "<small>The adventurers are hired to</small> Defeat a monster",
+          "<small>The adventurers are hired to</small> Discover a secret",
+          "<small>The adventurers are hired to</small> Find someone",
+          "<small>The adventurers are hired to</small> Retrieve something",
+          "<small>The adventurers are hired to</small> Investigate a crime",
+          "<small>The adventurers are hired to</small> Negotiate a deal"
+        ],
+        [
+          "<small>From or within</small> The wealthy district",
+          "<small>From or within</small> An abandoned area",
+          "<small>From or within</small> The marketplace",
+          "<small>From or within</small> The riverfront docks",
+          "<small>From or within</small> The dwarven enclave",
+          "<small>From or within</small> Outside the city"
+        ],
+        [
+          "<small>While dealing with</small> Rival adventurers",
+          "<small>While dealing with</small> A political enemy",
+          "<small>While dealing with</small> Monsters or undead",
+          "<small>While dealing with</small> Thieves or scouts",
+          "<small>While dealing with</small> A strict time limit",
+          "<small>While dealing with</small> A setup or betrayal"
+        ]
+      ],
+      es: [
+        [
+          "<small>Los aventureros son contratados para</small> Derrotar a un monstruo",
+          "<small>Los aventureros son contratados para</small> Descubrir un secreto",
+          "<small>Los aventureros son contratados para</small> Encontrar a alguien",
+          "<small>Los aventureros son contratados para</small> Recuperar algo",
+          "<small>Los aventureros son contratados para</small> Investigar un crimen",
+          "<small>Los aventureros son contratados para</small> Negociar un trato"
+        ],
+        [
+          "<small>Desde o dentro de</small> El distrito rico",
+          "<small>Desde o dentro de</small> Una zona abandonada",
+          "<small>Desde o dentro de</small> El mercado",
+          "<small>Desde o dentro de</small> Los muelles del río",
+          "<small>Desde o dentro de</small> El enclave enano",
+          "<small>Desde o dentro de</small> Fuera de la ciudad"
+        ],
+        [
+          "<small>Mientras lidian con</small> Aventureros rivales",
+          "<small>Mientras lidian con</small> Un enemigo político",
+          "<small>Mientras lidian con</small> Monstruos o no muertos",
+          "<small>Mientras lidian con</small> Ladrones o exploradores",
+          "<small>Mientras lidian con</small> Un límite de tiempo estricto",
+          "<small>Mientras lidian con</small> Una trampa o traición"
+        ]
+      ]
+  },
+  wicked_dreams: {
+    title: "Wicked Dreams",
+      en: [
+        [
+          "<small>You are summoned by</small> Contrived stupidity",
+          "<small>You are summoned by</small> A sacrifice or offering",
+          "<small>You are summoned by</small> Destructive behavior",
+          "<small>You are summoned by</small> An eldritch device",
+          "<small>You are summoned by</small> Luck or happenstance",
+          "<small>You are summoned by</small> An ancient prophecy"
+        ],
+        [
+          "<small>Somewhere in or near a</small> Summer camp",
+          "<small>Somewhere in or near a</small> College or university",
+          "<small>Somewhere in or near a</small> Derelict building",
+          "<small>Somewhere in or near a</small> Private house or villa",
+          "<small>Somewhere in or near a</small> Cemetery or church",
+          "<small>Somewhere in or near a</small> Library or museum"
+        ],
+        [
+          "<small>But beware of</small> Monster hunters",
+          "<small>But beware of</small> Police detectives",
+          "<small>But beware of</small> Otherworldly rivalry",
+          "<small>But beware of</small> Divine intervention",
+          "<small>But beware of</small> Power-hungry cultists",
+          "<small>But beware of</small> Arcane secrets"
+        ]
+      ],
+      es: [
+        [
+          "<small>Has sido invocado por</small> Una estupidez forzada",
+          "<small>Has sido invocado por</small> Un sacrificio u ofrenda",
+          "<small>Has sido invocado por</small> Un comportamiento destructivo",
+          "<small>Has sido invocado por</small> Un artefacto primigenio",
+          "<small>Has sido invocado por</small> Suerte o azar",
+          "<small>Has sido invocado por</small> Una profecía antigua"
+        ],
+        [
+          "<small>En algún lugar en o cerca de</small> Un campamento de verano",
+          "<small>En algún lugar en o cerca de</small> Un colegio o universidad",
+          "<small>En algún lugar en o cerca de</small> Un edificio abandonado",
+          "<small>En algún lugar en o cerca de</small> Una casa privada o villa",
+          "<small>En algún lugar en o cerca de</small> Un cementerio o iglesia",
+          "<small>En algún lugar en o cerca de</small> Una biblioteca o museo"
+        ],
+        [
+          "<small>Pero cuidado con</small> Cazadores de monstruos",
+          "<small>Pero cuidado con</small> Detectives de la policía",
+          "<small>Pero cuidado con</small> Rivalidades de otros mundos",
+          "<small>Pero cuidado con</small> La intervención divina",
+          "<small>Pero cuidado con</small> Cultistas hambrientos de poder",
+          "<small>Pero cuidado con</small> Secretos arcanos"
+        ]
+      ]
+  }
 };
