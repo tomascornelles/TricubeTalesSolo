@@ -162,7 +162,7 @@ const i18n = {
     crimes_unsolved: "Misterios no resueltos",
     deck: "Mazo", 
     dice_title: "Dado",
-    disclaimer: "Compatible con Tricube Tales.\nEste juego es un trabajo no oficial y no comercial. \nEl contenido no es afiliado a Zadmar Games.\nDistribuido bajo la licencia CC BY 3.0.",
+    disclaimer: "Compatible con Tricube Tales.\nEste juego es un trabajo no oficial y no comercial. \nEl contenido no está afiliado a Zadmar Games.\nDistribuido bajo la licencia CC BY 3.0.",
     dungeon_denizens: "Habitantes",
     dungeon_events: "Eventos",
     dungeon_features: "Características",
