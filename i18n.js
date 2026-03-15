@@ -2526,5 +2526,1066 @@ guardians_shadow_frontier: {
       "<small>Mientras lidian con</small> Un oponente astuto"
     ]
   ]
-}
+},
+  heroes_of_sherwood: {
+  title: "Heroes of Sherwood Forest",
+  en: [
+    [
+      "<small>The outlaws decide to</small> Steal from the rich",
+      "<small>The outlaws decide to</small> Win a contest",
+      "<small>The outlaws decide to</small> Rescue a prisoner",
+      "<small>The outlaws decide to</small> Protect the innocent",
+      "<small>The outlaws decide to</small> Go on a hunt",
+      "<small>The outlaws decide to</small> Help those in need"
+    ],
+    [
+      "<small>In or near</small> Sherwood Forest",
+      "<small>In or near</small> A castle or manor",
+      "<small>In or near</small> A mystical landmark",
+      "<small>In or near</small> A church or abbey",
+      "<small>In or near</small> A town or village",
+      "<small>In or near</small> A natural cave"
+    ],
+    [
+      "<small>While dealing with</small> Sir Guy of Gisbourne",
+      "<small>While dealing with</small> Rival outlaws",
+      "<small>While dealing with</small> Templar knights",
+      "<small>While dealing with</small> Bounty hunters",
+      "<small>While dealing with</small> An injured civilian",
+      "<small>While dealing with</small> A witness or spy"
+    ]
+  ],
+  es: [
+    [
+      "<small>Los forajidos deciden</small> Robar a los ricos",
+      "<small>Los forajidos deciden</small> Ganar un concurso",
+      "<small>Los forajidos deciden</small> Rescatar a un prisionero",
+      "<small>Los forajidos deciden</small> Proteger a los inocentes",
+      "<small>Los forajidos deciden</small> Ir de caza",
+      "<small>Los forajidos deciden</small> Ayudar a los necesitados"
+    ],
+    [
+      "<small>En o cerca de</small> El bosque de Sherwood",
+      "<small>En o cerca de</small> Un castillo o mansión",
+      "<small>En o cerca de</small> Un hito místico",
+      "<small>En o cerca de</small> Una iglesia o abadía",
+      "<small>En o cerca de</small> Un pueblo o aldea",
+      "<small>En o cerca de</small> Una cueva natural"
+    ],
+    [
+      "<small>Mientras lidian con</small> Sir Guy de Gisbourne",
+      "<small>Mientras lidian con</small> Forajidos rivales",
+      "<small>Mientras lidian con</small> Caballeros templarios",
+      "<small>Mientras lidian con</small> Cazarrecompensas",
+      "<small>Mientras lidian con</small> Un civil herido",
+      "<small>Mientras lidian con</small> Un testigo o espía"
+    ]
+  ]
+},
+  horrible_henchmen: {
+  title: "Horrible Henchmen",
+  en: [
+    [
+      "<small>The master orders the henchmen to</small> Abduct someone",
+      "<small>The master orders the henchmen to</small> Recover a corpse",
+      "<small>The master orders the henchmen to</small> Steal a trinket",
+      "<small>The master orders the henchmen to</small> Eliminate a threat",
+      "<small>The master orders the henchmen to</small> Destroy evidence",
+      "<small>The master orders the henchmen to</small> Protect the master"
+    ],
+    [
+      "<small>Near, at, or inside</small> The local church",
+      "<small>Near, at, or inside</small> An opulent manor",
+      "<small>Near, at, or inside</small> The town theater",
+      "<small>Near, at, or inside</small> A prominent tavern",
+      "<small>Near, at, or inside</small> The town hall",
+      "<small>Near, at, or inside</small> The marketplace"
+    ],
+    [
+      "<small>While dealing with</small> Raiders or bandits",
+      "<small>While dealing with</small> An escaped prisoner",
+      "<small>While dealing with</small> Another “Big Bad”",
+      "<small>While dealing with</small> A rival for affection",
+      "<small>While dealing with</small> An attack on the town",
+      "<small>While dealing with</small> Master’s bad temper"
+    ]
+  ],
+  es: [
+    [
+      "<small>El amo ordena a los esbirros</small> Secuestrar a alguien",
+      "<small>El amo ordena a los esbirros</small> Recuperar un cadáver",
+      "<small>El amo ordena a los esbirros</small> Robar una baratija",
+      "<small>El amo ordena a los esbirros</small> Eliminar una amenaza",
+      "<small>El amo ordena a los esbirros</small> Destruir evidencia",
+      "<small>El amo ordena a los esbirros</small> Proteger al amo"
+    ],
+    [
+      "<small>Cerca, en o dentro de</small> La iglesia local",
+      "<small>Cerca, en o dentro de</small> Una mansión opulenta",
+      "<small>Cerca, en o dentro de</small> El teatro del pueblo",
+      "<small>Cerca, en o dentro de</small> Una taberna prominente",
+      "<small>Cerca, en o dentro de</small> El ayuntamiento",
+      "<small>Cerca, en o dentro de</small> El mercado"
+    ],
+    [
+      "<small>Mientras lidian con</small> Saqueadores o bandidos",
+      "<small>Mientras lidian con</small> Un prisionero escapado",
+      "<small>Mientras lidian con</small> Otro “Gran Villano”",
+      "<small>Mientras lidian con</small> Un rival por el afecto del amo",
+      "<small>Mientras lidian con</small> Un ataque al pueblo",
+      "<small>Mientras lidian con</small> El mal temperamento del amo"
+    ]
+  ]
+},
+hunters_victorian_london: {
+  title: "Hunters of Victorian London",
+  en: [
+    [
+      "<small>The hunters must deal with a</small> Violent rampage",
+      "<small>The hunters must deal with a</small> Cursed monster",
+      "<small>The hunters must deal with a</small> Stealthy killer",
+      "<small>The hunters must deal with a</small> Reanimated corpse",
+      "<small>The hunters must deal with a</small> Terrible experiment",
+      "<small>The hunters must deal with a</small> Phantom criminal"
+    ],
+    [
+      "<small>Which leads them to a</small> Tall building or tower",
+      "<small>Which leads them to a</small> Hospital or asylum",
+      "<small>Which leads them to a</small> Mansion or house",
+      "<small>Which leads them to a</small> Bridge or rooftop",
+      "<small>Which leads them to a</small> Museum or library",
+      "<small>Which leads them to a</small> Subway or sewer"
+    ],
+    [
+      "<small>But they must also deal with a</small> Partner or hostage",
+      "<small>But they must also deal with a</small> Police investigation",
+      "<small>But they must also deal with a</small> Meddling aristocrat",
+      "<small>But they must also deal with a</small> Henchman or servant",
+      "<small>But they must also deal with a</small> Deadly serial killer",
+      "<small>But they must also deal with a</small> Dark twist or secret"
+    ]
+  ],
+  es: [
+    [
+      "<small>Los cazadores deben lidiar con un</small> Ataque violento",
+      "<small>Los cazadores deben lidiar con un</small> Monstruo maldito",
+      "<small>Los cazadores deben lidiar con un</small> Asesino sigiloso",
+      "<small>Los cazadores deben lidiar con un</small> Cadáver reanimado",
+      "<small>Los cazadores deben lidiar con un</small> Experimento terrible",
+      "<small>Los cazadores deben lidiar con un</small> Criminal fantasma"
+    ],
+    [
+      "<small>Lo que los lleva a un</small> Edificio alto o torre",
+      "<small>Lo que los lleva a un</small> Hospital o manicomio",
+      "<small>Lo que los lleva a una</small> Mansión o casa",
+      "<small>Lo que los lleva a un</small> Puente o azotea",
+      "<small>Lo que los lleva a un</small> Museo o biblioteca",
+      "<small>Lo que los lleva al</small> Metro o alcantarilla"
+    ],
+    [
+      "<small>Pero también deben lidiar con un</small> Compañero o rehén",
+      "<small>Pero también deben lidiar con una</small> Investigación policial",
+      "<small>Pero también deben lidiar con un</small> Aristócrata entrometido",
+      "<small>Pero también deben lidiar con un</small> Secuaz o sirviente",
+      "<small>Pero también deben lidiar con un</small> Asesino en serie mortal",
+      "<small>Pero también deben lidiar con un</small> Giro oscuro o secreto"
+    ]
+  ]
+},
+interstellar_bounty_hunters: {
+  title: "Interstellar Bounty Hunters",
+  en: [
+    [
+      "<small>Track down and capture or kill</small> A dangerous fugitive",
+      "<small>Track down and capture or kill</small> A defaulted debtor",
+      "<small>Track down and capture or kill</small> A war criminal",
+      "<small>Track down and capture or kill</small> An escaped prisoner",
+      "<small>Track down and capture or kill</small> A valuable item",
+      "<small>Track down and capture or kill</small> A mysterious asset"
+    ],
+    [
+      "<small>From somewhere on</small> An ice world",
+      "<small>From somewhere on</small> A desert planet",
+      "<small>From somewhere on</small> A space station",
+      "<small>From somewhere on</small> A transport vessel",
+      "<small>From somewhere on</small> A gas giant",
+      "<small>From somewhere on</small> A forest paradise"
+    ],
+    [
+      "<small>While dealing with</small> An ambush or trap",
+      "<small>While dealing with</small> Unexpected betrayal",
+      "<small>While dealing with</small> Pirates or raiders",
+      "<small>While dealing with</small> Rival bounty hunters",
+      "<small>While dealing with</small> Scavengers or thieves",
+      "<small>While dealing with</small> Special client request"
+    ]
+  ],
+  es: [
+    [
+      "<small>Rastrea y captura o mata a</small> Un fugitivo peligroso",
+      "<small>Rastrea y captura o mata a</small> Un deudor moroso",
+      "<small>Rastrea y captura o mata a</small> Un criminal de guerra",
+      "<small>Rastrea y captura o mata a</small> Un prisionero escapado",
+      "<small>Rastrea y captura o mata a</small> Un objeto valioso",
+      "<small>Rastrea y captura o mata a</small> Un activo misterioso"
+    ],
+    [
+      "<small>En algún lugar de</small> Un mundo de hielo",
+      "<small>En algún lugar de</small> Un planeta desértico",
+      "<small>En algún lugar de</small> Una estación espacial",
+      "<small>En algún lugar de</small> Una nave de transporte",
+      "<small>En algún lugar de</small> Un gigante gaseoso",
+      "<small>En algún lugar de</small> Un paraíso forestal"
+    ],
+    [
+      "<small>Mientras lidian con</small> Una emboscada o trampa",
+      "<small>Mientras lidian con</small> Una traición inesperada",
+      "<small>Mientras lidian con</small> Piratas o asaltantes",
+      "<small>Mientras lidian con</small> Cazarrecompensas rivales",
+      "<small>Mientras lidian con</small> Carroñeros o ladrones",
+      "<small>Mientras lidian con</small> Una petición especial del cliente"
+    ]
+  ]
+},
+  interstellar_explorers: {
+  title: "Interstellar Explorers",
+  en: [
+    [
+      "<small>The explorers discover a</small> Strange new species",
+      "<small>The explorers discover a</small> Low-tech civilization",
+      "<small>The explorers discover a</small> Scene of destruction",
+      "<small>The explorers discover a</small> Lost Earth colony",
+      "<small>The explorers discover a</small> Dangerous threat",
+      "<small>The explorers discover a</small> Mysterious artifact"
+    ],
+    [
+      "<small>Situated on a</small> Barren rocky planet",
+      "<small>Situated on a</small> Habitable moon",
+      "<small>Situated on a</small> Tidally locked planet",
+      "<small>Situated on a</small> Megastructure",
+      "<small>Situated on a</small> Frozen water planet",
+      "<small>Situated on a</small> Earth-like world"
+    ],
+    [
+      "<small>While dealing with</small> Asteroids or debris",
+      "<small>While dealing with</small> Starship problems",
+      "<small>While dealing with</small> Parasites or disease",
+      "<small>While dealing with</small> Alien romance",
+      "<small>While dealing with</small> Hazardous conditions",
+      "<small>While dealing with</small> Hostile forces"
+    ]
+  ],
+  es: [
+    [
+      "<small>Los exploradores descubren una</small> Nueva especie extraña",
+      "<small>Los exploradores descubren una</small> Civilización de baja tecnología",
+      "<small>Los exploradores descubren una</small> Escena de destrucción",
+      "<small>Los exploradores descubren una</small> Colonia terrestre perdida",
+      "<small>Los exploradores descubren una</small> Amenaza peligrosa",
+      "<small>Los exploradores descubren un</small> Artefacto misterioso"
+    ],
+    [
+      "<small>Situado en un</small> Planeta rocoso yermo",
+      "<small>Situado en una</small> Luna habitable",
+      "<small>Situado en un</small> Planeta con acoplamiento de marea",
+      "<small>Situado en una</small> Megaestructura",
+      "<small>Situado en un</small> Planeta de agua helada",
+      "<small>Situado en un</small> Mundo similar a la Tierra"
+    ],
+    [
+      "<small>Mientras lidian con</small> Asteroides o escombros",
+      "<small>Mientras lidian con</small> Problemas en la nave",
+      "<small>Mientras lidian con</small> Parásitos o enfermedades",
+      "<small>Mientras lidian con</small> Un romance alienígena",
+      "<small>Mientras lidian con</small> Condiciones peligrosas",
+      "<small>Mientras lidian con</small> Fuerzas hostiles"
+    ]
+  ]
+},
+  interstellar_laser_knights: {
+  title: "Interstellar Laser Knights",
+  en: [
+    [
+      "<small>The knights have been ordered to</small> Rescue a dignitary",
+      "<small>The knights have been ordered to</small> Aid citizens in need",
+      "<small>The knights have been ordered to</small> Hunt down a fugitive",
+      "<small>The knights have been ordered to</small> Recover an artifact",
+      "<small>The knights have been ordered to</small> Gather evidence",
+      "<small>The knights have been ordered to</small> Mediate a dispute"
+    ],
+    [
+      "<small>From somewhere on</small> A volcanic planet",
+      "<small>From somewhere on</small> A water world",
+      "<small>From somewhere on</small> An inhabited asteroid",
+      "<small>From somewhere on</small> A jungle planet",
+      "<small>From somewhere on</small> A dangerous moon",
+      "<small>From somewhere on</small> A city planet"
+    ],
+    [
+      "<small>While dealing with</small> A vicious crime lord",
+      "<small>While dealing with</small> Innocent bystanders",
+      "<small>While dealing with</small> A hired assassin",
+      "<small>While dealing with</small> A natural hazard",
+      "<small>While dealing with</small> Military tensions",
+      "<small>While dealing with</small> An ancient enemy"
+    ]
+  ],
+  es: [
+    [
+      "<small>Los caballeros han recibido la orden de</small> Rescatar a un dignatario",
+      "<small>Los caballeros han recibido la orden de</small> Ayudar a ciudadanos necesitados",
+      "<small>Los caballeros han recibido la orden de</small> Cazar a un fugitivo",
+      "<small>Los caballeros han recibido la orden de</small> Recuperar un artefacto",
+      "<small>Los caballeros han recibido la orden de</small> Reunir pruebas",
+      "<small>Los caballeros han recibido la orden de</small> Mediar en una disputa"
+    ],
+    [
+      "<small>En algún lugar de</small> Un planeta volcánico",
+      "<small>En algún lugar de</small> Un mundo acuático",
+      "<small>En algún lugar de</small> Un asteroide habitado",
+      "<small>En algún lugar de</small> Un planeta selvático",
+      "<small>En algún lugar de</small> Una luna peligrosa",
+      "<small>En algún lugar de</small> Un planeta ciudad"
+    ],
+    [
+      "<small>Mientras lidian con</small> Un despiadado señor del crimen",
+      "<small>Mientras lidian con</small> Transeúntes inocentes",
+      "<small>Mientras lidian con</small> Un asesino a sueldo",
+      "<small>Mientras lidian con</small> Un peligro natural",
+      "<small>Mientras lidian con</small> Tensiones militares",
+      "<small>Mientras lidian con</small> Un antiguo enemigo"
+    ]
+  ]
+},
+  interstellar_mech_war: {
+  title: "Interstellar Mech War",
+  en: [
+    [
+      "<small>The squad is ordered to</small> Destroy a target",
+      "<small>The squad is ordered to</small> Retrieve an asset",
+      "<small>The squad is ordered to</small> Escort a VIP",
+      "<small>The squad is ordered to</small> Gather intel",
+      "<small>The squad is ordered to</small> Raid the enemy",
+      "<small>The squad is ordered to</small> Guard a location"
+    ],
+    [
+      "<small>Somewhere near, in, or on</small> An orbital station",
+      "<small>Somewhere near, in, or on</small> No man’s land",
+      "<small>Somewhere near, in, or on</small> A colony outpost",
+      "<small>Somewhere near, in, or on</small> A prize location",
+      "<small>Somewhere near, in, or on</small> Enemy territory",
+      "<small>Somewhere near, in, or on</small> An active war zone"
+    ],
+    [
+      "<small>While dealing with</small> Restricted tech",
+      "<small>While dealing with</small> Unexpected hazards",
+      "<small>While dealing with</small> A surprise or ambush",
+      "<small>While dealing with</small> A deadly weapon",
+      "<small>While dealing with</small> Scavangers or pirates",
+      "<small>While dealing with</small> A traitor or spy"
+    ]
+  ],
+  es: [
+    [
+      "<small>El escuadrón tiene la orden de</small> Destruir un objetivo",
+      "<small>El escuadrón tiene la orden de</small> Recuperar un activo",
+      "<small>El escuadrón tiene la orden de</small> Escortar a un VIP",
+      "<small>El escuadrón tiene la orden de</small> Reunir inteligencia",
+      "<small>El escuadrón tiene la orden de</small> Asaltar al enemigo",
+      "<small>El escuadrón tiene la orden de</small> Custodiar una ubicación"
+    ],
+    [
+      "<small>En algún lugar cerca, en o sobre</small> Una estación orbital",
+      "<small>En algún lugar cerca, en o sobre</small> Tierra de nadie",
+      "<small>En algún lugar cerca, en o sobre</small> Un puesto de avanzada",
+      "<small>En algún lugar cerca, en o sobre</small> Una ubicación estratégica",
+      "<small>En algún lugar cerca, en o sobre</small> Territorio enemigo",
+      "<small>En algún lugar cerca, en o sobre</small> Una zona de guerra activa"
+    ],
+    [
+      "<small>Mientras lidian con</small> Tecnología restringida",
+      "<small>Mientras lidian con</small> Peligros inesperados",
+      "<small>Mientras lidian con</small> Una sorpresa o emboscada",
+      "<small>Mientras lidian con</small> Un arma letal",
+      "<small>Mientras lidian con</small> Carroñeros o piratas",
+      "<small>Mientras lidian con</small> Un traidor o espía"
+    ]
+  ]
+},
+  interstellar_rebels: {
+  title: "Interstellar Rebels",
+  en: [
+    [
+      "<small>The rebels decide to</small> Destroy a facility",
+      "<small>The rebels decide to</small> Hunt down a fugitive",
+      "<small>The rebels decide to</small> Protect those in need",
+      "<small>The rebels decide to</small> Rescue a prisoner",
+      "<small>The rebels decide to</small> Steal plans or intel",
+      "<small>The rebels decide to</small> Capture a resource"
+    ],
+    [
+      "<small>Which leads them to</small> A backwater planet",
+      "<small>Which leads them to</small> An outpost world",
+      "<small>Which leads them to</small> A space port/station",
+      "<small>Which leads them to</small> A dead world",
+      "<small>Which leads them to</small> A lawless colony",
+      "<small>Which leads them to</small> A habitable moon"
+    ],
+    [
+      "<small>But they must also deal with a</small> Heavily armed patrol",
+      "<small>But they must also deal with a</small> Dangerous spaceship",
+      "<small>But they must also deal with a</small> Debt or favor",
+      "<small>But they must also deal with a</small> Trap or ambush",
+      "<small>But they must also deal with a</small> Change of plans",
+      "<small>But they must also deal with a</small> Criminal faction"
+    ]
+  ],
+  es: [
+    [
+      "<small>Los rebeldes deciden</small> Destruir una instalación",
+      "<small>Los rebeldes deciden</small> Cazar a un fugitivo",
+      "<small>Los rebeldes deciden</small> Proteger a los necesitados",
+      "<small>Los rebeldes deciden</small> Rescatar a un prisionero",
+      "<small>Los rebeldes deciden</small> Robar planos o inteligencia",
+      "<small>Los rebeldes deciden</small> Capturar un recurso"
+    ],
+    [
+      "<small>Lo que los lleva a</small> Un planeta remoto",
+      "<small>Lo que los lleva a</small> Un mundo de avanzada",
+      "<small>Lo que los lleva a</small> Un puerto o estación espacial",
+      "<small>Lo que los lleva a</small> Un mundo muerto",
+      "<small>Lo que los lleva a</small> Una colonia sin ley",
+      "<small>Lo que los lleva a</small> Una luna habitable"
+    ],
+    [
+      "<small>Pero también deben lidiar con</small> Una patrulla fuertemente armada",
+      "<small>Pero también deben lidiar con</small> Una nave espacial peligrosa",
+      "<small>Pero también deben lidiar con</small> Una deuda o favor",
+      "<small>Pero también deben lidiar con</small> Una trampa o emboscada",
+      "<small>Pero también deben lidiar con</small> Un cambio de planes",
+      "<small>Pero también deben lidiar con</small> Una facción criminal"
+    ]
+  ]
+},
+  interstellar_smugglers: {
+  title: "Interstellar Smugglers",
+  en: [
+    [
+      "<small>The crew needs to smuggle</small> Alcohol or narcotics",
+      "<small>The crew needs to smuggle</small> Medical supplies",
+      "<small>The crew needs to smuggle</small> A dangerous alien",
+      "<small>The crew needs to smuggle</small> A fugitive or refugee",
+      "<small>The crew needs to smuggle</small> Military equipment",
+      "<small>The crew needs to smuggle</small> Stolen tech or plans"
+    ],
+    [
+      "<small>From</small> A mining world",
+      "<small>From</small> A fetid swamp planet",
+      "<small>From</small> A distant rim world",
+      "<small>From</small> A large starship",
+      "<small>From</small> A tidally locked planet",
+      "<small>From</small> An artificial world"
+    ],
+    [
+      "<small>To</small> A mining world",
+      "<small>To</small> A fetid swamp planet",
+      "<small>To</small> A distant rim world",
+      "<small>To</small> A large starship",
+      "<small>To</small> A tidally locked planet",
+      "<small>To</small> An artificial world"
+    ],
+    [
+      "<small>While dealing with</small> A bounty hunter",
+      "<small>While dealing with</small> A tight time limit",
+      "<small>While dealing with</small> A fickle client",
+      "<small>While dealing with</small> A deadly pursuit",
+      "<small>While dealing with</small> Technical difficulties",
+      "<small>While dealing with</small> Unexpected hazards"
+    ]
+  ],
+  es: [
+    [
+      "<small>La tripulación debe contrabandear</small> Alcohol o narcóticos",
+      "<small>La tripulación debe contrabandear</small> Suministros médicos",
+      "<small>La tripulación debe contrabandear</small> Un alienígena peligroso",
+      "<small>La tripulación debe contrabandear</small> Un fugitivo o refugiado",
+      "<small>La tripulación debe contrabandear</small> Equipo militar",
+      "<small>La tripulación debe contrabandear</small> Tecnología o planos robados"
+    ],
+    [
+      "<small>Desde</small> Un mundo minero",
+      "<small>Desde</small> Un planeta de pantanos fétidos",
+      "<small>Desde</small> Un mundo del borde exterior",
+      "<small>Desde</small> Una gran nave estelar",
+      "<small>Desde</small> Un planeta con acoplamiento de marea",
+      "<small>Desde</small> Un mundo artificial"
+    ],
+    [
+      "<small>Hacia</small> Un mundo minero",
+      "<small>Hacia</small> Un planeta de pantanos fétidos",
+      "<small>Hacia</small> Un mundo del borde exterior",
+      "<small>Hacia</small> Una gran nave estelar",
+      "<small>Hacia</small> Un planeta con acoplamiento de marea",
+      "<small>Hacia</small> Un mundo artificial"
+    ],
+    [
+      "<small>Mientras lidian con</small> Un cazarrecompensas",
+      "<small>Mientras lidian con</small> Un límite de tiempo estricto",
+      "<small>Mientras lidian con</small> Un cliente voluble",
+      "<small>Mientras lidian con</small> Una persecución mortal",
+      "<small>Mientras lidian con</small> Dificultades técnicas",
+      "<small>Mientras lidian con</small> Peligros inesperados"
+    ]
+  ]
+},
+  interstellar_troopers: {
+  title: "Interstellar Troopers",
+  en: [
+    [
+      "<small>The troopers are ordered to</small> Investigate a mystery",
+      "<small>The troopers are ordered to</small> Explore a location",
+      "<small>The troopers are ordered to</small> Destroy a facility",
+      "<small>The troopers are ordered to</small> Capture an enemy",
+      "<small>The troopers are ordered to</small> Recover valuable data",
+      "<small>The troopers are ordered to</small> Rescue civilians"
+    ],
+    [
+      "<small>From somewhere near, in or on</small> A hostile world",
+      "<small>From somewhere near, in or on</small> A space station",
+      "<small>From somewhere near, in or on</small> An enemy base",
+      "<small>From somewhere near, in or on</small> A wrecked spaceship",
+      "<small>From somewhere near, in or on</small> A colonized planet",
+      "<small>From somewhere near, in or on</small> Ancient ruins"
+    ],
+    [
+      "<small>While dealing with</small> Dangerous aliens",
+      "<small>While dealing with</small> Difficult weather",
+      "<small>While dealing with</small> Automated defences",
+      "<small>While dealing with</small> A malicious AI",
+      "<small>While dealing with</small> Freebooters",
+      "<small>While dealing with</small> A change of orders"
+    ]
+  ],
+  es: [
+    [
+      "<small>Los soldados tienen la orden de</small> Investigar un misterio",
+      "<small>Los soldados tienen la orden de</small> Explorar una ubicación",
+      "<small>Los soldados tienen la orden de</small> Destruir una instalación",
+      "<small>Los soldados tienen la orden de</small> Capturar a un enemigo",
+      "<small>Los soldados tienen la orden de</small> Recuperar datos valiosos",
+      "<small>Los soldados tienen la orden de</small> Rescatar civiles"
+    ],
+    [
+      "<small>Desde algún lugar cerca, en o sobre</small> Un mundo hostil",
+      "<small>Desde algún lugar cerca, en o sobre</small> Una estación espacial",
+      "<small>Desde algún lugar cerca, en o sobre</small> Una base enemiga",
+      "<small>Desde algún lugar cerca, en o sobre</small> Una nave espacial naufragada",
+      "<small>Desde algún lugar cerca, en o sobre</small> Un planeta colonizado",
+      "<small>Desde algún lugar cerca, en o sobre</small> Ruinas antiguas"
+    ],
+    [
+      "<small>Mientras lidian con</small> Alienígenas peligrosos",
+      "<small>Mientras lidian con</small> Clima adverso",
+      "<small>Mientras lidian con</small> Defensas automatizadas",
+      "<small>Mientras lidian con</small> Una IA maliciosa",
+      "<small>Mientras lidian con</small> Filibusteros espaciales",
+      "<small>Mientras lidian con</small> Un cambio de órdenes"
+    ]
+  ]
+},
+  maidenstead_mysteries: {
+  title: "Maidenstead Mysteries",
+  en: [
+    [
+      "<small>The sleuths investigate</small> A locked-room crime",
+      "<small>The sleuths investigate</small> A vanishing person",
+      "<small>The sleuths investigate</small> An unexplained theft",
+      "<small>The sleuths investigate</small> A freak accident",
+      "<small>The sleuths investigate</small> An impossible escape",
+      "<small>The sleuths investigate</small> A bizarre sighting"
+    ],
+    [
+      "<small>Which leads them to</small> A run-down hotel",
+      "<small>Which leads them to</small> A spooky old house",
+      "<small>Which leads them to</small> An eerie museum",
+      "<small>Which leads them to</small> A creepy film studio",
+      "<small>Which leads them to</small> A forlorn churchyard",
+      "<small>Which leads them to</small> A dilapidated hospital"
+    ],
+    [
+      "<small>But they must also deal with</small> A medium or psychic",
+      "<small>But they must also deal with</small> Rival investigators",
+      "<small>But they must also deal with</small> Unwanted publicity",
+      "<small>But they must also deal with</small> Legal challenges",
+      "<small>But they must also deal with</small> Family matters",
+      "<small>But they must also deal with</small> A shocking revelation"
+    ]
+  ],
+  es: [
+    [
+      "<small>Los sabuesos investigan</small> Un crimen en una habitación cerrada",
+      "<small>Los sabuesos investigan</small> Una desaparición misteriosa",
+      "<small>Los sabuesos investigan</small> Un robo inexplicable",
+      "<small>Los sabuesos investigan</small> Un accidente extraño",
+      "<small>Los sabuesos investigan</small> Un escape imposible",
+      "<small>Los sabuesos investigan</small> Un avistamiento bizarro"
+    ],
+    [
+      "<small>Lo que los lleva a</small> Un hotel de mala muerte",
+      "<small>Lo que los lleva a</small> Una vieja casa espeluznante",
+      "<small>Lo que los lleva a</small> Un museo inquietante",
+      "<small>Lo que los lleva a</small> Un estudio de cine lúgubre",
+      "<small>Lo que los lleva a</small> Un cementerio abandonado",
+      "<small>Lo que los lleva a</small> Un hospital ruinoso"
+    ],
+    [
+      "<small>Pero también deben lidiar con</small> Un médium o vidente",
+      "<small>Pero también deben lidiar con</small> Investigadores rivales",
+      "<small>Pero también deben lidiar con</small> Publicidad no deseada",
+      "<small>Pero también deben lidiar con</small> Desafíos legales",
+      "<small>Pero también deben lidiar con</small> Asuntos familiares",
+      "<small>Pero también deben lidiar con</small> Una revelación impactante"
+    ]
+  ]
+},
+  metahuman_uprising: {
+  title: "Metahuman Uprising",
+  en: [
+    [
+      "<small>The heroes must deal with</small> A mad scientist",
+      "<small>The heroes must deal with</small> A young villain",
+      "<small>The heroes must deal with</small> An evil genius",
+      "<small>The heroes must deal with</small> A callous mercenary",
+      "<small>The heroes must deal with</small> A crazy fanatic",
+      "<small>The heroes must deal with</small> An ancient “god”"
+    ],
+    [
+      "<small>Who plans to kill, capture, or steal</small> A political figure",
+      "<small>Who plans to kill, capture, or steal</small> A lucrative target",
+      "<small>Who plans to kill, capture, or steal</small> Another metahuman",
+      "<small>Who plans to kill, capture, or steal</small> Government secrets",
+      "<small>Who plans to kill, capture, or steal</small> A military officer",
+      "<small>Who plans to kill, capture, or steal</small> Ordinary civilians"
+    ],
+    [
+      "<small>With the further complication of</small> Personal obligations",
+      "<small>With the further complication of</small> Meddling humans",
+      "<small>With the further complication of</small> Gung-ho minions",
+      "<small>With the further complication of</small> Undesirable allies",
+      "<small>With the further complication of</small> Innocent bystanders",
+      "<small>With the further complication of</small> Plans within plans"
+    ]
+  ],
+  es: [
+    [
+      "<small>Los héroes deben lidiar con</small> Un científico loco",
+      "<small>Los héroes deben lidiar con</small> Un joven villano",
+      "<small>Los héroes deben lidiar con</small> Un genio malvado",
+      "<small>Los héroes deben lidiar con</small> Un mercenario despiadado",
+      "<small>Los héroes deben lidiar con</small> Un fanático demente",
+      "<small>Los héroes deben lidiar con</small> Un antiguo “dios”"
+    ],
+    [
+      "<small>Que planea matar, capturar o robar a</small> Una figura política",
+      "<small>Que planea matar, capturar o robar a</small> Un objetivo lucrativo",
+      "<small>Que planea matar, capturar o robar a</small> Otro metahumano",
+      "<small>Que planea matar, capturar o robar</small> Secretos del gobierno",
+      "<small>Que planea matar, capturar o robar a</small> Un oficial militar",
+      "<small>Que planea matar, capturar o robar a</small> Civiles comunes"
+    ],
+    [
+      "<small>Con la complicación añadida de</small> Obligaciones personales",
+      "<small>Con la complicación añadida de</small> Humanos entrometidos",
+      "<small>Con la complicación añadida de</small> Secuaces temerarios",
+      "<small>Con la complicación añadida de</small> Aliados indeseables",
+      "<small>Con la complicación añadida de</small> Transeúntes inocentes",
+      "<small>Con la complicación añadida de</small> Planes dentro de planes"
+    ]
+  ]
+},
+  minerunners: {
+  title: "Minerunners",
+  en: [
+    [
+      "<small>The minerunners need to</small> Recover a lost artifact",
+      "<small>The minerunners need to</small> Eliminate a threat",
+      "<small>The minerunners need to</small> Rescue another crew",
+      "<small>The minerunners need to</small> Capture a specimen",
+      "<small>The minerunners need to</small> Provide assistance",
+      "<small>The minerunners need to</small> Obtain information"
+    ],
+    [
+      "<small>From somewhere in or near a</small> Deep mineshaft",
+      "<small>From somewhere in or near a</small> New vein of ore",
+      "<small>From somewhere in or near a</small> Distant passageway",
+      "<small>From somewhere in or near a</small> Natural chamber",
+      "<small>From somewhere in or near a</small> Residential area",
+      "<small>From somewhere in or near a</small> Great chasm"
+    ],
+    [
+      "<small>While dealing with a</small> Damaged war wagon",
+      "<small>While dealing with a</small> Huge zombie horde",
+      "<small>While dealing with a</small> Serious injury",
+      "<small>While dealing with a</small> Mysterious enemy",
+      "<small>While dealing with a</small> Trap or ambush",
+      "<small>While dealing with a</small> Flood or cave-in"
+    ]
+  ],
+  es: [
+    [
+      "<small>Los mineros deben</small> Recuperar un artefacto perdido",
+      "<small>Los mineros deben</small> Eliminar una amenaza",
+      "<small>Los mineros deben</small> Rescatar a otra tripulación",
+      "<small>Los mineros deben</small> Capturar un espécimen",
+      "<small>Los mineros deben</small> Prestar asistencia",
+      "<small>Los mineros deben</small> Obtener información"
+    ],
+    [
+      "<small>Desde algún lugar en o cerca de</small> Un pozo minero profundo",
+      "<small>Desde algún lugar en o cerca de</small> Una nueva veta de mineral",
+      "<small>Desde algún lugar en o cerca de</small> Un pasadizo distante",
+      "<small>Desde algún lugar en o cerca de</small> Una cámara natural",
+      "<small>Desde algún lugar en o cerca de</small> Una zona residencial",
+      "<small>Desde algún lugar en o cerca de</small> Un gran abismo"
+    ],
+    [
+      "<small>Mientras lidian con</small> Un vagón de guerra dañado",
+      "<small>Mientras lidian con</small> Una enorme horda de zombis",
+      "<small>Mientras lidian con</small> Una herida grave",
+      "<small>Mientras lidian con</small> Un enemigo misterioso",
+      "<small>Mientras lidian con</small> Una trampa o emboscada",
+      "<small>Mientras lidian con</small> Una inundación o derrumbe"
+    ]
+  ]
+},
+  mythical_heroes: {
+  title: "Mythical Heroes",
+  en: [
+    [
+      "<small>The heroes embark on a quest to</small> Slay a monster/tyrant",
+      "<small>The heroes embark on a quest to</small> Rescue a prisoner",
+      "<small>The heroes embark on a quest to</small> Defend a settlement",
+      "<small>The heroes embark on a quest to</small> Recover lost treasure",
+      "<small>The heroes embark on a quest to</small> Obtain a weapon",
+      "<small>The heroes embark on a quest to</small> Capture a monster"
+    ],
+    [
+      "<small>Along the way they must also</small> Receive a blessing",
+      "<small>Along the way they must also</small> Survive an ambush",
+      "<small>Along the way they must also</small> Defeat a rival",
+      "<small>Along the way they must also</small> Navigate a hazard",
+      "<small>Along the way they must also</small> Protect the weak",
+      "<small>Along the way they must also</small> Consult an oracle"
+    ],
+    [
+      "<small>While facing and overcoming</small> A puzzle or riddle",
+      "<small>While facing and overcoming</small> Divine vengeance",
+      "<small>While facing and overcoming</small> A moral dilemma",
+      "<small>While facing and overcoming</small> Time constraints",
+      "<small>While facing and overcoming</small> A feud or rivalry",
+      "<small>While facing and overcoming</small> Treachery or betrayal"
+    ]
+  ],
+  es: [
+    [
+      "<small>Los héroes se embarcan en una gesta para</small> Matar a un monstruo o tirano",
+      "<small>Los héroes se embarcan en una gesta para</small> Rescatar a un prisionero",
+      "<small>Los héroes se embarcan en una gesta para</small> Defender un asentamiento",
+      "<small>Los héroes se embarcan en una gesta para</small> Recuperar un tesoro perdido",
+      "<small>Los héroes se embarcan en una gesta para</small> Obtener un arma",
+      "<small>Los héroes se embarcan en una gesta para</small> Capturar a un monstruo"
+    ],
+    [
+      "<small>Por el camino también deben</small> Recibir una bendición",
+      "<small>Por el camino también deben</small> Sobrevivir a una emboscada",
+      "<small>Por el camino también deben</small> Derrotar a un rival",
+      "<small>Por el camino también deben</small> Sortear un peligro",
+      "<small>Por el camino también deben</small> Proteger a los débiles",
+      "<small>Por el camino también deben</small> Consultar a un oráculo"
+    ],
+    [
+      "<small>Mientras enfrentan y superan</small> Un puzle o acertijo",
+      "<small>Mientras enfrentan y superan</small> La venganza divina",
+      "<small>Mientras enfrentan y superan</small> Un dilema moral",
+      "<small>Mientras enfrentan y superan</small> Restricciones de tiempo",
+      "<small>Mientras enfrentan y superan</small> Una disputa o rivalidad",
+      "<small>Mientras enfrentan y superan</small> Una traición"
+    ]
+  ]
+},
+  pirates_bone_blade: {
+  title: "Pirates of the Bone Blade",
+  en: [
+    [
+      "<small>The pirates decide to</small> Pillage and plunder",
+      "<small>The pirates decide to</small> Rescue an ally",
+      "<small>The pirates decide to</small> Recover lost treasure",
+      "<small>The pirates decide to</small> Kidnap and ransom",
+      "<small>The pirates decide to</small> Destroy an enemy",
+      "<small>The pirates decide to</small> Follow Jake’s trail"
+    ],
+    [
+      "<small>Near, on, or within</small> A coastal fortress",
+      "<small>Near, on, or within</small> Some old ruins",
+      "<small>Near, on, or within</small> A tropical island",
+      "<small>Near, on, or within</small> A sheltered bay",
+      "<small>Near, on, or within</small> Another ship",
+      "<small>Near, on, or within</small> A seaside village"
+    ],
+    [
+      "<small>While dealing with</small> A huge sea monster",
+      "<small>While dealing with</small> Unfriendly locals",
+      "<small>While dealing with</small> A disorderly crew",
+      "<small>While dealing with</small> A supernatural threat",
+      "<small>While dealing with</small> Rival raiders",
+      "<small>While dealing with</small> Dangerous weather"
+    ]
+  ],
+  es: [
+    [
+      "<small>Los piratas deciden</small> Saquear y pillar",
+      "<small>Los piratas deciden</small> Rescatar a un aliado",
+      "<small>Los piratas deciden</small> Recuperar un tesoro perdido",
+      "<small>Los piratas deciden</small> Secuestrar y pedir rescate",
+      "<small>Los piratas deciden</small> Destruir a un enemigo",
+      "<small>Los piratas deciden</small> Seguir el rastro de Jake"
+    ],
+    [
+      "<small>Cerca, en o dentro de</small> Una fortaleza costera",
+      "<small>Cerca, en o dentro de</small> Unas viejas ruinas",
+      "<small>Cerca, en o dentro de</small> Una isla tropical",
+      "<small>Cerca, en o dentro de</small> Una bahía resguardada",
+      "<small>Cerca, en o dentro de</small> Otro barco",
+      "<small>Cerca, en o dentro de</small> Una aldea costera"
+    ],
+    [
+      "<small>Mientras lidian con</small> Un enorme monstruo marino",
+      "<small>Mientras lidian con</small> Lugareños hostiles",
+      "<small>Mientras lidian con</small> Una tripulación indisciplinada",
+      "<small>Mientras lidian con</small> Una amenaza sobrenatural",
+      "<small>Mientras lidian con</small> Invasores rivales",
+      "<small>Mientras lidian con</small> Un clima peligroso"
+    ]
+  ]
+},
+  putrid_politicians: {
+  title: "Putrid Politicians",
+  en: [
+    [
+      "<small>The politicians decide to</small> Find a new scapegoat",
+      "<small>The politicians decide to</small> Dispose of a rival",
+      "<small>The politicians decide to</small> Exert some influence",
+      "<small>The politicians decide to</small> Line their pockets",
+      "<small>The politicians decide to</small> Discover a secret",
+      "<small>The politicians decide to</small> Attend a fundraiser"
+    ],
+    [
+      "<small>Which leads them to</small> The capitol building",
+      "<small>Which leads them to</small> An exclusive club",
+      "<small>Which leads them to</small> A luxurious mansion",
+      "<small>Which leads them to</small> A fancy restaurant",
+      "<small>Which leads them to</small> A grand temple",
+      "<small>Which leads them to</small> An arena or theater"
+    ],
+    [
+      "<small>But they must also deal with</small> Compromising intel",
+      "<small>But they must also deal with</small> Past indiscretions",
+      "<small>But they must also deal with</small> Criminal charges",
+      "<small>But they must also deal with</small> Airing dirty laundry",
+      "<small>But they must also deal with</small> Agitators or activists",
+      "<small>But they must also deal with</small> Loose lips"
+    ]
+  ],
+  es: [
+    [
+      "<small>Los políticos deciden</small> Buscar un nuevo chivo expiatorio",
+      "<small>Los políticos deciden</small> Deshacerse de un rival",
+      "<small>Los políticos deciden</small> Ejercer algo de influencia",
+      "<small>Los políticos deciden</small> Llenarse los bolsillos",
+      "<small>Los políticos deciden</small> Descubrir un secreto",
+      "<small>Los políticos deciden</small> Asistir a una recaudación de fondos"
+    ],
+    [
+      "<small>Lo que los lleva a</small> El edificio del capitolio",
+      "<small>Lo que los lleva a</small> Un club exclusivo",
+      "<small>Lo que los lleva a</small> Una mansión lujosa",
+      "<small>Lo que los lleva a</small> Un restaurante elegante",
+      "<small>Lo que los lleva a</small> Un gran templo",
+      "<small>Lo que los lleva a</small> Una arena o teatro"
+    ],
+    [
+      "<small>Pero también deben lidiar con</small> Información comprometedora",
+      "<small>Pero también deben lidiar con</small> Indiscreciones del pasado",
+      "<small>Pero también deben lidiar con</small> Cargos criminales",
+      "<small>Pero también deben lidiar con</small> Trapos sucios al sol",
+      "<small>Pero también deben lidiar con</small> Agitadores o activistas",
+      "<small>Pero también deben lidiar con</small> Lenguas largas"
+    ]
+  ]
+},
+  rabbit_tales: {
+  title: "Rabbit Tales",
+  en: [
+    [
+      "<small>The rabbits must</small> Find a food source",
+      "<small>The rabbits must</small> Seek out some herbs",
+      "<small>The rabbits must</small> Rescue a rabbit",
+      "<small>The rabbits must</small> Scout for a new home",
+      "<small>The rabbits must</small> Deliver a warning",
+      "<small>The rabbits must</small> Investigate a vision"
+    ],
+    [
+      "<small>In, around, or beneath a</small> Dense thicket",
+      "<small>In, around, or beneath a</small> Building or farm",
+      "<small>In, around, or beneath a</small> Dried-up streambed",
+      "<small>In, around, or beneath a</small> Verdant meadow",
+      "<small>In, around, or beneath a</small> Mysterious forest",
+      "<small>In, around, or beneath a</small> Human path or road"
+    ],
+    [
+      "<small>While dealing with</small> A circling hawk",
+      "<small>While dealing with</small> Prowling predators",
+      "<small>While dealing with</small> A snare or trap",
+      "<small>While dealing with</small> A storm or flood",
+      "<small>While dealing with</small> Strange rabbits",
+      "<small>While dealing with</small> Mysterious omens"
+    ]
+  ],
+  es: [
+    [
+      "<small>Los conejos deben</small> Encontrar una fuente de alimento",
+      "<small>Los conejos deben</small> Buscar algunas hierbas",
+      "<small>Los conejos deben</small> Rescatar a un conejo",
+      "<small>Los conejos deben</small> Explorar un nuevo hogar",
+      "<small>Los conejos deben</small> Entregar una advertencia",
+      "<small>Los conejos deben</small> Investigar una visión"
+    ],
+    [
+      "<small>En, alrededor o bajo</small> Un matorral espeso",
+      "<small>En, alrededor o bajo</small> Un edificio o granja",
+      "<small>En, alrededor o bajo</small> El lecho seco de un arroyo",
+      "<small>En, alrededor o bajo</small> Un prado verdeante",
+      "<small>En, alrededor o bajo</small> Un bosque misterioso",
+      "<small>En, alrededor o bajo</small> Un camino o carretera humana"
+    ],
+    [
+      "<small>Mientras lidian con</small> Un halcón al acecho",
+      "<small>Mientras lidian con</small> Depredadores merodeando",
+      "<small>Mientras lidian con</small> Una trampa o lazo",
+      "<small>Mientras lidian con</small> Una tormenta o inundación",
+      "<small>Mientras lidian con</small> Conejos extraños",
+      "<small>Mientras lidian con</small> Presagios misteriosos"
+    ]
+  ]
+},
+  road_hogs: {
+  title: "Road Hogs",
+  en: [
+    [
+      "<small>The bikers must</small> Capture a criminal",
+      "<small>The bikers must</small> Hunt down a fugitive",
+      "<small>The bikers must</small> Protect the innocent",
+      "<small>The bikers must</small> Rescue a hostage",
+      "<small>The bikers must</small> Infiltrate a group",
+      "<small>The bikers must</small> Recover stolen goods"
+    ],
+    [
+      "<small>Which leads them to a</small> Warehouse or factory",
+      "<small>Which leads them to a</small> Bar, diner, or club",
+      "<small>Which leads them to a</small> Ranch or commune",
+      "<small>Which leads them to a</small> Church or town hall",
+      "<small>Which leads them to a</small> Hotel, motel, or hostel",
+      "<small>Which leads them to a</small> Hospital or morgue"
+    ],
+    [
+      "<small>But they must also deal with</small> Dangerous tourists",
+      "<small>But they must also deal with</small> A rival biker gang",
+      "<small>But they must also deal with</small> Magical mayhem",
+      "<small>But they must also deal with</small> A sheriff or politician",
+      "<small>But they must also deal with</small> An ambush or trap",
+      "<small>But they must also deal with</small> A monstrous threat"
+    ]
+  ],
+  es: [
+    [
+      "<small>Los moteros deben</small> Capturar a un criminal",
+      "<small>Los moteros deben</small> Cazar a un fugitivo",
+      "<small>Los moteros deben</small> Proteger a los inocentes",
+      "<small>Los moteros deben</small> Rescatar a un rehén",
+      "<small>Los moteros deben</small> Infiltrarse en un grupo",
+      "<small>Los moteros deben</small> Recuperar mercancía robada"
+    ],
+    [
+      "<small>Lo que los lleva a</small> Un almacén o fábrica",
+      "<small>Lo que los lleva a</small> Un bar, cafetería o club",
+      "<small>Lo que los lleva a</small> Un rancho o comuna",
+      "<small>Lo que los lleva a</small> Una iglesia o ayuntamiento",
+      "<small>Lo que los lleva a</small> Un hotel, motel u hostal",
+      "<small>Lo que los lleva a</small> Un hospital o morgue"
+    ],
+    [
+      "<small>Pero también deben lidiar con</small> Turistas peligrosos",
+      "<small>Pero también deben lidiar con</small> Una banda de moteros rival",
+      "<small>Pero también deben lidiar con</small> Caos mágico",
+      "<small>Pero también deben lidiar con</small> Un sheriff o político",
+      "<small>Pero también deben lidiar con</small> Una emboscada o trampa",
+      "<small>Pero también deben lidiar con</small> Una amenaza monstruosa"
+    ]
+  ]
+},
+  rotten_odds: {
+  title: "Rotten Odds",
+  en: [
+    [
+      "<small>The survivors must</small> Rescue someone",
+      "<small>The survivors must</small> Gather supplies",
+      "<small>The survivors must</small> Secure an area",
+      "<small>The survivors must</small> Investigate a lead",
+      "<small>The survivors must</small> Search a location",
+      "<small>The survivors must</small> Repair something"
+    ],
+    [
+      "<small>From or within</small> A shopping mall",
+      "<small>From or within</small> A high-rise hotel",
+      "<small>From or within</small> A cruise ship",
+      "<small>From or within</small> An amusement park",
+      "<small>From or within</small> A supermax prison",
+      "<small>From or within</small> A research facility"
+    ],
+    [
+      "<small>While dealing with</small> Hardened criminals",
+      "<small>While dealing with</small> Evolved zombies",
+      "<small>While dealing with</small> A paramilitary group",
+      "<small>While dealing with</small> Rival survivors",
+      "<small>While dealing with</small> Wild animals",
+      "<small>While dealing with</small> Urban hazards"
+    ]
+  ],
+  es: [
+    [
+      "<small>Los supervivientes deben</small> Rescatar a alguien",
+      "<small>Los supervivientes deben</small> Reunir suministros",
+      "<small>Los supervivientes deben</small> Asegurar un área",
+      "<small>Los supervivientes deben</small> Investigar una pista",
+      "<small>Los supervivientes deben</small> Registrar una ubicación",
+      "<small>Los supervivientes deben</small> Reparar algo"
+    ],
+    [
+      "<small>Desde o dentro de</small> Un centro comercial",
+      "<small>Desde o dentro de</small> Un hotel de gran altura",
+      "<small>Desde o dentro de</small> Un crucero",
+      "<small>Desde o dentro de</small> Un parque de atracciones",
+      "<small>Desde o dentro de</small> Una prisión de máxima seguridad",
+      "<small>Desde o dentro de</small> Una instalación de investigación"
+    ],
+    [
+      "<small>Mientras lidian con</small> Criminales curtidos",
+      "<small>Mientras lidian con</small> Zombis evolucionados",
+      "<small>Mientras lidian con</small> Un grupo paramilitar",
+      "<small>Mientras lidian con</small> Supervivientes rivales",
+      "<small>Mientras lidian con</small> Animales salvajes",
+      "<small>Mientras lidian con</small> Peligros urbanos"
+    ]
+  ]
+},
 };
