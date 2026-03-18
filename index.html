@@ -66,9 +66,9 @@
             <div>
               <strong data-i18n="karma">Karma</strong>
               <div role="group">
-                <button onclick="adjustStat('karma', -1)">-</button>
+                <button onclick="adjustStat('karma', -1)">➖</button>
                 <input id="pc-karma" type="number" value="3" readonly>
-                <button onclick="adjustStat('karma', 1)">+</button>
+                <button onclick="adjustStat('karma', 1)">➕</button>
               </div>
               <progress id="pc-progress" value="2" max="3"></progress>
             </div>
@@ -76,9 +76,9 @@
             <div>
               <strong data-i18n="resolve">Resolve</strong>
               <div role="group">
-                <button onclick="adjustStat('resolve', -1)">-</button>
+                <button onclick="adjustStat('resolve', -1)">➖</button>
                 <input id="pc-resolve" type="number" value="3" readonly>
-                <button onclick="adjustStat('resolve', 1)">+</button>
+                <button onclick="adjustStat('resolve', 1)">➕</button>
               </div>
               <progress id="pc-progress" value="2" max="3"></progress>
             </div>
@@ -86,19 +86,26 @@
 
           <details>
             <summary data-i18n="max_karma_and_resolve">🔋 Max karma and Resolve</summary>
-              <label for="pc-karma-max" data-i18n="max_karma">Karma Max</label>
-              <input id="pc-karma-max" type="number" placeholder="3" class="narrow">
-              <label for="pc-resolve-max" data-i18n="max_resolve">Resolve Max</label>
-              <input id="pc-resolve-max" type="number" placeholder="3" class="narrow">
+            <div class="grid">
+              <div>
+                <label for="pc-karma-max" data-i18n="max_karma">Karma Max</label>
+                <input id="pc-karma-max" type="number" placeholder="3" class="narrow">
+              </div>
+              <div>
+                <label for="pc-resolve-max" data-i18n="max_resolve">Resolve Max</label>
+                <input id="pc-resolve-max" type="number" placeholder="3" class="narrow">
+              </div>
           </details>
 
           <hr>
 
           <details>
             <summary data-i18n="afflictions">🩸 Afflictions</summary>
-            <input id="pc-affliction-1" type="text">
-            <input id="pc-affliction-2" type="text">
-            <input id="pc-affliction-3" type="text">
+            <div class="grid">
+              <input id="pc-affliction-1" type="text">
+              <input id="pc-affliction-2" type="text">
+              <input id="pc-affliction-3" type="text">
+            </div>
           </details>
         </article>
       </section>
