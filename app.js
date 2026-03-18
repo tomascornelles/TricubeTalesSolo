@@ -484,8 +484,8 @@ function updateDeleteButtonVisibility() {
     const btnDelete = document.getElementById('btn-delete-pc');
     if (!btnDelete) return;
 
-    // Si el PC activo es "new", ocultamos el botón. Si no, lo mostramos.
-    if (state.activePcName === 'new') {
+  console.log(state.activePcName);
+    if (state.activePcName === 'new' || typeof state.activePcName === 'undefined') {
         btnDelete.classList.add('hidden');
     } else {
         btnDelete.classList.remove('hidden');
