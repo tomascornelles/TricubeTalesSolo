@@ -1,4 +1,12 @@
-let state = { deck: [], drawn: [], stats: { v: 0, l: 0 }, lang: 'en', adventureStarted: false, isGameOver: false };
+let state = { 
+  deck: [], 
+  drawn: [], 
+  stats: { v: 0, l: 0 }, 
+  lang: 'en', 
+  adventureStarted: false, 
+  isGameOver: false,
+  pcs: []
+};
 
 function setLang(l) { state.lang = l; translateUI(); save(); }
 
@@ -6,7 +14,9 @@ function translateUI() {
   const d = i18n[state.lang];
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const k = el.getAttribute('data-i18n');
-    if (d[k]) el.innerText = d[k];
+    if (d[k]) {
+    if (el.tagName === 'INPUT') el.placeholder = d[k]; else el.innerText = d[k];
+    }
   });
   document.getElementById('lang-dropdown').value = state.lang;
   if(state.drawn.length > 0) processLogic(state.drawn[state.drawn.length-1].card, ['♥','♦'].includes(state.drawn[state.drawn.length-1].card.s));
@@ -28,6 +38,9 @@ function load() {
     translateUI();
   } else { initDeck(); }
   loadQuests();
+  renderPCList();
+  loadSelectedPC();
+  setupPCEventListeners();
 }
 
 function openModal(id, titleKey = "", body = "") {
@@ -252,5 +265,231 @@ const rollQuest = () => {
   });
   openModal('modal-info', questTables[table].title, quests.join('<br>'));
 };
+
+// 2. Escuchar cambios en TODO el formulario de PC
+function setupPCEventListeners() {
+    const container = document.getElementById('pc-sheet');
+    if (!container) return;
+
+    // Guardar automáticamente al escribir en cualquier campo
+    container.querySelectorAll('input, select, textarea').forEach(el => {
+        el.addEventListener('input', () => {
+            savePC();
+            updateProgressBars();
+        });
+    });
+
+document.getElementById('pc-list').addEventListener('change', (e) => {
+    // Aquí actualizamos el estado con el valor seleccionado (new o nombre del pc)
+    state.activePcName = e.target.value; 
+    loadSelectedPC();
+    save();
+});
+}
+
+function savePC() {
+  const nameInput = document.getElementById('pc-name').value.trim();
+  
+  // Si estamos en "new" y no hay nombre, no hacemos nada
+  if (state.activePcName === 'new' && nameInput === "") return;
+
+  const pcData = {
+    name: nameInput,
+    trait: document.getElementById('pc-trait').value,
+    concept: document.getElementById('pc-concept').value,
+    perks: document.getElementById('pc-perks').value,
+    quirks: document.getElementById('pc-quirks').value,
+    karma: parseInt(document.getElementById('pc-karma').value) || 0,
+    karmaMax: parseInt(document.getElementById('pc-karma-max').value) || 3,
+    resolve: parseInt(document.getElementById('pc-resolve').value) || 0,
+    resolveMax: parseInt(document.getElementById('pc-resolve-max').value) || 3,
+    afflictions: [
+      document.getElementById('pc-affliction-1').value,
+      document.getElementById('pc-affliction-2').value,
+      document.getElementById('pc-affliction-3').value
+    ]
+  };
+
+  // Buscar si ya existe el PC que estamos editando
+  const index = state.pcs.findIndex(p => p.name === state.activePcName);
+
+  let nameChanged = false;
+  if (index !== -1) {
+    // Si el nombre ha cambiado respecto al que teníamos guardado
+    if (state.pcs[index].name !== nameInput) nameChanged = true;
+    state.pcs[index] = pcData;
+  } else {
+    // Es un PC nuevo
+    state.pcs.push(pcData);
+    nameChanged = true;
+  }
+
+  // Actualizamos el nombre activo ANTES de renderizar
+  state.activePcName = nameInput;
+
+  // Solo redibujamos la lista si el nombre es nuevo o ha cambiado
+  if (nameChanged) {
+    renderPCList();
+  }
+  
+  updateDeleteButtonVisibility();
+  updateAfflictionCount();
+  save();
+}
+
+function loadSelectedPC() {
+  const pc = state.pcs.find(p => p.name === state.activePcName);
+  
+  if (state.activePcName !== 'new' && pc) {
+    // Rellenar con datos guardados
+    document.getElementById('pc-name').value = pc.name;
+    document.getElementById('pc-trait').value = pc.trait;
+    document.getElementById('pc-concept').value = pc.concept;
+    document.getElementById('pc-perks').value = pc.perks;
+    document.getElementById('pc-quirks').value = pc.quirks;
+    document.getElementById('pc-karma').value = pc.karma;
+    document.getElementById('pc-karma-max').value = pc.karmaMax;
+    document.getElementById('pc-resolve').value = pc.resolve;
+    document.getElementById('pc-resolve-max').value = pc.resolveMax;
+    document.getElementById('pc-affliction-1').value = pc.afflictions[0] || '';
+    document.getElementById('pc-affliction-2').value = pc.afflictions[1] || '';
+    document.getElementById('pc-affliction-3').value = pc.afflictions[2] || '';
+  } else {
+    // Reset para PC Nuevo (Valores por defecto)
+    document.getElementById('pc-name').value = "";
+    document.getElementById('pc-trait').value = "";
+    document.getElementById('pc-concept').value = "";
+    document.getElementById('pc-perks').value = "";
+    document.getElementById('pc-quirks').value = "";
+    document.getElementById('pc-karma').value = 3;
+    document.getElementById('pc-karma-max').value = 3;
+    document.getElementById('pc-resolve').value = 3;
+    document.getElementById('pc-resolve-max').value = 3;
+    document.querySelectorAll('[id^="pc-affliction"]').forEach(el => el.value = "");
+  }
+  updateProgressBars();
+  updateAfflictionCount();
+  updateDeleteButtonVisibility();
+}
+
+function renderPCList() {
+  const select = document.getElementById('pc-list');
+  const d = i18n[state.lang];
+  
+  // Limpiar y añadir opción "Nuevo"
+  select.innerHTML = `<option value="new">${d.new || 'New'}</option>`;
+  
+  state.pcs.forEach(pc => {
+    const opt = document.createElement('option');
+    opt.value = pc.name;
+    opt.innerText = pc.name;
+    // Forzamos la selección del pc activo
+    if (pc.name === state.activePcName) opt.selected = true;
+    select.appendChild(opt);
+  });
+
+  // Si no hay ninguno seleccionado en el bucle, es que es "new"
+  if (state.activePcName === 'new') select.value = 'new';
+
+  updateDeleteButtonVisibility();
+}
+
+// 5. Botones +/- y Barras de progreso
+function adjustStat(stat, amount) {
+    const input = document.getElementById(`pc-${stat}`);
+    const maxInput = document.getElementById(`pc-${stat}-max`);
+    let val = (parseInt(input.value) || 0) + amount;
+    const max = parseInt(maxInput.value) || 3;
+
+    if (val < 0) val = 0;
+    if (val > max) val = max;
+
+    input.value = val;
+    updateProgressBars();
+    savePC();
+}
+
+function updateProgressBars() {
+    const stats = ['karma', 'resolve'];
+    stats.forEach((stat, index) => {
+        const input = document.getElementById(`pc-${stat}`);
+        const maxInput = document.getElementById(`pc-${stat}-max`);
+        const val = parseInt(input.value) || 0;
+        const max = parseInt(maxInput.value) || 1;
+        
+        // Asignar a la barra de progreso
+        const progressBar = document.querySelectorAll('progress')[index];
+        if (progressBar) {
+            progressBar.value = val;
+            progressBar.max = max;
+        }
+
+        // Desactivar botones si se llega a los límites
+        const group = input.closest('[role="group"]');
+        if (group) {
+            group.querySelector('button:first-child').disabled = (val <= 0);
+            group.querySelector('button:last-child').disabled = (val >= max);
+        }
+    });
+}
+
+function updateAfflictionCount() {
+    // Obtenemos los valores de los 3 inputs de aflicciones
+    const aff1 = document.getElementById('pc-affliction-1').value.trim();
+    const aff2 = document.getElementById('pc-affliction-2').value.trim();
+    const aff3 = document.getElementById('pc-affliction-3').value.trim();
+
+    // Filtramos los que no están vacíos y contamos
+    const activeAfflictions = [aff1, aff2, aff3].filter(a => a !== "").length;
+
+    // Buscamos el elemento del título.
+    // Si en tu HTML es un <label> o <strong>, asegúrate de que tenga el atributo data-i18n="afflictions"
+    const label = document.querySelector('[data-i18n="afflictions"]');
+
+    if (label) {
+        const baseText = i18n[state.lang]["afflictions"] || "Afflictions";
+        // Solo añadir el número si hay más de una
+        if (activeAfflictions > 0) {
+            label.innerText = `${baseText} (${activeAfflictions})`;
+        } else {
+            label.innerText = baseText;
+        }
+    }
+}
+
+function deletePC() {
+  // No se puede eliminar la opción "new"
+  if (state.activePcName === 'new') return;
+
+  const d = i18n[state.lang];
+  const confirmMsg = state.lang === 'es' ? 
+    `¿Estás seguro de que quieres eliminar a ${state.activePcName}?` : 
+    `Are you sure you want to delete ${state.activePcName}?`;
+
+  if (confirm(confirmMsg)) {
+    // Filtrar el array para quitar el PC actual
+    state.pcs = state.pcs.filter(p => p.name !== state.activePcName);
+    
+    // Resetear a modo "new"
+    state.activePcName = 'new';
+    
+    // Guardar y refrescar UI
+    save();
+    renderPCList();
+    loadSelectedPC();
+  }
+}
+
+function updateDeleteButtonVisibility() {
+    const btnDelete = document.getElementById('btn-delete-pc');
+    if (!btnDelete) return;
+
+    // Si el PC activo es "new", ocultamos el botón. Si no, lo mostramos.
+    if (state.activePcName === 'new') {
+        btnDelete.classList.add('hidden');
+    } else {
+        btnDelete.classList.remove('hidden');
+    }
+}
 
 window.onload = load;

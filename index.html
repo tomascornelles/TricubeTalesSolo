@@ -30,42 +30,33 @@
       <section id="game-section">
         <article id="pc-sheet">
           <label for="pc-list" data-i18n="pc_list">PC List</label>
-          <select id="pc-list">
-            <option value="" data-i18n="new">New</option>
-            <option value="2" data-i18n="pc_2">2nd PC</option>
-            <option value="3" data-i18n="pc_3">3rd PC</option>
-            <option value="4" data-i18n="pc_4">4th PC</option>
-            <option value="5" data-i18n="pc_5">5th PC</option>
-            <option value="6" data-i18n="pc_6">6th PC</option>
-            <option value="7" data-i18n="pc_7">7th PC</option>
-            <option value="8" data-i18n="pc_8">8th PC</option>
-            <option value="9" data-i18n="pc_9">9th PC</option>
-            <option value="10" data-i18n="pc_10">10th PC</option>
-          </select>
-
+          <div role="group" id="pc-list-container">
+            <select id="pc-list">
+            </select>
+            <button id="btn-delete-pc" class="outline secondary" onclick="deletePC()">🗑️</button></div>
           <hr>
 
-          <input id="pc-name" type="text" placeholder="Name">
+          <input id="pc-name" type="text" placeholder="Name" data-i18n="name">
           <div role="group">
             <select id="pc-trait">
-              <option value="agile" data-i18n="agile">Agile</option>
-              <option value="brave" data-i18n="brave">Brave</option>
-              <option value="crafty" data-i18n="crafty">Crafty</option>
+              <option value="agile" data-i18n="trait_agile">Agile</option>
+              <option value="brave" data-i18n="trait_brave">Brave</option>
+              <option value="crafty" data-i18n="trait_crafty">Crafty</option>
             </select>
-            <input id="pc-concept" type="text" placeholder="Concept">
+            <input id="pc-concept" type="text" placeholder="Concept" data-i18n="concept">
           </div>
 
           <hr>
 
           <div class="grid">
             <details>
-              <summary data-i18n="perks">🟢 Perks</summary>
-              <textarea id="pc-perks" placeholder="Perks" rows="2"></textarea>
+              <summary data-i18n="perks">Perks</summary>
+              <textarea id="pc-perks" rows="2"></textarea>
             </details>
 
             <details>
-              <summary data-i18n="quirks">🔴 Quirks</summary>
-              <textarea id="pc-quirks" placeholder="Quirks" rows="2"></textarea>
+              <summary data-i18n="quirks">Quirks</summary>
+              <textarea id="pc-quirks" rows="2"></textarea>
             </details>
           </div>
 
@@ -73,39 +64,39 @@
 
           <div class="grid">
             <div>
-              <strong>Karma</strong>
+              <strong data-i18n="karma">Karma</strong>
               <div role="group">
-                <button onclick="rollDice(4)">-</button>
-                <input id="pc-karma" type="number" placeholder="3">
-                <button onclick="rollDice(6)">+</button>
+                <button onclick="adjustStat('karma', -1)">-</button>
+                <input id="pc-karma" type="number" value="3" readonly>
+                <button onclick="adjustStat('karma', 1)">+</button>
               </div>
               <progress id="pc-progress" value="2" max="3"></progress>
             </div>
 
             <div>
-              <strong>Resolve</strong>
+              <strong data-i18n="resolve">Resolve</strong>
               <div role="group">
-                <button onclick="rollDice(4)">-</button>
-                <input id="pc-resolve" type="number" placeholder="3">
-                <button onclick="rollDice(6)">+</button>
+                <button onclick="adjustStat('resolve', -1)">-</button>
+                <input id="pc-resolve" type="number" value="3" readonly>
+                <button onclick="adjustStat('resolve', 1)">+</button>
               </div>
               <progress id="pc-progress" value="2" max="3"></progress>
             </div>
           </div>
 
           <details>
-            <summary data-i18n="max">🔋 Max karma and Resolve</summary>
-              <label for="pc-karma-max" data-i18n="karma_max">Karma Max</label>
+            <summary data-i18n="max_karma_and_resolve">🔋 Max karma and Resolve</summary>
+              <label for="pc-karma-max" data-i18n="max_karma">Karma Max</label>
               <input id="pc-karma-max" type="number" placeholder="3" class="narrow">
-              <label for="pc-resolve-max" data-i18n="resolve_max">Resolve Max</label>
+              <label for="pc-resolve-max" data-i18n="max_resolve">Resolve Max</label>
               <input id="pc-resolve-max" type="number" placeholder="3" class="narrow">
           </details>
 
           <details>
             <summary data-i18n="afflictions">🩸 Afflictions</summary>
-            <input id="pc-affliction-1" type="text" placeholder="Affliction 1">
-            <input id="pc-affliction-2" type="text" placeholder="Affliction 2">
-            <input id="pc-affliction-3" type="text" placeholder="Affliction 3">
+            <input id="pc-affliction-1" type="text">
+            <input id="pc-affliction-2" type="text">
+            <input id="pc-affliction-3" type="text">
           </details>
         </article>
       </section>
