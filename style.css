@@ -107,6 +107,11 @@ margin-top: 1rem;
 .gird-list > * {
   width: 100%
 }
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 details summary { cursor: pointer; font-size: 1.1rem; }
 article [role="group"] { margin-bottom: 0; }
 

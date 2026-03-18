@@ -19,8 +19,7 @@
 
   <body>
     <main class="container">
-      <section id="game-section">
-        <article>
+        <article class="sticky">
           <div role="group">
             <button onclick="rollDice(1)">1d6</button>
             <button class="contrast" onclick="rollDice(2)">2d6</button>
@@ -28,7 +27,8 @@
           </div>
         </article>
         
-        <article>
+      <section id="game-section">
+        <article id="pc-sheet">
           <label for="pc-list" data-i18n="pc_list">PC List</label>
           <select id="pc-list">
             <option value="" data-i18n="new">New</option>
@@ -42,9 +42,9 @@
             <option value="9" data-i18n="pc_9">9th PC</option>
             <option value="10" data-i18n="pc_10">10th PC</option>
           </select>
-        </article>
 
-        <article id="pc-sheet">
+          <hr>
+
           <input id="pc-name" type="text" placeholder="Name">
           <div role="group">
             <select id="pc-trait">
