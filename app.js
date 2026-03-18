@@ -492,4 +492,31 @@ function updateDeleteButtonVisibility() {
     }
 }
 
+function clearAllData() {
+  const d = i18n[state.lang];
+
+  // Mensajes de confirmación según el idioma
+  const msg1 = state.lang === 'es'
+    ? "¿Estás SEGURO? Se borrarán todos los personajes y el progreso de la partida."
+    : "Are you SURE? All characters and game progress will be deleted.";
+
+  const msg2 = state.lang === 'es'
+    ? "Esta acción no se puede deshacer. ¿Continuar?"
+    : "This action cannot be undone. Continue?";
+
+  if (confirm(msg1)) {
+    if (confirm(msg2)) {
+      // Borrar el objeto del estado en localStorage
+      localStorage.removeItem('tricube_v5_en_default');
+
+      // Opcional: Borrar cualquier otra clave que hayas usado
+      localStorage.removeItem('pc_list');
+      localStorage.removeItem('active_pc_name');
+
+      // Recargar la página para resetear el estado inicial de la app
+      location.reload();
+    }
+  }
+}
+
 window.onload = load;

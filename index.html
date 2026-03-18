@@ -283,16 +283,22 @@
         </article>
       </section>
 
-      <footer class="grid">
-        <div class="lang-select-container">
-          <select id="lang-dropdown" onchange="setLang(this.value)">
-            <option value="en">English 🇺🇸</option>
-            <option value="es">Español 🇪🇸</option>
-          </select>
-        </div>
-        <div id="footer-text">
-          <a href="https://tomascornelles.is-a.dev" target="_blank" rel="noopener noreferrer"><small>© 2026 tomascornelles</small></a><br>
-          <em><small data-i18n="disclaimer"></small></em>
+      <footer>
+        <div class="grid">
+          <div class="lang-select-container">
+            <select id="lang-dropdown" onchange="setLang(this.value)">
+              <option value="en">English 🇺🇸</option>
+              <option value="es">Español 🇪🇸</option>
+            </select>
+          </div>
+          <div id="footer-text">
+            <a href="https://tomascornelles.is-a.dev" target="_blank" rel="noopener noreferrer"><small>© 2026 tomascornelles</small></a><br>
+            <em><small data-i18n="disclaimer"></small></em>
+            <hr>
+            <small  onclick="clearAllData()" >
+              🗑️ Borrar todos los datos locales
+            </small>
+          </div>
         </div>
       </footer>
     </main>
