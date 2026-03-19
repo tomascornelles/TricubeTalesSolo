@@ -5,6 +5,7 @@ let state = {
   lang: 'en', 
   adventureStarted: false, 
   isGameOver: false,
+  epicTwist: false,
   pcs: []
 };
 
@@ -52,7 +53,7 @@ function openModal(id, titleKey = "", body = "") {
 function closeModal(id) { document.getElementById(id).close(); }
 
 function startAdventure() {
-  state.adventureStarted = true; state.isGameOver = false;
+  state.adventureStarted = true; state.isGameOver = false; state.epicTwist = false;
   document.getElementById('init-scene-btn').classList.add('hidden');
   document.getElementById('card-content-wrapper').classList.remove('hidden');
   document.getElementById('reset-button').classList.remove('hidden');
@@ -80,7 +81,9 @@ function executeDraw() {
   el.innerText = `${card.v}${card.s}`;
   el.className = 'card-display ' + (isRed ? 'suit-red' : 'suit-black');
   processLogic(card, isRed);
-  if (checkFinalCondition()) document.getElementById('last-scene-msg').classList.remove('hidden');
+  console.log(state.epicTwist, checkFinalCondition());
+  if (state.epicTwist) document.getElementById('epic-twist-msg').classList.remove('hidden');
+  else if (checkFinalCondition()) document.getElementById('last-scene-msg').classList.remove('hidden');
   save();
 }
 
@@ -102,7 +105,7 @@ function processLogic(card, isRed) {
   } else {
     bc.classList.remove('hidden');
     const n = parseInt(card.v);
-    let trait = n <= 4 ? d.trait_agile : (n <= 7 ? d.trait_strong : d.trait_crafty);
+    let trait = n <= 4 ? d.trait_agile : (n <= 7 ? d.trait_brave : d.trait_crafty);
     let diff = [2, 5, 8].includes(n) ? "4+" : ([3, 6, 9].includes(n) ? "5+" : "6+");
     desc.innerHTML = `${d.challenge} <strong>${trait}</strong> (${diff})`;
   }
@@ -123,6 +126,10 @@ function checkFinalCondition() {
   const suits = {};
   ch.forEach(d => suits[d.card.s] = (suits[d.card.s] || 0) + 1);
   const counts = Object.values(suits);
+  if (counts.some(c => c >= 5)) {
+    state.epicTwist = true;
+    return true;
+  }
   if (counts.some(c => c >= 3) && counts.some(c => c === 2)) return true;
   return false;
 }
@@ -133,6 +140,7 @@ function showEndScreen() {
   document.getElementById('special-buttons').classList.add('hidden');
   document.getElementById('challenge-desc').classList.add('hidden');
   document.getElementById('last-scene-msg').classList.add('hidden');
+  document.getElementById('epic-twist-msg').classList.add('hidden');
   document.getElementById('final-screen').classList.remove('hidden');
   document.getElementById('final-stats').innerHTML = `${d.wins}: <strong>${state.stats.v}</strong> | ${d.losses}: <strong>${state.stats.l}</strong>`;
 }
@@ -279,12 +287,12 @@ function setupPCEventListeners() {
         });
     });
 
-document.getElementById('pc-list').addEventListener('change', (e) => {
+  document.getElementById('pc-list').addEventListener('change', (e) => {
     // Aquí actualizamos el estado con el valor seleccionado (new o nombre del pc)
     state.activePcName = e.target.value; 
     loadSelectedPC();
     save();
-});
+  });
 }
 
 function savePC() {
@@ -484,7 +492,6 @@ function updateDeleteButtonVisibility() {
     const btnDelete = document.getElementById('btn-delete-pc');
     if (!btnDelete) return;
 
-  console.log(state.activePcName);
     if (state.activePcName === 'new' || typeof state.activePcName === 'undefined') {
         btnDelete.classList.add('hidden');
     } else {
