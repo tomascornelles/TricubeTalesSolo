@@ -113,8 +113,10 @@ margin-top: 1rem;
   width: 100%
 }
 .sticky {
-  position: sticky;
+  position: fixed;
   bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 10;
   background: var(--pico-background-color);
   box-shadow: var(--pico-card-box-shadow);
