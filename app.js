@@ -526,4 +526,14 @@ function clearAllData() {
   }
 }
 
+function showTab(tabId) {
+  const sections = document.querySelectorAll('section');
+  sections.forEach(s => s.classList.add('hidden'));
+  document.getElementById(tabId).classList.remove('hidden');
+
+  const tabs = document.querySelectorAll('.nav-link');
+  tabs.forEach(t => t.classList.remove('contrast'));
+  document.getElementById(tabId + '-tab').classList.add('contrast');
+}
+
 window.onload = load;

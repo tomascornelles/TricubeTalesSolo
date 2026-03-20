@@ -11,23 +11,23 @@
     <script src="i18n.js"></script>
     <script src="app.js"></script>
     <script defer 
-      src="https://cloud.umami.is/script.js" 
-    data-website-id="6b20b3da-1981-42a9-9bbf-a202a411c01e"
-    data-domains="tricubesolo.netlify.app"
-    ></script>
+            src="https://cloud.umami.is/script.js" 
+            data-website-id="6b20b3da-1981-42a9-9bbf-a202a411c01e"
+            data-domains="tricubesolo.netlify.app"
+            ></script>
   </head>
 
   <body>
     <main class="container">
-        <article class="sticky">
-          <div role="group">
-            <button onclick="rollDice(1)">1d6</button>
-            <button class="contrast" onclick="rollDice(2)">2d6</button>
-            <button onclick="rollDice(3)">3d6</button>
-          </div>
-        </article>
-        
-      <section id="game-section">
+      <article>
+        <div role="group">
+          <button onclick="rollDice(1)">1d6</button>
+          <button class="contrast" onclick="rollDice(2)">2d6</button>
+          <button onclick="rollDice(3)">3d6</button>
+        </div>
+      </article>
+
+      <section id="game-section" class="hidden">
         <article id="pc-sheet">
           <label for="pc-list" data-i18n="pc_list">PC List</label>
           <div role="group" id="pc-list-container">
@@ -39,6 +39,7 @@
           <input id="pc-name" type="text" placeholder="Name" data-i18n="name">
           <div role="group">
             <select id="pc-trait">
+              <option disabled selected value="" data-i18n="trait">Trait</option>
               <option value="agile" data-i18n="trait_agile">Agile</option>
               <option value="brave" data-i18n="trait_brave">Brave</option>
               <option value="crafty" data-i18n="trait_crafty">Crafty</option>
@@ -111,49 +112,50 @@
       </section>
 
       <section id="card-section">
-        <div class="grid">
-          <article id="current-card-area">
-            <button id="init-scene-btn" onclick="startAdventure()" class="contrast" style="width:100%" data-i18n="start_adventure">Start Initial Scene</button>
+        <article id="current-card-area">
+          <button id="init-scene-btn" onclick="startAdventure()" class="contrast" style="width:100%" data-i18n="start_adventure">Start Initial Scene</button>
 
-            <div id="card-content-wrapper" class="hidden">
-              <div id="last-scene-msg" class="last-scene-alert hidden" data-i18n="last_scene_warn">⚠️ FINAL SCENE</div>
-              <div id="epic-twist-msg" class="last-scene-alert hidden" data-i18n="epic_twist_warn">
-                ‼️ EPIC TWIST<br>
-                <button onclick="openTwistModal()" data-i18n="btn_twist">Twist!</button>
-              </div>
-              <div id="card-icon" class="card-display">?</div>
-              <p id="challenge-desc" style="text-align:center; min-height: 3em;"></p>
+          <div id="card-content-wrapper" class="hidden">
+            <div id="last-scene-msg" class="last-scene-alert hidden" data-i18n="last_scene_warn">⚠️ FINAL SCENE</div>
+            <div id="epic-twist-msg" class="last-scene-alert hidden" data-i18n="epic_twist_warn">
+              ‼️ EPIC TWIST<br>
+              <button onclick="openTwistModal()" data-i18n="btn_twist">Twist!</button>
+            </div>
+            <div id="card-icon" class="card-display">?</div>
+            <p id="challenge-desc" style="text-align:center; min-height: 3em;"></p>
 
-              <div class="grid" id="action-buttons">
-                <button class="btn-victory" onclick="resolve(true)" data-i18n="btn_win">Win</button>
-                <button class="btn-loss" onclick="resolve(false)" data-i18n="btn_fail">Failure</button>
-              </div>
-
-              <div class="grid hidden" id="special-buttons">
-                <button class="contrast" onclick="drawCard()" data-i18n="btn_continue">Continue</button>
-                <button id="twist-btn" class="hidden" onclick="openTwistModal()" data-i18n="btn_twist">Twist!</button>
-              </div>
-
-              <div id="final-screen" class="game-over-banner hidden">
-                <h3 data-i18n="game_over">SESSION ENDED</h3>
-                <p id="final-stats"></p>
-                <button onclick="initDeck()" style="width:100%" data-i18n="new_adventure" class="contrast">New Adventure</button>
-              </div>
+            <div class="grid" id="action-buttons">
+              <button class="btn-victory" onclick="resolve(true)" data-i18n="btn_win">Win</button>
+              <button class="btn-loss" onclick="resolve(false)" data-i18n="btn_fail">Failure</button>
             </div>
 
-            <div class="hidden" id="challenge-content">
-              <hr>
-              <div>
-                <strong data-i18n="history">Challenge History</strong>
-                <div id="card-history" class="history-list"></div>
-              </div>
+            <div class="grid hidden" id="special-buttons">
+              <button class="contrast" onclick="drawCard()" data-i18n="btn_continue">Continue</button>
+              <button id="twist-btn" class="hidden" onclick="openTwistModal()" data-i18n="btn_twist">Twist!</button>
             </div>
 
-            <div class="hidden" id="reset-button">
-              <button onclick="showResetConfirm()" style="font-size: 0.9rem; width: 100%;" data-i18n="reset_deck">Reset Deck</button>
+            <div id="final-screen" class="game-over-banner hidden">
+              <h3 data-i18n="game_over">SESSION ENDED</h3>
+              <p id="final-stats"></p>
+              <button onclick="initDeck()" style="width:100%" data-i18n="new_adventure" class="contrast">New Adventure</button>
             </div>
-          </article>
+          </div>
 
+          <div class="hidden" id="challenge-content">
+            <hr>
+            <div>
+              <strong data-i18n="history">Challenge History</strong>
+              <div id="card-history" class="history-list"></div>
+            </div>
+          </div>
+
+          <div class="hidden" id="reset-button">
+            <button onclick="showResetConfirm()" style="font-size: 0.9rem; width: 100%;" data-i18n="reset_deck">Reset Deck</button>
+          </div>
+        </article>
+      </section>
+
+      <section id="generators-section" class="hidden">
           <article>
             <strong data-i18n="oracle_title">Oracle (Probability)</strong>
             <div role="group">
@@ -175,87 +177,96 @@
               <button onclick="rollManualTable(['complex', 'related'], 'complex_answer')" data-i18n="complex_answer"></button>
             </div>
           </article>
-        </div>
-      </section>
-
-      <section id="generators-section">
         <article>
           <h4 data-i18n="gen_title">Manual Generators</h4>
-            <details class="gen-section" name="generators">
-              <summary data-i18n="cat_urban"> Urban</summary>
-              <button onclick="rollManualTable(['settlements_large_desc', 'settlements_large_ppl'], 'settlements_large')" data-i18n="settlements_large"></button>
-              <button onclick="rollManualTable(['settlements_small_desc', 'settlements_small_ppl'], 'settlements_small')" data-i18n="settlements_small"></button>
-              <button onclick="rollManualTable(['urban_ppl'], 'urban_ppl')" data-i18n="urban_ppl"></button>
-              <button onclick="rollManualTable(['urban_locations'], 'urban_locations')" data-i18n="urban_locations"></button>
-              <button onclick="rollManualTable(['urban_events'], 'urban_events')" data-i18n="urban_events"></button>
-            </details>
+          <details class="gen-section" name="generators">
+            <summary data-i18n="cat_urban"> Urban</summary>
+            <button onclick="rollManualTable(['settlements_large_desc', 'settlements_large_ppl'], 'settlements_large')" data-i18n="settlements_large"></button>
+            <button onclick="rollManualTable(['settlements_small_desc', 'settlements_small_ppl'], 'settlements_small')" data-i18n="settlements_small"></button>
+            <button onclick="rollManualTable(['urban_ppl'], 'urban_ppl')" data-i18n="urban_ppl"></button>
+            <button onclick="rollManualTable(['urban_locations'], 'urban_locations')" data-i18n="urban_locations"></button>
+            <button onclick="rollManualTable(['urban_events'], 'urban_events')" data-i18n="urban_events"></button>
+          </details>
 
-            <details class="gen-section" name="generators">
-              <summary data-i18n="cat_wilderness">Wilderness</summary>
-              <button onclick="rollManualTable(['wilderness_regions_terrain', 'wilderness_regions_climate'], 'wilderness_regions')" data-i18n="wilderness_regions"></button>
-              <button onclick="rollManualTable(['wilderness_features'], 'wilderness_features')" data-i18n="wilderness_features"></button>
-              <button onclick="rollManualTable(['wilderness_folks'], 'wilderness_folks')" data-i18n="wilderness_folks"></button>
-              <button onclick="rollManualTable(['wilderness_events'], 'wilderness_events')" data-i18n="wilderness_events"></button>
-            </details>
+          <details class="gen-section" name="generators">
+            <summary data-i18n="cat_wilderness">Wilderness</summary>
+            <button onclick="rollManualTable(['wilderness_regions_terrain', 'wilderness_regions_climate'], 'wilderness_regions')" data-i18n="wilderness_regions"></button>
+            <button onclick="rollManualTable(['wilderness_features'], 'wilderness_features')" data-i18n="wilderness_features"></button>
+            <button onclick="rollManualTable(['wilderness_folks'], 'wilderness_folks')" data-i18n="wilderness_folks"></button>
+            <button onclick="rollManualTable(['wilderness_events'], 'wilderness_events')" data-i18n="wilderness_events"></button>
+          </details>
 
-            <details class="gen-section" name="generators">
-              <summary data-i18n="cat_dungeon">Dungeon Crawls</summary>
-              <button onclick="rollManualTable(['dungeon_features'], 'dungeon_features')" data-i18n="dungeon_features"></button>
-              <button onclick="rollManualTable(['dungeon_denizens'], 'dungeon_denizens')" data-i18n="dungeon_denizens"></button>
-              <button onclick="rollManualTable(['dungeon_events'], 'dungeon_events')" data-i18n="dungeon_events"></button>
-            </details>
+          <details class="gen-section" name="generators">
+            <summary data-i18n="cat_dungeon">Dungeon Crawls</summary>
+            <button onclick="rollManualTable(['dungeon_features'], 'dungeon_features')" data-i18n="dungeon_features"></button>
+            <button onclick="rollManualTable(['dungeon_denizens'], 'dungeon_denizens')" data-i18n="dungeon_denizens"></button>
+            <button onclick="rollManualTable(['dungeon_events'], 'dungeon_events')" data-i18n="dungeon_events"></button>
+          </details>
 
-            <details class="gen-section" name="generators">
-              <summary data-i18n="cat_voyages">Voyages</summary>
-              <button onclick="rollManualTable(['voyages_sky', 'voyages_wind'], 'voyages_conditions')" data-i18n="voyages_conditions"></button>
-              <button onclick="rollManualTable(['voyages_landmarks'], 'voyages_landmarks')" data-i18n="voyages_landmarks"></button>
-              <button onclick="rollManualTable(['voyages_encounters'], 'voyages_encounters')" data-i18n="voyages_encounters"></button>
-              <button onclick="rollManualTable(['voyages_events'], 'voyages_events')" data-i18n="voyages_events"></button>
-            </details>
+          <details class="gen-section" name="generators">
+            <summary data-i18n="cat_voyages">Voyages</summary>
+            <button onclick="rollManualTable(['voyages_sky', 'voyages_wind'], 'voyages_conditions')" data-i18n="voyages_conditions"></button>
+            <button onclick="rollManualTable(['voyages_landmarks'], 'voyages_landmarks')" data-i18n="voyages_landmarks"></button>
+            <button onclick="rollManualTable(['voyages_encounters'], 'voyages_encounters')" data-i18n="voyages_encounters"></button>
+            <button onclick="rollManualTable(['voyages_events'], 'voyages_events')" data-i18n="voyages_events"></button>
+          </details>
 
-            <details class="gen-section" name="generators">
-              <summary data-i18n="cat_planes">Planes</summary>
-              <button onclick="rollManualTable(['planes_planar_travel_dimension', 'planes_planar_travel_form', 'planes_planar_travel_dangers'], 'planes_planar_travel')" data-i18n="planes_planar_travel"></button>
-              <button onclick="rollManualTable(['planes_planets_travel_form', 'planes_planets_travel_orbit', 'planes_planets_travel_tech'], 'planes_planets_travel')" data-i18n="planes_planets_travel"></button>
-              <button onclick="rollManualTable(['planes_realm_features'], 'planes_realm_features')" data-i18n="planes_realm_features"></button>
-              <button onclick="rollManualTable(['planes_native_societies'], 'planes_native_societies')" data-i18n="planes_native_societies"></button>
-              <button onclick="rollManualTable(['planes_major_events'], 'planes_major_events')" data-i18n="planes_major_events"></button>
-            </details>
+          <details class="gen-section" name="generators">
+            <summary data-i18n="cat_planes">Planes</summary>
+            <button onclick="rollManualTable(['planes_planar_travel_dimension', 'planes_planar_travel_form', 'planes_planar_travel_dangers'], 'planes_planar_travel')" data-i18n="planes_planar_travel"></button>
+            <button onclick="rollManualTable(['planes_planets_travel_form', 'planes_planets_travel_orbit', 'planes_planets_travel_tech'], 'planes_planets_travel')" data-i18n="planes_planets_travel"></button>
+            <button onclick="rollManualTable(['planes_realm_features'], 'planes_realm_features')" data-i18n="planes_realm_features"></button>
+            <button onclick="rollManualTable(['planes_native_societies'], 'planes_native_societies')" data-i18n="planes_native_societies"></button>
+            <button onclick="rollManualTable(['planes_major_events'], 'planes_major_events')" data-i18n="planes_major_events"></button>
+          </details>
 
-            <details class="gen-section" name="generators">
-              <summary data-i18n="cat_crimes">Mysteries</summary>
-              <button onclick="rollManualTable(['crimes_suspected'], 'crimes_suspected')" data-i18n="crimes_suspected"></button>
-              <button onclick="rollManualTable(['crimes_motives'], 'crimes_motives')" data-i18n="crimes_motives"></button>
-              <button onclick="rollManualTable(['crimes_unsolved'], 'crimes_unsolved')" data-i18n="crimes_unsolved"></button>
-              <button onclick="rollManualTable(['crimes_clues'], 'crimes_clues')" data-i18n="crimes_clues"></button>
-            </details>
+          <details class="gen-section" name="generators">
+            <summary data-i18n="cat_crimes">Mysteries</summary>
+            <button onclick="rollManualTable(['crimes_suspected'], 'crimes_suspected')" data-i18n="crimes_suspected"></button>
+            <button onclick="rollManualTable(['crimes_motives'], 'crimes_motives')" data-i18n="crimes_motives"></button>
+            <button onclick="rollManualTable(['crimes_unsolved'], 'crimes_unsolved')" data-i18n="crimes_unsolved"></button>
+            <button onclick="rollManualTable(['crimes_clues'], 'crimes_clues')" data-i18n="crimes_clues"></button>
+          </details>
 
-            <details class="gen-section" name="generators">
-              <summary data-i18n="cat_social">Social</summary>
-              <button onclick="openSocialDisposition(1,6)" data-i18n="social_disposition"></button>
-              <button onclick="rollManualTable(['social_interest'], 'social_interest')" data-i18n="social_interest"></button>
-              <button onclick="rollManualTable(['social_demeanor'], 'social_demeanor')" data-i18n="social_demeanor"></button>
-              <button onclick="rollManualTable(['social_mannerisms'], 'social_mannerisms')" data-i18n="social_mannerisms"></button>
-            </details>
+          <details class="gen-section" name="generators">
+            <summary data-i18n="cat_social">Social</summary>
+            <button onclick="openSocialDisposition(1,6)" data-i18n="social_disposition"></button>
+            <button onclick="rollManualTable(['social_interest'], 'social_interest')" data-i18n="social_interest"></button>
+            <button onclick="rollManualTable(['social_demeanor'], 'social_demeanor')" data-i18n="social_demeanor"></button>
+            <button onclick="rollManualTable(['social_mannerisms'], 'social_mannerisms')" data-i18n="social_mannerisms"></button>
+          </details>
 
-            <details class="gen-section" name="generators">
-              <summary data-i18n="cat_arcane">Arcane</summary>
-              <button onclick="rollManualTable(['arcane_spells', 'arcane_spells_limitations', 'arcane_trappings'], 'arcane_spells')" data-i18n="arcane_spells"></button>
-              <button onclick="rollManualTable(['arcane_items', 'arcane_item_features', 'arcane_trappings'], 'arcane_items')" data-i18n="arcane_items"></button>
-            </details>
+          <details class="gen-section" name="generators">
+            <summary data-i18n="cat_arcane">Arcane</summary>
+            <button onclick="rollManualTable(['arcane_spells', 'arcane_spells_limitations', 'arcane_trappings'], 'arcane_spells')" data-i18n="arcane_spells"></button>
+            <button onclick="rollManualTable(['arcane_items', 'arcane_item_features', 'arcane_trappings'], 'arcane_items')" data-i18n="arcane_items"></button>
+          </details>
 
-            <details class="gen-section" name="generators">
-              <summary data-i18n="cat_tags">Tags</summary>
-              <button onclick="rollManualTable(['tags_person'], 'tags_person')" data-i18n="tags_person"></button>
-              <button onclick="rollManualTable(['tags_location'], 'tags_location')" data-i18n="tags_location"></button>
-            </details>
+          <details class="gen-section" name="generators">
+            <summary data-i18n="cat_tags">Tags</summary>
+            <button onclick="rollManualTable(['tags_person'], 'tags_person')" data-i18n="tags_person"></button>
+            <button onclick="rollManualTable(['tags_location'], 'tags_location')" data-i18n="tags_location"></button>
+          </details>
 
-            <details class="gen-section" name="generators">
-              <summary data-i18n="cat_names">Names</summary>
-              <button onclick="rollManualTable(['names_male', 'names_surname'], 'names_male')" data-i18n="names_male"></button>
-              <button onclick="rollManualTable(['names_female', 'names_surname'], 'names_female')" data-i18n="names_female"></button>
-              <button onclick="rollFantasyName()" data-i18n="names_fictional"></button>
-            </details>
+          <details class="gen-section" name="generators">
+            <summary data-i18n="cat_names">Names</summary>
+            <button onclick="rollManualTable(['names_male', 'names_surname'], 'names_male')" data-i18n="names_male"></button>
+            <button onclick="rollManualTable(['names_female', 'names_surname'], 'names_female')" data-i18n="names_female"></button>
+            <button onclick="rollFantasyName()" data-i18n="names_fictional"></button>
+          </details>
+
+          <hr>
+
+          <details class="fantasy-towns">
+            <summary data-i18n="cat_towns">Fantasy Towns</summary>
+            <button class="contrast" onclick="rollFantasyTownName()" data-i18n="town_name"></button>
+            <button onclick="rollManualTable(['town_impressions_settlement', 'town_impressions_gobernance', 'town_impressions_population'], 'town_impresions')" data-i18n="town_impresions"></button>
+            <button onclick="rollManualTable(['town_features', 'town_features', 'town_features'], 'town_features')" data-i18n="town_features"></button>
+            <button onclick="rollManualTable(['town_events'], 'town_events')" data-i18n="town_events"></button>
+            <button class="contrast" onclick="rollManualTable(['town_locations', 'town_location_features'], 'town_locations')" data-i18n="town_locations"></button>
+            <button onclick="rollManualTable(['town_folk', 'town_npc_traits'], 'town_folk')" data-i18n="town_folk"></button>
+            <button onclick="rollManualTable(['town_local_events'], 'town_local_events')" data-i18n="town_local_events"></button>
+          </details>
         </article>
 
         <div class="grid">
@@ -277,23 +288,6 @@
             </div>
           </article>
         </div>
-
-        <article class="fantasy-towns">
-          <h4 data-i18n="cat_towns">Fantasy Towns</h4>
-          <div class="grid">
-              <button class="contrast" onclick="rollFantasyTownName()" data-i18n="town_name"></button>
-          </div>
-          <div class="grid">
-              <button onclick="rollManualTable(['town_impressions_settlement', 'town_impressions_gobernance', 'town_impressions_population'], 'town_impresions')" data-i18n="town_impresions"></button>
-              <button onclick="rollManualTable(['town_features', 'town_features', 'town_features'], 'town_features')" data-i18n="town_features"></button>
-              <button onclick="rollManualTable(['town_events'], 'town_events')" data-i18n="town_events"></button>
-          </div>
-          <div class="grid">
-              <button class="contrast" onclick="rollManualTable(['town_locations', 'town_location_features'], 'town_locations')" data-i18n="town_locations"></button>
-              <button onclick="rollManualTable(['town_folk', 'town_npc_traits'], 'town_folk')" data-i18n="town_folk"></button>
-              <button onclick="rollManualTable(['town_local_events'], 'town_local_events')" data-i18n="town_local_events"></button>
-          </div>
-        </article>
       </section>
 
       <footer>
@@ -313,6 +307,14 @@
         </div>
       </footer>
     </main>
+
+      <div class="sticky">
+        <div role="group">
+          <button onclick="showTab('game-section')" data-i18n="characters" class="nav-link" id="game-section-tab">Characters</button>
+          <button onclick="showTab('card-section')" data-i18n="scenes" class="nav-link contrast" id="card-section-tab">Scenes</button>
+          <button onclick="showTab('generators-section')" data-i18n="generators" class="nav-link" id="generators-section-tab">Generators</button>
+        </div>
+      </div>
 
     <dialog id="modal-info">
       <article>
@@ -341,8 +343,8 @@
           <button onclick="rollTwist('horror', 'twist_horror')" data-i18n="twist_horror">Horror</button>
           <button onclick="rollTwist('scifi', 'twist_scifi')" data-i18n="twist_scifi">Sci-Fi</button>
         </div>
-          <hr>
-          <button class="contrast" onclick="closeModal('modal-twist-choice')" data-i18n="modal_cancel">Cancel</button>
+        <hr>
+        <button class="contrast" onclick="closeModal('modal-twist-choice')" data-i18n="modal_cancel">Cancel</button>
       </article>
     </dialog>
 
@@ -357,8 +359,8 @@
           <button onclick="rollSocialDisposition(1,5), closeModal('modal-disposition')" data-i18n="social_disposition_friendly"></button>
           <button onclick="rollSocialDisposition(1,4), closeModal('modal-disposition')" data-i18n="social_disposition_very_friendly"></button>
         </div>
-          <hr>
-          <button class="contrast" onclick="closeModal('modal-disposition')" data-i18n="modal_cancel">Cancel</button>
+        <hr>
+        <button class="contrast" onclick="closeModal('modal-disposition')" data-i18n="modal_cancel">Cancel</button>
     </dialog>
 
     <script>

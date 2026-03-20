@@ -141,6 +141,7 @@ const i18n = {
     name: "Name",
     concept: "Concept",
     pc_list: "PC List",
+    trait: "Trait",
     perks: "🟢 Perks",
     quirks: "🔴 Quirks",
     karma: "Karma",
@@ -151,6 +152,9 @@ const i18n = {
     max_karma: "Max Karma",
     max_resolve: "Max Resolve",
     delete_data: "🧨 Delete local data",
+    scenes: "Scenes",
+    generators: "Generators",
+    characters: "Characters",
   },
   es: {
     and: "y...",
@@ -291,7 +295,8 @@ const i18n = {
     name: "Nombre",
     concept: "Concepto",
     pc_list: "Lista de PJs",
-    perks: "🟢 Virtudes",
+    trait: "Rasgo",
+    perks: "🟢 Ventajas",
     quirks: "🔴 Defectos",
     karma: "Karma",
     resolve: "Resolucion",
@@ -300,7 +305,10 @@ const i18n = {
     affliction: "Aflicción",
     max_karma: "Maximo de Karma",
     max_resolve: "Maximo de Resolución",
-    delete_data: "🧨 Borrar todos los datos locales"
+    delete_data: "🧨 Borrar todos los datos locales",
+    scenes: "Escenas",
+    generators: "Generadores",
+    characters: "Personajes",
   },
 };
 
