@@ -34,8 +34,7 @@ function load() {
       document.getElementById('card-content-wrapper').classList.remove('hidden');
       document.getElementById('reset-button').classList.remove('hidden');
       document.getElementById('challenge-content').classList.remove('hidden');
-      const card = state.deck[state.deck.length-1];
-      state.drawn.push({ card, result: null });
+      const card = state.deck.pop();
       const isRed = ['♥','♦'].includes(card.s);
       const el = document.getElementById('card-icon');
       el.innerText = `${card.v}${card.s}`;
@@ -49,6 +48,7 @@ function load() {
   renderPCList();
   loadSelectedPC();
   setupPCEventListeners();
+  showTab('generators-section');
 }
 
 setInterval(() => {
