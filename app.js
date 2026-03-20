@@ -38,11 +38,19 @@ function load() {
     if(state.isGameOver) showEndScreen();
     translateUI();
   } else { initDeck(); }
+
   loadQuests();
   renderPCList();
   loadSelectedPC();
   setupPCEventListeners();
 }
+
+setInterval(() => {
+  if(JSON.stringify(state) !== localStorage.getItem('tricube_v5_en_default')) {
+    console.log('saving...');
+    load();
+  }
+}, 1000);
 
 function openModal(id, titleKey = "", body = "") {
   const d = i18n[state.lang];
