@@ -127,6 +127,7 @@ margin-top: 1rem;
 }
 details summary { cursor: pointer; font-size: 1.1rem; }
 article [role="group"] { margin-bottom: 0; }
+#card-section { min-height: 30vh; }
 
 .card-display { font-size: 3.5rem; text-align: center; margin: 0.5rem 0; font-weight: bold; min-height: 1.2em; transition: all 0.2s; }
 .shuffling { animation: shake 0.1s infinite; opacity: 0.5; filter: blur(2px); }
