@@ -34,6 +34,12 @@ function load() {
       document.getElementById('card-content-wrapper').classList.remove('hidden');
       document.getElementById('reset-button').classList.remove('hidden');
       document.getElementById('challenge-content').classList.remove('hidden');
+      const card = state.deck[state.deck.length-1];
+      state.drawn.push({ card, result: null });
+      const isRed = ['♥','♦'].includes(card.s);
+      const el = document.getElementById('card-icon');
+      el.innerText = `${card.v}${card.s}`;
+      el.className = 'card-display ' + (isRed ? 'suit-red' : 'suit-black');
     }
     if(state.isGameOver) showEndScreen();
     translateUI();
@@ -47,8 +53,7 @@ function load() {
 
 setInterval(() => {
   if(JSON.stringify(state) !== localStorage.getItem('tricube_v5_en_default')) {
-    console.log('saving...');
-    load();
+    loadSelectedPC();
   }
 }, 1000);
 
@@ -89,7 +94,6 @@ function executeDraw() {
   el.innerText = `${card.v}${card.s}`;
   el.className = 'card-display ' + (isRed ? 'suit-red' : 'suit-black');
   processLogic(card, isRed);
-  console.log(state.epicTwist, checkFinalCondition());
   if (state.epicTwist) document.getElementById('epic-twist-msg').classList.remove('hidden');
   else if (checkFinalCondition()) document.getElementById('last-scene-msg').classList.remove('hidden');
   save();
