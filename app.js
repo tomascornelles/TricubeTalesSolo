@@ -250,7 +250,9 @@ function initDeck() {
   state.deck = []; s.forEach(suit => v.forEach(val => state.deck.push({v: val, s: suit})));
   state.deck.push({v: 'Joker', s: ''});
   state.drawn = []; state.stats = { v: 0, l: 0 }; state.adventureStarted = false; state.isGameOver = false;
-  shuffle(state.deck); save(); location.reload();
+  shuffle(state.deck); 
+  save(); 
+  location.reload();
 }
 
 function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } }
