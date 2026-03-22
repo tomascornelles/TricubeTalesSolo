@@ -39,10 +39,10 @@
           <div class="avatar">
             <input id="pc-name" type="text" placeholder="Name" data-i18n="name">
 
-            <div class="avatar-image">
-              <img id="pc-image-preview" src="img/avatar.jpg" alt="Avatar" onclick="document.getElementById('pc-image-input').click()">
-
-              <input type="file" id="pc-image-input" accept="image/*" style="display: none;" onchange="handleImageUpload(this)">
+            <div>
+              <div id="avatar-image" style="background-image: url(img/avatar.jpg);" onclick="document.getElementById('pc-image-input').click();">
+                <input type="file" id="pc-image-input" accept="image/*" style="display: none;" onchange="handleImageUpload(this)">
+              </div>
             </div>
           </div>
 
@@ -170,7 +170,7 @@
             </div>
         </article>
 
-        <article id="log-area">
+        <article id="log-area" class="hidden">
           <strong data-i18n="log_title">Log</strong>
           <div id="log-content" contenteditable oninput="updateLog()"></div>
         </article>

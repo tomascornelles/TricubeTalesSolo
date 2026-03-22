@@ -36,6 +36,7 @@ function load() {
       document.getElementById('card-content-wrapper').classList.remove('hidden');
       document.getElementById('reset-button').classList.remove('hidden');
       document.getElementById('challenge-content').classList.remove('hidden');
+      document.getElementById('log-area').classList.remove('hidden');
       document.getElementById('log-content').innerText = state.log || '';
       if (state.currentCard) {
       const card = state.currentCard.card;
@@ -72,11 +73,12 @@ function openModal(id, titleKey = "", body = "") {
 function closeModal(id) { document.getElementById(id).close(); }
 
 function startAdventure() {
-  state.adventureStarted = true; state.isGameOver = false; state.epicTwist = false; state.currentCard = null;
+  state.adventureStarted = true; state.isGameOver = false; state.epicTwist = false; state.currentCard = null; state.log = '';
   document.getElementById('init-scene-btn').classList.add('hidden');
   document.getElementById('card-content-wrapper').classList.remove('hidden');
   document.getElementById('reset-button').classList.remove('hidden');
   document.getElementById('challenge-content').classList.remove('hidden');
+  document.getElementById('log-area').classList.remove('hidden');
   drawCard();
 }
 
@@ -106,7 +108,6 @@ function executeDraw() {
 }
 
 function processLogic(card, isRed) {
-  console.trace(card, isRed);
   const d = i18n[state.lang];
   const desc = document.getElementById('challenge-desc');
   const bc = document.getElementById('action-buttons');
@@ -135,6 +136,7 @@ function processLogic(card, isRed) {
 
 function resolve(win) {
   state.drawn.push({ card: state.currentCard.card, result: win });
+  state.currentCard = null;
   if (win) state.stats.v++; else state.stats.l++;
   renderHistory();
   if (checkFinalCondition()) { 
@@ -151,10 +153,15 @@ function resolve(win) {
 
 function checkFinalCondition() {
   const ch = state.drawn.filter(d => !isNaN(d.card.v));
-  if (ch.length >= 9) return true;
+  if (ch.length >= 8) return true;
   const suits = {};
-  ch.forEach(d => suits[d.card.s] = (suits[d.card.s] || 0) + 1);
+  if (state.currentCard && !isNaN(state.currentCard.card.v)) suits[state.currentCard.card.s] = 1;
+  console.log(ch);
+  ch.forEach(d => {
+    suits[d.card.s] = (suits[d.card.s] || 0) + 1;
+  });
   const counts = Object.values(suits);
+  console.log(suits, counts);
   if (counts.some(c => c >= 5)) {
     state.epicTwist = true;
     return true;
@@ -327,8 +334,8 @@ function setupPCEventListeners() {
 
 function savePC() {
   const nameInput = document.getElementById('pc-name').value.trim();
-  const imagePreview = document.getElementById('pc-image-preview');
-  const imageData = imagePreview.src;
+  const imagePreview = document.getElementById('avatar-image');
+  const imageData = imagePreview.style.backgroundImage.replace('url(','').replace(')','').trim();
   
   // Si estamos en "new" y no hay nombre, no hacemos nada
   if (state.activePcName === 'new' && nameInput === "") return;
@@ -380,13 +387,11 @@ function savePC() {
 
 function loadSelectedPC() {
   const pc = state.pcs.find(p => p.name === state.activePcName);
-  const imagePreview = document.getElementById('pc-image-preview');
-  // Define aquí tu imagen por defecto
   const defaultImage = "img/avatar.jpg";
   
   if (state.activePcName !== 'new' && pc) {
     // Rellenar con datos guardados
-    imagePreview.src = pc.image || defaultImage;
+    document.getElementById('avatar-image').style.backgroundImage = `url(${pc.image})` || `url(${defaultImage})`;
     document.getElementById('pc-name').value = pc.name;
     document.getElementById('pc-trait').value = pc.trait;
     document.getElementById('pc-concept').value = pc.concept;
@@ -400,8 +405,9 @@ function loadSelectedPC() {
     document.getElementById('pc-affliction-2').value = pc.afflictions[1] || '';
     document.getElementById('pc-affliction-3').value = pc.afflictions[2] || '';
   } else {
+    console.log(state.activePcName, pc, defaultImage);
     // Reset para PC Nuevo (Valores por defecto)
-    imagePreview.src = defaultImage;
+    document.getElementById('avatar-image').style.backgroundImage = `url(${defaultImage})`;
     document.getElementById('pc-name').value = "";
     document.getElementById('pc-trait').value = "";
     document.getElementById('pc-concept').value = "";
@@ -595,7 +601,8 @@ function handleImageUpload(input) {
     const base64Image = e.target.result;
 
     // Actualizar la previsualización inmediatamente
-    document.getElementById('pc-image-preview').src = base64Image;
+    // document.getElementById('pc-image-preview').src = base64Image;
+    document.getElementById('avatar-image').style.backgroundImage = `url(${base64Image})`;
 
     // Guardar el cambio en los datos del personaje
     savePC();
