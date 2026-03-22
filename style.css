@@ -145,6 +145,7 @@ padding-bottom: .5rem;
   box-shadow: var(--pico-card-box-shadow);
   overflow: hidden;
   background-size: cover;
+  background-position: center;
 }
 #log-content { 
 white-space: pre-wrap; 
