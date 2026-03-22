@@ -22,7 +22,7 @@ function translateUI() {
     }
   });
   document.getElementById('lang-dropdown').value = state.lang;
-  if(state.drawn.length > 0) processLogic(state.currentCard.card, ['♥','♦'].includes(state.currentCard.card.s));
+  if(state.drawn.length > 0 && state.currentCard) processLogic(state.currentCard.card, ['♥','♦'].includes(state.currentCard.card.s));
   renderHistory();
 }
 
@@ -36,9 +36,14 @@ function load() {
       document.getElementById('card-content-wrapper').classList.remove('hidden');
       document.getElementById('reset-button').classList.remove('hidden');
       document.getElementById('challenge-content').classList.remove('hidden');
+      if (state.currentCard) {
       const card = state.currentCard.card;
       const isRed = ['♥','♦'].includes(card.s);
       processLogic(card, isRed);
+      } else {
+        document.getElementById('card-content-wrapper').classList.add('hidden');
+        document.getElementById('draw-new-card').classList.remove('hidden');
+      }
     }
     if(state.isGameOver) showEndScreen();
     translateUI();
@@ -77,6 +82,8 @@ function startAdventure() {
 function drawCard() {
   if (state.deck.length === 0 || state.isGameOver) return;
   const el = document.getElementById('card-icon');
+  document.getElementById('card-content-wrapper').classList.remove('hidden');
+  document.getElementById('draw-new-card').classList.add('hidden');
   el.classList.add('shuffling');
   let counter = 0;
   const anim = setInterval(() => {
@@ -126,12 +133,18 @@ function processLogic(card, isRed) {
 }
 
 function resolve(win) {
-  // const lastIdx = state.drawn.length - 1;
-  // state.drawn[lastIdx].result = win;
   state.drawn.push({ card: state.currentCard.card, result: win });
   if (win) state.stats.v++; else state.stats.l++;
   renderHistory();
-  if (checkFinalCondition()) { state.isGameOver = true; showEndScreen(); } else { drawCard(); }
+  if (checkFinalCondition()) { 
+    state.isGameOver = true; 
+    showEndScreen(); 
+  } else { 
+    // drawCard(); 
+    document.getElementById('card-content-wrapper').classList.add('hidden');
+    document.getElementById('draw-new-card').classList.remove('hidden');
+    state.currentCard = null;
+  }
   save();
 }
 
