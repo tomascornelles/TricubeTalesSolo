@@ -6,7 +6,8 @@ let state = {
   adventureStarted: false, 
   isGameOver: false,
   epicTwist: false,
-  pcs: []
+  pcs: [],
+  currentTab: 'generators-section'
 };
 
 function setLang(l) { state.lang = l; translateUI(); save(); }
@@ -48,7 +49,7 @@ function load() {
   renderPCList();
   loadSelectedPC();
   setupPCEventListeners();
-  showTab('generators-section');
+  showTab(state.currentTab);
 }
 
 setInterval(() => {
@@ -541,6 +542,7 @@ function clearAllData() {
 }
 
 function showTab(tabId) {
+  console.log(tabId);
   const sections = document.querySelectorAll('section');
   sections.forEach(s => s.classList.add('hidden'));
   document.getElementById(tabId).classList.remove('hidden');
@@ -548,6 +550,9 @@ function showTab(tabId) {
   const tabs = document.querySelectorAll('.nav-link');
   tabs.forEach(t => t.classList.remove('contrast'));
   document.getElementById(tabId + '-tab').classList.add('contrast');
+
+  state.currentTab = tabId;
+  save();
 }
 
 window.onload = load;
