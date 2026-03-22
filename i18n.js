@@ -155,6 +155,9 @@ const i18n = {
     scenes: "Scenes",
     generators: "Generators",
     characters: "Characters",
+    draw_new_card_text: "Draw a new card to continue.",
+    only_draw: "Only draw a card when you want the story to progress toward its conclusion",
+    draw_new_card: "Draw New Card",
   },
   es: {
     and: "y...",
@@ -309,6 +312,9 @@ const i18n = {
     scenes: "Escenas",
     generators: "Generadores",
     characters: "Personajes",
+    draw_new_card_text: "Roba una nueva carta para continuar",
+    only_draw: "Solo roba una carta cuando quieras avanzar en la historia hacia su conclusión.",
+    draw_new_card: "Roba una nueva carta",
   },
 };
 
