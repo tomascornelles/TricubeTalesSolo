@@ -124,8 +124,7 @@ function processLogic(card, isRed) {
   const desc = document.getElementById('challenge-desc');
   const bc = document.getElementById('action-buttons');
   const bs = document.getElementById('special-buttons');
-  const tb = document.getElementById('twist-btn');
-  bc.classList.add('hidden'); bs.classList.add('hidden'); tb.classList.add('hidden');
+  bc.classList.add('hidden'); bs.classList.add('hidden');
   const el = document.getElementById('card-icon');
   el.innerText = `${card.v}${card.s}`;
   el.className = 'card-display ' + (isRed ? 'suit-red' : 'suit-black');
@@ -135,8 +134,8 @@ function processLogic(card, isRed) {
     desc.innerHTML = `<strong>${p}</strong>.<br>${isRed ? d.eff_pos : d.eff_neg}`;
     bs.classList.remove('hidden');
   } else if (card.v === 'A' || card.v === 'Joker') {
-    desc.innerText = d.twist_event;
-    bs.classList.remove('hidden'); tb.classList.remove('hidden');
+    desc.innerText = `${d.twist_event}\n${manualTables.scene_changes[state.lang][Math.floor(Math.random() * manualTables.scene_changes[state.lang].length)]}`;
+    bs.classList.remove('hidden');
   } else {
     bc.classList.remove('hidden');
     const n = parseInt(card.v);
