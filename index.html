@@ -36,7 +36,16 @@
             <button id="btn-delete-pc" class="outline secondary" onclick="deletePC()">🗑️</button></div>
           <hr>
 
-          <input id="pc-name" type="text" placeholder="Name" data-i18n="name">
+          <div class="avatar">
+            <input id="pc-name" type="text" placeholder="Name" data-i18n="name">
+
+            <div class="avatar-image">
+              <img id="pc-image-preview" src="img/avatar.jpg" alt="Avatar" onclick="document.getElementById('pc-image-input').click()">
+
+              <input type="file" id="pc-image-input" accept="image/*" style="display: none;" onchange="handleImageUpload(this)">
+            </div>
+          </div>
+
           <div role="group">
             <select id="pc-trait">
               <option disabled selected value="" data-i18n="trait">Trait</option>
@@ -112,53 +121,60 @@
       </section>
 
       <section id="card-section">
-        <article id="current-card-area">
-          <button id="init-scene-btn" onclick="startAdventure()" class="contrast" style="width:100%" data-i18n="start_adventure">Start Initial Scene</button>
+        <div class="grid">
+          <article id="current-card-area">
+            <button id="init-scene-btn" onclick="startAdventure()" class="contrast" style="width:100%" data-i18n="start_adventure">Start Initial Scene</button>
 
-          <div id="card-content-wrapper" class="hidden">
-            <div id="last-scene-msg" class="last-scene-alert hidden" data-i18n="last_scene_warn">⚠️ FINAL SCENE</div>
-            <div id="epic-twist-msg" class="last-scene-alert hidden" data-i18n="epic_twist_warn">
-              ‼️ EPIC TWIST<br>
-              <button onclick="openTwistModal()" data-i18n="btn_twist">Twist!</button>
+            <div id="card-content-wrapper" class="hidden">
+              <div id="last-scene-msg" class="last-scene-alert hidden" data-i18n="last_scene_warn">⚠️ FINAL SCENE</div>
+              <div id="epic-twist-msg" class="last-scene-alert hidden" data-i18n="epic_twist_warn">
+                ‼️ EPIC TWIST<br>
+                <button onclick="openTwistModal()" data-i18n="btn_twist">Twist!</button>
+              </div>
+              <div id="card-icon" class="card-display">?</div>
+              <p id="challenge-desc" style="text-align:center; min-height: 3em;"></p>
+
+              <div class="grid" id="action-buttons">
+                <button class="btn-victory" onclick="resolve(true)" data-i18n="btn_win">Win</button>
+                <button class="btn-loss" onclick="resolve(false)" data-i18n="btn_fail">Failure</button>
+              </div>
+
+              <div class="grid hidden" id="special-buttons">
+                <button class="contrast" onclick="drawCard()" data-i18n="btn_continue">Continue</button>
+                <button id="twist-btn" class="hidden" onclick="openTwistModal()" data-i18n="btn_twist">Twist!</button>
+              </div>
+
+              <div id="final-screen" class="game-over-banner hidden">
+                <h3 data-i18n="game_over">SESSION ENDED</h3>
+                <p id="final-stats"></p>
+                <button onclick="initDeck()" style="width:100%" data-i18n="new_adventure" class="contrast">New Adventure</button>
+              </div>
             </div>
-            <div id="card-icon" class="card-display">?</div>
-            <p id="challenge-desc" style="text-align:center; min-height: 3em;"></p>
 
-            <div class="grid" id="action-buttons">
-              <button class="btn-victory" onclick="resolve(true)" data-i18n="btn_win">Win</button>
-              <button class="btn-loss" onclick="resolve(false)" data-i18n="btn_fail">Failure</button>
+            <div id="draw-new-card" class="hidden">
+              <h2 data-i18n="draw_new_card_text">Draw a new card to continue.</h2>
+              <p data-i18n="only_draw">Only draw a card when you want the story to progress toward its conclusion</p>
+              <button onclick="drawCard()" style="width: 100%;" data-i18n="draw_new_card" class="contrast">Draw New Card</button>
             </div>
 
-            <div class="grid hidden" id="special-buttons">
-              <button class="contrast" onclick="drawCard()" data-i18n="btn_continue">Continue</button>
-              <button id="twist-btn" class="hidden" onclick="openTwistModal()" data-i18n="btn_twist">Twist!</button>
+            <div class="hidden" id="challenge-content">
+              <hr>
+              <div>
+                <strong data-i18n="history">Challenge History</strong>
+                <div id="card-history" class="history-list"></div>
+              </div>
             </div>
 
-            <div id="final-screen" class="game-over-banner hidden">
-              <h3 data-i18n="game_over">SESSION ENDED</h3>
-              <p id="final-stats"></p>
-              <button onclick="initDeck()" style="width:100%" data-i18n="new_adventure" class="contrast">New Adventure</button>
+            <div class="hidden" id="reset-button">
+              <button onclick="showResetConfirm()" style="font-size: 0.9rem; width: 100%;" data-i18n="reset_deck">Reset Deck</button>
             </div>
-          </div>
-
-          <div id="draw-new-card" class="hidden">
-            <h2 data-i18n="draw_new_card_text">Draw a new card to continue.</h2>
-            <p data-i18n="only_draw">Only draw a card when you want the story to progress toward its conclusion</p>
-            <button onclick="drawCard()" style="width: 100%;" data-i18n="draw_new_card" class="contrast">Draw New Card</button>
-          </div>
-
-          <div class="hidden" id="challenge-content">
-            <hr>
-            <div>
-              <strong data-i18n="history">Challenge History</strong>
-              <div id="card-history" class="history-list"></div>
-            </div>
-          </div>
-
-          <div class="hidden" id="reset-button">
-            <button onclick="showResetConfirm()" style="font-size: 0.9rem; width: 100%;" data-i18n="reset_deck">Reset Deck</button>
-          </div>
         </article>
+
+        <article id="log-area">
+          <strong data-i18n="log_title">Log</strong>
+          <div id="log-content" contenteditable oninput="updateLog()"></div>
+        </article>
+            </div>
       </section>
 
       <section id="generators-section">

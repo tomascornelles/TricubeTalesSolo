@@ -36,6 +36,7 @@ function load() {
       document.getElementById('card-content-wrapper').classList.remove('hidden');
       document.getElementById('reset-button').classList.remove('hidden');
       document.getElementById('challenge-content').classList.remove('hidden');
+      document.getElementById('log-content').innerText = state.log || '';
       if (state.currentCard) {
       const card = state.currentCard.card;
       const isRed = ['♥','♦'].includes(card.s);
@@ -326,12 +327,15 @@ function setupPCEventListeners() {
 
 function savePC() {
   const nameInput = document.getElementById('pc-name').value.trim();
+  const imagePreview = document.getElementById('pc-image-preview');
+  const imageData = imagePreview.src;
   
   // Si estamos en "new" y no hay nombre, no hacemos nada
   if (state.activePcName === 'new' && nameInput === "") return;
 
   const pcData = {
     name: nameInput,
+    image: imageData,
     trait: document.getElementById('pc-trait').value,
     concept: document.getElementById('pc-concept').value,
     perks: document.getElementById('pc-perks').value,
@@ -376,9 +380,13 @@ function savePC() {
 
 function loadSelectedPC() {
   const pc = state.pcs.find(p => p.name === state.activePcName);
+  const imagePreview = document.getElementById('pc-image-preview');
+  // Define aquí tu imagen por defecto
+  const defaultImage = "img/avatar.jpg";
   
   if (state.activePcName !== 'new' && pc) {
     // Rellenar con datos guardados
+    imagePreview.src = pc.image || defaultImage;
     document.getElementById('pc-name').value = pc.name;
     document.getElementById('pc-trait').value = pc.trait;
     document.getElementById('pc-concept').value = pc.concept;
@@ -393,6 +401,7 @@ function loadSelectedPC() {
     document.getElementById('pc-affliction-3').value = pc.afflictions[2] || '';
   } else {
     // Reset para PC Nuevo (Valores por defecto)
+    imagePreview.src = defaultImage;
     document.getElementById('pc-name').value = "";
     document.getElementById('pc-trait').value = "";
     document.getElementById('pc-concept').value = "";
@@ -563,6 +572,42 @@ function showTab(tabId) {
 
   state.currentTab = tabId;
   save();
+}
+
+function handleImageUpload(input) {
+  const file = input.files[0];
+  if (!file) return;
+
+  // Validar que sea una imagen
+  if (!file.type.startsWith('image/')) {
+    alert('Por favor, selecciona un archivo de imagen válido.');
+    return;
+  }
+
+  // Validar tamaño (ej: máx 2MB para no saturar localStorage)
+  if (file.size > 2 * 1024 * 1024) {
+    alert('La imagen es demasiado grande. El tamaño máximo es 2MB.');
+    return;
+  }
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const base64Image = e.target.result;
+
+    // Actualizar la previsualización inmediatamente
+    document.getElementById('pc-image-preview').src = base64Image;
+
+    // Guardar el cambio en los datos del personaje
+    savePC();
+  };
+
+  reader.readAsDataURL(file);
+}
+
+function updateLog() {
+  state.log = document.getElementById('log-content').innerText;
+  save();
+  document.getElementById('log-content').innerText = state.log;
 }
 
 window.onload = load;
