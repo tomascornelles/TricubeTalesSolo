@@ -1,6 +1,7 @@
 let state = { 
   deck: [], 
   drawn: [], 
+  currentCard: null,
   stats: { v: 0, l: 0 }, 
   lang: 'en', 
   adventureStarted: false, 
@@ -21,7 +22,7 @@ function translateUI() {
     }
   });
   document.getElementById('lang-dropdown').value = state.lang;
-  if(state.drawn.length > 0) processLogic(state.drawn[state.drawn.length-1].card, ['♥','♦'].includes(state.drawn[state.drawn.length-1].card.s));
+  if(state.drawn.length > 0) processLogic(state.currentCard.card, ['♥','♦'].includes(state.currentCard.card.s));
   renderHistory();
 }
 
@@ -35,11 +36,9 @@ function load() {
       document.getElementById('card-content-wrapper').classList.remove('hidden');
       document.getElementById('reset-button').classList.remove('hidden');
       document.getElementById('challenge-content').classList.remove('hidden');
-      const card = state.deck.pop();
+      const card = state.currentCard.card;
       const isRed = ['♥','♦'].includes(card.s);
-      const el = document.getElementById('card-icon');
-      el.innerText = `${card.v}${card.s}`;
-      el.className = 'card-display ' + (isRed ? 'suit-red' : 'suit-black');
+      processLogic(card, isRed);
     }
     if(state.isGameOver) showEndScreen();
     translateUI();
@@ -54,7 +53,7 @@ function load() {
 
 setInterval(() => {
   if(JSON.stringify(state) !== localStorage.getItem('tricube_v5_en_default')) {
-    loadSelectedPC();
+    load();
   }
 }, 1000);
 
@@ -67,7 +66,7 @@ function openModal(id, titleKey = "", body = "") {
 function closeModal(id) { document.getElementById(id).close(); }
 
 function startAdventure() {
-  state.adventureStarted = true; state.isGameOver = false; state.epicTwist = false;
+  state.adventureStarted = true; state.isGameOver = false; state.epicTwist = false; state.currentCard = null;
   document.getElementById('init-scene-btn').classList.add('hidden');
   document.getElementById('card-content-wrapper').classList.remove('hidden');
   document.getElementById('reset-button').classList.remove('hidden');
@@ -89,11 +88,9 @@ function drawCard() {
 
 function executeDraw() {
   const card = state.deck.pop();
-  state.drawn.push({ card, result: null });
+  // state.drawn.push({ card, result: null });
+  state.currentCard = { card, result: null };
   const isRed = ['♥','♦'].includes(card.s);
-  const el = document.getElementById('card-icon');
-  el.innerText = `${card.v}${card.s}`;
-  el.className = 'card-display ' + (isRed ? 'suit-red' : 'suit-black');
   processLogic(card, isRed);
   if (state.epicTwist) document.getElementById('epic-twist-msg').classList.remove('hidden');
   else if (checkFinalCondition()) document.getElementById('last-scene-msg').classList.remove('hidden');
@@ -101,12 +98,16 @@ function executeDraw() {
 }
 
 function processLogic(card, isRed) {
+  console.trace(card, isRed);
   const d = i18n[state.lang];
   const desc = document.getElementById('challenge-desc');
   const bc = document.getElementById('action-buttons');
   const bs = document.getElementById('special-buttons');
   const tb = document.getElementById('twist-btn');
   bc.classList.add('hidden'); bs.classList.add('hidden'); tb.classList.add('hidden');
+  const el = document.getElementById('card-icon');
+  el.innerText = `${card.v}${card.s}`;
+  el.className = 'card-display ' + (isRed ? 'suit-red' : 'suit-black');
 
   if (['J', 'Q', 'K'].includes(card.v)) {
     let p = card.v === 'K' ? d.plot_main : (card.v === 'Q' ? d.plot_pri : d.plot_sec);
@@ -125,8 +126,9 @@ function processLogic(card, isRed) {
 }
 
 function resolve(win) {
-  const lastIdx = state.drawn.length - 1;
-  state.drawn[lastIdx].result = win;
+  // const lastIdx = state.drawn.length - 1;
+  // state.drawn[lastIdx].result = win;
+  state.drawn.push({ card: state.currentCard.card, result: win });
   if (win) state.stats.v++; else state.stats.l++;
   renderHistory();
   if (checkFinalCondition()) { state.isGameOver = true; showEndScreen(); } else { drawCard(); }
@@ -177,7 +179,6 @@ function openSocialDisposition() { openModal('modal-disposition'); }
   
 function rollSocialDisposition(h,f) {
   const r1 = Math.floor(Math.random() * 6 + 1);
-  console.log(r1);
   const table = (r1 <= h) 
   ? manualTables.social_attitude_negative[state.lang]
   : (r1 >= f)
@@ -534,15 +535,11 @@ function clearAllData() {
       // Opcional: Borrar cualquier otra clave que hayas usado
       localStorage.removeItem('pc_list');
       localStorage.removeItem('active_pc_name');
-
-      // Recargar la página para resetear el estado inicial de la app
-      location.reload();
     }
   }
 }
 
 function showTab(tabId) {
-  console.log(tabId);
   const sections = document.querySelectorAll('section');
   sections.forEach(s => s.classList.add('hidden'));
   document.getElementById(tabId).classList.remove('hidden');
