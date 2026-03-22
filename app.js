@@ -88,11 +88,19 @@ function drawCard() {
   document.getElementById('card-content-wrapper').classList.remove('hidden');
   document.getElementById('draw-new-card').classList.add('hidden');
   el.classList.add('shuffling');
+  document.getElementById('action-buttons').classList.add('hidden');
+  document.getElementById('special-buttons').classList.add('hidden');
   let counter = 0;
   const anim = setInterval(() => {
     const rs = ['♠', '♣', '♥', '♦'];
     el.innerText = (Math.floor(Math.random() * 9) + 2) + rs[Math.floor(Math.random() * 4)];
-    if(++counter > 8) { clearInterval(anim); el.classList.remove('shuffling'); executeDraw(); }
+    if(++counter > 8) { 
+      clearInterval(anim); 
+      el.classList.remove('shuffling'); 
+      document.getElementById('action-buttons').classList.remove('hidden'); 
+      document.getElementById('special-buttons').classList.remove('hidden');
+      executeDraw(); 
+    }
   }, 50);
 }
 
