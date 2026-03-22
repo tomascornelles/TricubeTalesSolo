@@ -73,7 +73,11 @@ function openModal(id, titleKey = "", body = "") {
 function closeModal(id) { document.getElementById(id).close(); }
 
 function startAdventure() {
-  state.adventureStarted = true; state.isGameOver = false; state.epicTwist = false; state.currentCard = null; state.log = '';
+  state.isGameOver = false; 
+  state.epicTwist = false; 
+  state.currentCard = null; 
+  state.log = '';
+  state.adventureStarted = true; 
   document.getElementById('init-scene-btn').classList.add('hidden');
   document.getElementById('card-content-wrapper').classList.remove('hidden');
   document.getElementById('reset-button').classList.remove('hidden');
