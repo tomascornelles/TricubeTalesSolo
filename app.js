@@ -77,7 +77,6 @@ function startAdventure() {
   state.isGameOver = false; 
   state.epicTwist = false; 
   state.currentCard = null; 
-  state.notes = '';
   state.adventureStarted = true; 
   document.getElementById('init-scene-btn').classList.add('hidden');
   document.getElementById('card-content-wrapper').classList.remove('hidden');
@@ -287,6 +286,7 @@ function initDeck() {
   state.deck.push({v: 'Joker', s: ''});
   state.drawn = []; state.stats = { v: 0, l: 0 }; state.adventureStarted = false; state.isGameOver = false;
   shuffle(state.deck); 
+  state.notes = '';
   save(); 
   location.reload();
 }
