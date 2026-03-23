@@ -294,7 +294,9 @@ function initDeck() {
 function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } }
 
 function renderHistory() {
-  const h = document.getElementById('card-history'); h.innerHTML = "";
+  const h = document.getElementById('card-history'); 
+  h.innerHTML = "";
+  h.classList.add('hidden');
   [...state.drawn].reverse().forEach(item => {
     if (['J', 'Q', 'K', 'A', 'Joker'].includes(item.card.v)) return;
     const span = document.createElement('span');
@@ -302,6 +304,7 @@ function renderHistory() {
     span.className = `hist-item ${isRed ? 'suit-red' : 'suit-black'} ${item.result === false ? 'hist-fail' : ''}`;
     span.innerText = `${item.card.v}${item.card.s}`;
     h.appendChild(span);
+    h.classList.remove('hidden');
   });
 }
 
