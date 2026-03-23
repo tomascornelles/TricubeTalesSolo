@@ -613,18 +613,66 @@ function handleImageUpload(input) {
   }
 
   const reader = new FileReader();
-  reader.onload = function(e) {
-    const base64Image = e.target.result;
-
-    // Actualizar la previsualización inmediatamente
-    // document.getElementById('pc-image-preview').src = base64Image;
-    document.getElementById('avatar-image').style.backgroundImage = `url(${base64Image})`;
-
-    // Guardar el cambio en los datos del personaje
-    savePC();
+reader.onload = function(e) {
+    const img = new Image();
+    img.onload = function() {
+      // 2. Procesar la imagen en el Canvas una vez cargada
+      const processedBase64 = processImageToSquare(img, 128);
+      
+      // 3. Actualizar la previsualización inmediatamente con la imagen optimizada
+      document.getElementById('avatar-image').style.backgroundImage = `url(${processedBase64})`;
+      
+      // 4. Guardar el cambio en los datos del personaje (ya incluye la nueva imagen)
+      savePC();
+      
+      // Limpiar el input file para permitir subir la misma imagen otra vez si se desea
+      input.value = '';
+    };
+    img.src = e.target.result;
   };
 
   reader.readAsDataURL(file);
+}
+
+function processImageToSquare(img, size) {
+  // Crear un canvas invisible
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+
+  // Establecer el tamaño del canvas al tamaño final deseado
+  canvas.width = size;
+  canvas.height = size;
+
+  // Calcular las dimensiones de recorte (crop) para centrar la imagen
+  let sourceX, sourceY, sourceWidth, sourceHeight;
+  const aspectRatio = img.width / img.height;
+
+  if (aspectRatio > 1) {
+    // La imagen es más ancha que alta (paisaje)
+    sourceHeight = img.height;
+    sourceWidth = img.height; // El ancho del recorte es igual a la altura original
+    sourceX = (img.width - img.height) / 2; // Centrado horizontal
+    sourceY = 0;
+  } else {
+    // La imagen es más alta que ancha (retrato) o ya es cuadrada
+    sourceWidth = img.width;
+    sourceHeight = img.width; // La altura del recorte es igual al ancho original
+    sourceX = 0;
+    sourceY = (img.height - img.width) / 2; // Centrado vertical
+  }
+
+  // Dibujar la imagen recortada y redimensionada en el canvas
+  // ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
+  ctx.drawImage(
+    img,
+    sourceX, sourceY, sourceWidth, sourceHeight, // Dimensiones y posición de origen (recorte)
+    0, 0, size, size // Dimensiones y posición de destino (en el canvas)
+  );
+
+  // Convertir el canvas a Base64.
+  // Usamos 'image/jpeg' y calidad 0.85 para reducir aún más el tamaño del string Base64
+  // comparado con 'image/png', manteniendo buena calidad para un avatar de 128px.
+  return canvas.toDataURL('image/jpeg', 0.85);
 }
 
 function format(command, value = null) {
