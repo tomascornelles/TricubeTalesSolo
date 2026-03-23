@@ -266,9 +266,14 @@ function rollOracle() {
 
 function rollDice(n) {
   const results = [];
+  const dices = [];
   for (let i = 0; i < n; i++) results.push(Math.floor(Math.random() * 6) + 1);
-  results.forEach((r,i) => results[i] = `<span class="dice dice-${r}"></span>`);
-  openModal('modal-info', "dice_title", results.join(''));
+  results.forEach((r,i) => dices[i] = `<span class="dice-rolling dice"></span>`);
+  results.forEach((r,i) => results[i] = `<span class="dice dice-result dice-${r}"></span>`);
+  openModal('modal-info', "dice_title", dices.join(''));
+  setTimeout(() => { 
+    document.querySelector('#modal-body').innerHTML = results.join('');
+  }, 500);
 }
 
 function drawSingleCard() {
