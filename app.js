@@ -27,6 +27,7 @@ function translateUI() {
 }
 
 function save() { localStorage.setItem('tricube_v5_en_default', JSON.stringify(state)); }
+
 function load() {
   const saved = localStorage.getItem('tricube_v5_en_default');
   if (saved) { 
@@ -37,7 +38,6 @@ function load() {
       document.getElementById('reset-button').classList.remove('hidden');
       document.getElementById('challenge-content').classList.remove('hidden');
       document.getElementById('log-area').classList.remove('hidden');
-      document.getElementById('log-content').innerText = state.log || '';
       if (state.currentCard) {
       const card = state.currentCard.card;
       const isRed = ['♥','♦'].includes(card.s);
@@ -51,6 +51,7 @@ function load() {
     translateUI();
   } else { initDeck(); }
 
+  loadEditorContent();
   loadQuests();
   renderPCList();
   loadSelectedPC();
@@ -76,13 +77,14 @@ function startAdventure() {
   state.isGameOver = false; 
   state.epicTwist = false; 
   state.currentCard = null; 
-  state.log = '';
+  state.notes = '';
   state.adventureStarted = true; 
   document.getElementById('init-scene-btn').classList.add('hidden');
   document.getElementById('card-content-wrapper').classList.remove('hidden');
   document.getElementById('reset-button').classList.remove('hidden');
   document.getElementById('challenge-content').classList.remove('hidden');
   document.getElementById('log-area').classList.remove('hidden');
+  loadEditorContent();
   drawCard();
 }
 
@@ -622,10 +624,23 @@ function handleImageUpload(input) {
   reader.readAsDataURL(file);
 }
 
-function updateLog() {
-  state.log = document.getElementById('log-content').innerText;
-  save();
-  document.getElementById('log-content').innerText = state.log;
+function format(command, value = null) {
+  document.execCommand(command, false, value);
+  document.getElementById('editor-content').focus();
+}
+
+function saveEditorContent() {
+  const content = document.getElementById('editor-content').innerHTML;
+  state.notes = content; // Notas generales si no hay PC
+
+  save(); // Tu función existente para guardar en localStorage
+}
+
+function loadEditorContent() {
+  const editor = document.getElementById('editor-content');
+  if (!editor) return;
+
+  editor.innerHTML = state.notes || "";
 }
 
 window.onload = load;

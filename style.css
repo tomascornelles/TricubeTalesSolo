@@ -157,7 +157,38 @@ border-radius: var(--pico-border-radius);
 box-shadow: var(--pico-card-box-shadow);
 margin-top: .5rem;
 }
+.editor-toolbar {
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
 
+.editor-toolbar button {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.9rem;
+  width: auto;
+}
+
+#editor-content {
+  border: 1px solid var(--pico-muted-border-color);
+  border-radius: var(--pico-border-radius);
+  min-height: 200px;
+  padding: 1rem;
+  background: var(--pico-background-color);
+  outline: none;
+}
+
+#editor-content:focus {
+  border-color: var(--pico-primary);
+}
+
+/* Estilo para el placeholder cuando está vacío */
+#editor-content:empty:before {
+  content: attr(placeholder);
+  color: var(--pico-muted-color);
+  pointer-events: none;
+}
 .card-display { font-size: 3.5rem; text-align: center; margin: 0.5rem 0; font-weight: bold; min-height: 1.2em; transition: all 0.2s; }
 .shuffling { animation: shake 0.1s infinite; opacity: 0.5; filter: blur(2px); }
 @keyframes shake {
