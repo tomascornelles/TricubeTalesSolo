@@ -52,6 +52,7 @@
               <option value="agile" data-i18n="trait_agile">Agile</option>
               <option value="brave" data-i18n="trait_brave">Brave</option>
               <option value="crafty" data-i18n="trait_crafty">Crafty</option>
+              <option value="vehicle" data-i18n="trait_vehicle">Vehicle</option>
             </select>
             <input id="pc-concept" type="text" placeholder="Concept" data-i18n="concept">
           </div>
@@ -73,7 +74,7 @@
           <hr>
 
           <div class="grid">
-            <div>
+            <div id="karma">
               <strong data-i18n="karma">Karma</strong>
               <div role="group">
                 <button onclick="adjustStat('karma', -1)">➖</button>
@@ -83,7 +84,7 @@
               <progress id="pc-progress" value="2" max="3"></progress>
             </div>
 
-            <div>
+            <div id="resolve">
               <strong data-i18n="resolve">Resolve</strong>
               <div role="group">
                 <button onclick="adjustStat('resolve', -1)">➖</button>
@@ -97,7 +98,7 @@
           <details>
             <summary data-i18n="max_karma_and_resolve">🔋 Max karma and Resolve</summary>
             <div class="grid">
-              <div>
+              <div id="karma-max">
                 <label for="pc-karma-max" data-i18n="max_karma">Karma Max</label>
                 <input id="pc-karma-max" type="number" placeholder="3" class="narrow">
               </div>
@@ -374,7 +375,7 @@
     <dialog id="modal-confirm-log">
       <article>
         <strong data-i18n="reset_l">Reset?</strong>
-        <p data-i18n="reset_text">Current log will be lost.</p>
+        <p data-i18n="reset_text_log">Current log will be lost.</p>
         <div class="grid-buttons">
           <button onclick="closeModal('modal-confirm-log')" data-i18n="modal_cancel">Cancel</button>
           <button onclick="deleteLog()" data-i18n="modal_yes" class="contrast">Yes, reset</button>
