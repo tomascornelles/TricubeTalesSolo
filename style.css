@@ -148,13 +148,12 @@ padding-bottom: .5rem;
   background-size: cover;
   background-position: center;
 }
-.editor-toolbar {
-  margin-bottom: 0.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-}
 
+#log-area .buttons {
+display: flex;
+gap: 1rem;
+align-items: center;
+}
 .editor-toolbar button {
   padding: 0.2rem 0.5rem;
   font-size: 0.9rem;

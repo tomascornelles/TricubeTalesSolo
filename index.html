@@ -171,14 +171,20 @@
           </article>
 
           <article id="log-area">
-            <div role="group" class="editor-toolbar">
-              <button onclick="format('formatBlock', 'h2')">H1</button>
-              <button onclick="format('formatBlock', 'h3')">H2</button>
-              <button onclick="format('bold')"><b>B</b></button>
-              <button onclick="format('italic')"><i>I</i></button>
-              <button onclick="format('underline')"><u>U</u></button>
-              <button onclick="format('strikeThrough')"><s>S</s></button>
-              <button onclick="format('formatBlock', 'pre')">&lt;&gt;</button>
+            <div class="buttons">
+              <div role="group" class="editor-toolbar">
+                <button onclick="format('formatBlock', 'h2')"><b>H1</b></button>
+                <button onclick="format('formatBlock', 'h3')">H2</button>
+              </div>
+              <div role="group" class="editor-toolbar">
+                <button onclick="format('bold')"><b>B</b></button>
+                <button onclick="format('italic')"><i>I</i></button>
+                <button onclick="format('underline')"><u>U</u></button>
+                <button onclick="format('strikeThrough')"><s>S</s></button>
+              </div>
+              <div role="group" class="editor-toolbar">
+                <button onclick="format('formatBlock', 'pre')">&lt;code&gt;</button>
+              </div>
             </div>
 
             <div id="editor-content" contenteditable="true" oninput="saveEditorContent()"></div>
