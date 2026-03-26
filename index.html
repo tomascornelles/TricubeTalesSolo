@@ -177,9 +177,13 @@
               <button onclick="format('italic')"><i>I</i></button>
               <button onclick="format('underline')"><u>U</u></button>
               <button onclick="format('strikeThrough')"><s>S</s></button>
+              <button onclick="format('formatBlock', 'pre')">&lt;&gt;</button>
             </div>
 
-            <div id="editor-content" contenteditable="true" oninput="saveEditorContent()">
+            <div id="editor-content" contenteditable="true" oninput="saveEditorContent()"></div>
+
+            <div id="editor-status">
+              <button id="editor-save" onclick="confirmDeleteLog()" data-i18n="delete_log" style="width: 100%; margin-top: 0.5em">Delete log</button>
             </div>
           </article>
         </div>
@@ -363,6 +367,17 @@
         <div class="grid-buttons">
           <button onclick="closeModal('modal-confirm')" data-i18n="modal_cancel">Cancel</button>
           <button onclick="initDeck()" data-i18n="modal_yes" class="contrast">Yes, reset</button>
+        </div>
+      </article>
+    </dialog>
+
+    <dialog id="modal-confirm-log">
+      <article>
+        <strong data-i18n="reset_l">Reset?</strong>
+        <p data-i18n="reset_text">Current log will be lost.</p>
+        <div class="grid-buttons">
+          <button onclick="closeModal('modal-confirm-log')" data-i18n="modal_cancel">Cancel</button>
+          <button onclick="deleteLog()" data-i18n="modal_yes" class="contrast">Yes, reset</button>
         </div>
       </article>
     </dialog>

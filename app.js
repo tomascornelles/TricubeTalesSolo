@@ -291,7 +291,6 @@ function initDeck() {
   state.deck.push({v: 'Joker', s: ''});
   state.drawn = []; state.stats = { v: 0, l: 0 }; state.adventureStarted = false; state.isGameOver = false;
   shuffle(state.deck); 
-  state.notes = '';
   save(); 
   location.reload();
 }
@@ -697,6 +696,18 @@ function loadEditorContent() {
   if (!editor) return;
 
   editor.innerHTML = state.notes || "";
+}
+
+function confirmDeleteLog() {
+  // use modal instead confirm
+  openModal('modal-confirm-log');
+}
+
+function deleteLog() {
+  closeModal('modal-confirm-log');
+  state.notes = '';
+  save();
+  loadEditorContent();
 }
 
 window.onload = load;
