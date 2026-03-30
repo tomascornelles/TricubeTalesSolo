@@ -265,14 +265,24 @@ function rollOracle() {
 }
 
 function rollDice(n) {
+  const diceSound = document.getElementById('dice-sound');
   const results = [];
   const dices = [];
+
+  if (diceSound) {
+    diceSound.currentTime = 0; // Reiniciar el audio si ya se estaba reproduciendo
+    diceSound.play().catch(e => console.log("El navegador bloqueó el audio hasta que interactúes con la página."));
+  }
+
   for (let i = 0; i < n; i++) results.push(Math.floor(Math.random() * 6) + 1);
   results.forEach((r,i) => dices[i] = `<span class="dice-rolling dice"></span>`);
   results.forEach((r,i) => results[i] = `<span class="dice dice-result dice-${r}"></span>`);
   openModal('modal-info', "dice_title", dices.join(''));
   setTimeout(() => { 
     document.querySelector('#modal-body').innerHTML = results.join('');
+    if (diceSound) {
+    // diceSound.pause();
+  }
   }, 500);
 }
 
