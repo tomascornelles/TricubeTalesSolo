@@ -235,8 +235,8 @@ const i18n = {
     planes_planets_travel: "Viajes Planetarios",
     planes_realm_features: "Características",
     plot_main: "Trama Principal", 
-    plot_pri: "Trama Primaria", 
-    plot_sec: "Trama Secundaria",
+    plot_pri: "Trama Secundaria", 
+    plot_sec: "Subtrama secundaria",
     ppl_urban: "Gente Ciudad", 
     ppl_wild: "Gente Campo", 
     quests: "Generador de misiones",
@@ -308,7 +308,7 @@ const i18n = {
     perks: "🟢 Ventajas",
     quirks: "🔴 Defectos",
     karma: "Karma",
-    resolve: "Resolucion",
+    resolve: "Resolución",
     max_karma_and_resolve: "‼️ Maximo de Karma y Resolución",
     afflictions: "💢 Aflicciones",
     affliction: "Aflicción",
@@ -331,7 +331,7 @@ const manualTables = {
   },
   related: {
     en:["And could be related to main plot", "And could be related to Your character", "And could be related to Primary subplot", "And could be related to Random event (roll)", "And could be related to Secondary subplot", "And could be related to Twist table (roll)"],
-    es: ["Y podría estar relacionado con la trama principal", "Y podría estar relacionado con tu personaje", "Y podría estar relacionado con la trama secundaria primaria", "Y podría estar relacionado con un evento aleatorio (tirar)", "Y podría estar relacionado con la trama secundaria", "Y podría estar relacionado con la tabla de giros (tirar)"],
+    es: ["Y podría estar relacionado con la trama principal", "Y podría estar relacionado con tu personaje", "Y podría estar relacionado con la trama secundaria", "Y podría estar relacionado con un evento aleatorio (tirar)", "Y podría estar relacionado con la subtrama secundaria", "Y podría estar relacionado con la tabla de giros (tirar)"],
   },
   scene_changes: {
     en: ["Positive (for you)", "New location (roll)", "Negative (for you)", "New person (roll)", "Twist table (roll)", "New event (roll)"],
