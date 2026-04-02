@@ -522,7 +522,7 @@ function updateProgressBars() {
     }
   });
 
-  if (pc.trait === "vehicle") {
+  if (pc && pc.trait === "vehicle") {
     document.getElementById('karma').classList.add('hidden');
     document.getElementById('karma-max').classList.add('hidden');
   } else { 
